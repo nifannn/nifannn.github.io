@@ -140,13 +140,6 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -155,6 +148,13 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -221,20 +221,20 @@
 <ul>
 <li>install with pip:</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sudo pip install virtualenv</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo pip install virtualenv</div></pre></td></tr></table></figure>
 <h2 id="usage">Usage</h2>
 <hr>
 <h3 id="create-a-new-virtual-environment">Create a new virtual environment</h3>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> virtualenv ENV</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ virtualenv ENV</div></pre></td></tr></table></figure>
 <ul>
 <li>ENV is the directory of the new virtual environment</li>
 </ul>
 <h3 id="activate-virtual-environment">Activate virtual environment</h3>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> change directory to ENV</span></div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ENV/</span></div><div class="line"><span class="meta"></span></div><div class="line">#<span class="bash"> activate </span></div><div class="line"><span class="meta">(ENV)$</span><span class="bash"> <span class="built_in">source</span> bin/activate</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># change directory to ENV</div><div class="line">$ cd ENV/</div><div class="line"></div><div class="line"># activate </div><div class="line">(ENV)$ source bin/activate</div></pre></td></tr></table></figure>
 <h3 id="deactivate-virtual-environment">Deactivate virtual environment</h3>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">(ENV)$</span><span class="bash"> deactivate</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(ENV)$ deactivate</div></pre></td></tr></table></figure>
 <h3 id="remove-a-virtual-environment">Remove a virtual environment</h3>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> deactivate the virtual environment</span></div><div class="line"><span class="meta">(ENV)$</span><span class="bash"> deactivate</span></div><div class="line"><span class="meta"></span></div><div class="line">#<span class="bash"> delete the environment folder</span></div><div class="line"><span class="meta">$</span><span class="bash"> rm -r /path/to/ENV</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># deactivate the virtual environment</div><div class="line">(ENV)$ deactivate</div><div class="line"></div><div class="line"># delete the environment folder</div><div class="line">$ rm -r /path/to/ENV</div></pre></td></tr></table></figure>
 <h2 id="some-links">Some links</h2>
 <hr>
 <p><a href="https://virtualenv.pypa.io/" target="_blank" rel="external">Documentation</a></p>
