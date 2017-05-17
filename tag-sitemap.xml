@@ -2,29 +2,8 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://nifannn.github.io/tags/Hexo/</loc>
-        <lastmod>2017-05-15T22:35:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Blog/</loc>
-        <lastmod>2017-05-15T22:35:43.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Git/</loc>
         <lastmod>2017-05-16T21:23:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Python/</loc>
-        <lastmod>2017-05-16T22:18:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -38,6 +17,13 @@
 
     <url>
         <loc>https://nifannn.github.io/tags/Django/</loc>
+        <lastmod>2017-05-16T22:18:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Python/</loc>
         <lastmod>2017-05-16T22:18:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
