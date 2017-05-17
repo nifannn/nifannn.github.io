@@ -23,6 +23,13 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Python/</loc>
+        <lastmod>2017-05-16T22:18:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Web-development/</loc>
         <lastmod>2017-05-16T22:18:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,8 +44,8 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Python/</loc>
-        <lastmod>2017-05-16T22:18:40.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/cookbook/</loc>
+        <lastmod>2017-05-17T04:28:33.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
