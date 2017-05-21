@@ -86,13 +86,13 @@
                     <div class="post-heading">
                         <div class="tags">
                             
+                              <a class="tag" href="/tags/#Python" title="Python">Python</a>
+                            
                               <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
                             
                               <a class="tag" href="/tags/#Data Science" title="Data Science">Data Science</a>
                             
                               <a class="tag" href="/tags/#Kaggle" title="Kaggle">Kaggle</a>
-                            
-                              <a class="tag" href="/tags/#Python" title="Python">Python</a>
                             
                         </div>
                         <h1>What I Have Learnt from My First Kaggle Competition</h1>
@@ -258,10 +258,6 @@
 <p>In machine learning theories, there are many metrics to evaluate machine learning models, like confusion matrix, AUC, F1 score, loss, etc. But in Kaggle competition, there will be one given metric, so I do not plan to talk about metrics here. Additionally, cross validation is necessary. In Kaggle, there are public leaderboard and private leaderboard. The public leaderborad tests model on small part of test dataset, like 30%, and the private leaderboard tests model on the rest. Therefore, if the models overfit, it can get good performance on public leaderboard, but fail on private leaderboard. Cross validation can be used to prevent overfitting. K-fold cross validation splits dataset into k sets, taking 1 set as validation set and k-1 sets as traning set. Repeat k times and use average loss as final loss.</p>
 <h3 id="ensemble">Ensemble</h3>
 <p>According No Free Lunch Theory, each model has its own advantages and disadvantages, just like everyone has his strengthness and weakness. So if we can make different models cooperate to solve one problem, the results we get will be better than those of individual model. The goal behind ensemble methods is to combine different models for a better generalization performance. Bagging, boosting and stacking are common ensemble methods. Bagging is a weighted average of base models’ predictions, like random forest. Stacking trains the best single model on the predictions of base models.</p>
-<h2 id="notes-on-my-solution">Notes on My Solution</h2>
-<hr>
-<h2 id="inspiring-ideas-from-others">Inspiring Ideas from Others</h2>
-<hr>
 <h2 id="reference">Reference</h2>
 <hr>
 <ul>
@@ -325,7 +321,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#basic-pipeline"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Basic Pipeline</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exploratory-data-analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Exploratory Data Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#data-cleaning"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Data Cleaning</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#feature-engineering"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Feature Engineering</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#feature-selection"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">Feature Selection</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#feature-encoding-amp-transformation"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">Feature Encoding & Transformation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#model"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Model</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#model-selection"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">Model Selection</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#hyperparameter-tuning-amp-cross-validation"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">Hyperparameter Tuning & Cross Validation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ensemble"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Ensemble</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#notes-on-my-solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Notes on My Solution</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#inspiring-ideas-from-others"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Inspiring Ideas from Others</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#basic-pipeline"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Basic Pipeline</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exploratory-data-analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Exploratory Data Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#data-cleaning"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Data Cleaning</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#feature-engineering"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Feature Engineering</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#feature-selection"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">Feature Selection</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#feature-encoding-amp-transformation"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">Feature Encoding & Transformation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#model"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Model</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#model-selection"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">Model Selection</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#hyperparameter-tuning-amp-cross-validation"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">Hyperparameter Tuning & Cross Validation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ensemble"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Ensemble</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
         
         </div>
       </aside>
@@ -345,13 +341,13 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Python" title="Python">Python</a>
+                        
                           <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
                         
                           <a class="tag" href="/tags/#Data Science" title="Data Science">Data Science</a>
                         
                           <a class="tag" href="/tags/#Kaggle" title="Kaggle">Kaggle</a>
-                        
-                          <a class="tag" href="/tags/#Python" title="Python">Python</a>
                         
                     </div>
                 </section>
