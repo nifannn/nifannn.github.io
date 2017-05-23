@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/05/22/vim-notes/</loc>
-        <lastmod>2017-05-23T03:36:18.000Z</lastmod>
+        <loc>https://nifannn.github.io/2017/05/23/%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B/</loc>
+        <lastmod>2017-05-23T17:49:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://nifannn.github.io/2017/05/21/%E8%8A%A6%E7%AC%8B%E7%82%92%E8%99%BE%E4%BB%81/</loc>
-        <lastmod>2017-05-21T16:48:27.000Z</lastmod>
+        <lastmod>2017-05-23T17:43:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/05/22/vim-notes/</loc>
+        <lastmod>2017-05-23T03:42:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
