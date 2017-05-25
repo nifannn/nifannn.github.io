@@ -30,13 +30,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-05-21T04:51:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Data-Science/</loc>
         <lastmod>2017-05-21T04:51:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,6 +53,62 @@
     <url>
         <loc>https://nifannn.github.io/tags/recipe/</loc>
         <lastmod>2017-05-23T19:07:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Classification/</loc>
+        <lastmod>2017-05-23T19:23:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Model-Evaluation/</loc>
+        <lastmod>2017-05-23T19:23:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
+        <lastmod>2017-05-24T16:26:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
+        <lastmod>2017-05-24T16:26:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/NLP/</loc>
+        <lastmod>2017-05-24T16:26:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Word-Representation/</loc>
+        <lastmod>2017-05-24T16:26:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Word-Embedding/</loc>
+        <lastmod>2017-05-24T16:26:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Word2Vec/</loc>
+        <lastmod>2017-05-24T16:26:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
