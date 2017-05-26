@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          What I Have Learnt from My First Kaggle Competition - Vanptain Blog
+          芦笋柠檬烤三文鱼 - Vanptain Blog
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/05/17/first-kaggle/">
+    <link rel="canonical" href="https://nifannn.github.io/2017/05/25/芦笋柠檬烤三文鱼/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('dspipeline.jpg')
+            background-image: url('null')
             /*post*/
         
     }
@@ -86,20 +86,12 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
-                            
-                              <a class="tag" href="/tags/#Python" title="Python">Python</a>
-                            
-                              <a class="tag" href="/tags/#Data Science" title="Data Science">Data Science</a>
-                            
-                              <a class="tag" href="/tags/#Kaggle" title="Kaggle">Kaggle</a>
-                            
                         </div>
-                        <h1>What I Have Learnt from My First Kaggle Competition</h1>
+                        <h1>芦笋柠檬烤三文鱼</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-05-17
+                            2017-05-25
                         </span>
                     </div>
                 
@@ -216,90 +208,16 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>Kaggle is a platform for machine learning competitions, and it is a great place to learn machine learning and data science.</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<hr>
-<p>This semester I took a machine learning course, and for practice, I enrolled in a Kaggle competition in the end of this semester and got into top 12% finally. This competition is an amazing experience and I learned a lot of practical knowledge. This article aims to summarize what I have learned.</p>
-<h2 id="basic-pipeline">Basic Pipeline</h2>
-<hr>
-<h3 id="exploratory-data-analysis">Exploratory Data Analysis</h3>
-<p>The raw data we get are usually not perfect and have a lot of issues. But before processing data, we need to get familiar with data by visualization and basic statistical test. Through EDA, we can catch basic information like distribution, outliers and shape of data, and correlation betwwen features. Charts like scatter, boxplot and column chart are useful tools. In Python, matplotlib, ggplot, plotly and seaborn are very powerful libraries for data visualization.</p>
-<h3 id="data-cleaning">Data Cleaning</h3>
-<p>When we have a basic understanding of data, we will start data prerpocessing. First, we need to modify the inaccurate information of data. For example, we need to remove the records having missing values or replace the missing value manually. In additon to missing values, outliers, duplicates and typos should also get attention.</p>
-<h3 id="feature-engineering">Feature Engineering</h3>
-<p>Feature enginnering is one of most important parts in the whole pipeline. Usually, the combinations of used features have a great impact on the results of models.</p>
-<h4 id="feature-selection">Feature Selection</h4>
-<p>More features mean more information and more features can often improve the performance on the training dataset. But too much unnecessary information can lead to overfitting and feature selection is one important step. The number of different combinations of features is so large that normally we can not pick the most efficient combination easily. In addition, when some used features share their information, the performance can get hurt. And it is also likely that when feature A is added, the performance becomes worse, but when feature A and feature B are added meanwhile, the performance improves.</p>
-<p>There are some tools that can help our feature selection:</p>
-<ul>
-<li>
-<p>Relevance of features</p>
-</li>
-<li>
-<p>Regularization</p>
-</li>
-<li>
-<p>Random forest feature importance</p>
-</li>
-<li>
-<p>Dimension reduction(PCA, LDA, clustering, etc)</p>
-</li>
-</ul>
-<h4 id="feature-encoding-amp-transformation">Feature Encoding &amp; Transformation</h4>
-<p>Data are not only numbers, but also some texts, images and so forth. We need to convert data into numbers and sometimes we need to perform standardization.</p>
-<p>For ordinal features, we can map to numbers using a dictionary. For nominal features, it is better to choose one-hot encoding. For texts, there are tfidf, word2vec and so on. For images, we can use features like shape of images, created data of images, etc. For numerical features, we can also take results of some basic computation like plus, minus, multiplication and division as new features. It is a good option to try bayes prior for high categorical features. For geographical features, we can consider clustering and take clustering center and distance as new features.</p>
-<h3 id="model">Model</h3>
-<h4 id="model-selection">Model Selection</h4>
-<p>For Kaggle competition, there are many models to choose, in traditional machine learning and deep learning. Generally, random forest and gradient boosting trees are most common models because they usually bring the best performance among traditional machine learning models. Scikit-learn can provide random forest and we can use gradient boosting trees with xgboost or LightGBM. Other models can be used as base models for ensemble.</p>
-<h4 id="hyperparameter-tuning-amp-cross-validation">Hyperparameter Tuning &amp; Cross Validation</h4>
-<p>Before training models, we have to determine a group of hyperparameters to get a model from one model family. Grid search is a tool to find the hyperparameters. But it will take much time if there are many combinations of hyperparameters. Then heuristic algorithms like gene algorithm are also good options to find one good solution.</p>
-<p>In machine learning theories, there are many metrics to evaluate machine learning models, like confusion matrix, AUC, F1 score, loss, etc. But in Kaggle competition, there will be one given metric, so I do not plan to talk about metrics here. Additionally, cross validation is necessary. In Kaggle, there are public leaderboard and private leaderboard. The public leaderborad tests model on small part of test dataset, like 30%, and the private leaderboard tests model on the rest. Therefore, if the models overfit, it can get good performance on public leaderboard, but fail on private leaderboard. Cross validation can be used to prevent overfitting. K-fold cross validation splits dataset into k sets, taking 1 set as validation set and k-1 sets as traning set. Repeat k times and use average loss as final loss.</p>
-<h3 id="ensemble">Ensemble</h3>
-<p>According No Free Lunch Theory, each model has its own advantages and disadvantages, just like everyone has his strengthness and weakness. So if we can make different models cooperate to solve one problem, the results we get will be better than those of individual model. The goal behind ensemble methods is to combine different models for a better generalization performance. Bagging, boosting and stacking are common ensemble methods. Bagging is a weighted average of base models’ predictions, like random forest. Stacking trains the best single model on the predictions of base models.</p>
-<h2 id="reference">Reference</h2>
-<hr>
-<ul>
-<li>
-<p><a href="https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries/discussion/32156" target="_blank" rel="external">Solution Share(#13)</a></p>
-</li>
-<li>
-<p><a href="https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries/discussion/32123" target="_blank" rel="external">3rd Place Solution Summary</a></p>
-</li>
-<li>
-<p><a href="https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries/discussion/32146" target="_blank" rel="external">9th Place Solution</a></p>
-</li>
-<li>
-<p><a href="https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries/discussion/32163" target="_blank" rel="external">My best single model and solution</a></p>
-</li>
-<li>
-<p><a href="https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries/discussion/32148" target="_blank" rel="external">2nd Place Solution</a></p>
-</li>
-<li>
-<p><a href="https://www.kaggle.com/c/two-sigma-connect-rental-listing-inquiries/discussion/32116" target="_blank" rel="external">My Approach</a></p>
-</li>
-<li>
-<p><a href="https://dnc1994.com/2016/05/rank-10-percent-in-first-kaggle-competition-en/" target="_blank" rel="external">How to Rank 10% in Your First Kaggle Competition</a></p>
-</li>
-<li>
-<p><a href="https://www.amazon.com/Python-Machine-Learning-Sebastian-Raschka/dp/1783555130" target="_blank" rel="external">Python Machine Learning</a></p>
-</li>
-</ul>
-
+                
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/05/19/黄瓜炒火腿肠/" data-toggle="tooltip" data-placement="top" title="黄瓜炒火腿肠">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/05/17/照烧三文鱼/" data-toggle="tooltip" data-placement="top" title="照烧三文鱼">Next Post &rarr;</a>
+                            <a href="/2017/05/24/first-touch-with-word2vec/" data-toggle="tooltip" data-placement="top" title="First Touch with Word2Vec">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -325,7 +243,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#basic-pipeline"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Basic Pipeline</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exploratory-data-analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Exploratory Data Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#data-cleaning"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Data Cleaning</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#feature-engineering"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Feature Engineering</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#feature-selection"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">Feature Selection</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#feature-encoding-amp-transformation"><span class="toc-nav-number">2.3.2.</span> <span class="toc-nav-text">Feature Encoding & Transformation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#model"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Model</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#model-selection"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">Model Selection</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#hyperparameter-tuning-amp-cross-validation"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">Hyperparameter Tuning & Cross Validation</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ensemble"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Ensemble</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -345,14 +263,6 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
-                        
-                          <a class="tag" href="/tags/#Python" title="Python">Python</a>
-                        
-                          <a class="tag" href="/tags/#Data Science" title="Data Science">Data Science</a>
-                        
-                          <a class="tag" href="/tags/#Kaggle" title="Kaggle">Kaggle</a>
-                        
                     </div>
                 </section>
                 
