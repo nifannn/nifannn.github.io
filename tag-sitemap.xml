@@ -23,21 +23,14 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Python/</loc>
-        <lastmod>2017-05-21T04:51:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Data-Science/</loc>
-        <lastmod>2017-05-21T04:51:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Kaggle/</loc>
+        <lastmod>2017-05-21T04:51:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Python/</loc>
         <lastmod>2017-05-21T04:51:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -51,64 +44,71 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Data-Science/</loc>
+        <lastmod>2017-05-26T04:45:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Classification/</loc>
-        <lastmod>2017-05-26T03:55:19.000Z</lastmod>
+        <lastmod>2017-05-26T04:45:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Model-Evaluation/</loc>
-        <lastmod>2017-05-26T03:55:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/recipe/</loc>
-        <lastmod>2017-05-26T04:30:31.000Z</lastmod>
+        <lastmod>2017-05-26T04:45:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-05-26T04:38:24.000Z</lastmod>
+        <lastmod>2017-05-26T21:52:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
-        <lastmod>2017-05-26T04:38:24.000Z</lastmod>
+        <lastmod>2017-05-26T21:52:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/NLP/</loc>
-        <lastmod>2017-05-26T04:38:24.000Z</lastmod>
+        <lastmod>2017-05-26T21:52:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Word-Representation/</loc>
-        <lastmod>2017-05-26T04:38:24.000Z</lastmod>
+        <lastmod>2017-05-26T21:52:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Word-Embeddings/</loc>
-        <lastmod>2017-05-26T04:38:24.000Z</lastmod>
+        <lastmod>2017-05-26T21:52:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Word2Vec/</loc>
-        <lastmod>2017-05-26T04:38:24.000Z</lastmod>
+        <lastmod>2017-05-26T21:52:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/recipe/</loc>
+        <lastmod>2017-05-27T01:30:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
