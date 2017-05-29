@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/05/28/%E5%8F%AF%E4%B9%90%E9%B8%A1%E7%BF%85/</loc>
+        <lastmod>2017-05-29T01:45:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/05/28/GloVe-Notes/</loc>
+        <lastmod>2017-05-28T14:23:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/05/24/first-touch-with-word2vec/</loc>
         <lastmod>2017-05-28T00:08:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
