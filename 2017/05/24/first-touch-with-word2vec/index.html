@@ -88,13 +88,13 @@
                             
                               <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
                             
-                              <a class="tag" href="/tags/#NLP" title="NLP">NLP</a>
+                              <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
                             
-                              <a class="tag" href="/tags/#Word Embeddings" title="Word Embeddings">Word Embeddings</a>
+                              <a class="tag" href="/tags/#NLP" title="NLP">NLP</a>
                             
                               <a class="tag" href="/tags/#Word Representation" title="Word Representation">Word Representation</a>
                             
-                              <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
+                              <a class="tag" href="/tags/#Word Embeddings" title="Word Embeddings">Word Embeddings</a>
                             
                               <a class="tag" href="/tags/#Word2Vec" title="Word2Vec">Word2Vec</a>
                             
@@ -157,14 +157,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -228,10 +228,11 @@
 <p>Recently, I spent much time on Kaggle competition: Quora Question Pairs. The competition wants to predict whether two questions from Quora have same intent. Obviously, it is a typical NLP task but I am new to NLP. Through this competition, I have learnt a lot about NLP and this blog aims to summarize what I have learnt about Word2Vec, a famous and useful word representation method.</p>
 <h2 id="word-embeddings">Word Embeddings</h2>
 <hr>
-<p>Computers can only calculate numbers and the input for machine learning models should be numbers. Therefore, for problems having non-numerical data, like colors, sizes, images, speech, texts, etc, we have to do some encoding, converting the data into numerical features. But for texts, it is usually not easy to convert to bunches of numbers. And for some methods like one hot encoding, it assumes that each word is indpendent, which will miss some importatnt information between words. In addition, it is not computationally efficient.</p>
+<p>Computers can only calculate numbers and the input for machine learning models should be numbers. Therefore, for problems having non-numerical data, like colors, sizes, images, speech, texts, etc, we have to do some encoding, converting the data into numerical features. But for texts, it is usually not easy to convert to bunches of numbers. And for some methods like one hot encoding, it assumes that each word is indpendent, which will miss some importatnt information between words. In addition, it is not computationally efficient. For instance, if we have a vocabulary of 10 million words, then each word will be represented as a vector of 10 million dimensions. Word embeddings are somehow like dimension reduction. Words will be mapped into a space with relatively low dimensions and some important information between words can be kept simultaneously.</p>
 <h2 id="two-original-models">Two original Models</h2>
 <hr>
 <h3 id="basic-intuition">Basic Intuition</h3>
+<p>The basic model behind word2vec is a neural network with one hidden layer. We try to train the neural network through inputing one-hot encodings of some words and maximizing the probability of the apperance of the given sentence. It is a little bit like autoencoders and what we care is the weight matrix of the hidden layer. The weight matrix is like a lookup table, recording vectors of each word in vocabulary. The word2vec has two main models, skip-gram and</p>
 <h3 id="skip-gram">Skip-Gram</h3>
 <h3 id="cbow">CBOW</h3>
 <h2 id="optimization-tricks">Optimization Tricks</h2>
@@ -324,13 +325,13 @@
                        
                           <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
                         
-                          <a class="tag" href="/tags/#NLP" title="NLP">NLP</a>
+                          <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
                         
-                          <a class="tag" href="/tags/#Word Embeddings" title="Word Embeddings">Word Embeddings</a>
+                          <a class="tag" href="/tags/#NLP" title="NLP">NLP</a>
                         
                           <a class="tag" href="/tags/#Word Representation" title="Word Representation">Word Representation</a>
                         
-                          <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
+                          <a class="tag" href="/tags/#Word Embeddings" title="Word Embeddings">Word Embeddings</a>
                         
                           <a class="tag" href="/tags/#Word2Vec" title="Word2Vec">Word2Vec</a>
                         
