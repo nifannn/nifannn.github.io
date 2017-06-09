@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          First Touch with Word2Vec - Vanptain Blog
+          Shell Notes - Vanptain Blog
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/05/24/first-touch-with-word2vec/">
+    <link rel="canonical" href="https://nifannn.github.io/2017/06/09/Shell-Notes/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('word2vec.jpg')
+            background-image: url('linux.jpg')
             /*post*/
         
     }
@@ -86,24 +86,18 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
+                              <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
                             
-                              <a class="tag" href="/tags/#NLP" title="NLP">NLP</a>
+                              <a class="tag" href="/tags/#Shell script" title="Shell script">Shell script</a>
                             
-                              <a class="tag" href="/tags/#Word Embeddings" title="Word Embeddings">Word Embeddings</a>
-                            
-                              <a class="tag" href="/tags/#Word Representation" title="Word Representation">Word Representation</a>
-                            
-                              <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-                            
-                              <a class="tag" href="/tags/#Word2Vec" title="Word2Vec">Word2Vec</a>
+                              <a class="tag" href="/tags/#Bash" title="Bash">Bash</a>
                             
                         </div>
-                        <h1>First Touch with Word2Vec</h1>
-                        <h2 class="subheading">Basic ideas behind word2vec</h2>
+                        <h1>Shell Notes</h1>
+                        <h2 class="subheading">Quick reference for frequently used bash commands</h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-05-24
+                            2017-06-09
                         </span>
                     </div>
                 
@@ -220,64 +214,16 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>Word2vec is a group of related models that are used to produce word embeddings. These models are shallow neural networks with one hidden layer. The models are created by a tem of researchers at Google.</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<hr>
-<p>Recently, I spent much time on Kaggle competition: Quora Question Pairs. The competition wants to predict whether two questions from Quora have same intent. Obviously, it is a typical NLP task but I am new to NLP. Through this competition, I have learnt a lot about NLP and this blog aims to summarize what I have learnt about Word2Vec, a famous and useful word representation method.</p>
-<h2 id="word-embeddings">Word Embeddings</h2>
-<hr>
-<p>Computers can only calculate numbers and the input for machine learning models should be numbers. Therefore, for problems having non-numerical data, like colors, sizes, images, speech, texts, etc, we have to do some encoding, converting the data into numerical features. But for texts, it is usually not easy to convert to bunches of numbers. And for some methods like one hot encoding, it assumes that each word is indpendent, which will miss some importatnt information between words. In addition, it is not computationally efficient. For instance, if we have a vocabulary of 10 million words, then each word will be represented as a vector of 10 million dimensions. Word embeddings are somehow like dimension reduction. Words will be mapped into a space with relatively low dimensions and some important information between words can be kept simultaneously.</p>
-<h2 id="two-original-models">Two original Models</h2>
-<hr>
-<h3 id="basic-intuition">Basic Intuition</h3>
-<p>The basic model behind word2vec is a neural network with one hidden layer. We try to train the neural network through inputing one-hot encodings of some words and maximizing the probability of the apperance of the given sentence. It is a little bit like autoencoders and what we care is the weight matrix of the hidden layer. The weight matrix is like a lookup table, recording vectors of each word in vocabulary. The word2vec has two main models, skip-gram and</p>
-<h3 id="skip-gram">Skip-Gram</h3>
-<h3 id="cbow">CBOW</h3>
-<h2 id="optimization-tricks">Optimization Tricks</h2>
-<hr>
-<h2 id="demos-for-fun">Demos for Fun</h2>
-<hr>
-<h2 id="reference">Reference</h2>
-<hr>
-<ul>
-<li>
-<p><a href="https://www.tensorflow.org/tutorials/word2vec" target="_blank" rel="external">Tensorflow Tutorial</a></p>
-</li>
-<li>
-<p><a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/" target="_blank" rel="external">Word2Vec Tutorial - The Skip-Gram Model</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6" target="_blank" rel="external">Stanford Natural Language Processing with Deep Learning</a></p>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/1411.2738v3.pdf" target="_blank" rel="external">word2vec Parameter Learning Explained</a></p>
-</li>
-<li>
-<p><a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="external">Efficient Estimation of Word Representations in Vector Space</a></p>
-</li>
-<li>
-<p><a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf" target="_blank" rel="external">Distributed Representations of Words and Phrases and their Compositionality</a></p>
-</li>
-<li>
-<p><a href="http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/" target="_blank" rel="external">Word2Vec Tutorial Part 2 - Negative Sampling</a></p>
-</li>
-</ul>
-
+                
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/05/25/芦笋柠檬烤三文鱼/" data-toggle="tooltip" data-placement="top" title="芦笋柠檬烤三文鱼">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/05/23/Basic-Metrics-for-Machine-Learning-Classifier/" data-toggle="tooltip" data-placement="top" title="Basic Metrics for Machine Learning Classifier">Next Post &rarr;</a>
+                            <a href="/2017/06/05/summary-quora-question-pairs/" data-toggle="tooltip" data-placement="top" title="Summary of Kaggle Quora Question Pairs Competition">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -303,7 +249,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#word-embeddings"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Word Embeddings</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#two-original-models"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Two original Models</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#basic-intuition"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Basic Intuition</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#skip-gram"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Skip-Gram</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#cbow"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">CBOW</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#optimization-tricks"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Optimization Tricks</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#demos-for-fun"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Demos for Fun</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -323,17 +269,11 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Machine Learning" title="Machine Learning">Machine Learning</a>
+                          <a class="tag" href="/tags/#Linux" title="Linux">Linux</a>
                         
-                          <a class="tag" href="/tags/#NLP" title="NLP">NLP</a>
+                          <a class="tag" href="/tags/#Shell script" title="Shell script">Shell script</a>
                         
-                          <a class="tag" href="/tags/#Word Embeddings" title="Word Embeddings">Word Embeddings</a>
-                        
-                          <a class="tag" href="/tags/#Word Representation" title="Word Representation">Word Representation</a>
-                        
-                          <a class="tag" href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-                        
-                          <a class="tag" href="/tags/#Word2Vec" title="Word2Vec">Word2Vec</a>
+                          <a class="tag" href="/tags/#Bash" title="Bash">Bash</a>
                         
                     </div>
                 </section>

@@ -65,14 +65,14 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Word-Representation/</loc>
+        <loc>https://nifannn.github.io/tags/Word-Embeddings/</loc>
         <lastmod>2017-05-30T01:10:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Word-Embeddings/</loc>
+        <loc>https://nifannn.github.io/tags/Word-Representation/</loc>
         <lastmod>2017-05-30T01:10:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -93,6 +93,13 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/NLP/</loc>
+        <lastmod>2017-06-06T02:14:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Kaggle/</loc>
         <lastmod>2017-06-06T02:14:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -107,15 +114,29 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/NLP/</loc>
-        <lastmod>2017-06-06T02:14:53.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/Recipe/</loc>
+        <lastmod>2017-06-08T15:51:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Recipe/</loc>
-        <lastmod>2017-06-08T15:51:29.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/Linux/</loc>
+        <lastmod>2017-06-09T23:01:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Shell-script/</loc>
+        <lastmod>2017-06-09T23:01:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Bash/</loc>
+        <lastmod>2017-06-09T23:01:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
