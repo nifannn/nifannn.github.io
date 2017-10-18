@@ -214,12 +214,55 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Query the list of <em>CITY</em> names starting with vowels (i.e., a, e, i, o, or u) from <strong>STATION</strong>. Your result cannot contain duplicates.<br>
+<strong>Input Format</strong><br>
+The <strong>STATION</strong> table is described as follows:</p>
+<center><b>STATION</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>CITY</td>
+<td>VARCHAR2(21)</td>
+</tr>
+<tr>
+<td>STATE</td>
+<td>VARCHAR2(2)</td>
+</tr>
+<tr>
+<td>LAT_N</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>LONG_W</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
+<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<ul>
+<li>query <em>CITY</em> names ==&gt; SELECT CITY</li>
+<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
+<li>starting with vowels ==&gt; WHERE CITY REGEXP ‘^[aeiou]’</li>
+<li>cannot contain duplicates ==&gt; SELECT DISTINCT CITY</li>
+</ul>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> CITY <span class="keyword">FROM</span> STATION <span class="keyword">WHERE</span> CITY REGEXP <span class="string">'^[aeiou]'</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-6/problem" target="_blank" rel="external">Weather Observation Station 6</a></p>
 
                 
 

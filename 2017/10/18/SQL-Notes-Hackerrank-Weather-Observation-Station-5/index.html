@@ -214,12 +214,49 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Query the two cities in <strong>STATION</strong> with the shortest and longest <em>CITY</em> names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.<br>
+<strong>Input Format</strong><br>
+The <strong>STATION</strong> table is described as follows:</p>
+<center><b>STATION</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>CITY</td>
+<td>VARCHAR2(21)</td>
+</tr>
+<tr>
+<td>STATE</td>
+<td>VARCHAR2(2)</td>
+</tr>
+<tr>
+<td>LAT_N</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>LONG_W</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
+<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CITY, <span class="keyword">LENGTH</span>(CITY) <span class="keyword">FROM</span> STATION <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">LENGTH</span>(CITY), CITY <span class="keyword">LIMIT</span> <span class="number">1</span>;</div><div class="line"><span class="keyword">SELECT</span> CITY, <span class="keyword">LENGTH</span>(CITY) <span class="keyword">FROM</span> STATION <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">LENGTH</span>(CITY) <span class="keyword">DESC</span>, CITY <span class="keyword">LIMIT</span> <span class="number">1</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-5/problem" target="_blank" rel="external">Weather Observation Station 5</a></p>
 
                 
 
