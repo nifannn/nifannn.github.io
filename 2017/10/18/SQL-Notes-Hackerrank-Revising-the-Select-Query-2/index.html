@@ -214,12 +214,56 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Query the names of all American cities in <strong>CITY</strong> with populations larger than 120000. The CountryCode for America is USA.<br>
+<strong>Input Format</strong><br>
+The <strong>CITY</strong> table is described as follows:</p>
+<center><b>CITY</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(17)</td>
+</tr>
+<tr>
+<td>COUNTRYCODE</td>
+<td>VARCHAR2(3)</td>
+</tr>
+<tr>
+<td>DISTRICT</td>
+<td>VARCHAR2(20)</td>
+</tr>
+<tr>
+<td>POPULATION</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<ul>
+<li>query names ==&gt; SELECT NAME</li>
+<li>in <strong>CITY</strong> table ==&gt; FROM CITY</li>
+<li>populations larger than 120000 ==&gt; POPULATION &gt; 120000</li>
+<li>CountryCode for America is USA ==&gt; COUNTRYCODE = ‘USA’</li>
+<li>American cities with populations larger than 120000 ==&gt;<br>
+WHERE COUNTRYCODE = ‘USA’ AND POPULATION &gt; 120000</li>
+</ul>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">NAME</span> <span class="keyword">FROM</span> CITY <span class="keyword">WHERE</span> COUNTRYCODE = <span class="string">'USA'</span> <span class="keyword">AND</span> POPULATION &gt; <span class="number">120000</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
+<p><a href="https://www.hackerrank.com/challenges/revising-the-select-query-2/problem" target="_blank" rel="external">Revising the Select Query 2</a></p>
 
                 
 
