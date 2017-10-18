@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,12 +214,54 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Query the names of all the Japanese cities in the <strong>CITY</strong> table. The <em>COUNTRYCODE</em> for Japan is JPN.<br>
+<strong>Input Format</strong><br>
+The <strong>CITY</strong> table is described as follows:</p>
+<center><b>CITY</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(17)</td>
+</tr>
+<tr>
+<td>COUNTRYCODE</td>
+<td>VARCHAR2(3)</td>
+</tr>
+<tr>
+<td>DISTRICT</td>
+<td>VARCHAR2(20)</td>
+</tr>
+<tr>
+<td>POPULATION</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<ul>
+<li>query the names ==&gt; SELECT NAME</li>
+<li>in the <strong>CITY</strong> table ==&gt; FROM CITY</li>
+<li><em>COUNTRYCODE</em> for Japan is JPN ==&gt; COUNTRYCODE = ‘JPN’</li>
+<li>Japanese cities ==&gt; WHERE COUNTRYCODE = ‘JPN’</li>
+</ul>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">NAME</span> <span class="keyword">FROM</span> CITY <span class="keyword">WHERE</span> COUNTRYCODE = <span class="string">'JPN'</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
+<p><a href="https://www.hackerrank.com/challenges/japanese-cities-name/problem" target="_blank" rel="external">Japanese Cities’ Names</a></p>
 
                 
 
