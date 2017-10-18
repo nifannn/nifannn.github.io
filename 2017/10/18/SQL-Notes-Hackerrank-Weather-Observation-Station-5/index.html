@@ -248,9 +248,34 @@ The <strong>STATION</strong> table is described as follows:</p>
 </tr>
 </tbody>
 </table>
-<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
+<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.<br>
+<strong>Sample Input</strong><br>
+Let’s say that <em>CITY</em> only has four entries: <em>DEF</em>, <em>ABC</em>, <em>PQRS</em> and <em>WXY</em><br>
+<strong>Sample Ouput</strong></p>
+<blockquote>
+<p>ABC 3<br>
+PQRS 4</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+When ordered alphabetically, the <em>CITY</em> names are listed as <em>ABC</em>, <em>DEF</em>, <em>PQRS</em>, and <em>WXY</em>, with the respective lengths 3, 3, 4 and 3. The longest-named city is obviously <em>PQRS</em>, but there are 3 options for shortest-named city; we choose <em>ABC</em>, because it comes first alphabetically.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>For the shortest city name, we can sort city names according to their length in ascending order, and for cities having the same length, sort with their names in alphabetical order. Then we output city name and its length of the first entry. So,</p>
+<ul>
+<li>output city name and its length ==&gt; SELECT CITY, LENGTH(CITY)</li>
+<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
+<li>sort with length in ascending order, name in alphabetical order ==&gt;<br>
+ORDER BY LENGTH(CITY), CITY</li>
+<li>output result of first entry ==&gt; LIMIT 1</li>
+</ul>
+<p>For the longest city name, we can sort city names with length in descending order. Then sort cities’ names in alphabetical order for those having the same length. Finally output city name and length of first entry. So,</p>
+<ul>
+<li>output city name and length ==&gt; SELECT CITY, LENGTH(CITY)</li>
+<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
+<li>sort with length in descending order, name in alphabetical order ==&gt;<br>
+ORDER BY LENGTH(CITY) DESC, CITY</li>
+<li>output result of first entry ==&gt; LIMIT 1</li>
+</ul>
 <h3 id="solution">Solution</h3>
 <hr>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CITY, <span class="keyword">LENGTH</span>(CITY) <span class="keyword">FROM</span> STATION <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">LENGTH</span>(CITY), CITY <span class="keyword">LIMIT</span> <span class="number">1</span>;</div><div class="line"><span class="keyword">SELECT</span> CITY, <span class="keyword">LENGTH</span>(CITY) <span class="keyword">FROM</span> STATION <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">LENGTH</span>(CITY) <span class="keyword">DESC</span>, CITY <span class="keyword">LIMIT</span> <span class="number">1</span>;</div></pre></td></tr></table></figure>
