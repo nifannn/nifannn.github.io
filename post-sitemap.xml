@@ -7,6 +7,54 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/04/18/deploy-Django-based-website-on-Ubuntu/</loc>
+        <lastmod>2017-10-20T22:48:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/20/Docker-Notes-Basic-Common-Commands-for-Ubuntu/</loc>
+        <lastmod>2017-10-20T22:45:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/09/03/%E8%A5%BF%E5%85%B0%E8%8A%B1%E8%83%A1%E8%90%9D%E5%8D%9C%E7%82%92%E8%99%BE%E4%BB%81/</loc>
+        <lastmod>2017-10-20T22:44:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/17/%E8%A5%BF%E5%85%B0%E8%8A%B1%E7%82%92%E9%B8%A1%E8%83%B8%E8%82%89/</loc>
+        <lastmod>2017-10-20T22:44:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/17/%E8%8A%A6%E7%AC%8B%E7%82%92%E8%99%BE%E4%BB%81/</loc>
+        <lastmod>2017-10-20T22:44:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/20/%E5%9C%9F%E8%B1%86%E7%82%96%E7%89%9B%E8%82%89/</loc>
+        <lastmod>2017-10-20T22:44:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/10/18/SQL-Notes-Hackerrank-Weather-Observation-Station-5/</loc>
         <lastmod>2017-10-18T23:01:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -111,22 +159,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/10/17/%E8%A5%BF%E5%85%B0%E8%8A%B1%E7%82%92%E9%B8%A1%E8%83%B8%E8%82%89/</loc>
-        <lastmod>2017-10-17T14:05:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/17/%E8%8A%A6%E7%AC%8B%E7%82%92%E8%99%BE%E4%BB%81/</loc>
-        <lastmod>2017-10-17T14:02:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/10/16/Machine-Learning-Notes-Logistic-Regression-Model/</loc>
         <lastmod>2017-10-16T23:22:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -153,14 +185,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/12/Machine-Learning-Notes-Linear-Regression-Model/</loc>
         <lastmod>2017-10-13T01:46:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/09/03/%E8%A5%BF%E5%85%B0%E8%8A%B1%E8%83%A1%E8%90%9D%E5%8D%9C%E7%82%92%E8%99%BE%E4%BB%81/</loc>
-        <lastmod>2017-09-03T21:15:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -313,14 +337,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/05/17/first-kaggle/</loc>
         <lastmod>2017-05-21T04:51:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/04/18/deploy-Django-based-website-on-Ubuntu/</loc>
-        <lastmod>2017-05-16T22:18:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Hackerrank Weather Observation Station 7 - Vanptain Blog
+          Docker Notes: Basic Common Commands for Ubuntu - Vanptain Blog
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/18/SQL-Notes-Hackerrank-Weather-Observation-Station-7/">
+    <link rel="canonical" href="https://nifannn.github.io/2017/10/20/Docker-Notes-Basic-Common-Commands-for-Ubuntu/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('sql.jpg')
+            background-image: url('null')
             /*post*/
         
     }
@@ -86,16 +86,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                              <a class="tag" href="/tags/#Docker" title="Docker">Docker</a>
                             
-                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                              <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
                             
                         </div>
-                        <h1>SQL Notes: Hackerrank Weather Observation Station 7</h1>
+                        <h1>Docker Notes: Basic Common Commands for Ubuntu</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-18
+                            2017-10-20
                         </span>
                     </div>
                 
@@ -212,58 +212,7 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
-<hr>
-<p>Query the list of <em>CITY</em> names ending with vowels (a, e, i, o, u) from <strong>STATION</strong>. Your result cannot contain duplicates.<br>
-<strong>Input Format</strong><br>
-The <strong>STATION</strong> table is described as follows:</p>
-<center><b>STATION</b></center>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID</td>
-<td>NUMBER</td>
-</tr>
-<tr>
-<td>CITY</td>
-<td>VARCHAR2(21)</td>
-</tr>
-<tr>
-<td>STATE</td>
-<td>VARCHAR2(2)</td>
-</tr>
-<tr>
-<td>LAT_N</td>
-<td>NUMBER</td>
-</tr>
-<tr>
-<td>LONG_W</td>
-<td>NUMBER</td>
-</tr>
-</tbody>
-</table>
-<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
-<h3 id="analysis">Analysis</h3>
-<hr>
-<ul>
-<li>query <em>CITY</em> names ==&gt; SELECT CITY</li>
-<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
-<li>ending with vowels ==&gt; WHERE CITY REGEXP ‘[aeiou]$’</li>
-<li>cannot contain duplicates ==&gt; SELECT DISTINCT CITY</li>
-</ul>
-<h3 id="solution">Solution</h3>
-<hr>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> CITY <span class="keyword">FROM</span> STATION <span class="keyword">WHERE</span> CITY REGEXP <span class="string">'[aeiou]$'</span>;</div></pre></td></tr></table></figure>
-<h3 id="link">Link</h3>
-<hr>
-<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-7/problem" target="_blank" rel="external">Weather Observation Station 7</a></p>
-
+                
                 
 
                 <hr>
@@ -271,12 +220,12 @@ The <strong>STATION</strong> table is described as follows:</p>
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/20/Docker-Notes-Basic-Common-Commands-for-Ubuntu/" data-toggle="tooltip" data-placement="top" title="Docker Notes: Basic Common Commands for Ubuntu">&larr; Previous Post</a>
+                            <a href="/2017/10/20/土豆炖牛肉/" data-toggle="tooltip" data-placement="top" title="土豆炖牛肉">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/10/18/SQL-Notes-Hackerrank-Weather-Observation-Station-6/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Weather Observation Station 6">Next Post &rarr;</a>
+                            <a href="/2017/10/18/SQL-Notes-Hackerrank-Weather-Observation-Station-7/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Weather Observation Station 7">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -302,7 +251,7 @@ The <strong>STATION</strong> table is described as follows:</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -322,9 +271,9 @@ The <strong>STATION</strong> table is described as follows:</p>
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                          <a class="tag" href="/tags/#Docker" title="Docker">Docker</a>
                         
-                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                          <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
                         
                     </div>
                 </section>
