@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Vim Notes - Vanptain Blog
+          SQL Notes: Hackerrank Weather Observation Station 8 - Vanptain Blog
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/05/22/vim-notes/">
+    <link rel="canonical" href="https://nifannn.github.io/2017/10/20/SQL-Notes-Hackerrank-Weather-Observation-Station-8/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('vim1.jpg')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -86,14 +86,16 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Vim" title="Vim">Vim</a>
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
-                        <h1>Vim Notes</h1>
-                        <h2 class="subheading">Frequently used commands</h2>
+                        <h1>SQL Notes: Hackerrank Weather Observation Station 8</h1>
+                        <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-05-22
+                            2017-10-20
                         </span>
                     </div>
                 
@@ -210,224 +212,58 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>Vim is a powerful text editor in Linux.</p>
-</blockquote>
-<h2 id="introduction">Introduction</h2>
-<p>Summarize some basic commands of Vim for quick review.</p>
-<h2 id="commands">Commands</h2>
-<h3 id="movements">Movements</h3>
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Query the list of <em>CITY</em> names from <strong>STATION</strong> which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.<br>
+<strong>Input Format</strong><br>
+The <strong>STATION</strong> table is described as follows:</p>
+<center><b>STATION</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>CITY</td>
+<td>VARCHAR2(21)</td>
+</tr>
+<tr>
+<td>STATE</td>
+<td>VARCHAR2(2)</td>
+</tr>
+<tr>
+<td>LAT_N</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>LONG_W</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
+<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<p>For this problem, we can use regular expressions to filter city names. The regular expression for city names having vowels as both their first and last characters is ‘^[aeiou].*[aeiou]$’. ‘^[aeiou]’ means first character is one of vowels and ‘[aeiou]$’ means the string ends with vowels. ‘.*’ can represent any numbers of any characters.</p>
 <ul>
-<li>
-<p>h         left</p>
-</li>
-<li>
-<p>j         down</p>
-</li>
-<li>
-<p>k         up</p>
-</li>
-<li>
-<p>l         right</p>
-</li>
-<li>
-<p>w         to the start of next word</p>
-</li>
-<li>
-<p>e         to the end of word</p>
-</li>
-<li>
-<p>$         to the end of line</p>
-</li>
-<li>
-<p>0         move to the start of line</p>
-</li>
-<li>
-<p>number motion         repeat a motion many times</p>
-</li>
-<li>
-<p>2w        move two words forward</p>
-</li>
-<li>
-<p>3e        move to the end of the third word forward</p>
-</li>
-<li>
-<p>CTRL-G         dsplay location in the file and file status</p>
-</li>
-<li>
-<p>G         move to the end of file</p>
-</li>
-<li>
-<p>gg        move to first line</p>
-</li>
-<li>
-<p>number G        move to specific line</p>
-</li>
+<li>query <em>CITY</em> names ==&gt; SELECT CITY</li>
+<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
+<li>start with vowels and end with vowels ==&gt; WHERE CITY REGEXP ‘^[aeiou].*[aeiou]$’</li>
+<li>cannot contain duplicates ==&gt; SELECT DISTINCT CITY</li>
 </ul>
-<h3 id="insert-and-delete">Insert and Delete</h3>
-<ul>
-<li>
-<p>i         insert before the cursor</p>
-</li>
-<li>
-<p>o         insert a new line below</p>
-</li>
-<li>
-<p>O         insert a new line above</p>
-</li>
-<li>
-<p>a         insert after the cursor</p>
-</li>
-<li>
-<p>A         append after the line</p>
-</li>
-<li>
-<p>x         delete the character at the cursor</p>
-</li>
-<li>
-<p>d motion       delete to word motion type</p>
-</li>
-<li>
-<p>dw        delete until the start of next word</p>
-</li>
-<li>
-<p>d$        delete to the end of line</p>
-</li>
-<li>
-<p>d number motion         delete to the word motion many times</p>
-</li>
-<li>
-<p>d2w         delete until the start of next next word</p>
-</li>
-<li>
-<p>dd          delete one line</p>
-</li>
-<li>
-<p>2dd         delete two lines</p>
-</li>
-</ul>
-<h3 id="change-replace-and-copy">Change, Replace and Copy</h3>
-<ul>
-<li>
-<p>u         undo previous action</p>
-</li>
-<li>
-<p>U         undo all changes on a line</p>
-</li>
-<li>
-<p>CTRL-R         undo the undo’s</p>
-</li>
-<li>
-<p>p         put text after the cursor</p>
-</li>
-<li>
-<p>r         replace the character under the cursor</p>
-</li>
-<li>
-<p>R         replace until ESC</p>
-</li>
-<li>
-<p>c [number] motion         change to the location of multiple times’ motion</p>
-</li>
-<li>
-<p>ce        change until the end of word</p>
-</li>
-<li>
-<p>c$        change to the end of line</p>
-</li>
-</ul>
-<h3 id="search-and-substitute">Search and Substitute</h3>
-<ul>
-<li>
-<p>/phrase         search forward for the phrase</p>
-</li>
-<li>
-<p>?phrase         search backward for the phrase</p>
-</li>
-<li>
-<p>n            find next occurence</p>
-</li>
-<li>
-<p>N            find last occurence</p>
-</li>
-<li>
-<p>CTRL-o       back to older positions</p>
-</li>
-<li>
-<p>CTRL-I       to newer positions</p>
-</li>
-<li>
-<p>%          match (,),[,],{,}</p>
-</li>
-<li>
-<p>:s/old/new          substitute new for first old in the line</p>
-</li>
-<li>
-<p>:s/old/new/g        substitute new for old globally in the line</p>
-</li>
-<li>
-<p>:#,#s/old/new/g        substitute between two lines</p>
-</li>
-<li>
-<p>:%s/old/new/g       substitute in the whole file</p>
-</li>
-<li>
-<p>:%s/old/new/gc      find occurences in the whole file and check whether to substitute</p>
-</li>
-<li>
-<p>set ic          ignore upper/lower case</p>
-</li>
-<li>
-<p>set is          show partial matches for a search phrases</p>
-</li>
-<li>
-<p>set hls         highlight matching phrases</p>
-</li>
-</ul>
-<h3 id="file-related">File Related</h3>
-<ul>
-<li>
-<p>:q         quit</p>
-</li>
-<li>
-<p>:q!        force to quit</p>
-</li>
-<li>
-<p>:wq        save and quit</p>
-</li>
-<li>
-<p>:w         save</p>
-</li>
-<li>
-<p>:w FILENAME        write to specific file</p>
-</li>
-<li>
-<p>v         visual selection</p>
-</li>
-<li>
-<p>:r FILENAME         retrieve file and put it below the cursor</p>
-</li>
-<li>
-<p>:r !dir         retrieve output of dir and put it below the cursor</p>
-</li>
-</ul>
-<h3 id="other-basic-commands">Other Basic Commands</h3>
-<ul>
-<li>
-<p>:!command        execute external command</p>
-</li>
-<li>
-<p>:help         help</p>
-</li>
-<li>
-<p>:help user-manual      user manual</p>
-</li>
-<li>
-<p>ESC        normal mode</p>
-</li>
-</ul>
-<h2 id="reference">Reference</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vimtutor</div></pre></td></tr></table></figure>
+<h3 id="solution">Solution</h3>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> CITY <span class="keyword">FROM</span> STATION <span class="keyword">WHERE</span> CITY REGEXP <span class="string">'^[aeiou].*[aeiou]$'</span>;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-8/problem" target="_blank" rel="external">Weather Observation Station 8</a></p>
 
                 
 
@@ -435,13 +271,9 @@
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/05/23/番茄炒蛋/" data-toggle="tooltip" data-placement="top" title="番茄炒蛋">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/05/17/first-kaggle/" data-toggle="tooltip" data-placement="top" title="What I Have Learnt from My First Kaggle Competition">Next Post &rarr;</a>
+                            <a href="/2017/10/20/土豆炖牛肉/" data-toggle="tooltip" data-placement="top" title="土豆炖牛肉">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -467,7 +299,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#commands"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Commands</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#movements"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Movements</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert-and-delete"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Insert and Delete</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#change-replace-and-copy"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Change, Replace and Copy</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#search-and-substitute"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Search and Substitute</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#file-related"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">File Related</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#other-basic-commands"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">Other Basic Commands</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#reference"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Reference</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -487,7 +319,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Vim" title="Vim">Vim</a>
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                         
                     </div>
                 </section>
