@@ -65,13 +65,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-06-06T02:14:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/NLP/</loc>
         <lastmod>2017-06-06T02:14:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -177,15 +170,36 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
+        <lastmod>2017-10-21T04:43:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Supervised-Learning/</loc>
+        <lastmod>2017-10-21T04:43:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Regression/</loc>
+        <lastmod>2017-10-21T04:43:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/SQL/</loc>
-        <lastmod>2017-10-21T01:29:45.000Z</lastmod>
+        <lastmod>2017-10-21T19:22:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
-        <lastmod>2017-10-21T01:29:45.000Z</lastmod>
+        <lastmod>2017-10-21T19:22:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

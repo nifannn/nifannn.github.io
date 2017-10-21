@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Hackerrank Weather Observation Station 12 - Vanptain Blog
+          SQL Notes: Hackerrank Higher Than 75 Marks - Vanptain Blog
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/20/SQL-Notes-Hackerrank-Weather-Observation-Station-12/">
+    <link rel="canonical" href="https://nifannn.github.io/2017/10/20/SQL-Notes-Hackerrank-Higher-Than-75-Marks/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,7 +91,7 @@
                               <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
-                        <h1>SQL Notes: Hackerrank Weather Observation Station 12</h1>
+                        <h1>SQL Notes: Hackerrank Higher Than 75 Marks</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
@@ -214,56 +214,87 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<p>Query the list of <em>CITY</em> names from <strong>STATION</strong> that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.<br>
+<p>Query the <em>Name</em> of any student in <strong>STUDENTS</strong> who scored higher than 75 <em>Marks</em>. Order your output by the <em>last three characters</em> of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending <em>ID</em>.<br>
 <strong>Input Format</strong><br>
-The <strong>STATION</strong> table is described as follows:</p>
-<center><b>STATION</b></center>
+The <strong>STUDENTS</strong> table is described as follows:</p>
 <table>
 <thead>
 <tr>
-<th>Field</th>
+<th>Column</th>
 <th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ID</td>
-<td>NUMBER</td>
+<td>Integer</td>
 </tr>
 <tr>
-<td>CITY</td>
-<td>VARCHAR2(21)</td>
+<td>Name</td>
+<td>String</td>
 </tr>
 <tr>
-<td>STATE</td>
-<td>VARCHAR2(2)</td>
-</tr>
-<tr>
-<td>LAT_N</td>
-<td>NUMBER</td>
-</tr>
-<tr>
-<td>LONG_W</td>
-<td>NUMBER</td>
+<td>Marks</td>
+<td>Integer</td>
 </tr>
 </tbody>
 </table>
-<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
+<p>The <em>Name</em> column only contains uppercase (A-Z) and lowercase (a-z) letters.</p>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ashley</td>
+<td>81</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Samantha</td>
+<td>75</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Julia</td>
+<td>76</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Belvet</td>
+<td>84</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>Ashley<br>
+Julia<br>
+Belvet</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+Only Ashley, Julia, and Belvet have Marks &gt;75. If you look at the last three characters of each of their names, there are no duplicates and ‘ley’ &lt; ‘lia’ &lt; ‘vet’.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
-<p>Use regular expressions to filter city names. Regular expression ‘^[^aeiou].*[^aeiou]$’ can be used for this problem. ‘^[^aeiou]’ means city names do not start with vowels and ‘[^aeiou]$’ means city names do not end with vowels. ‘.*’ can represent any string of any length.</p>
 <ul>
-<li>query <em>CITY</em> names ==&gt; SELECT CITY</li>
-<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
-<li>do not start with vowels ==&gt; WHERE CITY REGEXP ‘^[^aeiou].*[^aeiou]$’</li>
-<li>do not contain duplicates ==&gt; SELECT DISTINCT CITY</li>
+<li>query student names ==&gt; SELECT Name</li>
+<li>from <strong>STUDENTS</strong> table ==&gt; FROM STUDENTS</li>
+<li>score higher than 75 <em>Marks</em> ==&gt; WHERE Marks &gt; 75</li>
+<li>order output by <em>last three characters</em> of name ==&gt; ORDER BY RIGHT(Name, 3)</li>
+<li>secondary sort by ascending <em>ID</em> ==&gt; ORDER BY RIGHT(Name, 3), ID</li>
 </ul>
 <h3 id="solution">Solution</h3>
 <hr>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> CITY <span class="keyword">FROM</span> STATION <span class="keyword">WHERE</span> CITY REGEXP <span class="string">'^[^aeiou].*[^aeiou]$'</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">FROM</span> STUDENTS <span class="keyword">WHERE</span> Marks &gt; <span class="number">75</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">RIGHT</span>(<span class="keyword">Name</span>, <span class="number">3</span>), <span class="keyword">ID</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-12/problem" target="_blank" rel="external">Weather Observation Station 12</a></p>
+<p><a href="https://www.hackerrank.com/challenges/more-than-75-marks/problem" target="_blank" rel="external">Higher Than 75 Marks</a></p>
 
                 
 
@@ -271,13 +302,9 @@ The <strong>STATION</strong> table is described as follows:</p>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/10/20/SQL-Notes-Hackerrank-Higher-Than-75-Marks/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Higher Than 75 Marks">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/10/20/SQL-Notes-Hackerrank-Weather-Observation-Station-11/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Weather Observation Station 11">Next Post &rarr;</a>
+                            <a href="/2017/10/20/SQL-Notes-Hackerrank-Weather-Observation-Station-12/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Weather Observation Station 12">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
