@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -212,7 +212,141 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Write a query that prints a list of employee names (i.e.: the <em>name</em> attribute) for employees in Employee having a salary greater than $2000 per month who have been employees for less than 10 months. Sort your result by ascending <em>employee_id</em>.<br>
+<strong>Input Format</strong><br>
+The <strong>Employee</strong> table containing employee data for a company is described as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>employee_id</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>months</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>salary</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<p>where <em>employee_id</em> is an employee’s ID number, <em>name</em> is their name, <em>months</em> is the total number of months they’ve been working for the company, and <em>salary</em> is their monthly salary.</p>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>employee_id</th>
+<th>name</th>
+<th>months</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12228</td>
+<td>Rose</td>
+<td>15</td>
+<td>1968</td>
+</tr>
+<tr>
+<td>33645</td>
+<td>Angela</td>
+<td>1</td>
+<td>3443</td>
+</tr>
+<tr>
+<td>45692</td>
+<td>Frank</td>
+<td>17</td>
+<td>1608</td>
+</tr>
+<tr>
+<td>56118</td>
+<td>Patrick</td>
+<td>7</td>
+<td>1345</td>
+</tr>
+<tr>
+<td>59725</td>
+<td>Lisa</td>
+<td>11</td>
+<td>2330</td>
+</tr>
+<tr>
+<td>74197</td>
+<td>Kimberly</td>
+<td>16</td>
+<td>4372</td>
+</tr>
+<tr>
+<td>78454</td>
+<td>Bonnie</td>
+<td>8</td>
+<td>1771</td>
+</tr>
+<tr>
+<td>83565</td>
+<td>Michael</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>98607</td>
+<td>Todd</td>
+<td>5</td>
+<td>3396</td>
+</tr>
+<tr>
+<td>99989</td>
+<td>Joe</td>
+<td>9</td>
+<td>3573</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>Angela<br>
+Michael<br>
+Todd<br>
+Joe</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+<em>Angela</em> has been an employee for 1 month and earns $3443 per month.<br>
+<em>Michael</em> has been an employee for 6 months and earns $2017 per month.<br>
+<em>Todd</em> has been an employee for 5 months and earns $3396 per month.<br>
+<em>Joe</em> has been an employee for 9 months and earns $3573 per month.<br>
+We order our output by ascending <em>employee_id</em>.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<ul>
+<li>query employee names ==&gt; SELECT name</li>
+<li>from <strong>Employee</strong> table ==&gt; FROM Employee</li>
+<li>salary greater than $2000 ==&gt; salary &gt; 2000</li>
+<li>less than 10 months ==&gt; months &lt; 10</li>
+<li>employees having a salary greater than $2000 who have been employees for less than 10 months ==&gt; WHERE salary &gt; 2000 AND months &lt; 10</li>
+<li>sort result by ascending <em>employee_id</em> ==&gt; ORDER BY employee_id</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> Employee <span class="keyword">WHERE</span> salary &gt; <span class="number">2000</span> <span class="keyword">AND</span> <span class="keyword">months</span> &lt; <span class="number">10</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> employee_id;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/salary-of-employees/problem" target="_blank" rel="external">Employee Salaries</a></p>
+
                 
 
                 <hr>
@@ -251,7 +385,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
