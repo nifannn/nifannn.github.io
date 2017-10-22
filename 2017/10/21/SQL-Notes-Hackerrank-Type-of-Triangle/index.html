@@ -142,6 +142,13 @@
 
                         
                         <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -150,13 +157,6 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -212,7 +212,98 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Write a query identifying the type of each record in the <strong>TRIANGLES</strong> table using its three side lengths. Output one of the following statements for each record in the table:</p>
+<ul>
+<li><strong>Equilateral</strong>: It’s a triangle with 3 sides of equal length.</li>
+<li><strong>Isosceles</strong>: It’s a triangle with 2 sides of equal length.</li>
+<li><strong>Scalene</strong>: It’s a triangle with 3 sides of differing lengths.</li>
+<li><strong>Not a Triangle</strong>: The given values of A, B, and C don’t form a triangle.</li>
+</ul>
+<p><strong>Input Format</strong><br>
+The <strong>TRIANGLES</strong> table is described as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<p>Each row in the table denotes the lengths of each of a triangle’s three sides.</p>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>20</td>
+<td>23</td>
+</tr>
+<tr>
+<td>20</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>20</td>
+<td>21</td>
+<td>22</td>
+</tr>
+<tr>
+<td>13</td>
+<td>14</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>Isosceles<br>
+Equilateral<br>
+Scalene<br>
+Not A Triangle</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+Values in the tuple (20,20,23) form an Isosceles triangle, because A=B.<br>
+Values in the tuple (20,20,20) form an Equilateral triangle, because A=B=C.<br>
+Values in the tuple (20,21,22) form a Scalene triangle, because A≠B≠C.<br>
+Values in the tuple (3,14,30) cannot form a triangle because the combined value of sides A and B is not larger than that of side C.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<p>We can use IF() function to solve this problem. The syntax is ‘IF(condition, A, B)’. When condition is satisfied, it will execute A otherwise B.<br>
+First of all, we need to return type of triangle for each row in <strong>TRIANGLES</strong> table, so the query looks like ‘SELECT () FROM TRIANGLES’.<br>
+Then, we will determine type of triangles. We can check whether three sides can form a triangle first. So, if A+B&gt;C and A+C&gt;B and B+C&gt;A, three sides can form a triangle and we can continue other work, otherwise we will just return ‘Not A Triangle’. The query will be “SELECT IF(A+B&gt;C AND A+C&gt;B AND B+C&gt;A, IF(), ‘Not A Triangle’) FROM TRIANGLES”.<br>
+Next, when three sides can form a triangle, we will decide whether it is equilateral, isosceles or scalene. We can check whether it’s equilateral first. If three sides have the same length, it will be equilateral. Otherwise, there are at leat two different lengths among three sides and it can be isosceles or scalene. On this condition, if two sides share length, it will be isosceles, otherwise scalene. Therefore, we can check whether three sides have the same length first. If so, we will return ‘Equilateral’. Otherwise, check whether two sides have the same length. If two sides have the same length, we will return ‘Isosceles’, otherwise ‘Scalene’.<br>
+Now turn to the query. Check whether three sides have the same length and query will be “SELECT IF(A+B&gt;C AND A+C&gt;B AND B+C&gt;A, IF(A=B AND B=C, ‘Equilateral’, IF()), ‘Not A Triangle’) FROM TRIANGLES”. Then check whether two sides have the same length and the query will be “SELECT IF(A+B&gt;C AND A+C&gt;B AND B+C&gt;A, IF(A=B AND B=C, ‘Equilateral’, IF(A=B OR B=C OR A=C, ‘Isosceles’, ‘Scalene’)), ‘Not A Triangle’) FROM TRIANGLES”.</p>
+<h3 id="solution">Solution</h3>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(A+B&gt;C <span class="keyword">AND</span> A+C&gt;B <span class="keyword">AND</span> B+C&gt;A, <span class="keyword">IF</span>(A=B <span class="keyword">AND</span> B=C, <span class="string">'Equilateral'</span>, <span class="keyword">IF</span>(A=B <span class="keyword">OR</span> B=C <span class="keyword">OR</span> A=C, <span class="string">'Isosceles'</span>, <span class="string">'Scalene'</span>)), <span class="string">'Not A Triangle'</span>) <span class="keyword">FROM</span> TRIANGLES;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/what-type-of-triangle/problem" target="_blank" rel="external">Type of Triangle</a></p>
+
                 
 
                 <hr>
@@ -251,7 +342,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
