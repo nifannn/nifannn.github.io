@@ -212,7 +212,135 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Generate the following two result sets:</p>
+<ol>
+<li>Query an <em>alphabetically ordered</em> list of all names in <strong>OCCUPATIONS</strong>, immediately followed by the first letter of each profession as a parenthetical (i.e.: enclosed in parentheses). For example: AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).</li>
+<li>Query the number of ocurrences of each occupation in <strong>OCCUPATIONS</strong>. Sort the occurrences in <em>ascending order</em>, and output them in the following format:</li>
+</ol>
+<blockquote>
+<p>There are a total of [occupation_count] [occupation]s.</p>
+</blockquote>
+<p>where [occupation_count] is the number of occurrences of an occupation in <strong>OCCUPATIONS</strong> and [occupation] is the <em>lowercase</em> occupation name. If more than one <em>Occupation</em> has the same [occupation_count], they should be ordered alphabetically.<br>
+<strong>Note</strong>: There will be at least two entries in the table for each type of occupation.</p>
+<p><strong>Input Format</strong><br>
+The <strong>OCCUPATIONS</strong> table is described as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<p>Occupation will only contain one of the following values: <strong>Doctor</strong>, <strong>Professor</strong>, <strong>Singer</strong> or <strong>Actor</strong>.</p>
+<p><strong>Sample Input</strong><br>
+An <strong>OCCUPATIONS</strong> table that contains the following records:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Occupation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samantha</td>
+<td>Doctor</td>
+</tr>
+<tr>
+<td>Julia</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Maria</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Meera</td>
+<td>Singer</td>
+</tr>
+<tr>
+<td>Ashely</td>
+<td>Professor</td>
+</tr>
+<tr>
+<td>Ketty</td>
+<td>Professor</td>
+</tr>
+<tr>
+<td>Christeen</td>
+<td>Professor</td>
+</tr>
+<tr>
+<td>Jane</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Jenny</td>
+<td>Doctor</td>
+</tr>
+<tr>
+<td>Priya</td>
+<td>Singer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>Ashely(P)<br>
+Christeen(P)<br>
+Jane(A)<br>
+Jenny(D)<br>
+Julia(A)<br>
+Ketty(P)<br>
+Maria(A)<br>
+Meera(S)<br>
+Priya(S)<br>
+Samantha(D)<br>
+There are a total of 2 doctors.<br>
+There are a total of 2 singers.<br>
+There are a total of 3 actors.<br>
+There are a total of 3 professors.</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+The results of the first query are formatted to the problem description’s specifications.<br>
+The results of the second query are ascendingly ordered first by number of names corresponding to each profession (2 ≤ 2 ≤ 3 ≤ 3), and then alphabetically by profession (<em>doctor</em> ≤ <em>singer</em>, and <em>actor</em> ≤ <em>professor</em>).</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<p>We can use CONCAT() function to solve this problem. The syntax is ‘CONCAT(str1, str2, …)’ and it returns the string that results from concatenating the arguments.<br>
+And we can use SUBSTR() or LEFT() function to get first letter of Occupation. Syntax of SUBSTR() I use here is ‘SUBSTR(str, pos, len)’ and it returns a substring len characters long from string str, starting at position pos. Syntax of LEFT() is ‘LEFT(str, len)’ and it returns the leftmost len characters from the string str, or NULL if any argument is NULL.<br>
+Additionally,</p>
+<ul>
+<li>from <strong>OCCUPATIONS</strong> table ==&gt; FROM OCCUPATIONS</li>
+<li><em>alphabetically ordered</em> list of names ==&gt; ORDER BY Name</li>
+<li>occupation_count ==&gt; COUNT(Occupation) … GROUP BY Occupation</li>
+<li><em>lowercase</em> occupation name ==&gt; LOWER(Occupation)</li>
+<li>sort occurrences in <em>ascending order</em> ==&gt; ORDER BY COUNT(Occupation)</li>
+<li>order alphabetically if having the same occupation_count ==&gt;<br>
+ORDER BY COUNT(Occupation), Occupation</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<hr>
+<h4 id="solution-1">Solution 1</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="keyword">Name</span>, <span class="string">'('</span>, <span class="keyword">SUBSTR</span>(Occupation,<span class="number">1</span>,<span class="number">1</span>),<span class="string">')'</span>) <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="string">'There are a total of '</span>, <span class="keyword">COUNT</span>(Occupation), <span class="string">' '</span>, <span class="keyword">LOWER</span>(Occupation), <span class="string">'s.'</span>) <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">GROUP</span> <span class="keyword">BY</span> Occupation <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(Occupation), Occupation;</div></pre></td></tr></table></figure>
+<h4 id="solution-2">Solution 2</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="keyword">Name</span>, <span class="string">'('</span>, <span class="keyword">LEFT</span>(Occupation,<span class="number">1</span>),<span class="string">')'</span>) <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="string">'There are a total of '</span>, <span class="keyword">COUNT</span>(Occupation), <span class="string">' '</span>, <span class="keyword">LOWER</span>(Occupation), <span class="string">'s.'</span>) <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">GROUP</span> <span class="keyword">BY</span> Occupation <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(Occupation), Occupation;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/the-pads/problem" target="_blank" rel="external">The PADS</a></p>
+
                 
 
                 <hr>
@@ -251,7 +379,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Solution 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Solution 2</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>

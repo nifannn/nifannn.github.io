@@ -72,14 +72,14 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
+        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
         <lastmod>2017-06-06T02:14:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
+        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
         <lastmod>2017-06-06T02:14:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -102,27 +102,6 @@
     <url>
         <loc>https://nifannn.github.io/tags/Bash/</loc>
         <lastmod>2017-08-01T22:34:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/web/</loc>
-        <lastmod>2017-08-05T18:49:49.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/game/</loc>
-        <lastmod>2017-08-05T18:49:49.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Vue/</loc>
-        <lastmod>2017-08-05T18:49:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -205,15 +184,36 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/web/</loc>
+        <lastmod>2017-10-22T19:05:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/game/</loc>
+        <lastmod>2017-10-22T19:05:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Vuejs/</loc>
+        <lastmod>2017-10-22T19:05:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/SQL/</loc>
-        <lastmod>2017-10-22T16:52:41.000Z</lastmod>
+        <lastmod>2017-10-22T19:48:55.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
-        <lastmod>2017-10-22T16:52:41.000Z</lastmod>
+        <lastmod>2017-10-22T19:48:55.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
