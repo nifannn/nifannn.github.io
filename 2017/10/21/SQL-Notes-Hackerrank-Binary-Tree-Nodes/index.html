@@ -214,10 +214,94 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>You are given a table, <em>BST</em>, containing two columns: <em>N</em> and <em>P</em>, where <em>N</em> represents the value of a node in <em>Binary Tree</em>, and <em>P</em> is the parent of <em>N</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<p>Write a query to find the node type of <em>Binary Tree</em> ordered by the value of the node. Output one of the following for each node:</p>
+<ul>
+<li><em>Root</em>: If node is root node.</li>
+<li><em>Leaf</em>: If node is leaf node.</li>
+<li><em>Inner</em>: If node is neither root nor leaf node.</li>
+</ul>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>1 Leaf<br>
+2 Inner<br>
+3 Leaf<br>
+5 Root<br>
+6 Leaf<br>
+8 Inner<br>
+9 Leaf</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+The <em>Binary Tree</em> below illustrates the sample:<br>
+<img src="bst.png" alt="bst"></p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>We can use IF() function to solve this problem. First, the query returns N and node type from <strong>BST</strong> table and outputs result ordered by N. So the query looks like “SELECT N, IF() FROM BST ORDER BY N”.<br>
+Next, check whether the node is root. If P is null, then the node will be root. The query can be “SELECT N, IF(P IS NULL, ‘Root’, IF()) FROM BST ORDER BY N”.<br>
+Finally, check whether the node is leaf. If the node value appears in Column <em>P</em>, it will be ‘Inner’, otherwise ‘Leaf’. The query can be “SELECT N, IF(P IS NULL, ‘Root’, IF(B.N IN (SELECT P FROM BST), ‘Inner’, ‘Leaf’)) FROM BST AS B ORDER BY N”. Additionally, if the node value appears in Column <em>P</em>, then the number of p value that equals to the node value will be greater than 0. So the query can be “SELECT N, IF(P IS NULL, ‘Root’, IF((SELECT COUNT(*) FROM BST WHERE P=B.N))) FROM BST AS B ORDER BY N” as well.</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<h4 id="solution1">Solution1</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> N, <span class="keyword">IF</span>(P <span class="keyword">IS</span> <span class="literal">NULL</span>, <span class="string">'Root'</span>, <span class="keyword">IF</span>((<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> BST <span class="keyword">WHERE</span> P=B.N)&gt;<span class="number">0</span>, <span class="string">'Inner'</span>, <span class="string">'Leaf'</span>)) <span class="keyword">FROM</span> BST <span class="keyword">AS</span> B <span class="keyword">ORDER</span> <span class="keyword">BY</span> N;</div></pre></td></tr></table></figure>
+<h4 id="solution2">Solution2</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> N, <span class="keyword">IF</span>(P <span class="keyword">IS</span> <span class="literal">NULL</span>, <span class="string">'Root'</span>, <span class="keyword">IF</span>(B.N <span class="keyword">IN</span> (<span class="keyword">SELECT</span> P <span class="keyword">FROM</span> BST), <span class="string">'Inner'</span>, <span class="string">'Leaf'</span>)) <span class="keyword">FROM</span> BST <span class="keyword">AS</span> B <span class="keyword">ORDER</span> <span class="keyword">BY</span> N;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://www.hackerrank.com/challenges/binary-search-tree-1/problem" target="_blank" rel="external">Binary Tree Nodes</a></p>
@@ -260,7 +344,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Solution1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Solution2</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
