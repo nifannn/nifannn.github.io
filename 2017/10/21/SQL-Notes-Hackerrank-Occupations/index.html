@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -302,13 +302,100 @@ The fourth column is an alphabetically ordered list of Actor names.<br>
 The empty cell data for columns with less than the maximum number of names per occupation (in this case, the Professor and Actor columns) are filled with <strong>NULL</strong> values.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>To solve this problem, we can use user-defined variables to help create a new table. Take the sample input as example, the table we want to create looks like below:</p>
+<table>
+<thead>
+<tr>
+<th>RowLine</th>
+<th>Doctor</th>
+<th>Professor</th>
+<th>Singer</th>
+<th>Actor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NULL</td>
+<td>Ashely</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NULL</td>
+<td>Christeen</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>1</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>Jane</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Jenny</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>Julia</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NULL</td>
+<td>Ketty</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>Maria</td>
+</tr>
+<tr>
+<td>1</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>Meera</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>Priya</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Samantha</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>RowLine</em> represents the line where the name should be put. In addition, because we want to sort names alphabetically for each occupation, the first step of creating the table above is to sort <strong>OCCUPATIONS</strong> table by name. Let’s call the table <em>t</em>. Once we have got the table <em>t</em>, we can use “SELECT MIN(Doctor), MIN(Professor), MIN(Singer), MIN(Actor) FROM t GROUP BY RowLine” to get the result.</p>
+<p>To get table <em>t</em>, user-defined variables and CASE operator can help. We create four variables to record the line number <em>RowLine</em>, one for each occupation. We use CASE to add variables according to occupation.</p>
 <h3 id="solution">Solution</h3>
 <hr>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @r1=<span class="number">0</span>, @r2=<span class="number">0</span>, @r3 =<span class="number">0</span>, @r4=<span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(Doctor), <span class="keyword">MIN</span>(Professor), <span class="keyword">MIN</span>(Singer), <span class="keyword">MIN</span>(Actor) <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">CASE</span> Occupation <span class="keyword">WHEN</span> <span class="string">'Doctor'</span> <span class="keyword">THEN</span> @r1:=@r1+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Professor'</span> <span class="keyword">THEN</span> @r2:=@r2+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Singer'</span> <span class="keyword">THEN</span> @r3:=@r3+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Actor'</span> <span class="keyword">THEN</span> @r4:=@r4+<span class="number">1</span> <span class="keyword">END</span></div><div class="line">       <span class="keyword">AS</span> RowLine,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Doctor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Doctor,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Professor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Professor,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Singer'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Singer,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Actor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Actor</div><div class="line">       <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span>) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> RowLine;</div></pre></td></tr></table></figure>
 <h3 id="links">Links</h3>
 <hr>
 <p><a href="https://www.hackerrank.com/challenges/occupations/problem" target="_blank" rel="external">Occupations</a><br>
-<a href="https://dev.mysql.com/doc/refman/5.7/en/user-variables.html" target="_blank" rel="external">Mysql User-Defined Variables</a></p>
+<a href="https://dev.mysql.com/doc/refman/5.7/en/user-variables.html" target="_blank" rel="external">Mysql User-Defined Variables</a><br>
+<a href="https://dev.mysql.com/doc/refman/5.7/en/control-flow-functions.html#operator_case" target="_blank" rel="external">Mysql Control Flow Functions Case Operator</a></p>
 
                 
 
