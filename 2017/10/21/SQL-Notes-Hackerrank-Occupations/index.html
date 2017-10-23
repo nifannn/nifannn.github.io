@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,10 +214,97 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Pivot the <em>Occupation</em> column in <strong>OCCUPATIONS</strong> so that each <em>Name</em> is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be <em>Doctor</em>, <em>Professor</em>, <em>Singer</em>, and <em>Actor</em>, respectively.<br>
+<strong>Note</strong>: Print <strong>NULL</strong> when there are no more names corresponding to an occupation.</p>
+<p><strong>Input Format</strong><br>
+The <strong>OCCUPATIONS</strong> table is described as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>Occupation</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<p><em>Occupation</em> will only contain one of the following values: <strong>Doctor</strong>, <strong>Professor</strong>, <strong>Singer</strong> or <strong>Actor</strong>.</p>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Occupation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samantha</td>
+<td>Doctor</td>
+</tr>
+<tr>
+<td>Julia</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Maria</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Meera</td>
+<td>Singer</td>
+</tr>
+<tr>
+<td>Ashely</td>
+<td>Professor</td>
+</tr>
+<tr>
+<td>Ketty</td>
+<td>Professor</td>
+</tr>
+<tr>
+<td>Christeen</td>
+<td>Professor</td>
+</tr>
+<tr>
+<td>Jane</td>
+<td>Actor</td>
+</tr>
+<tr>
+<td>Jenny</td>
+<td>Doctor</td>
+</tr>
+<tr>
+<td>Priya</td>
+<td>Singer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>Jenny    Ashley     Meera  Jane<br>
+Samantha Christeen  Priya  Julia<br>
+NULL     Ketty      NULL   Maria</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+The first column is an alphabetically ordered list of Doctor names.<br>
+The second column is an alphabetically ordered list of Professor names.<br>
+The third column is an alphabetically ordered list of Singer names.<br>
+The fourth column is an alphabetically ordered list of Actor names.<br>
+The empty cell data for columns with less than the maximum number of names per occupation (in this case, the Professor and Actor columns) are filled with <strong>NULL</strong> values.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @r1=<span class="number">0</span>, @r2=<span class="number">0</span>, @r3 =<span class="number">0</span>, @r4=<span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(Doctor), <span class="keyword">MIN</span>(Professor), <span class="keyword">MIN</span>(Singer), <span class="keyword">MIN</span>(Actor) <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">CASE</span> Occupation <span class="keyword">WHEN</span> <span class="string">'Doctor'</span> <span class="keyword">THEN</span> @r1:=@r1+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Professor'</span> <span class="keyword">THEN</span> @r2:=@r2+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Singer'</span> <span class="keyword">THEN</span> @r3:=@r3+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Actor'</span> <span class="keyword">THEN</span> @r4:=@r4+<span class="number">1</span> <span class="keyword">END</span></div><div class="line">       <span class="keyword">AS</span> RowLine,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Doctor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Doctor,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Professor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Professor,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Singer'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Singer,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Actor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Actor</div><div class="line">       <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span>) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> RowLine;</div></pre></td></tr></table></figure>
 <h3 id="links">Links</h3>
 <hr>
 <p><a href="https://www.hackerrank.com/challenges/occupations/problem" target="_blank" rel="external">Occupations</a><br>
