@@ -107,13 +107,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Recipe/</loc>
-        <lastmod>2017-10-20T22:44:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Docker/</loc>
         <lastmod>2017-10-20T22:45:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -205,15 +198,22 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Recipe/</loc>
+        <lastmod>2017-10-23T02:12:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/SQL/</loc>
-        <lastmod>2017-10-22T19:48:55.000Z</lastmod>
+        <lastmod>2017-10-23T02:23:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
-        <lastmod>2017-10-22T19:48:55.000Z</lastmod>
+        <lastmod>2017-10-23T02:23:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
