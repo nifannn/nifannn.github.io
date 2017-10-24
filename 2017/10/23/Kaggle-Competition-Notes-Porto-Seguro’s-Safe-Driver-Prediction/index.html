@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Hackerrank Occupations - Vanptain Blog
+          Kaggle Competition Notes: Porto Seguro’s Safe Driver Prediction - Vanptain Blog
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/21/SQL-Notes-Hackerrank-Occupations/">
+    <link rel="canonical" href="https://nifannn.github.io/2017/10/23/Kaggle-Competition-Notes-Porto-Seguro’s-Safe-Driver-Prediction/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('sql.jpg')
+            background-image: url('null')
             /*post*/
         
     }
@@ -86,16 +86,18 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                              <a class="tag" href="/tags/#Classification" title="Classification">Classification</a>
                             
-                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                              <a class="tag" href="/tags/#Kaggle" title="Kaggle">Kaggle</a>
+                            
+                              <a class="tag" href="/tags/#Insurance" title="Insurance">Insurance</a>
                             
                         </div>
-                        <h1>SQL Notes: Hackerrank Occupations</h1>
+                        <h1>Kaggle Competition Notes: Porto Seguro’s Safe Driver Prediction</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-21
+                            2017-10-23
                         </span>
                     </div>
                 
@@ -212,204 +214,16 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
-<hr>
-<p>Pivot the <em>Occupation</em> column in <strong>OCCUPATIONS</strong> so that each <em>Name</em> is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be <em>Doctor</em>, <em>Professor</em>, <em>Singer</em>, and <em>Actor</em>, respectively.<br>
-<strong>Note</strong>: Print <strong>NULL</strong> when there are no more names corresponding to an occupation.</p>
-<p><strong>Input Format</strong><br>
-The <strong>OCCUPATIONS</strong> table is described as follows:</p>
-<table>
-<thead>
-<tr>
-<th>Column</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>String</td>
-</tr>
-<tr>
-<td>Occupation</td>
-<td>String</td>
-</tr>
-</tbody>
-</table>
-<p><em>Occupation</em> will only contain one of the following values: <strong>Doctor</strong>, <strong>Professor</strong>, <strong>Singer</strong> or <strong>Actor</strong>.</p>
-<p><strong>Sample Input</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Occupation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Samantha</td>
-<td>Doctor</td>
-</tr>
-<tr>
-<td>Julia</td>
-<td>Actor</td>
-</tr>
-<tr>
-<td>Maria</td>
-<td>Actor</td>
-</tr>
-<tr>
-<td>Meera</td>
-<td>Singer</td>
-</tr>
-<tr>
-<td>Ashely</td>
-<td>Professor</td>
-</tr>
-<tr>
-<td>Ketty</td>
-<td>Professor</td>
-</tr>
-<tr>
-<td>Christeen</td>
-<td>Professor</td>
-</tr>
-<tr>
-<td>Jane</td>
-<td>Actor</td>
-</tr>
-<tr>
-<td>Jenny</td>
-<td>Doctor</td>
-</tr>
-<tr>
-<td>Priya</td>
-<td>Singer</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Sample Output</strong></p>
-<blockquote>
-<p>Jenny    Ashley     Meera  Jane<br>
-Samantha Christeen  Priya  Julia<br>
-NULL     Ketty      NULL   Maria</p>
-</blockquote>
-<p><strong>Explanation</strong><br>
-The first column is an alphabetically ordered list of Doctor names.<br>
-The second column is an alphabetically ordered list of Professor names.<br>
-The third column is an alphabetically ordered list of Singer names.<br>
-The fourth column is an alphabetically ordered list of Actor names.<br>
-The empty cell data for columns with less than the maximum number of names per occupation (in this case, the Professor and Actor columns) are filled with <strong>NULL</strong> values.</p>
-<h3 id="analysis">Analysis</h3>
-<hr>
-<p>To solve this problem, we can use user-defined variables to help create a new table. Take the sample input as example, the table we want to create looks like below:</p>
-<table>
-<thead>
-<tr>
-<th>RowLine</th>
-<th>Doctor</th>
-<th>Professor</th>
-<th>Singer</th>
-<th>Actor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>NULL</td>
-<td>Ashely</td>
-<td>NULL</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>NULL</td>
-<td>Christeen</td>
-<td>NULL</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>1</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>Jane</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Jenny</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>Julia</td>
-</tr>
-<tr>
-<td>3</td>
-<td>NULL</td>
-<td>Ketty</td>
-<td>NULL</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>3</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>Maria</td>
-</tr>
-<tr>
-<td>1</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>Meera</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>Priya</td>
-<td>NULL</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Samantha</td>
-<td>NULL</td>
-<td>NULL</td>
-<td>NULL</td>
-</tr>
-</tbody>
-</table>
-<p>The <em>RowLine</em> represents the line where the name should be put. In addition, because we want to sort names alphabetically for each occupation, the first step of creating the table above is to sort <strong>OCCUPATIONS</strong> table by name. Let’s call the table <em>t</em>. Once we have got the table <em>t</em>, we can use “SELECT MIN(Doctor), MIN(Professor), MIN(Singer), MIN(Actor) FROM t GROUP BY RowLine” to get the result.</p>
-<p>To get table <em>t</em>, user-defined variables and CASE operator can help. We create four variables to record the line number <em>RowLine</em>, one for each occupation. We use CASE to add variables according to occupation.</p>
-<h3 id="solution">Solution</h3>
-<hr>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @r1=<span class="number">0</span>, @r2=<span class="number">0</span>, @r3 =<span class="number">0</span>, @r4=<span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(Doctor), <span class="keyword">MIN</span>(Professor), <span class="keyword">MIN</span>(Singer), <span class="keyword">MIN</span>(Actor) <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">CASE</span> Occupation <span class="keyword">WHEN</span> <span class="string">'Doctor'</span> <span class="keyword">THEN</span> @r1:=@r1+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Professor'</span> <span class="keyword">THEN</span> @r2:=@r2+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Singer'</span> <span class="keyword">THEN</span> @r3:=@r3+<span class="number">1</span></div><div class="line">                       <span class="keyword">WHEN</span> <span class="string">'Actor'</span> <span class="keyword">THEN</span> @r4:=@r4+<span class="number">1</span> <span class="keyword">END</span></div><div class="line">       <span class="keyword">AS</span> RowLine,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Doctor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Doctor,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Professor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Professor,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Singer'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Singer,</div><div class="line">       <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Occupation = <span class="string">'Actor'</span> <span class="keyword">THEN</span> <span class="keyword">Name</span> <span class="keyword">END</span> <span class="keyword">AS</span> Actor</div><div class="line">       <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span>) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> RowLine;</div></pre></td></tr></table></figure>
-<h3 id="links">Links</h3>
-<hr>
-<p><a href="https://www.hackerrank.com/challenges/occupations/problem" target="_blank" rel="external">Occupations</a><br>
-<a href="https://dev.mysql.com/doc/refman/5.7/en/user-variables.html" target="_blank" rel="external">Mysql User-Defined Variables</a><br>
-<a href="https://dev.mysql.com/doc/refman/5.7/en/control-flow-functions.html#operator_case" target="_blank" rel="external">Mysql Control Flow Functions Case Operator</a></p>
-
+                
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/10/21/SQL-Notes-Hackerrank-Binary-Tree-Nodes/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Binary Tree Nodes">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/10/21/SQL-Notes-Hackerrank-The-PADS/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank The PADS">Next Post &rarr;</a>
+                            <a href="/2017/10/23/SQL-Notes-Hackerrank-Weather-Observation-Station-20/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Weather Observation Station 20">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -435,7 +249,7 @@ The empty cell data for columns with less than the maximum number of names per o
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#links"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Links</span></a></li></ol>
+          <ol class="nav">none</ol>
         
         </div>
       </aside>
@@ -455,9 +269,11 @@ The empty cell data for columns with less than the maximum number of names per o
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                          <a class="tag" href="/tags/#Classification" title="Classification">Classification</a>
                         
-                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                          <a class="tag" href="/tags/#Kaggle" title="Kaggle">Kaggle</a>
+                        
+                          <a class="tag" href="/tags/#Insurance" title="Insurance">Insurance</a>
                         
                     </div>
                 </section>

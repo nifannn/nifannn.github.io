@@ -23,13 +23,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Classification/</loc>
-        <lastmod>2017-05-26T04:45:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Model-Evaluation/</loc>
         <lastmod>2017-05-26T04:45:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -73,13 +66,6 @@
 
     <url>
         <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
-        <lastmod>2017-06-06T02:14:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
         <lastmod>2017-06-06T02:14:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -214,6 +200,27 @@
     <url>
         <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
         <lastmod>2017-10-23T23:41:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Classification/</loc>
+        <lastmod>2017-10-24T03:10:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
+        <lastmod>2017-10-24T03:10:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Insurance/</loc>
+        <lastmod>2017-10-24T03:10:54.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
