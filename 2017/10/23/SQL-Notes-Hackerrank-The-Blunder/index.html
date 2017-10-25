@@ -149,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -214,55 +214,124 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<p>Query the difference between the maximum and minimum populations in <strong>CITY</strong>.</p>
+<p>Samantha was tasked with calculating the average monthly salaries for all employees in the <strong>EMPLOYEES</strong> table, but did not realize her keyboard’s 0 key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeroes removed), and the actual average salary.</p>
+<p>Write a query calculating the amount of error (i.e.: <em>actual - miscalculated</em> average monthly salaries), and round it up to the next integer.</p>
 <p><strong>Input Format</strong><br>
-The <strong>CITY</strong> table is described as follows:</p>
-<center><b>CITY</b></center>
+The <strong>EMPLOYEES</strong> table is described as follows:</p>
 <table>
 <thead>
 <tr>
-<th>Field</th>
+<th>Column</th>
 <th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ID</td>
-<td>NUMBER</td>
+<td>Integer</td>
 </tr>
 <tr>
 <td>NAME</td>
-<td>VARCHAR2(17)</td>
+<td>String</td>
 </tr>
 <tr>
-<td>COUNTRYCODE</td>
-<td>VARCHAR2(3)</td>
-</tr>
-<tr>
-<td>DISTRICT</td>
-<td>VARCHAR2(20)</td>
-</tr>
-<tr>
-<td>POPULATION</td>
-<td>NUMBER</td>
+<td>Salary</td>
+<td>Integer</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Note</strong>: Salary is measured in dollars per month and its value is &lt; 10<sup>5</sup>.</p>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kristeen</td>
+<td>1420</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ashley</td>
+<td>2006</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Julia</td>
+<td>2210</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Maria</td>
+<td>3000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>2061</p>
+</blockquote>
+<p><strong>Explanation</strong><br>
+The table below shows the salaries without zeroes as they were entered by Samantha:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kristeen</td>
+<td>142</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ashley</td>
+<td>26</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Julia</td>
+<td>221</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Maria</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Samantha computes an average salary of 98.00. The <em>actual</em> average salary is 2159.00.<br>
+The resulting error between the two calculations is 2159.00 - 98.00 = 2061.00 which, when rounded to the next integer, is 2061.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>We can use REPLACE() function to solve the problem. The syntax is ‘REPLACE(<em>str</em>, <em>from_str</em>, <em>to_str</em>)’ and it returns the string <em>str</em> with all occurrences of the string <em>from_str</em> replaced by the string <em>to_str</em>.</p>
 <ul>
-<li>maximum population ==&gt; MAX(POPULATION)</li>
-<li>minimum population ==&gt; MIN(POPULATION)</li>
-<li>query difference between maximum and minimum populations ==&gt;<br>
-SELECT MAX(POPULATION) - MIN(POPULATION)</li>
-<li>in <strong>CITY</strong> table ==&gt; FROM CITY</li>
+<li>actual average monthly salaries ==&gt; AVG(Salary)</li>
+<li>salary without zeros ==&gt; REPLACE(Salary, ‘0’, ‘’)</li>
+<li>miscalculated average monthly salaries ==&gt; AVG(REPLACE(Salary, ‘0’, ‘’))</li>
+<li>difference between actual and miscalculated average salaries ==&gt;<br>
+SELECT AVG(Salary) - AVG(REPLACE(Salary, ‘0’, ‘’))</li>
+<li>round the difference up to next integer ==&gt;<br>
+SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary, ‘0’, ‘’)))</li>
+<li>from <strong>EMPLOYEES</strong> table ==&gt; FROM EMPLOYEES</li>
 </ul>
 <h3 id="solution">Solution</h3>
 <hr>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(POPULATION) - <span class="keyword">MIN</span>(POPULATION) <span class="keyword">FROM</span> CITY;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CEIL</span>(<span class="keyword">AVG</span>(Salary) - <span class="keyword">AVG</span>(<span class="keyword">REPLACE</span>(Salary, <span class="string">'0'</span>, <span class="string">''</span>))) <span class="keyword">FROM</span> EMPLOYEES;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/the-blunder/problem" target="_blank" rel="external">The Blunder</a></p>
+<p><a href="https://www.hackerrank.com/challenges/the-blunder/problem" target="_blank" rel="external">The Blunder</a><br>
+<a href="https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_replace" target="_blank" rel="external">Mysql Replace Function</a></p>
 
                 
 
