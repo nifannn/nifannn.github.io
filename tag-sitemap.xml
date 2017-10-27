@@ -58,13 +58,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
-        <lastmod>2017-06-06T02:14:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Linux/</loc>
         <lastmod>2017-08-01T22:34:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -163,13 +156,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-10-24T13:43:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Classification/</loc>
         <lastmod>2017-10-24T13:43:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -228,6 +214,34 @@
     <url>
         <loc>https://nifannn.github.io/tags/Recipe/</loc>
         <lastmod>2017-10-25T17:16:24.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
+        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
+        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Coursera/</loc>
+        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Advanced-Machine-Learning-Specialization/</loc>
+        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
