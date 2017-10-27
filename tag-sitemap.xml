@@ -149,6 +149,13 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
+        <lastmod>2017-10-24T13:43:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Data-Science/</loc>
         <lastmod>2017-10-24T13:43:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -157,13 +164,6 @@
 
     <url>
         <loc>https://nifannn.github.io/tags/Classification/</loc>
-        <lastmod>2017-10-24T13:43:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
         <lastmod>2017-10-24T13:43:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -193,20 +193,6 @@
     <url>
         <loc>https://nifannn.github.io/tags/Leetcode/</loc>
         <lastmod>2017-10-25T14:21:54.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/SQL/</loc>
-        <lastmod>2017-10-25T17:15:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
-        <lastmod>2017-10-25T17:15:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -249,6 +235,20 @@
     <url>
         <loc>https://nifannn.github.io/tags/Deep-Learning-Specialization/</loc>
         <lastmod>2017-10-27T21:08:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/SQL/</loc>
+        <lastmod>2017-10-27T21:47:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
+        <lastmod>2017-10-27T21:47:45.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
