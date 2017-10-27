@@ -219,29 +219,36 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
+        <loc>https://nifannn.github.io/tags/Advanced-Machine-Learning-Specialization/</loc>
         <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
+        <lastmod>2017-10-27T21:08:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
-        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <lastmod>2017-10-27T21:08:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Coursera/</loc>
-        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <lastmod>2017-10-27T21:08:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Advanced-Machine-Learning-Specialization/</loc>
-        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/Deep-Learning-Specialization/</loc>
+        <lastmod>2017-10-27T21:08:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
