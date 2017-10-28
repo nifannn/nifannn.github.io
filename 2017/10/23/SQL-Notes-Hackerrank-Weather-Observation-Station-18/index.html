@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
                         <h1>SQL Notes: Hackerrank Weather Observation Station 18</h1>
@@ -138,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -208,7 +212,65 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Consider <em>P<sub>1</sub>(a,b)</em> and <em>P<sub>2</sub>(c,d)</em> to be two points on a <em>2D</em> plane.</p>
+<ul>
+<li><em>a</em> happens to equal the minimum value in <em>Northern Latitude (LAT_N</em> in <strong>STATION</strong>).</li>
+<li><em>b</em> happens to equal the minimum value in <em>Western Longitude (LONG_W</em> in <strong>STATION</strong>).</li>
+<li><em>c</em> happens to equal the maximum value in <em>Northern Latitude (LAT_N</em> in <strong>STATION</strong>).</li>
+<li><em>d</em> happens to equal the maximum value in <em>Western Longitude (LONG_W</em> in <strong>STATION</strong>).</li>
+</ul>
+<p>Query the Manhattan Distance between points <em>P<sub>1</sub></em> and <em>P<sub>2</sub></em> and round it to a scale of 4 decimal places.</p>
+<p><strong>Input Format</strong><br>
+The <strong>STATION</strong> table is described as follows:</p>
+<center><b>STATION</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>CITY</td>
+<td>VARCHAR2(21)</td>
+</tr>
+<tr>
+<td>STATE</td>
+<td>VARCHAR2(2)</td>
+</tr>
+<tr>
+<td>LAT_N</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>LONG_W</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
+<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<p>The Manhattan Distance is |a - c| + |b - d|.</p>
+<ul>
+<li>|a - c| + |b - d| ==&gt; ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W)-MAX(LONG_W))</li>
+<li>round to a scale of 4 decimal places ==&gt; SELECT ROUND(ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W)-MAX(LONG_W)), 4)</li>
+<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ROUND</span>(<span class="keyword">ABS</span>(<span class="keyword">MIN</span>(LAT_N)-<span class="keyword">MAX</span>(LAT_N)) + <span class="keyword">ABS</span>(<span class="keyword">MIN</span>(LONG_W)-<span class="keyword">MAX</span>(LONG_W)), <span class="number">4</span>) <span class="keyword">FROM</span> STATION;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-18/problem" target="_blank" rel="external">Weather Observation Station 18</a></p>
+
                 
 
                 <hr>
@@ -247,7 +309,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +329,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                        
                     </div>
                 </section>
                 
