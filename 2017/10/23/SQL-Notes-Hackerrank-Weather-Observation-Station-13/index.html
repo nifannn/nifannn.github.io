@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
                         <h1>SQL Notes: Hackerrank Weather Observation Station 13</h1>
@@ -138,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -208,7 +212,59 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Query the sum of <em>Northern Latitudes (LAT_N)</em> from <strong>STATION</strong> having values greater than 38.7880 and less than 137.2345. Truncate your answer to 4 decimal places.</p>
+<p><strong>Input Format</strong><br>
+The <strong>STATION</strong> table is described as follows:</p>
+<center><b>STATION</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>CITY</td>
+<td>VARCHAR2(21)</td>
+</tr>
+<tr>
+<td>STATE</td>
+<td>VARCHAR2(2)</td>
+</tr>
+<tr>
+<td>LAT_N</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>LONG_W</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
+<p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<ul>
+<li>sum of LAT_N ==&gt; SUM(LAT_N)</li>
+<li>truncate answer to 4 decimal places ==&gt; SELECT ROUND(SUM(LAT_N), 4)</li>
+<li>from <strong>STATION</strong> table ==&gt; FROM STATION</li>
+<li>values greater than 38.7880 and less than 137.2345 ==&gt;<br>
+WHERE LAT_N &gt; 38.7880 AND LAT_N &lt; 137.2345</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ROUND</span>(<span class="keyword">SUM</span>(LAT_N), <span class="number">4</span>) <span class="keyword">FROm</span> STATION <span class="keyword">WHERE</span> LAT_N &gt; <span class="number">38.7880</span> <span class="keyword">AND</span> LAT_N &lt; <span class="number">137.2345</span>;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-13/problem" target="_blank" rel="external">Weather Observation Station 13</a></p>
+
                 
 
                 <hr>
@@ -247,7 +303,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +323,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                        
                     </div>
                 </section>
                 
