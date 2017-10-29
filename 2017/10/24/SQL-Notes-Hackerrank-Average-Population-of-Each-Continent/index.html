@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
                         <h1>SQL Notes: Hackerrank Average Population of Each Continent</h1>
@@ -208,7 +212,129 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Given the <strong>CITY</strong> and <strong>COUNTRY</strong> tables, query the names of all the continents (<em>COUNTRY.Continent</em>) and their respective average city populations (<em>CITY.Population</em>) rounded <em>down</em> to the nearest integer.</p>
+<p><strong>Note:</strong> <em>CITY.CountryCode</em> and <em>COUNTRY.Code</em> are matching key columns. Do not include continents without cities in your output.</p>
+<p><strong>Input Format</strong><br>
+The <strong>CITY</strong> and <strong>COUNTRY</strong> tables are described as follows:</p>
+<center><b>CITY</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(17)</td>
+</tr>
+<tr>
+<td>COUNTRYCODE</td>
+<td>VARCHAR2(3)</td>
+</tr>
+<tr>
+<td>DISTRICT</td>
+<td>VARCHAR2(20)</td>
+</tr>
+<tr>
+<td>POPULATION</td>
+<td>NUMBER</td>
+</tr>
+</tbody>
+</table>
+<center><b>COUNTRY</b></center>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE</td>
+<td>VARCHAR2(3)</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(44)</td>
+</tr>
+<tr>
+<td>CONTINENT</td>
+<td>VARCHAR2(13)</td>
+</tr>
+<tr>
+<td>REGION</td>
+<td>VARCHAR2(25)</td>
+</tr>
+<tr>
+<td>SURFACEAREA</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>INDEPYEAR</td>
+<td>VARCHAR2(5)</td>
+</tr>
+<tr>
+<td>POPULATION</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>LIFEEXPECTANCY</td>
+<td>VARCHAR2(4)</td>
+</tr>
+<tr>
+<td>GNP</td>
+<td>NUMBER</td>
+</tr>
+<tr>
+<td>GNPOLD</td>
+<td>VARCHAR2(9)</td>
+</tr>
+<tr>
+<td>LOCALNAME</td>
+<td>VARCHAR2(44)</td>
+</tr>
+<tr>
+<td>GOVERNMENTFORM</td>
+<td>VARCHAR2(44)</td>
+</tr>
+<tr>
+<td>HEADOFSTATE</td>
+<td>VARCHAR2(32)</td>
+</tr>
+<tr>
+<td>CAPITAL</td>
+<td>VARCHAR2(4)</td>
+</tr>
+<tr>
+<td>CODE2</td>
+<td>VARCHAR2(2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<ul>
+<li>join two tables ==&gt; FROM CITY AS i JOIN COUNTRY AS o ON i.COUNTRYCODE=o.CODE</li>
+<li>query names of continents ==&gt; SELECT o.CONTINENT</li>
+<li>respective city average population ==&gt; AVG(i.POPULATION) … GROUP BY o.CONTINENT</li>
+<li>round down to nearest integer ==&gt; FLOOR(AVG(i.POPULATION)) … GROUP BY o.CONTINENT</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> o.CONTINENT, <span class="keyword">FLOOR</span>(<span class="keyword">AVG</span>(i.POPULATION)) <span class="keyword">FROM</span> CITY <span class="keyword">AS</span> i <span class="keyword">JOIN</span> COUNTRY <span class="keyword">AS</span> o <span class="keyword">ON</span> i.COUNTRYCODE=o.CODE <span class="keyword">GROUP</span> <span class="keyword">BY</span> o.CONTINENT;</div></pre></td></tr></table></figure>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/average-population-of-each-continent/problem" target="_blank" rel="external">Average Population of Each Continent</a></p>
+
                 
 
                 <hr>
@@ -247,7 +373,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +393,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                        
                     </div>
                 </section>
                 
