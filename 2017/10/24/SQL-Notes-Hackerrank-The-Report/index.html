@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,12 +214,65 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>You are given two tables: <em>Students</em> and <em>Grades</em>. <em>Students</em> contains three columns <em>ID</em>, <em>Name</em> and <em>Marks</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>Marks</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<p><em>Grades</em> contains the following data:</p>
+<p>|  Grade  |  Min_Mark  |  Max_Mark  |<br>
+|  1      |  0         |  9         |<br>
+|  2      |  10        |  19        |<br>
+|  3      |  20        |  29        |<br>
+|  4      |  30        |  39        |<br>
+|  5      |  40        |  49        |<br>
+|  6      |  50        |  59        |<br>
+|  7      |  60        |  69        |<br>
+|  8      |  70        |  79        |<br>
+|  9      |  80        |  89        |<br>
+|  10     |  90        |  100       |</p>
+<p><em>Ketty</em> gives <em>Eve</em> a task to generate a report containing three columns: <em>Name</em>, <em>Grade</em> and <em>Mark</em>. <em>Ketty</em> doesn’t want the NAMES of those students who received a grade lower than <em>8</em>. The report must be in descending order by grade – i.e. higher grades are entered first. If there is more than one student with the same grade (8-10) assigned to them, order those particular students by their name alphabetically. Finally, if the grade is lower than 8, use “NULL” as their name and list them by their grades in descending order. If there is more than one student with the same grade (1-7) assigned to them, order those particular students by their marks in ascending order.</p>
+<p>Write a query to help Eve.</p>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<p><strong>Note</strong></p>
+<p><strong>Explanation</strong></p>
 <h3 id="analysis">Analysis</h3>
 <hr>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(g.Grade&lt;<span class="number">8</span>, <span class="literal">NULL</span>, s.Name), g.Grade, s.Marks <span class="keyword">FROM</span> Students <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Grades <span class="keyword">AS</span> g <span class="keyword">ON</span> s.Marks <span class="keyword">BETWEEN</span> g.Min_Mark <span class="keyword">AND</span> g.Max_Mark <span class="keyword">ORDER</span> <span class="keyword">BY</span> g.Grade <span class="keyword">DESC</span>, s.Name, s.Marks;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
+<p><a href="https://www.hackerrank.com/challenges/the-report/problem" target="_blank" rel="external">The Report</a></p>
 
                 
 
