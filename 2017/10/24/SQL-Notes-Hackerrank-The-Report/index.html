@@ -238,17 +238,67 @@
 </tbody>
 </table>
 <p><em>Grades</em> contains the following data:</p>
-<p>|  Grade  |  Min_Mark  |  Max_Mark  |<br>
-|  1      |  0         |  9         |<br>
-|  2      |  10        |  19        |<br>
-|  3      |  20        |  29        |<br>
-|  4      |  30        |  39        |<br>
-|  5      |  40        |  49        |<br>
-|  6      |  50        |  59        |<br>
-|  7      |  60        |  69        |<br>
-|  8      |  70        |  79        |<br>
-|  9      |  80        |  89        |<br>
-|  10     |  90        |  100       |</p>
+<table>
+<thead>
+<tr>
+<th>Grade</th>
+<th>Min_Mark</th>
+<th>Max_Mark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>19</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+<td>29</td>
+</tr>
+<tr>
+<td>4</td>
+<td>30</td>
+<td>39</td>
+</tr>
+<tr>
+<td>5</td>
+<td>40</td>
+<td>49</td>
+</tr>
+<tr>
+<td>6</td>
+<td>50</td>
+<td>59</td>
+</tr>
+<tr>
+<td>7</td>
+<td>60</td>
+<td>69</td>
+</tr>
+<tr>
+<td>8</td>
+<td>70</td>
+<td>79</td>
+</tr>
+<tr>
+<td>9</td>
+<td>80</td>
+<td>89</td>
+</tr>
+<tr>
+<td>10</td>
+<td>90</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
 <p><em>Ketty</em> gives <em>Eve</em> a task to generate a report containing three columns: <em>Name</em>, <em>Grade</em> and <em>Mark</em>. <em>Ketty</em> doesn’t want the NAMES of those students who received a grade lower than <em>8</em>. The report must be in descending order by grade – i.e. higher grades are entered first. If there is more than one student with the same grade (8-10) assigned to them, order those particular students by their name alphabetically. Finally, if the grade is lower than 8, use “NULL” as their name and list them by their grades in descending order. If there is more than one student with the same grade (1-7) assigned to them, order those particular students by their marks in ascending order.</p>
 <p>Write a query to help Eve.</p>
 <p><strong>Sample Input</strong></p>
@@ -260,11 +310,107 @@
 <th>Marks</th>
 </tr>
 </thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>1</td>
+<td>Julia</td>
+<td>88</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Samantha</td>
+<td>68</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Maria</td>
+<td>99</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Scarlet</td>
+<td>78</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ashley</td>
+<td>63</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Jane</td>
+<td>81</td>
+</tr>
+</tbody>
 </table>
 <p><strong>Sample Output</strong></p>
+<blockquote>
+<p>Maria 10 99<br>
+Jane 9 81<br>
+Julia 9 88<br>
+Scarlet 8 78<br>
+NULL 7 63<br>
+NULL 7 68</p>
+</blockquote>
 <p><strong>Note</strong></p>
+<p>Print “NULL”  as the name if the grade is less than 8.</p>
 <p><strong>Explanation</strong></p>
+<p>Consider the following table with the grades assigned to the students:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Marks</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Julia</td>
+<td>88</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Samantha</td>
+<td>68</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Maria</td>
+<td>99</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Scarlet</td>
+<td>78</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ashley</td>
+<td>63</td>
+<td>7</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Jane</td>
+<td>81</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>So, the following students got <em>8</em>, <em>9</em> or <em>10</em> grades:</p>
+<ul>
+<li><em>Maria (grade 10)</em></li>
+<li><em>Jane (grade 9)</em></li>
+<li><em>Julia (grade 9)</em></li>
+<li><em>Scarlet (grade 8)</em></li>
+</ul>
 <h3 id="analysis">Analysis</h3>
 <hr>
 <h3 id="solution">Solution</h3>
