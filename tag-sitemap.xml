@@ -86,6 +86,13 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Ubuntu/</loc>
+        <lastmod>2017-10-20T22:48:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Web-development/</loc>
         <lastmod>2017-10-20T22:48:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -94,13 +101,6 @@
 
     <url>
         <loc>https://nifannn.github.io/tags/Django/</loc>
-        <lastmod>2017-10-20T22:48:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Ubuntu/</loc>
         <lastmod>2017-10-20T22:48:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -149,6 +149,13 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
+        <lastmod>2017-10-24T13:43:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Data-Science/</loc>
         <lastmod>2017-10-24T13:43:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -157,13 +164,6 @@
 
     <url>
         <loc>https://nifannn.github.io/tags/Classification/</loc>
-        <lastmod>2017-10-24T13:43:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Kaggle/</loc>
         <lastmod>2017-10-24T13:43:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -205,13 +205,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Advanced-Machine-Learning-Specialization/</loc>
-        <lastmod>2017-10-27T03:46:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Deep-Learning-Specialization/</loc>
         <lastmod>2017-10-27T21:08:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -233,27 +226,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
-        <lastmod>2017-11-03T21:52:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
-        <lastmod>2017-11-03T21:52:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Coursera/</loc>
-        <lastmod>2017-11-03T21:52:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Computer-Vision/</loc>
         <lastmod>2017-11-03T21:52:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -263,6 +235,34 @@
     <url>
         <loc>https://nifannn.github.io/tags/CNN/</loc>
         <lastmod>2017-11-03T21:52:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Machine-Learning/</loc>
+        <lastmod>2017-11-16T15:35:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
+        <lastmod>2017-11-16T15:35:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Coursera/</loc>
+        <lastmod>2017-11-16T15:35:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Advanced-Machine-Learning-Specialization/</loc>
+        <lastmod>2017-11-16T15:35:31.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
