@@ -7,6 +7,262 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-The-Report/</loc>
+        <lastmod>2017-11-29T17:33:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/03/Deep-Learning-Notes-Convolutional-Neural-Networks/</loc>
+        <lastmod>2017-11-29T17:29:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/19/Machine-Learning-Notes-Adam-Optimization/</loc>
+        <lastmod>2017-11-20T04:59:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/19/Machine-Learning-Notes-Gradient-Descent-Optimization/</loc>
+        <lastmod>2017-11-20T04:57:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/19/Machine-Learning-Notes-Backpropagation/</loc>
+        <lastmod>2017-11-20T04:57:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/19/Machine-Learning-Notes-Perceptron/</loc>
+        <lastmod>2017-11-20T04:55:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-676-Implement-Magic-Dictionary/</loc>
+        <lastmod>2017-11-18T13:44:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-451-Sort-Characters-By-Frequency/</loc>
+        <lastmod>2017-11-18T13:44:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-311-Sparse-Matrix-Multiplication/</loc>
+        <lastmod>2017-11-18T13:43:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-508-Most-Frequent-Subtree-Sum/</loc>
+        <lastmod>2017-11-18T13:34:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-609-Find-Duplicate-File-in-System/</loc>
+        <lastmod>2017-11-18T13:33:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
+        <lastmod>2017-11-18T13:33:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-535-Encode-and-Decode-TinyURL/</loc>
+        <lastmod>2017-11-18T13:32:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
+        <lastmod>2017-11-18T13:31:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-290-Word-Pattern/</loc>
+        <lastmod>2017-11-18T13:30:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-438-Find-All-Anagrams-in-a-String/</loc>
+        <lastmod>2017-11-18T13:30:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
+        <lastmod>2017-11-17T14:18:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-720-Longest-Word-in-Dictionary/</loc>
+        <lastmod>2017-11-17T14:17:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-246-Strobogrammatic-Number/</loc>
+        <lastmod>2017-11-17T14:14:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-645-Set-Mismatch/</loc>
+        <lastmod>2017-11-17T13:56:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-594-Longest-Harmonlous-Subsequence/</loc>
+        <lastmod>2017-11-17T13:55:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-202-Happy-Number/</loc>
+        <lastmod>2017-11-17T13:54:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-350-Intersection-of-Two-Arrays-2/</loc>
+        <lastmod>2017-11-17T13:53:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-409-Longest-Palindrome/</loc>
+        <lastmod>2017-11-17T13:52:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-447-Number-of-Boomerangs/</loc>
+        <lastmod>2017-11-17T13:52:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-599-Minimum-Index-Sum-of-Two-Lists/</loc>
+        <lastmod>2017-11-17T13:50:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Computer-Vision-Notes-DeepFace/</loc>
+        <lastmod>2017-11-17T02:35:23.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Deep-Learning-Notes-GAN/</loc>
+        <lastmod>2017-11-16T17:31:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Deep-Learning-Notes-Autoencoder/</loc>
+        <lastmod>2017-11-16T17:31:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Deep-Learning-Notes-GRU/</loc>
+        <lastmod>2017-11-16T17:31:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Deep-Learning-Notes-LSTM/</loc>
+        <lastmod>2017-11-16T17:30:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Deep-Learning-Notes-RNN/</loc>
+        <lastmod>2017-11-16T17:29:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-242-Valid-Anagram/</loc>
         <lastmod>2017-11-16T16:12:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -591,14 +847,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/03/Deep-Learning-Notes-Convolutional-Neural-Networks/</loc>
-        <lastmod>2017-11-03T22:21:20.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/11/01/Coursera-Deep-Learning-Specialization-Notes-Convolutional-Neural-Networks/</loc>
         <lastmod>2017-11-03T21:52:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -681,14 +929,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/11/03/Algorithm-Notes-Leetcode-153-Find-Minimum-in-Rotated-Sorted-Array/</loc>
         <lastmod>2017-11-03T13:46:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-The-Report/</loc>
-        <lastmod>2017-11-01T17:47:45.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

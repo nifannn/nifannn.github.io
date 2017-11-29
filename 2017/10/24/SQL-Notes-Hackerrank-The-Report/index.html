@@ -149,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -413,6 +413,63 @@ NULL 7 68</p>
 </ul>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>First, we need to get grades of each student by joining two tables on the condition marks are bwtween min_mark and max_mark:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ID</span>, <span class="keyword">Name</span>, Marks, Grade <span class="keyword">FROM</span> Students <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Grades <span class="keyword">AS</span> g <span class="keyword">ON</span> s.Marks <span class="keyword">BETWEEN</span> g.Min_Mark <span class="keyword">AND</span> g.Max_Mark;</div></pre></td></tr></table></figure>
+<p>And we will get table like below:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Marks</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Julia</td>
+<td>88</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Samantha</td>
+<td>68</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Maria</td>
+<td>99</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Scarlet</td>
+<td>78</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ashley</td>
+<td>63</td>
+<td>7</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Jane</td>
+<td>81</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>The problem requires to output name, grade and marks, so</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Name, g.Grade, s.Marks <span class="keyword">FROM</span> Students <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Grades <span class="keyword">AS</span> g <span class="keyword">ON</span> s.Marks <span class="keyword">BETWEEN</span> g.Min_Mark <span class="keyword">AND</span> g.Max_Mark;</div></pre></td></tr></table></figure>
+<p>Besides, we should output names of students whoes grades are greater than 7 and we can use IF() function to filter:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(g.Grade&lt;<span class="number">8</span>, <span class="literal">NULL</span>, s.Name), g.Grade, s.Marks <span class="keyword">FROM</span> Students <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Grades <span class="keyword">AS</span> g <span class="keyword">ON</span> s.Marks <span class="keyword">BETWEEN</span> g.Min_Mark <span class="keyword">AND</span> g.Max_Mark;</div></pre></td></tr></table></figure>
+<p>Addtionally, the report must be in descending order by grade, so we will order output by grade first. For students with same grade, order by their name alphabetically, so we then order by name. For students whose grades are lower than 8, we will output ‘NULL’ as their name and for ‘NULL’ with same grade, we order by marks in ascending order, so we order by marks finally:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(g.Grade&lt;<span class="number">8</span>, <span class="literal">NULL</span>, s.Name), g.Grade, s.Marks <span class="keyword">FROM</span> Students <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Grades <span class="keyword">AS</span> g <span class="keyword">ON</span> s.Marks <span class="keyword">BETWEEN</span> g.Min_Mark <span class="keyword">AND</span> g.Max_Mark <span class="keyword">ORDER</span> <span class="keyword">BY</span> g.Grade <span class="keyword">DESC</span>, s.Name, s.Marks;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(g.Grade&lt;<span class="number">8</span>, <span class="literal">NULL</span>, s.Name), g.Grade, s.Marks <span class="keyword">FROM</span> Students <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Grades <span class="keyword">AS</span> g <span class="keyword">ON</span> s.Marks <span class="keyword">BETWEEN</span> g.Min_Mark <span class="keyword">AND</span> g.Max_Mark <span class="keyword">ORDER</span> <span class="keyword">BY</span> g.Grade <span class="keyword">DESC</span>, s.Name, s.Marks;</div></pre></td></tr></table></figure>
