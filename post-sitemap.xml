@@ -7,6 +7,54 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/11/29/Deep-Learning-Notes-Bidirectional-LSTM/</loc>
+        <lastmod>2017-11-30T01:24:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Challenges/</loc>
+        <lastmod>2017-11-30T00:32:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Top-Competitors/</loc>
+        <lastmod>2017-11-30T00:32:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Contest-Leaderboard/</loc>
+        <lastmod>2017-11-30T00:31:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Ollivander-s-Inventory/</loc>
+        <lastmod>2017-11-30T00:31:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/14/Computer-Vision-Notes-Neural-Style-Transfer/</loc>
+        <lastmod>2017-11-29T23:40:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-The-Report/</loc>
         <lastmod>2017-11-29T17:33:27.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -361,14 +409,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/11/15/Computer-Vision-Notes-FaceNet/</loc>
         <lastmod>2017-11-16T00:58:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/11/14/Computer-Vision-Notes-Neural-Style-Transfer/</loc>
-        <lastmod>2017-11-15T04:22:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1089,38 +1129,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/31/Algorithm-Notes-Leetcode-414-Third-Maximum-Number/</loc>
         <lastmod>2017-10-31T13:17:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Ollivander-s-Inventory/</loc>
-        <lastmod>2017-10-30T14:01:54.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Challenges/</loc>
-        <lastmod>2017-10-30T14:01:52.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Contest-Leaderboard/</loc>
-        <lastmod>2017-10-30T14:01:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Top-Competitors/</loc>
-        <lastmod>2017-10-30T14:01:45.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
