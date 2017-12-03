@@ -7,6 +7,54 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Ollivander-s-Inventory/</loc>
+        <lastmod>2017-12-03T01:26:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Top-Competitors/</loc>
+        <lastmod>2017-12-02T23:13:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Challenges/</loc>
+        <lastmod>2017-12-02T21:43:43.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/30/Tensorflow-Notes-Install-Tensorflow-gpu-On-Ubuntu/</loc>
+        <lastmod>2017-12-01T00:58:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/29/HDFS-Notes-Install-HDFS-on-Ubuntu/</loc>
+        <lastmod>2017-11-30T03:11:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/29/HDFS-Notes-Basic-Commands/</loc>
+        <lastmod>2017-11-30T03:08:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/11/29/Deep-Learning-Notes-Bidirectional-LSTM/</loc>
         <lastmod>2017-11-30T01:24:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -15,32 +63,8 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Challenges/</loc>
-        <lastmod>2017-11-30T00:32:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Top-Competitors/</loc>
-        <lastmod>2017-11-30T00:32:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Contest-Leaderboard/</loc>
         <lastmod>2017-11-30T00:31:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Ollivander-s-Inventory/</loc>
-        <lastmod>2017-11-30T00:31:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

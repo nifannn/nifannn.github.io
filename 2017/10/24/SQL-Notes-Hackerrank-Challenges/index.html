@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -214,6 +214,83 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Julia asked her students to create some coding challenges. Write a query to print the <em>hacker_id</em>, <em>name</em>, and the total number of challenges created by each student. Sort your results by the total number of challenges in descending order. If more than one student created the same number of challenges, then sort the result by <em>hacker_id</em>. If more than one student created the same number of challenges and the count is less than the maximum number of challenges created, then exclude those students from the result.</p>
+<p><strong>Input Format</strong></p>
+<p>The following tables contain challenge data:</p>
+<ul>
+<li><em>Hackers</em>: The <em>hacker_id</em> is the id of the hacker, and <em>name</em> is the name of the hacker.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Column</th>
+<th style="text-align:center">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">hacker_id</td>
+<td style="text-align:center">Integer</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">String</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>Challenges</em>: The <em>challenge_id</em> is the id of the challenge, and <em>hacker_id</em> is the id of the student who created the challenge.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Column</th>
+<th style="text-align:center">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">challenge_id</td>
+<td style="text-align:center">Integer</td>
+</tr>
+<tr>
+<td style="text-align:center">acker_id</td>
+<td style="text-align:center">Integer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Sample Input 0</strong></p>
+<p><em>Hackers</em> Table:</p>
+<p><img src="hackers_table_0.png" alt="hackers_table_0"></p>
+<p><em>Challenges</em> Table:</p>
+<p><img src="challenges_table_0.png" alt="challenges_table_0"></p>
+<p><strong>Sample Output 0</strong></p>
+<blockquote>
+<p>21283 Angela 6<br>
+88255 Patrick 5<br>
+96196 Lisa 1</p>
+</blockquote>
+<p><strong>Sample Input 1</strong></p>
+<p><em>Hackers</em> Table:</p>
+<p><img src="hackers_table_1.png" alt="hackers_table_1"></p>
+<p><em>Challenges</em> Table:</p>
+<p><img src="challenges_table_1.png" alt="challenges_table_1"></p>
+<p><strong>Sample Output 1</strong></p>
+<blockquote>
+<p>12299 Rose 6<br>
+34856 Angela 6<br>
+79345 Frank 4<br>
+80491 Patrick 3<br>
+81041 Lisa 1</p>
+</blockquote>
+<p><strong>Explanation</strong></p>
+<p>For <em>Sample Case 0</em>, we can get the following details:</p>
+<p><img src="explanation_table_1.png" alt="explanation_table_1"></p>
+<p>Students 5077 and 62743 both created 4 challenges, but the maximum number of challenges created is 6 so these students are excluded from the result.</p>
+<p>For <em>Sample Case 1</em>, we can get the following details:</p>
+<p><img src="explanation_table_2.png" alt="explanation_table_2"></p>
+<p>Students 12299 and 34856 both created 6 challenges. Because 6 is the maximum number of challenges created, these students are included in the result.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
 <h3 id="solution">Solution</h3>

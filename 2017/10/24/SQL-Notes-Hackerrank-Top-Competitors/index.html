@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -214,6 +214,44 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Julia just finished conducting a coding contest, and she needs your help assembling the leaderboard! Write a query to print the respective <em>hacker_id</em> and <em>name</em> of hackers who achieved full scores for <em>more than one</em> challenge. Order your output in descending order by the total number of challenges in which the hacker earned a full score. If more than one hacker received full scores in same number of challenges, then sort them by ascending <em>hacker_id</em>.</p>
+<hr>
+<p><strong>Input Format</strong></p>
+<p>The following tables contain contest data:</p>
+<ul>
+<li><em>Hackers</em>: The <em>hacker_id</em> is the <em>id</em> of the hacker, and <em>name</em> is the <em>name</em> of the hacker.</li>
+</ul>
+<p><img src="hackers_0.png" alt="hackers_0"></p>
+<ul>
+<li><em>Difficulty</em>: The <em>difficult_level</em> is the level of difficulty of the challenge, and <em>score</em> is the score of the challenge for the difficulty level.</li>
+</ul>
+<p><img src="difficulty_0.png" alt="difficulty_0"></p>
+<ul>
+<li><em>Challenges</em>: The <em>challenge_id</em> is the id of the challenge, the <em>hacker_id</em> is the id of the hacker who created the challenge, and <em>difficulty_level</em> is the level of difficulty of the challenge.</li>
+</ul>
+<p><img src="challenges_0.png" alt="challenges_0"></p>
+<ul>
+<li><em>Submissions</em>: The <em>submission_id</em> is the id of the submission, <em>hacker_id</em> is the id of the hacker who made the submission, <em>challenge_id</em> is the id of the challenge that the submission belongs to, and <em>score</em> is the score of the submission.</li>
+</ul>
+<p><img src="submissions_0.png" alt="submissions_0"></p>
+<p><strong>Sample Input</strong></p>
+<p><em>Hackers</em> Table:</p>
+<p><img src="hackers_1.png" alt="hackers_1"></p>
+<p><em>Difficulty</em> Table:</p>
+<p><img src="difficulty_1.png" alt="difficulty_1"></p>
+<p><em>Challenges</em> Table:</p>
+<p><img src="challenges_1.png" alt="challenges_1"></p>
+<p><em>Submissions</em> Table:</p>
+<p><img src="submissions_1.png" alt="submissions_1"></p>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>90411 Joe</p>
+</blockquote>
+<p><strong>Explanation</strong></p>
+<p>Hacker <em>86870</em> got a score of <em>30</em> for challenge <em>71055</em> with a difficulty level of <em>2</em>, so <em>86870</em> earned a full score for this challenge.</p>
+<p>Hacker <em>90411</em> got a score of <em>30</em> for challenge <em>71055</em> with a difficulty level of <em>2</em>, so <em>90411</em> earned a full score for this challenge.</p>
+<p>Hacker <em>90411</em> got a score of <em>100</em> for challenge <em>66730</em> with a difficulty level of <em>6</em>, so <em>90411</em> earned a full score for this challenge.</p>
+<p>Only hacker <em>90411</em> managed to earn a full score for more than one challenge, so we print the their <em>hacker_id</em> and name as 2 space-separated values.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
 <h3 id="solution">Solution</h3>
