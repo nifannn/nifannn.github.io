@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
                         <h1>SQL Notes: Hackerrank Projects</h1>
@@ -138,13 +142,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -153,6 +150,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +212,45 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>You are given a table, <em>Projects</em>, containing three columns: <em>Task_ID</em>, <em>Start_Date</em> and <em>End_Date</em>. It is guaranteed that the difference between the <em>End_Date</em> and the <em>Start_Date</em> is equal to 1 day for each row in the table.</p>
+<p><img src="projects_0.png" alt="projects_0"></p>
+<p>If the <em>End_Date</em> of the tasks are consecutive, then they are part of the same project. Samantha is interested in finding the total number of different projects completed.</p>
+<p>Write a query to output the start and end dates of projects listed by the number of days it took to complete the project in ascending order. If there is more than one project that have the same number of completion days, then order by the start date of the project.</p>
+<p><strong>Sample Input</strong></p>
+<p><img src="projects_1.png" alt="projects_1"></p>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>2015-10-28 2015-10-29<br>
+2015-10-30 2015-10-31<br>
+2015-10-13 2015-10-15<br>
+2015-10-01 2015-10-04</p>
+</blockquote>
+<p><strong>Explanation</strong></p>
+<p>The example describes following <em>four</em> projects:</p>
+<ul>
+<li>
+<p><em>Project 1</em>: Tasks <em>1</em>, <em>2</em> and <em>3</em> are completed on consecutive days, so these are part of the project. Thus start date of project is <em>2015-10-01</em> and end date is <em>2015-10-04</em>, so it took <em>3</em> days to complete the project.</p>
+</li>
+<li>
+<p><em>Project 2</em>: Tasks <em>4</em> and <em>5</em> are completed on consecutive days, so these are part of the project. Thus, the start date of project is <em>2015-10-13</em> and end date is <em>2015-10-15</em>, so it took <em>2</em> days to complete the project.</p>
+</li>
+<li>
+<p><em>Project 3</em>: Only task <em>6</em> is part of the project. Thus, the start date of project is <em>2015-10-28</em> and end date is <em>2015-10-29</em>, so it took <em>1</em> day to complete the project.</p>
+</li>
+<li>
+<p><em>Project 4</em>: Only task <em>7</em> is part of the project. Thus, the start date of project is <em>2015-10-30</em> and end date is <em>2015-10-31</em>, so it took <em>1</em> day to complete the project.</p>
+</li>
+</ul>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/projects/problem" target="_blank" rel="external">Projects</a></p>
+
                 
 
                 <hr>
@@ -247,7 +289,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +309,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                        
                     </div>
                 </section>
                 

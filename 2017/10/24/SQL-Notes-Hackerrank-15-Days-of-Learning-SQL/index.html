@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
                         <h1>SQL Notes: Hackerrank 15 Days of Learning SQL</h1>
@@ -138,13 +142,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -153,6 +150,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +212,51 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Julia conducted a 15 days of learning SQL contest. The start date of the contest was <em>March 01, 2016</em> and the end date was <em>March 15, 2016</em>.</p>
+<p>Write a query to print total number of unique hackers who made at least 1 submission each day (starting on the first day of the contest), and find the <em>hacker_id</em> and <em>name</em> of the hacker who made maximum number of submissions each day. If more than one such hacker has a maximum number of submissions, print the lowest <em>hacker_id</em>. The query should print this information for each day of the contest, sorted by the date.</p>
+<hr>
+<p><strong>Input Format</strong></p>
+<p>The following tables hold contest data:</p>
+<ul>
+<li><em>Hackers</em>: The <em>hacker_id</em> is the id of the hacker, and <em>name</em> is the name of the hacker.</li>
+</ul>
+<p><img src="hackers_0.png" alt="hackers_0"></p>
+<ul>
+<li><em>Submissions</em>: The <em>submission_date</em> is the date of the submission, <em>submission_id</em> is the id of the submission, <em>hacker_id</em> is the id of the hacker who made the submission, and <em>score</em> is the score of the submission.</li>
+</ul>
+<p><img src="submissions_0.png" alt="submissions_0"></p>
+<p><strong>Sample Input</strong></p>
+<p>For the following sample input, assume that the end date of the contest was <em>March 06, 2016</em>.</p>
+<p><em>Hackers</em> Table:</p>
+<p><img src="hackers_1.png" alt="hackers_1"></p>
+<p><em>Submissions</em> Table:</p>
+<p><img src="submissions_1.png" alt="submissions_1"></p>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>2016-03-01 4 20703 Angela<br>
+2016-03-02 2 79722 Michael<br>
+2016-03-03 2 20703 Angela<br>
+2016-03-04 2 20703 Angela<br>
+2016-03-05 1 36396 Frank<br>
+2016-03-06 1 20703 Angela</p>
+</blockquote>
+<p><strong>Explanation</strong></p>
+<p>On <em>March 01, 2016</em> hackers 20703, 36395, 53473, and 79722 made submissions. There are 4 unique hackers who made at least one submission each day. As each hacker made one submission, 20703 is considered to be the hacker who made maximum number of submissions on this day. The name of the hacker is <em>Angela</em>.</p>
+<p>On <em>March 02, 2016</em> hackers 15758, 20703, and 79722 made submissions. Now 20703 and 79722 were the only ones to submit every day, so there are 2 unique hackers who made at least one submission each day. 79722 made  submissions, and name of the hacker is <em>Michael</em>.</p>
+<p>On <em>March 03, 2016</em> hackers 20703, 36396, and 79722 made submissions. Now 20703 and 79722 were the only ones, so there are 2 unique hackers who made at least one submission each day. As each hacker made one submission so 20703 is considered to be the hacker who made maximum number of submissions on this day. The name of the hacker is <em>Angela</em>.</p>
+<p>On <em>March 04, 2016</em> hackers 20703, 44065, 53473, and 79722 made submissions. Now 20703 and 79722 only submitted each day, so there are 2 unique hackers who made at least one submission each day. As each hacker made one submission so 20703 is considered to be the hacker who made maximum number of submissions on this day. The name of the hacker is <em>Angela</em>.</p>
+<p>On <em>March 05, 2016</em> hackers 20703, 36396, 38289 and 62529 made submissions. Now 20703 only submitted each day, so there is only 1 unique hacker who made at least one submission each day. 36396 made 2 submissions and name of the hacker is <em>Frank</em>.</p>
+<p>On <em>March 06, 2016</em> only 20703 made submission, so there is only 1 unique hacker who made at least one submission each day. 20703 made 1 submission and name of the hacker is <em>Angela</em>.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/15-days-of-learning-sql/problem" target="_blank" rel="external">15 Days of Learning SQL</a></p>
+
                 
 
                 <hr>
@@ -247,7 +295,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +315,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                        
                     </div>
                 </section>
                 

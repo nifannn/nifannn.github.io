@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                            
+                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
                             
                         </div>
                         <h1>SQL Notes: Hackerrank Interviews</h1>
@@ -138,13 +142,6 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -153,6 +150,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +212,76 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Samantha interviews many candidates from different colleges using coding challenges and contests. Write a query to print the <em>contest_id</em>, <em>hacker_id</em>, <em>name</em>, and the sums of <em>total_submissions</em>, <em>total_accepted_submissions</em>, <em>total_views</em>, and <em>total_unique_views</em> for each contest sorted by <em>contest_id</em>. Exclude the contest from the result if all four sums are 0.</p>
+<p><strong>Note:</strong> A specific contest can be used to screen candidates at more than one college, but each college only holds 1 screening contest.</p>
+<hr>
+<p><strong>Input Format</strong></p>
+<p>The following tables hold interview data:</p>
+<ul>
+<li><em>Contests</em>: The <em>contest_id</em> is the id of the contest, <em>hacker_id</em> is the id of the hacker who created the contest, and <em>name</em> is the name of the hacker.</li>
+</ul>
+<p><img src="contests_0.png" alt="contests_0"></p>
+<ul>
+<li><em>Colleges</em>: The <em>college_id</em> is the id of the college, and <em>contest_id</em>is the id of the contest that Samantha used to screen the candidates.</li>
+</ul>
+<p><img src="colleges_0.png" alt="colleges_0"></p>
+<ul>
+<li><em>Challenges</em>: The <em>challenge_id</em> is the id of the challenge that belongs to one of the contests whose contest_id Samantha forgot, and <em>college_id</em> is the id of the college where the challenge was given to candidates.</li>
+</ul>
+<p><img src="challenges_0.png" alt="challenges_0"></p>
+<ul>
+<li><em>View_Stats</em>: The <em>challenge_id</em> is the id of the challenge, <em>total_views</em> is the number of times the challenge was viewed by candidates, and <em>total_unique_views</em> is the number of times the challenge was viewed by unique candidates.</li>
+</ul>
+<p><img src="view_stats_0.png" alt="view_stats_0"></p>
+<ul>
+<li><em>Submission_Stats</em>: The <em>challenge_id</em> is the id of the challenge, <em>total_submissions</em> is the number of submissions for the challenge, and <em>total_accepted_submission</em> is the number of submissions that achieved full scores.</li>
+</ul>
+<p><img src="submission_stats_0.png" alt="submission_stats_0"></p>
+<hr>
+<p><strong>Sample Input</strong></p>
+<p>Contests Table:</p>
+<p><img src="contests_1.png" alt="contests_1"></p>
+<p>Colleges Table:</p>
+<p><img src="colleges_1.png" alt="colleges_1"></p>
+<p>Challenges Table:</p>
+<p><img src="challenges_1.png" alt="challenges_1"></p>
+<p>View_Stats Table:</p>
+<p><img src="view_stats_1.png" alt="view_stats_1"></p>
+<p>Submission_Stats Table:</p>
+<p><img src="submission_stats_1.png" alt="submission_stats_1"></p>
+<p><strong>Sample Output</strong></p>
+<blockquote>
+<p>66406 17973 Rose 111 39 156 56<br>
+66556 79153 Angela 0 0 11 10<br>
+94828 80275 Frank 150 38 41 15</p>
+</blockquote>
+<p><strong>Explanation</strong></p>
+<p>The contest 66406 is used in the college 11219. In this college 11219, challenges 18765 and 47127 are asked, so from the view and submission stats:</p>
+<ul>
+<li>
+<p>Sum of total submissions = 27 + 56 + 28 = 111</p>
+</li>
+<li>
+<p>Sum of total accepted submissions = 10 + 18 + 11 = 39</p>
+</li>
+<li>
+<p>Sum of total views = 43 + 72 + 26 + 15 = 156</p>
+</li>
+<li>
+<p>Sum of total unique views = 10 + 13 + 19 + 14 = 56</p>
+</li>
+</ul>
+<p>Similarly, we can find the sums for contests 66556 and 94828.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://www.hackerrank.com/challenges/interviews/problem" target="_blank" rel="external">Interviews</a></p>
+
                 
 
                 <hr>
@@ -247,7 +320,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +340,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
+                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                        
                     </div>
                 </section>
                 
