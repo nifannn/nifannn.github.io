@@ -149,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -212,7 +212,70 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Table: <strong>Person</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PersonId</td>
+<td>int</td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td>varchar</td>
+</tr>
+<tr>
+<td>LastName</td>
+<td>varchar</td>
+</tr>
+</tbody>
+</table>
+<p>PersonId is the primary key column for this table.</p>
+<p>Table: <strong>Address</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AddressId</td>
+<td>int</td>
+</tr>
+<tr>
+<td>PersonId</td>
+<td>int</td>
+</tr>
+<tr>
+<td>City</td>
+<td>varchar</td>
+</tr>
+<tr>
+<td>State</td>
+<td>varchar</td>
+</tr>
+</tbody>
+</table>
+<p>AddressId is the primary key column for this table.</p>
+<p>Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:</p>
+<p>FirstName, LastName, City, State</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/combine-two-tables/description/" target="_blank" rel="external">175. Combine Two Tables</a></p>
+
                 
 
                 <hr>
@@ -251,7 +314,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
