@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#569 Median Employee Salary</h1>
@@ -138,13 +142,6 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -153,6 +150,13 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -208,7 +212,20 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>The <strong>Employee</strong> table holds all employees. The employee table has three columns: Employee Id, Company Name, and Salary.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">+-----+------------+--------+</div><div class="line">|Id   | Company    | Salary |</div><div class="line">+-----+------------+--------+</div><div class="line">|1    | A          | 2341   |</div><div class="line">|2    | A          | 341    |</div><div class="line">|3    | A          | 15     |</div><div class="line">|4    | A          | 15314  |</div><div class="line">|5    | A          | 451    |</div><div class="line">|6    | A          | 513    |</div><div class="line">|7    | B          | 15     |</div><div class="line">|8    | B          | 13     |</div><div class="line">|9    | B          | 1154   |</div><div class="line">|10   | B          | 1345   |</div><div class="line">|11   | B          | 1221   |</div><div class="line">|12   | B          | 234    |</div><div class="line">|13   | C          | 2345   |</div><div class="line">|14   | C          | 2645   |</div><div class="line">|15   | C          | 2645   |</div><div class="line">|16   | C          | 2652   |</div><div class="line">|17   | C          | 65     |</div><div class="line">+-----+------------+--------+</div></pre></td></tr></table></figure>
+<p>Write a SQL query to find the median salary of each company. Bonus points if you can solve it without using any built-in SQL functions.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+-----+------------+--------+</div><div class="line">|Id   | Company    | Salary |</div><div class="line">+-----+------------+--------+</div><div class="line">|5    | A          | 451    |</div><div class="line">|6    | A          | 513    |</div><div class="line">|12   | B          | 234    |</div><div class="line">|9    | B          | 1154   |</div><div class="line">|14   | C          | 2645   |</div><div class="line">+-----+------------+--------+</div></pre></td></tr></table></figure>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/median-employee-salary/description/" target="_blank" rel="external">569. Median Employee Salary</a></p>
+
                 
 
                 <hr>
@@ -247,7 +264,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +284,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 
