@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#602 Friend Requests 2: Who Has the Most Friends</h1>
@@ -145,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -208,7 +212,71 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>In social network like Facebook or Twitter, people send friend requests and accept others’ requests as well.</p>
+<p>Table <strong>request_accepted</strong> holds the data of friend acceptance, while <em>requester_id</em> and <em>accepter_id</em> both are the id of a person.</p>
+<table>
+<thead>
+<tr>
+<th>requester_id</th>
+<th>accepter_id</th>
+<th>accept_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2016_06-03</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>2016-06-08</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>2016-06-08</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>2016-06-09</td>
+</tr>
+</tbody>
+</table>
+<p>Write a query to find the the people who has most friends and the most friends number. For the sample data above, the result is:</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong></p>
+<ul>
+<li>It is guaranteed there is only 1 people having the most friends.</li>
+<li>The friend request could only been accepted once, which mean there is no multiple records with the same <em>requester_id</em> and <em>accepter_id</em> value.</li>
+</ul>
+<p><strong>Explanation:</strong><br>
+The person with id ‘3’ is a friend of people ‘1’, ‘2’ and ‘4’, so he has 3 friends in total, which is the most number than any others.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends/description/" target="_blank" rel="external">602. Friend Requests 2: Who Has the Most Friends</a></p>
+
                 
 
                 <hr>
@@ -247,7 +315,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +335,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

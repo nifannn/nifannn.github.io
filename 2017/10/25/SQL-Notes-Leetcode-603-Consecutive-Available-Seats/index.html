@@ -149,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -212,7 +212,72 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Several friends at a cinema ticket office would like to reserve consecutive available seats.<br>
+Can you help to query all the consecutive available seats order by the seat_id using the following <strong>cinema</strong> table?</p>
+<table>
+<thead>
+<tr>
+<th>seat_id</th>
+<th>free</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Your query should return the following result for the sample case above.</p>
+<table>
+<thead>
+<tr>
+<th>seat_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The seat_id is an auto increment int, and free is bool (‘1’ means free, and ‘0’ means occupied.).</li>
+<li>Consecutive available seats are more than 2(inclusive) seats consecutively available.</li>
+</ul>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/consecutive-available-seats/description/" target="_blank" rel="external">603. Consecutive Available Seats</a></p>
+
                 
 
                 <hr>
@@ -251,7 +316,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>

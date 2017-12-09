@@ -149,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -212,7 +212,125 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Query the <em>customer_number</em> from the <strong>orders</strong> table for the customer who has placed the largest number of orders.</p>
+<p>It is guaranteed that exactly one customer will have placed more orders than any other customer.</p>
+<p>The <strong>orders</strong> table is defined as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_number (PK)</td>
+<td>int</td>
+</tr>
+<tr>
+<td>customer_number</td>
+<td>int</td>
+</tr>
+<tr>
+<td>order_date</td>
+<td>date</td>
+</tr>
+<tr>
+<td>required_date</td>
+<td>date</td>
+</tr>
+<tr>
+<td>shipped_date</td>
+<td>date</td>
+</tr>
+<tr>
+<td>status</td>
+<td>char(15)</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>char(200)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>order_number</th>
+<th>customer_number</th>
+<th>order_date</th>
+<th>required_date</th>
+<th>shipped_date</th>
+<th>status</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>2017-04-09</td>
+<td>2017-04-13</td>
+<td>2017-04-12</td>
+<td>Closed</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2017-04-15</td>
+<td>2017-04-20</td>
+<td>2017-04-18</td>
+<td>Closed</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>2017-04-16</td>
+<td>2017-04-25</td>
+<td>2017-04-20</td>
+<td>Closed</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>2017-04-18</td>
+<td>2017-04-28</td>
+<td>2017-04-25</td>
+<td>Closed</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Output</strong></p>
+<table>
+<thead>
+<tr>
+<th>customer_number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Explanation</strong></p>
+<p>The customer with number ‘3’ has two orders, which is greater than either customer ‘1’ or ‘2’ because each of them  only has one order.<br>
+So the result is customer_number ‘3’.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/description/" target="_blank" rel="external">586. Customer Placing the Largest Number of Orders</a></p>
+
                 
 
                 <hr>
@@ -251,7 +369,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>

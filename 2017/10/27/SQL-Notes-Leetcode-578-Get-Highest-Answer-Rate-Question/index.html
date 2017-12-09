@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#578 Get Highest Answer Rate Question</h1>
@@ -145,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -208,7 +212,27 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Get the highest answer rate question from a table <strong>survey_log</strong> with these columns: <strong>uid, action, question_id, answer_id, q_num, timestamp</strong>.</p>
+<p>uid means user id; action has these kind of values: “show”, “answer”, “skip”; answer_id is not null when action column is “answer”, while is null for “show” and “skip”; q_num is the numeral order of the question in current session.</p>
+<p>Write a sql query to identify the question which has the highest answer rate.</p>
+<p><strong>Example:</strong></p>
+<p><strong>Input</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+------+-----------+--------------+------------+-----------+------------+</div><div class="line">| uid  | action    | question_id  | answer_id  | q_num     | timestamp  |</div><div class="line">+------+-----------+--------------+------------+-----------+------------+</div><div class="line">| 5    | show      | 285          | null       | 1         | 123        |</div><div class="line">| 5    | answer    | 285          | 124124     | 1         | 124        |</div><div class="line">| 5    | show      | 369          | null       | 2         | 125        |</div><div class="line">| 5    | skip      | 369          | null       | 2         | 126        |</div><div class="line">+------+-----------+--------------+------------+-----------+------------+</div></pre></td></tr></table></figure>
+<p><strong>Output</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+-------------+</div><div class="line">| survey_log  |</div><div class="line">+-------------+</div><div class="line">|    285      |</div><div class="line">+-------------+</div></pre></td></tr></table></figure>
+<p><strong>Explanation</strong></p>
+<p>question 285 has answer rate 1/1, while question 369 has 0/1 answer rate, so output 285.</p>
+<p><strong>Note:</strong> The highest answer rate meaning is: answer number’s ratio in show number in the same question.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/get-highest-answer-rate-question/description/" target="_blank" rel="external">578. Get Highest Answer Rate Question</a></p>
+
                 
 
                 <hr>
@@ -247,7 +271,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +291,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

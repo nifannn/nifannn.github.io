@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#579 Find Cumulative Salary of an Employee</h1>
@@ -145,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -208,7 +212,187 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>The <strong>Employee</strong> table holds the salary information in a year.</p>
+<p>Write a SQL to get the cumulative sum of an employee’s salary over a period of 3 months but exclude the most recent month.</p>
+<p>The result should be displayed by ‘Id’ ascending, and then by ‘Month’ descending.</p>
+<p><strong>Example</strong><br>
+<strong>Input</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Month</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>30</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>40</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>40</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>60</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>60</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Month</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>90</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>100</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Explanation</strong></p>
+<p>Employee ‘1’ has 3 salary records for the following 3 months except the most recent month ‘4’: salary 40 for month ‘3’, 30 for month ‘2’ and 20 for month '1’<br>
+So the cumulative sum of salary of this employee over 3 months is 90(40+30+20), 50(30+20) and 20 respectively.</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Month</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>90</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Employee ‘2’ only has one salary record (month ‘1’) except its most recent month ‘2’.</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Month</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p>Employ ‘3’ has two salary records except its most recent pay month ‘4’: month ‘3’ with 60 and month ‘2’ with 40. So the cumulative salary is as following.</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Month</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>100</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/find-cumulative-salary-of-an-employee/description/" target="_blank" rel="external">579. Find Cumulative Salary of an Employee</a></p>
+
                 
 
                 <hr>
@@ -247,7 +431,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +451,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

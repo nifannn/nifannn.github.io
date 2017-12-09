@@ -149,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -212,7 +212,23 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Select all employee’s name and bonus whose bonus is &lt; 1000.</p>
+<p>Table:<strong>Employee</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+-------+--------+-----------+--------+</div><div class="line">| empId |  name  | supervisor| salary |</div><div class="line">+-------+--------+-----------+--------+</div><div class="line">|   1   | John   |  3        | 1000   |</div><div class="line">|   2   | Dan    |  3        | 2000   |</div><div class="line">|   3   | Brad   |  null     | 4000   |</div><div class="line">|   4   | Thomas |  3        | 4000   |</div><div class="line">+-------+--------+-----------+--------+</div><div class="line">empId is the primary key column for this table.</div></pre></td></tr></table></figure>
+<p>Table: <strong>Bonus</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+-------+-------+</div><div class="line">| empId | bonus |</div><div class="line">+-------+-------+</div><div class="line">| 2     | 500   |</div><div class="line">| 4     | 2000  |</div><div class="line">+-------+-------+</div><div class="line">empId is the primary key column for this table.</div></pre></td></tr></table></figure>
+<p>Example ouput:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+-------+-------+</div><div class="line">| name  | bonus |</div><div class="line">+-------+-------+</div><div class="line">| John  | null  |</div><div class="line">| Dan   | 500   |</div><div class="line">| Brad  | null  |</div><div class="line">+-------+-------+</div></pre></td></tr></table></figure>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/employee-bonus/description/" target="_blank" rel="external">577. Employee Bonus</a></p>
+
                 
 
                 <hr>
@@ -251,7 +267,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>

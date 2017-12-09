@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#580 Count Student Number in Departments</h1>
@@ -145,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -208,7 +212,145 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>A university uses 2 data tables, <em>student</em> and <em>department</em>, to store data about its students and the departments associated with each major.</p>
+<p>Write a query to print the respective department name and number of students majoring in each department for all departments in the <em>department</em> table (even ones with no current students).</p>
+<p>Sort your results by descending number of students; if two or more departments have the same number of students, then sort those departments alphabetically by department name.</p>
+<p>The <em>student</em> is described as follow:</p>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>student_id</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>student_name</td>
+<td>String</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>dept_id</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<p>where student_id is the student’s ID number, student_name is the student’s name, gender is their gender, and dept_id is the department ID associated with their declared major.</p>
+<p>And the <em>department</em> table is described as below:</p>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dept_id</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>dept_name</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<p>where dept_id is the department’s ID number and dept_name is the department name.</p>
+<p>Here is an example <strong>input</strong>:<br>
+<em>student table</em>:</p>
+<table>
+<thead>
+<tr>
+<th>student_id</th>
+<th>student_name</th>
+<th>gender</th>
+<th>dept_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Jack</td>
+<td>M</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane</td>
+<td>F</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mark</td>
+<td>M</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><em>department</em> table:</p>
+<table>
+<thead>
+<tr>
+<th>dept_id</th>
+<th>dept_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Engineering</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Science</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Law</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Output</strong> should be:</p>
+<table>
+<thead>
+<tr>
+<th>dept_name</th>
+<th>student_number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engineering</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Science</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Law</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/count-student-number-in-departments/description/" target="_blank" rel="external">580. Count Number in Departments</a></p>
+
                 
 
                 <hr>
@@ -247,7 +389,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +409,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

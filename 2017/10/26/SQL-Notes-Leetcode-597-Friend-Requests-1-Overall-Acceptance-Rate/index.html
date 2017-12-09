@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#597 Friend Requests 1: Overall Acceptance Rate</h1>
@@ -145,14 +149,14 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -208,7 +212,112 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>In social network like Facebook or Twitter, people send friend requests and accept others’ requests as well. Now given two tables as below:</p>
+<p>Table: <strong>friend_request</strong></p>
+<table>
+<thead>
+<tr>
+<th>sender_id</th>
+<th>send_to_id</th>
+<th>request_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2016_06-01</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>2016_06-01</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>2016_06-01</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>2016_06-02</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>2016-06-09</td>
+</tr>
+</tbody>
+</table>
+<p>Table: <strong>request_accepted</strong></p>
+<table>
+<thead>
+<tr>
+<th>requester_id</th>
+<th>accepter_id</th>
+<th>accept_date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2016_06-03</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>2016-06-08</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>2016-06-08</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>2016-06-09</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>2016-06-10</td>
+</tr>
+</tbody>
+</table>
+<p>Write a query to find the overall acceptance rate of requests rounded to 2 decimals, which is the number of acceptance divide the number of requests.<br>
+For the sample data above, your query should return the following result.</p>
+<table>
+<thead>
+<tr>
+<th>accept_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.80</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The accepted requests are not necessarily from the table <strong>friend_request</strong>. In this case, you just need to simply count the total accepted requests (no matter whether they are in the original requests), and divide it by the number of requests to get the acceptance rate.</li>
+<li>It is possible that a sender sends multiple requests to the same receiver, and a request could be accepted more than once. In this case, the ‘duplicated’ requests or acceptances are only counted once.</li>
+<li>If there is no requests at all, you should return 0.00 as the accept_rate.</li>
+</ul>
+<p><strong>Explanation:</strong> There are 4 unique accepted requests, and there are 5 requests in total. So the rate is 0.80.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/friend-requests-i-overall-acceptance-rate/description/" target="_blank" rel="external">597. Friend Request 1: Overall Acceptance Rate</a></p>
+
                 
 
                 <hr>
@@ -247,7 +356,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +376,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 
