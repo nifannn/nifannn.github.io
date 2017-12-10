@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#614 Second Degree Follower</h1>
@@ -138,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +212,27 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>In facebook, there is a <strong>follow</strong> table with two columns: <em>followee</em>, <em>follower</em>.</p>
+<p>Please write a sql query to get the amount of each follower’s follower if he/she has one.</p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+-------------+------------+</div><div class="line">| followee    | follower   |</div><div class="line">+-------------+------------+</div><div class="line">|     A       |     B      |</div><div class="line">|     B       |     C      |</div><div class="line">|     B       |     D      |</div><div class="line">|     D       |     E      |</div><div class="line">+-------------+------------+</div></pre></td></tr></table></figure>
+<p>should output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+-------------+------------+</div><div class="line">| follower    | num        |</div><div class="line">+-------------+------------+</div><div class="line">|     B       |  2         |</div><div class="line">|     D       |  1         |</div><div class="line">+-------------+------------+</div></pre></td></tr></table></figure>
+<p><strong>Explaination:</strong><br>
+Both B and D exist in the follower list, when as a followee, B’s follower is C and D, and D’s follower is E. A does not exist in follower list.<br>
+<strong>Note:</strong><br>
+Followee would not follow himself/herself in all cases.<br>
+Please display the result in follower’s alphabet order.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/second-degree-follower/" target="_blank" rel="external">614. Second Degree Follower</a></p>
+
                 
 
                 <hr>
@@ -247,7 +271,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +291,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

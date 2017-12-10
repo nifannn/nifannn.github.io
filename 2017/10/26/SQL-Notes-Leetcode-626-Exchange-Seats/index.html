@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#626 Exchange Seats</h1>
@@ -138,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +212,25 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Mary is a teacher in a middle school and she has a table <strong>seat</strong> storing students’ names and their corresponding seat ids.</p>
+<p>The column id is continuous increment.<br>
+Mary wants to change seats for the adjacent students.<br>
+Can you write a SQL query to output the result for Mary?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+---------+---------+</div><div class="line">|    id   | student |</div><div class="line">+---------+---------+</div><div class="line">|    1    | Abbot   |</div><div class="line">|    2    | Doris   |</div><div class="line">|    3    | Emerson |</div><div class="line">|    4    | Green   |</div><div class="line">|    5    | Jeames  |</div><div class="line">+---------+---------+</div></pre></td></tr></table></figure>
+<p>For the sample input, the output is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+---------+---------+</div><div class="line">|    id   | student |</div><div class="line">+---------+---------+</div><div class="line">|    1    | Doris   |</div><div class="line">|    2    | Abbot   |</div><div class="line">|    3    | Green   |</div><div class="line">|    4    | Emerson |</div><div class="line">|    5    | Jeames  |</div><div class="line">+---------+---------+</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong><br>
+If the number of students is odd, there is no need to change the last one’s seat.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/exchange-seats/description/" target="_blank" rel="external">626. Exchange Seats</a></p>
+
                 
 
                 <hr>
@@ -247,7 +269,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +289,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

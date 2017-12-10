@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('sql.jpg')
             /*post*/
         
     }
@@ -85,6 +85,10 @@
                 
                     <div class="post-heading">
                         <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                            
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#608 Tree Node</h1>
@@ -138,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -208,7 +212,36 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>Given a table <strong>tree</strong>, <em>id</em> is identifier of the tree node and <em>p_id</em> is its parent node’s <em>id</em>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+----+------+</div><div class="line">| id | p_id |</div><div class="line">+----+------+</div><div class="line">| 1  | null |</div><div class="line">| 2  | 1    |</div><div class="line">| 3  | 1    |</div><div class="line">| 4  | 2    |</div><div class="line">| 5  | 2    |</div><div class="line">+----+------+</div></pre></td></tr></table></figure>
+<p>Each node in the tree can be one of three types:</p>
+<ul>
+<li>Leaf: if the node is a leaf node.</li>
+<li>Root: if the node is the root of the tree.</li>
+<li>Inner: If the node is neither a leaf node nor a root node.<br>
+Write a query to print the node id and the type of the node. Sort your output by the node id. The result for the above sample is:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+----+------+</div><div class="line">| id | Type |</div><div class="line">+----+------+</div><div class="line">| 1  | Root |</div><div class="line">| 2  | Inner|</div><div class="line">| 3  | Leaf |</div><div class="line">| 4  | Leaf |</div><div class="line">| 5  | Leaf |</div><div class="line">+----+------+</div></pre></td></tr></table></figure>
+<p><strong>Explanation</strong></p>
+<ul>
+<li>Node ‘1’ is root node, because its parent node is NULL and it has child node ‘2’ and ‘3’.</li>
+<li>Node ‘2’ is inner node, because it has parent node ‘1’ and child node ‘4’ and ‘5’.</li>
+<li>Node ‘3’, ‘4’ and ‘5’ is Leaf node, because they have parent node and they don’t have child node.</li>
+</ul>
+<p>And here is the image of the sample tree as below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">        1</div><div class="line">      /   \</div><div class="line">    2       3</div><div class="line">  /   \</div><div class="line">4       5</div></pre></td></tr></table></figure>
+<p><strong>Note</strong></p>
+<p>If there is only one node on the tree, you only need to output its root attributes.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/tree-node/description/" target="_blank" rel="external">608. Tree Node</a></p>
+
                 
 
                 <hr>
@@ -247,7 +280,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
@@ -267,6 +300,10 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+                        
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                        
                     </div>
                 </section>
                 

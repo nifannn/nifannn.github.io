@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -212,7 +212,35 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p><strong>Description</strong></p>
+<p>Given three tables: <strong>salesperson</strong>, <strong>company</strong>, <strong>orders</strong>.<br>
+Output all the <em>names</em> in the table <strong>salesperson</strong>, who didn’t have sales to company ‘RED’.</p>
+<p><strong>Example</strong><br>
+<strong>Input</strong></p>
+<p>Table: <strong>salesperson</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+----------+------+--------+-----------------+-----------+</div><div class="line">| sales_id | name | salary | commission_rate | hire_date |</div><div class="line">+----------+------+--------+-----------------+-----------+</div><div class="line">|   1      | John | 100000 |     6           | 4/1/2006  |</div><div class="line">|   2      | Amy  | 120000 |     5           | 5/1/2010  |</div><div class="line">|   3      | Mark | 65000  |     12          | 12/25/2008|</div><div class="line">|   4      | Pam  | 25000  |     25          | 1/1/2005  |</div><div class="line">|   5      | Alex | 50000  |     10          | 2/3/2007  |</div><div class="line">+----------+------+--------+-----------------+-----------+</div></pre></td></tr></table></figure>
+<p>The table <strong>salesperson</strong> holds the salesperson information. Every salesperson has a <em>sales_id</em> and a <em>name</em>.<br>
+Table: <strong>company</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+---------+--------+------------+</div><div class="line">| com_id  |  name  |    city    |</div><div class="line">+---------+--------+------------+</div><div class="line">|   1     |  RED   |   Boston   |</div><div class="line">|   2     | ORANGE |   New York |</div><div class="line">|   3     | YELLOW |   Boston   |</div><div class="line">|   4     | GREEN  |   Austin   |</div><div class="line">+---------+--------+------------+</div></pre></td></tr></table></figure>
+<p>The table <strong>company</strong> holds the company information. Every company has a <em>com_id</em> and a <em>name</em>.<br>
+Table: <strong>orders</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+----------+----------+---------+----------+--------+</div><div class="line">| order_id |  date    | com_id  | sales_id | amount |</div><div class="line">+----------+----------+---------+----------+--------+</div><div class="line">| 1        | 1/1/2014 |    3    |    4     | 100000 |</div><div class="line">| 2        | 2/1/2014 |    4    |    5     | 5000   |</div><div class="line">| 3        | 3/1/2014 |    1    |    1     | 50000  |</div><div class="line">| 4        | 4/1/2014 |    1    |    4     | 25000  |</div><div class="line">+----------+----------+---------+----------+--------+</div></pre></td></tr></table></figure>
+<p>The table <strong>orders</strong> holds the sales record information, salesperson and customer company are represented by <em>sales_id</em> and <em>com_id</em>.<br>
+<strong>output</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+------+</div><div class="line">| name | </div><div class="line">+------+</div><div class="line">| Amy  | </div><div class="line">| Mark | </div><div class="line">| Alex |</div><div class="line">+------+</div></pre></td></tr></table></figure>
+<p><strong>Explanation</strong></p>
+<p>According to order ‘3’ and ‘4’ in table <strong>orders</strong>, it is easy to tell only salesperson ‘John’ and ‘Alex’ have sales to company ‘RED’,<br>
+so we need to output all the other <em>names</em> in table <strong>salesperson</strong>.</p>
+<h3 id="analysis">Analysis</h3>
+<hr>
+<h3 id="solution">Solution</h3>
+<hr>
+<h3 id="link">Link</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/sales-person/description/" target="_blank" rel="external">607. Sales Person</a></p>
+
                 
 
                 <hr>
@@ -251,7 +279,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
