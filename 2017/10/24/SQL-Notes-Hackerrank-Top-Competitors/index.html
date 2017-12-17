@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -254,8 +254,15 @@
 <p>Only hacker <em>90411</em> managed to earn a full score for more than one challenge, so we print the their <em>hacker_id</em> and name as 2 space-separated values.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>First, we should output hacker_id and name, the query should start with ‘SELECT hacker_id, name’. Then we need to join the four tables and the query can be:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> h.hacker_id, h.name <span class="keyword">FROM</span> Submissions <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Hackers <span class="keyword">AS</span> h <span class="keyword">ON</span> s.hacker_id = h.hacker_id</div><div class="line">                                <span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> c <span class="keyword">ON</span> s.challenge_id = c.challenge_id</div><div class="line">                                <span class="keyword">JOIN</span> Difficulty <span class="keyword">AS</span> d <span class="keyword">ON</span> c.difficulty_level = d.difficulty_level;</div></pre></td></tr></table></figure>
+<p>Next, we need to filter submissions when a hacker achieved full scores using ‘WHERE’:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> h.hacker_id, h.name <span class="keyword">FROM</span> Submissions <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Hackers <span class="keyword">AS</span> h <span class="keyword">ON</span> s.hacker_id = h.hacker_id</div><div class="line">                                <span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> c <span class="keyword">ON</span> s.challenge_id = c.challenge_id</div><div class="line">                                <span class="keyword">JOIN</span> Difficulty <span class="keyword">AS</span> d <span class="keyword">ON</span> c.difficulty_level = d.difficulty_level</div><div class="line"><span class="keyword">WHERE</span> s.score = d.score;</div></pre></td></tr></table></figure>
+<p>Finally, we should sort output by total number of challenges with full score in descending order and hacker_id in ascending order. We can group submissions with full score by hacker_id and name, and select hackers whose total number of challenges with full score is larger than 1. Then order hackers by number of challenges and hacker_id:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> h.hacker_id, h.name <span class="keyword">FROM</span> Submissions <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Hackers <span class="keyword">AS</span> h <span class="keyword">ON</span> s.hacker_id = h.hacker_id</div><div class="line">                                <span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> c <span class="keyword">ON</span> s.challenge_id = c.challenge_id</div><div class="line">                                <span class="keyword">JOIN</span> Difficulty <span class="keyword">AS</span> d <span class="keyword">ON</span> c.difficulty_level = d.difficulty_level</div><div class="line"><span class="keyword">WHERE</span> s.score = d.score <span class="keyword">GROUP</span> <span class="keyword">BY</span> h.hacker_id, h.name <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*)&gt;<span class="number">1</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span>, h.hacker_id;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> h.hacker_id, h.name <span class="keyword">FROM</span> Submissions <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Hackers <span class="keyword">AS</span> h <span class="keyword">ON</span> s.hacker_id = h.hacker_id</div><div class="line">                                <span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> c <span class="keyword">ON</span> s.challenge_id = c.challenge_id</div><div class="line">                                <span class="keyword">JOIN</span> Difficulty <span class="keyword">AS</span> d <span class="keyword">ON</span> c.difficulty_level = d.difficulty_level</div><div class="line"><span class="keyword">WHERE</span> s.score = d.score <span class="keyword">GROUP</span> <span class="keyword">BY</span> h.hacker_id, h.name <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*)&gt;<span class="number">1</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span>, h.hacker_id;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://www.hackerrank.com/challenges/full-score/problem" target="_blank" rel="external">Top Competitors</a></p>
