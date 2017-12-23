@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -245,8 +245,18 @@
 </ul>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>For this problem, we can find start date and end date of each project and then order by duration and start date. To find start date and end date of projects, we can get start date and end date of each project separately first, then cross join start and end dates and find (start date, end date) pairs based on some conditions. That is basic ideas of my solution.</p>
+<p>First, we need to find start dates and end dates of each project separately. If a start date is not included in all end dates, it should be the start date of a project:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> Start_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects);</div></pre></td></tr></table></figure>
+<p>Similarly, an end date excluded in start date column should be the end date of some project:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> End_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects);</div></pre></td></tr></table></figure>
+<p>Then, we need to find (start date, end date) pairs for each project. Before that, we can cross join start dates and end dates of projects to generate all potential pairs. Also, for the same project, end date should be the minimum among all end dates of projects that are larger than start date of the project:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> Start_Date, <span class="keyword">MIN</span>(End_Date) <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> Start_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects)) <span class="keyword">AS</span> s,</div><div class="line">(<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> End_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects)) <span class="keyword">AS</span> e</div><div class="line"><span class="keyword">WHERE</span> Start_Date &lt; End_Date</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Start_Date;</div></pre></td></tr></table></figure>
+<p>Finally, sort output by duration and start date:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> Start_Date, <span class="keyword">MIN</span>(End_Date) <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> Start_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects)) <span class="keyword">AS</span> s,</div><div class="line">(<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> End_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects)) <span class="keyword">AS</span> e</div><div class="line"><span class="keyword">WHERE</span> Start_Date &lt; End_Date</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Start_Date</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">DATEDIFF</span>(<span class="keyword">MIN</span>(End_Date), Start_Date), Start_Date;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> Start_Date, <span class="keyword">MIN</span>(End_Date) <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> Start_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects)) <span class="keyword">AS</span> s,</div><div class="line">(<span class="keyword">SELECT</span> End_Date <span class="keyword">FROM</span> Projects <span class="keyword">WHERE</span> End_Date <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> Start_Date <span class="keyword">FROM</span> Projects)) <span class="keyword">AS</span> e</div><div class="line"><span class="keyword">WHERE</span> Start_Date &lt; End_Date</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Start_Date</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">DATEDIFF</span>(<span class="keyword">MIN</span>(End_Date), Start_Date), Start_Date;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://www.hackerrank.com/challenges/projects/problem" target="_blank" rel="external">Projects</a></p>

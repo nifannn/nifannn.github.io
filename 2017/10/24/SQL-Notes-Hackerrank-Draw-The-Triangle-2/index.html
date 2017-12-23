@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -225,8 +225,21 @@
 <p>Write a query to print the pattern <em>P(20)</em>.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>For this problem, use REPEAT function to generate texts of each line. Also, use a variable to decide the length of each line and apply REPEAT functon for each row of a table with at least 20 rows. Finally, control the number of lines to output.</p>
+<p>First, declare and initialize a variable:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @<span class="built_in">number</span> = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+<p>Then, choose a table with at least 20 rows and apply REPEAT function for each row. Also, increase the variable by 1 each time before applying the function:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @<span class="built_in">number</span> = <span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">REPEAT</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span>+<span class="number">1</span>) <span class="keyword">FROM</span> information_schema.tables;</div></pre></td></tr></table></figure>
+<p>Finally, output the first 20 lines:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @<span class="built_in">number</span> = <span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">REPEAT</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span>+<span class="number">1</span>) <span class="keyword">FROM</span> information_schema.tables <span class="keyword">LIMIT</span> <span class="number">20</span>;</div></pre></td></tr></table></figure>
+<p>Or</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @<span class="built_in">number</span> = <span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">REPEAT</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span>+<span class="number">1</span>) <span class="keyword">FROM</span> information_schema.tables <span class="keyword">WHERE</span> @<span class="built_in">number</span> &lt; <span class="number">20</span>;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<h4 id="solution-1">Solution 1</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @<span class="built_in">number</span> = <span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">REPEAT</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span>+<span class="number">1</span>) <span class="keyword">FROM</span> information_schema.tables <span class="keyword">LIMIT</span> <span class="number">20</span>;</div></pre></td></tr></table></figure>
+<h4 id="solution-2">Solution 2</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> @<span class="built_in">number</span> = <span class="number">0</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">REPEAT</span>(<span class="string">'* '</span>, @<span class="built_in">number</span> := @<span class="built_in">number</span>+<span class="number">1</span>) <span class="keyword">FROM</span> information_schema.tables <span class="keyword">WHERE</span> @<span class="built_in">number</span> &lt; <span class="number">20</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://www.hackerrank.com/challenges/draw-the-triangle-2/problem" target="_blank" rel="external">Draw The Triangle 2</a></p>
@@ -269,7 +282,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Solution 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Solution 2</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
