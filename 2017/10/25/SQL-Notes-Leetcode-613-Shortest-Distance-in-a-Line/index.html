@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -250,8 +250,16 @@
 <p><strong>Note:</strong> Every point is unique, which means there is no duplicates in table <strong>point</strong>.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>We can cross join point table with itself to generate all possible pairs of points. Then calculate distaneces and select minimum value:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(<span class="keyword">ABS</span>(p2.x - p1.x)) <span class="keyword">AS</span> shortest <span class="keyword">FROM</span> point <span class="keyword">AS</span> p1, point <span class="keyword">AS</span> p2 <span class="keyword">WHERE</span> p1.x &lt;&gt; p2.x;</div></pre></td></tr></table></figure>
+<p>The above query calculates each distance twice and we can assume the first point is smaller than the second:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(p2.x - p1.x) <span class="keyword">AS</span> shortest <span class="keyword">FROM</span> point <span class="keyword">AS</span> p1, point <span class="keyword">AS</span> p2 <span class="keyword">WHERE</span> p1.x &lt; p2.x;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<h4 id="solution-1">Solution 1</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(<span class="keyword">ABS</span>(p2.x - p1.x)) <span class="keyword">AS</span> shortest <span class="keyword">FROM</span> point <span class="keyword">AS</span> p1, point <span class="keyword">AS</span> p2 <span class="keyword">WHERE</span> p1.x &lt;&gt; p2.x;</div></pre></td></tr></table></figure>
+<h4 id="solution-2">Solution 2</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(p2.x - p1.x) <span class="keyword">AS</span> shortest <span class="keyword">FROM</span> point <span class="keyword">AS</span> p1, point <span class="keyword">AS</span> p2 <span class="keyword">WHERE</span> p1.x &lt; p2.x;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/shortest-distance-in-a-line/description/" target="_blank" rel="external">613. Shortest Distance in a Line</a></p>
@@ -294,7 +302,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Solution 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Solution 2</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
