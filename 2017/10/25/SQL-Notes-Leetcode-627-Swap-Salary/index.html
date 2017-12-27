@@ -291,8 +291,13 @@
 </table>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Write a single update query:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> salary</div></pre></td></tr></table></figure>
+<p>Use IF() function to swap f and m, return f if sex is m, return m otherwise:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> salary <span class="keyword">SET</span> sex = <span class="keyword">IF</span>(sex=<span class="string">'m'</span>, <span class="string">'f'</span>, <span class="string">'m'</span>);</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> salary <span class="keyword">SET</span> sex = <span class="keyword">IF</span>(sex=<span class="string">'m'</span>, <span class="string">'f'</span>, <span class="string">'m'</span>);</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/swap-salary/description/" target="_blank" rel="external">627. Swap Salary</a></p>

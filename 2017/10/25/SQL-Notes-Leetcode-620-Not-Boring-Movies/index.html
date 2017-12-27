@@ -222,8 +222,21 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+---------+-----------+--------------+-----------+</div><div class="line">|   id    | movie     |  description |  rating   |</div><div class="line">+---------+-----------+--------------+-----------+</div><div class="line">|   5     | House card|   Interesting|   9.1     |</div><div class="line">|   1     | War       |   great 3D   |   8.9     |</div><div class="line">+---------+-----------+--------------+-----------+</div></pre></td></tr></table></figure>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<ul>
+<li>Output all columns from table <strong>cinema</strong>:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> cinema;</div></pre></td></tr></table></figure>
+<ul>
+<li>Output movies with an odd numbered ID and a description that is not ‘boring’:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> cinema <span class="keyword">WHERE</span> <span class="keyword">id</span> % <span class="number">2</span> &lt;&gt; <span class="number">0</span> <span class="keyword">AND</span> description &lt;&gt; <span class="string">'boring'</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>Order the result by rating:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> cinema <span class="keyword">WHERE</span> <span class="keyword">id</span> % <span class="number">2</span> &lt;&gt; <span class="number">0</span> <span class="keyword">AND</span> description &lt;&gt; <span class="string">'boring'</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> rating <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> cinema <span class="keyword">WHERE</span> <span class="keyword">id</span> % <span class="number">2</span> &lt;&gt; <span class="number">0</span> <span class="keyword">AND</span> description &lt;&gt; <span class="string">'boring'</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> rating <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/not-boring-movies/description/" target="_blank" rel="external">620. Not Boring Movies</a></p>

@@ -265,8 +265,10 @@ Could you help Tim by writing a query to judge whether these three sides can for
 </table>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Use IF() function to check whether three sides can form a triangle. If x, y, z can form a triangle, return ‘Yes’, otherwise ‘No’.</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> x, y, z, <span class="keyword">IF</span>(x+y&gt;z <span class="keyword">AND</span> x+z&gt;y <span class="keyword">AND</span> y+z&gt;x, <span class="string">'Yes'</span>, <span class="string">'No'</span>) <span class="keyword">AS</span> triangle <span class="keyword">FROM</span> triangle;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/triangle-judgement/description/" target="_blank" rel="external">610. Triangle Judgement</a></p>
