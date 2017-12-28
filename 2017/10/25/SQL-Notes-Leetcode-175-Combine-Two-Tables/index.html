@@ -270,8 +270,10 @@
 <p>FirstName, LastName, City, State</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Because the problem requires to provide information for each person, left join Person with Address and output expected columns.</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> p.FirstName, p.LastName, a.City, a.State <span class="keyword">FROM</span> Person <span class="keyword">AS</span> p </div><div class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> Address <span class="keyword">AS</span> a <span class="keyword">ON</span> p.PersonId = a.PersonId;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/combine-two-tables/description/" target="_blank" rel="external">175. Combine Two Tables</a></p>

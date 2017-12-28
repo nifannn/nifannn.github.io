@@ -235,8 +235,17 @@ Table: <strong>orders</strong></p>
 so we need to output all the other <em>names</em> in table <strong>salesperson</strong>.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<ul>
+<li>Join orders table and company table to find sales_id of who had sales to company ‘RED’:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> o.sales_id <span class="keyword">FROM</span> orders <span class="keyword">AS</span> o </div><div class="line"><span class="keyword">JOIN</span> company <span class="keyword">AS</span> c <span class="keyword">ON</span> o.com_id = c.com_id</div><div class="line"><span class="keyword">WHERE</span> c.name = <span class="string">'RED'</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>Output names of salespersons whose sales_id is not in the list the above query return:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> salesperson </div><div class="line"><span class="keyword">WHERE</span> sales_id <span class="keyword">NOT</span> <span class="keyword">IN</span> </div><div class="line">(<span class="keyword">SELECT</span> o.sales_id <span class="keyword">FROM</span> orders <span class="keyword">AS</span> o </div><div class="line"><span class="keyword">JOIN</span> company <span class="keyword">AS</span> c <span class="keyword">ON</span> o.com_id = c.com_id</div><div class="line"><span class="keyword">WHERE</span> c.name = <span class="string">'RED'</span>);</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> salesperson </div><div class="line"><span class="keyword">WHERE</span> sales_id <span class="keyword">NOT</span> <span class="keyword">IN</span> </div><div class="line">(<span class="keyword">SELECT</span> o.sales_id <span class="keyword">FROM</span> orders <span class="keyword">AS</span> o </div><div class="line"><span class="keyword">JOIN</span> company <span class="keyword">AS</span> c <span class="keyword">ON</span> o.com_id = c.com_id</div><div class="line"><span class="keyword">WHERE</span> c.name = <span class="string">'RED'</span>);</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/sales-person/description/" target="_blank" rel="external">607. Sales Person</a></p>
