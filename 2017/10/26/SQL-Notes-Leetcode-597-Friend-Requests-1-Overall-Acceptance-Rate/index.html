@@ -312,8 +312,30 @@ For the sample data above, your query should return the following result.</p>
 <p><strong>Explanation:</strong> There are 4 unique accepted requests, and there are 5 requests in total. So the rate is 0.80.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>To solve this problem, we can divide number of unique acceptance by number of unique requests.</p>
+<ul>
+<li>Get number of unique acceptance:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> requester_id, accepter_id) <span class="keyword">FROM</span> request_accepted;</div></pre></td></tr></table></figure>
+<ul>
+<li>Similarly, get number of unique requests:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> sender_id, send_to_id) <span class="keyword">FROM</span> friend_request;</div></pre></td></tr></table></figure>
+<ul>
+<li>Divide number of acceptance by number of requests:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> (<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> requester_id, accepter_id) <span class="keyword">FROM</span> request_accepted)/(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> sender_id, send_to_id) <span class="keyword">FROM</span> friend_request) <span class="keyword">AS</span> accept_rate;</div></pre></td></tr></table></figure>
+<ul>
+<li>Round result to 2 decimals:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ROUND</span>((<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> requester_id, accepter_id) <span class="keyword">FROM</span> request_accepted)/(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> sender_id, send_to_id) <span class="keyword">FROM</span> friend_request), <span class="number">2</span>) <span class="keyword">AS</span> accept_rate;</div></pre></td></tr></table></figure>
+<ul>
+<li>Check if result is null, return 0 if it is null:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IFNULL</span>(<span class="keyword">ROUND</span>((<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> requester_id, accepter_id) <span class="keyword">FROM</span> request_accepted)/(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> sender_id, send_to_id) <span class="keyword">FROM</span> friend_request), <span class="number">2</span>), <span class="number">0</span>) <span class="keyword">AS</span> accept_rate;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IFNULL</span>(<span class="keyword">ROUND</span>((<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> requester_id, accepter_id) <span class="keyword">FROM</span> request_accepted)/(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> sender_id, send_to_id) <span class="keyword">FROM</span> friend_request), <span class="number">2</span>), <span class="number">0</span>) <span class="keyword">AS</span> accept_rate;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/friend-requests-i-overall-acceptance-rate/description/" target="_blank" rel="external">597. Friend Request 1: Overall Acceptance Rate</a></p>
