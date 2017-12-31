@@ -220,8 +220,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+----+------------------+</div><div class="line">| Id | Email            |</div><div class="line">+----+------------------+</div><div class="line">| 1  | john@example.com |</div><div class="line">| 2  | bob@example.com  |</div><div class="line">+----+------------------+</div></pre></td></tr></table></figure>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Join 2 Person tables, filter records expected to be deleted and delete these records.</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DELETE</span> p1 <span class="keyword">FROM</span> Person <span class="keyword">AS</span> p1 </div><div class="line"><span class="keyword">JOIN</span> Person <span class="keyword">AS</span> p2 <span class="keyword">ON</span> p1.Email = p2.Email <span class="keyword">AND</span> p1.Id &gt; p2.Id;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/delete-duplicate-emails/description/" target="_blank" rel="external">196. Delete Duplicate Emails</a></p>
