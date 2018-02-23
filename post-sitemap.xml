@@ -7,6 +7,62 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Backpropagation/</loc>
+        <lastmod>2018-01-23T02:08:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-ReLU/</loc>
+        <lastmod>2018-01-23T01:59:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Softmax/</loc>
+        <lastmod>2018-01-23T01:59:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
+        <lastmod>2018-01-23T01:59:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-Maximum-Likelihood-and-Cross-Entropy/</loc>
+        <lastmod>2018-01-23T01:58:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
+        <lastmod>2018-01-23T01:57:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/26/SQL-Notes-Leetcode-612-Shortest-Distance-in-a-Plane/</loc>
+        <lastmod>2017-12-31T16:32:33.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/10/26/SQL-Notes-Leetcode-176-Second-Highest-Salary/</loc>
         <lastmod>2017-12-30T22:29:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -321,14 +377,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-614-Second-Degree-Follower/</loc>
         <lastmod>2017-12-10T19:33:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/26/SQL-Notes-Leetcode-612-Shortest-Distance-in-a-Plane/</loc>
-        <lastmod>2017-12-10T19:20:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

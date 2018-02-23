@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#612 Shortest Distance in a Plane - Vanptain Blog
+          SQL Notes: Leetcode#612 Shortest Distance in a Plane - Memogrocery
         
     </title>
 
@@ -119,7 +119,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Welcome</a>
+            <a class="navbar-brand" href="/">Memogrocery</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -254,8 +254,10 @@
 <p><strong>Note:</strong> The longest distance among all the points are less than 10000.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Join 2 point_2d tables to iterate all possible point pairs, then calculate distance with POW(), SQRT() and round shortest distance to 2 decimals using MIN(), ROUND().</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ROUND</span>(<span class="keyword">SQRT</span>(<span class="keyword">MIN</span>(<span class="keyword">POW</span>(p1.x-p2.x,<span class="number">2</span>)+<span class="keyword">POW</span>(p1.y-p2.y,<span class="number">2</span>))),<span class="number">2</span>) <span class="keyword">AS</span> shortest </div><div class="line"><span class="keyword">FROM</span> point_2d <span class="keyword">AS</span> p1, point_2d <span class="keyword">AS</span> p2</div><div class="line"><span class="keyword">WHERE</span> p1.x &lt;&gt; p2.x <span class="keyword">OR</span> p1.y &lt;&gt; p2.y;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/shortest-distance-in-a-plane/description/" target="_blank" rel="external">612. Shortest Distance in a Plane</a></p>
@@ -414,7 +416,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Fan Ni 2017 
+                    Copyright &copy; Fan Ni 2018 
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">
