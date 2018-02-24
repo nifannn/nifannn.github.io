@@ -121,13 +121,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Algorithm/</loc>
-        <lastmod>2017-10-21T19:44:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/web/</loc>
         <lastmod>2017-10-22T19:05:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -254,15 +247,22 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Leetcode/</loc>
+        <loc>https://nifannn.github.io/tags/SQL/</loc>
         <lastmod>2017-12-31T16:32:33.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/SQL/</loc>
-        <lastmod>2017-12-31T16:32:33.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/Algorithm/</loc>
+        <lastmod>2018-02-24T00:40:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Leetcode/</loc>
+        <lastmod>2018-02-24T00:40:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
