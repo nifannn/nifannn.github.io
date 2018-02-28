@@ -7,6 +7,126 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-624-Maximum-Distance-in-Arrays/</loc>
+        <lastmod>2018-02-28T05:27:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-26-Remove-Duplicates-from-Sorted-Array/</loc>
+        <lastmod>2018-02-28T03:26:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-643-Maximum-Average-Subarray-1/</loc>
+        <lastmod>2018-02-28T01:55:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-119-Pascal-s-Triangle-2/</loc>
+        <lastmod>2018-02-27T23:04:23.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-66-Plus-One/</loc>
+        <lastmod>2018-02-27T22:36:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/02/26/Algorithm-Notes-Leetcode-724-Find-Pivot-Index/</loc>
+        <lastmod>2018-02-27T19:30:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-118-Pascal-s-Triangle/</loc>
+        <lastmod>2018-02-27T19:25:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-35-Search-Insert-Position/</loc>
+        <lastmod>2018-02-27T19:00:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-53-Maximum-Subarray/</loc>
+        <lastmod>2018-02-27T18:48:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/02/27/Algorithm-Notes-Leetcode-344-Reverse-String/</loc>
+        <lastmod>2018-02-27T16:03:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-1-Two-Sum/</loc>
+        <lastmod>2018-02-26T18:38:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/02/26/NLP-Notes-GloVe/</loc>
+        <lastmod>2018-02-26T18:05:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/02/26/NLP-Notes-Word2Vec/</loc>
+        <lastmod>2018-02-26T18:05:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/02/26/NLP-Notes-TFIDF/</loc>
+        <lastmod>2018-02-26T18:04:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/02/26/Deep-Learning-Notes-DCGAN/</loc>
+        <lastmod>2018-02-26T18:03:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2018/02/25/Algorithm-Notes-Leetcode-747-Largest-Number-At-Least-Twice-of-Others/</loc>
         <lastmod>2018-02-26T18:01:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,14 +137,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-674-Longest-Continuous-Increasing-Subsequence/</loc>
         <lastmod>2018-02-26T17:52:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/02/26/Algorithm-Notes-Leetcode-724-Find-Pivot-Index/</loc>
-        <lastmod>2018-02-26T15:39:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -49,14 +161,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/02/25/Algorithm-Notes-Leetcode-746-Min-Cost-Climbing-Stairs/</loc>
         <lastmod>2018-02-26T03:08:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-53-Maximum-Subarray/</loc>
-        <lastmod>2018-02-25T23:17:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -1919,46 +2023,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-624-Maximum-Distance-in-Arrays/</loc>
-        <lastmod>2017-10-30T13:46:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-26-Remove-Duplicates-from-Sorted-Array/</loc>
-        <lastmod>2017-10-30T13:46:07.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-1-Two-Sum/</loc>
-        <lastmod>2017-10-30T13:45:05.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-119-Pascal-s-Triangle-2/</loc>
-        <lastmod>2017-10-30T13:44:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-643-Maximum-Average-Subarray-1/</loc>
-        <lastmod>2017-10-30T13:26:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/10/24/SQL-Notes-Hackerrank-Average-Population-of-Each-Continent/</loc>
         <lastmod>2017-10-29T17:51:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1985,30 +2049,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/23/SQL-Notes-Hackerrank-Weather-Observation-Station-20/</loc>
         <lastmod>2017-10-29T15:53:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-66-Plus-One/</loc>
-        <lastmod>2017-10-29T15:37:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-118-Pascal-s-Triangle/</loc>
-        <lastmod>2017-10-29T15:37:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/29/Algorithm-Notes-Leetcode-35-Search-Insert-Position/</loc>
-        <lastmod>2017-10-29T15:34:54.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
