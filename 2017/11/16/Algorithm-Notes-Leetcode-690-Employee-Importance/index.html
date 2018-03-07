@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -218,10 +218,10 @@
 <hr>
 <h3 id="solution">Solution</h3>
 <hr>
-<pre><code class="language-python"></code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"># Employee info</div><div class="line">class Employee:</div><div class="line">    def __init__(self, id, importance, subordinates):</div><div class="line">        # It's the unique id of each node.</div><div class="line">        # unique id of this employee</div><div class="line">        self.id = id</div><div class="line">        # the importance value of this employee</div><div class="line">        self.importance = importance</div><div class="line">        # the id of direct subordinates</div><div class="line">        self.subordinates = subordinates</div><div class="line">"""</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getImportance</span><span class="params">(self, employees, id)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type employees: Employee</div><div class="line">        :type id: int</div><div class="line">        :rtype: int</div><div class="line">        """</div><div class="line">        id2employee = &#123;e.id : e <span class="keyword">for</span> e <span class="keyword">in</span> employees&#125;</div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">dfs</span><span class="params">(id2employee, id)</span>:</span></div><div class="line">            employee = id2employee[id]</div><div class="line">            <span class="keyword">return</span> employee.importance + sum(dfs(id2employee, s_id) <span class="keyword">for</span> s_id <span class="keyword">in</span> employee.subordinates)</div><div class="line">        <span class="keyword">return</span> dfs(id2employee, id)</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href=""></a></p>
+<p><a href="https://leetcode.com/problems/employee-importance/description/" target="_blank" rel="external">690. Employee Importance</a></p>
 
                 
 
