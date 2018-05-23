@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-5/">
+    <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Salaries/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 5
+            SQL 笔记: Hackerrank Employee Salaries
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,39 +219,37 @@
         <div class="post-content-preview">
             问题
 
-查询 STATION 表格中 CITY 名字最长和最短的城市名, 以及对应长度(名字的字符数)。 如果最长或最短的城市不止一个, 选择按字母表排序优先出现的一个。
+写一条查询语句打印 Employee 表格中月薪大于$2000，并且工作时间小于10个月的员工名字（ name 属性）。根据 employee_id 升序排序。
 输入格式
-STATION 表格描述如下:
-STATION
+Employee 表格包含一家公司的员工数据，描述如下:
 
 
 
-Field
+Column
 Type
 
 
 
 
-ID
-NUMBER
+employee_id
+Integer
 
 
-CITY
-VARCHAR2(21)
+name
+String
 
 
-STATE
-VARCHAR2(2)
+months
+Integer
 
 
-LAT_N
-NUMBER......
+salary......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-23
         </p>
         <div class="tags">
             
@@ -267,9 +265,9 @@ NUMBER......
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-4/">
+    <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Names/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 4
+            SQL 笔记: Hackerrank Employee Names
         </h2>
         <h3 class="post-subtitle">
             
@@ -277,32 +275,42 @@ NUMBER......
         <div class="post-content-preview">
             问题
 
-把N作为 STATION 表格中 CITY 记录的数量，把N’作为 STATION 表格中 不重复 CITY 名字的数量; 查询 N - N’ 的值。 总之, 求表格中 CITY 记录的总数 和唯一的 CITY 名字的数量的差值。
+写一条查询语句以字母表顺序打印 Employee 中员工名字（ name 属性）。
 输入格式
-STATION 表格描述如下:
-STATION
+Employee 表格包含一家公司的员工数据，描述如下:
 
 
 
-Field
+Column
 Type
 
 
 
 
-ID
-NUMBER
+employee_id
+Integer
 
 
-CITY
-VARCHAR2(21)
-......
+name
+String
+
+
+months
+Integer
+
+
+salary
+Integer
+
+
+
+employee_id 为员工的ID号码，name 是......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-23
         </p>
         <div class="tags">
             
@@ -318,9 +326,9 @@ VARCHAR2(21)
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-3/">
+    <a href="/2018/05/23/SQL-笔记-Hackerrank-Higher-Than-75-Marks/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 3
+            SQL 笔记: Hackerrank Higher Than 75 Marks
         </h2>
         <h3 class="post-subtitle">
             
@@ -328,7 +336,64 @@ VARCHAR2(21)
         <div class="post-content-preview">
             问题
 
-查询 STATION 表中偶数 ID 的 CITY 名字。可以以任意顺序打印结果,但必须排除重复记录。
+查询 STUDENTS 中得分超过75 Marks 的学生的 Name。按名字最后三个字母排序。如果几个学生名字最后三个字母相同(如: Bobby, Robby, 等), 再按 ID 升序排序。
+输入格式
+STUDENTS 表格描述如下:
+
+
+
+Column
+Type
+
+
+
+
+ID
+Integer
+
+
+Name
+String
+
+
+Marks
+Integer
+
+
+
+Name 列只包含大......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-23
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-12/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Weather Observation Station 12
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STATION 表格中同时以非元音字母开头和结尾的 CITY 名称。结果不包含重复记录。
 输入格式
 STATION 表格描述如下:
 STATION
@@ -362,13 +427,13 @@ NUMBER
 
 
 
-LAT_N ：北纬 ......
+LAT_N ：北纬 LONG......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -384,9 +449,9 @@ LAT_N ：北纬 ......
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-1/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-11/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 1
+            SQL 笔记: Hackerrank Weather Observation Station 11
         </h2>
         <h3 class="post-subtitle">
             
@@ -394,7 +459,7 @@ LAT_N ：北纬 ......
         <div class="post-content-preview">
             问题
 
-查询 STATION 表格中的 CITY 和 STATE 属性。
+查询 STATION 表格中以非元音字母开头或结尾的 CITY 名称。结果不包含重复记录。
 输入格式
 STATION 表格描述如下:
 STATION
@@ -428,17 +493,13 @@ NUMBER
 
 
 
-LAT_N ：北纬  LONG_W ：西经
-分析
-
-
-查询......
+LAT_N ：北纬  LONG_......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -454,9 +515,9 @@ LAT_N ：北纬  LONG_W ：西经
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Names/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-10/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Japanese Cities' Names
+            SQL 笔记: Hackerrank Weather Observation Station 10
         </h2>
         <h3 class="post-subtitle">
             
@@ -464,10 +525,10 @@ LAT_N ：北纬  LONG_W ：西经
         <div class="post-content-preview">
             问题
 
-查询 CITY 表格中所有日本城市的名字。日本的 COUNTRYCODE 是JPN。
+查询 STATION 表格中以非元音字母结尾的 CITY 名称。结果不包含重复记录。
 输入格式
-CITY 表格描述如下:
-CITY
+STATION 表格描述如下:
+STATION
 
 
 
@@ -481,33 +542,30 @@ ID
 NUMBER
 
 
-NAME
-VARCHAR2(17)
+CITY
+VARCHAR2(21)
 
 
-COUNTRYCODE
-VARCHAR2(3)
+STATE
+VARCHAR2(2)
 
 
-DISTRICT
-VARCHAR2(20)
+LAT_N
+NUMBER
 
 
-POPULATION
+LONG_W
 NUMBER
 
 
 
-分析
-
-
-查......
+LAT_N ：北纬 LONG_W ：西......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -523,9 +581,9 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Attributes/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-9/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Japanese Cities' Attributes
+            SQL 笔记: Hackerrank Weather Observation Station 9
         </h2>
         <h3 class="post-subtitle">
             
@@ -533,10 +591,10 @@ NUMBER
         <div class="post-content-preview">
             问题
 
-查询 CITY 表格中每一个日本城市的所有属性。日本的 COUNTRYCODE 是JPN.
+查询 STATION 表格中以非元音字母开头的 CITY 名字。结果不包含重复记录。
 输入格式
-CITY 表格描述如下:
-CITY
+STATION 表格描述如下:
+STATION
 
 
 
@@ -550,31 +608,30 @@ ID
 NUMBER
 
 
-NAME
-VARCHAR2(17)
+CITY
+VARCHAR2(21)
 
 
-COUNTRYCODE
-VARCHAR2(3)
+STATE
+VARCHAR2(2)
 
 
-DISTRICT
-VARCHAR2(20)
+LAT_N
+NUMBER
 
 
-POPULATION
+LONG_W
 NUMBER
 
 
 
-分析
-......
+LAT_N ：北纬 LONG_W ：西......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -590,9 +647,9 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Select-By-Id/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-8/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Select By Id
+            SQL 笔记: Hackerrank Weather Observation Station 8
         </h2>
         <h3 class="post-subtitle">
             
@@ -600,10 +657,10 @@ NUMBER
         <div class="post-content-preview">
             问题
 
-查询 CITY 表中 ID 为1661的城市的所有列.
+查询 STATION 表格中首字母和最后一个字母均为元音字母的 CITY 名字。结果不包含重复记录。
 输入格式
-CITY 表描述如下:
-CITY
+STATION 表格描述如下:
+STATION
 
 
 
@@ -617,33 +674,30 @@ ID
 NUMBER
 
 
-NAME
-VARCHAR2(17)
+CITY
+VARCHAR2(21)
 
 
-COUNTRYCODE
-VARCHAR2(3)
+STATE
+VARCHAR2(2)
 
 
-DISTRICT
-VARCHAR2(20)
+LAT_N
+NUMBER
 
 
-POPULATION
+LONG_W
 NUMBER
 
 
 
-分析
-
-
-查询所有列 ==&gt; SELE......
+LAT_N ：北纬 L......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -659,9 +713,9 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Select-All/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-7/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Select All
+            SQL 笔记: Hackerrank Weather Observation Station 7
         </h2>
         <h3 class="post-subtitle">
             
@@ -669,10 +723,10 @@ NUMBER
         <div class="post-content-preview">
             问题
 
-查询 CITY 表格中所有行所有列（属性）。
+查询 STATION 表格中以元音字母结尾的 CITY 名字。结果不可以包含重复记录。
 输入格式
-CITY 表格描述如下:
-CITY
+STATION 表格描述如下:
+STATION
 
 
 
@@ -686,33 +740,30 @@ ID
 NUMBER
 
 
-NAME
-VARCHAR2(17)
+CITY
+VARCHAR2(21)
 
 
-COUNTRYCODE
-VARCHAR2(3)
+STATE
+VARCHAR2(2)
 
 
-DISTRICT
-VARCHAR2(20)
+LAT_N
+NUMBER
 
 
-POPULATION
+LONG_W
 NUMBER
 
 
 
-分析
-
-
-查询所有属性 ==&gt; SELECT ......
+LAT_N ：北纬 LONG_W ：......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -728,9 +779,9 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Revising-the-Select-Query-2/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-6/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Revising the Select Query 2
+            SQL 笔记: Hackerrank Weather Observation Station 6
         </h2>
         <h3 class="post-subtitle">
             
@@ -738,10 +789,10 @@ NUMBER
         <div class="post-content-preview">
             问题
 
-查询 CITY 中所有人口数大于120000的美国城市的名字。美国的 CountryCode 为USA。
+查询 STATION 表中元音字母(a, e, i, o, u) 开头的 CITY 名字。不可以包含重复记录。
 输入格式
-CITY 表格描述如下:
-CITY
+STATION 表格描述如下:
+STATION
 
 
 
@@ -755,88 +806,30 @@ ID
 NUMBER
 
 
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-VARCHAR2(3)
-
-
-DISTRICT
-VARCHAR2(20)
-
-
-POPULATION
-NUMBER......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-21
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Revising-the-Select-Query-1/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Revising the Select Query 1
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 CITY 中所有人口数大于100000的美国城市的所有列。美国的 CountryCode 是USA。
-输入格式
-CITY 表格描述如下:
 CITY
+VARCHAR2(21)
 
 
-
-Field
-Type
-
+STATE
+VARCHAR2(2)
 
 
-
-ID
+LAT_N
 NUMBER
 
 
-NAME
-VARCHAR2(17)
+LONG_W
+NUMBER
 
 
-COUNTRYCODE
-VARCHAR2(3)
 
-
-DISTRICT
-VARCHAR2(20)
-
-
-POPULATION
-NUMBE......
+LAT_N ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-22
         </p>
         <div class="tags">
             
@@ -886,6 +879,14 @@ NUMBE......
     <div class="tags">
         
             
+            <a href="/tags/#Algorithm" title="Algorithm" rel="81">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="122">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
@@ -906,14 +907,6 @@ NUMBE......
             
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="81">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="121">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Data Science" title="Data Science" rel="3">Data Science</a>
             
         
@@ -924,13 +917,13 @@ NUMBE......
             
         
             
-            <a href="/tags/#Deep Learning Specialization" title="Deep Learning Specialization" rel="3">Deep Learning Specialization</a>
-            
-        
-            
         
             
             <a href="/tags/#CNN" title="CNN" rel="2">CNN</a>
+            
+        
+            
+            <a href="/tags/#Deep Learning Specialization" title="Deep Learning Specialization" rel="3">Deep Learning Specialization</a>
             
         
             
@@ -976,11 +969,15 @@ NUMBE......
             
         
             
-            <a href="/tags/#SQL" title="SQL" rel="110">SQL</a>
+            <a href="/tags/#SQL" title="SQL" rel="120">SQL</a>
             
         
             
-            <a href="/tags/#Hackerrank" title="Hackerrank" rel="70">Hackerrank</a>
+            <a href="/tags/#Hackerrank" title="Hackerrank" rel="80">Hackerrank</a>
+            
+        
+            
+        
             
         
             
@@ -991,8 +988,6 @@ NUMBE......
         
             
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
-            
-        
             
         
             
@@ -1058,23 +1053,23 @@ NUMBE......
     <ul>
       
         <li>
-          <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-5/">SQL 笔记: Hackerrank Weather Observation Station 5</a>
+          <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Salaries/">SQL 笔记: Hackerrank Employee Salaries</a>
         </li>
       
         <li>
-          <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-4/">SQL 笔记: Hackerrank Weather Observation Station 4</a>
+          <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Names/">SQL 笔记: Hackerrank Employee Names</a>
         </li>
       
         <li>
-          <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-3/">SQL 笔记: Hackerrank Weather Observation Station 3</a>
+          <a href="/2018/05/23/SQL-笔记-Hackerrank-Higher-Than-75-Marks/">SQL 笔记: Hackerrank Higher Than 75 Marks</a>
         </li>
       
         <li>
-          <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-1/">SQL 笔记: Hackerrank Weather Observation Station 1</a>
+          <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-12/">SQL 笔记: Hackerrank Weather Observation Station 12</a>
         </li>
       
         <li>
-          <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Names/">SQL 笔记: Hackerrank Japanese Cities&#39; Names</a>
+          <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-11/">SQL 笔记: Hackerrank Weather Observation Station 11</a>
         </li>
       
     </ul>
