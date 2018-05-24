@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -219,13 +219,16 @@
         <div class="post-content-preview">
             问题
 
+给定一个整数数组，返回相加等于特定值的两个数的索引。
+假设每个输入只有一个解，并且不会使用同一个数两次。
+举例:
+给定 nums = [2, 7, 11, 15], target = 9,
+因为 nums[0] + nums[1] = 2 + 7 = 9,
+返回 [0, 1].
 解法 1
 
-基本想法
-
-Python 代码
-
-123456789101112class Solution(object):    def twoSum(self, nums, target):        """        :type nums: List[int]        :type target: int        :rtype: List[int]       ......
+基本思路
+使用哈希表储存数组的值以及对应索引。遍历数组，每次把数值和索引加入哈希表，再检查目标......
         </div>
     </a>
     
@@ -968,13 +971,13 @@ NUMBER......
             
         
             
-        
-            
-        
-            
-        
-            
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
+            
+        
+            
+        
+            
+        
             
         
             

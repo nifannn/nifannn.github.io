@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/05/21/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-1-Two-Sum/</loc>
+        <lastmod>2018-05-24T01:42:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-1-Two-Sum/</loc>
+        <lastmod>2018-05-24T00:37:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2018/05/23/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Employee-Salaries/</loc>
         <lastmod>2018-05-23T15:06:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -161,22 +177,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/05/22/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Weather-Observation-Station-6/</loc>
         <lastmod>2018-05-22T23:38:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/30/Algorithm-Notes-Leetcode-1-Two-Sum/</loc>
-        <lastmod>2018-05-22T03:44:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/05/21/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-1-Two-Sum/</loc>
-        <lastmod>2018-05-22T03:43:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -503,7 +503,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -519,7 +519,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

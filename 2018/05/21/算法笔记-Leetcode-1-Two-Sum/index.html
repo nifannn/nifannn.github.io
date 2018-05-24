@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,17 +214,22 @@
 
                 <h3 id="问题">问题</h3>
 <hr>
+<p>给定一个整数数组，返回相加等于特定值的两个数的索引。</p>
+<p>假设每个输入只有一个解，并且不会使用同一个数两次。</p>
+<p>举例:<br>
+给定 nums = [2, 7, 11, 15], target = 9,<br>
+因为 nums[0] + nums[1] = 2 + 7 = 9,<br>
+返回 [0, 1].</p>
 <h3 id="解法-1">解法 1</h3>
 <hr>
-<h4 id="基本想法">基本想法</h4>
-<hr>
+<h4 id="基本思路">基本思路</h4>
+<p>使用哈希表储存数组的值以及对应索引。遍历数组，每次把数值和索引加入哈希表，再检查目标值减去当前值的差是否存在哈希表中，如果存在，输出对应的两个数的索引。</p>
 <h4 id="python-代码">Python 代码</h4>
-<hr>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        """</div><div class="line">        lookup = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> idx, num <span class="keyword">in</span> enumerate(nums):</div><div class="line">            <span class="keyword">if</span> target - num <span class="keyword">in</span> lookup:</div><div class="line">                <span class="keyword">return</span> [lookup[target-num], idx]</div><div class="line">            lookup[num] = idx</div></pre></td></tr></table></figure>
 <h4 id="时间复杂度分析">时间复杂度分析</h4>
-<hr>
+<p>遍历数组一次, O(n)。</p>
 <h4 id="空间复杂度分析">空间复杂度分析</h4>
-<hr>
+<p>用哈希表储存数值和索引。一个有n个值的数组，哈希表最多记录n个元素，O(n)。</p>
 <h3 id="链接">链接</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/two-sum/description/" target="_blank" rel="external">1. Two Sum</a><br>
@@ -268,7 +273,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法-1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解法 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#基本想法"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本想法</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-代码"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python 代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#时间复杂度分析"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">时间复杂度分析</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#空间复杂度分析"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">空间复杂度分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法-1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">解法 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#基本思路"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本思路</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-代码"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python 代码</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#时间复杂度分析"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">时间复杂度分析</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#空间复杂度分析"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">空间复杂度分析</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>
