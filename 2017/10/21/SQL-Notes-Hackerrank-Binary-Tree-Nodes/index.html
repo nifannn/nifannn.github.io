@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -304,7 +304,8 @@ Finally, check whether the node is leaf. If the node value appears in Column <em
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> N, <span class="keyword">IF</span>(P <span class="keyword">IS</span> <span class="literal">NULL</span>, <span class="string">'Root'</span>, <span class="keyword">IF</span>(B.N <span class="keyword">IN</span> (<span class="keyword">SELECT</span> P <span class="keyword">FROM</span> BST), <span class="string">'Inner'</span>, <span class="string">'Leaf'</span>)) <span class="keyword">FROM</span> BST <span class="keyword">AS</span> B <span class="keyword">ORDER</span> <span class="keyword">BY</span> N;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/binary-search-tree-1/problem" target="_blank" rel="external">Binary Tree Nodes</a></p>
+<p><a href="https://www.hackerrank.com/challenges/binary-search-tree-1/problem" target="_blank" rel="external">Binary Tree Nodes</a><br>
+<a href="/2018/05/31/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Binary-Tree-Nodes/">(中文版) SQL 笔记: Hackerrank Binary Tree Nodes</a></p>
 
                 
 

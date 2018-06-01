@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -339,7 +339,8 @@ ORDER BY COUNT(Occupation), Occupation</li>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="keyword">Name</span>, <span class="string">'('</span>, <span class="keyword">LEFT</span>(Occupation,<span class="number">1</span>),<span class="string">')'</span>) <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">Name</span>;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="string">'There are a total of '</span>, <span class="keyword">COUNT</span>(Occupation), <span class="string">' '</span>, <span class="keyword">LOWER</span>(Occupation), <span class="string">'s.'</span>) <span class="keyword">FROM</span> OCCUPATIONS <span class="keyword">GROUP</span> <span class="keyword">BY</span> Occupation <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(Occupation), Occupation;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/the-pads/problem" target="_blank" rel="external">The PADS</a></p>
+<p><a href="https://www.hackerrank.com/challenges/the-pads/problem" target="_blank" rel="external">The PADS</a><br>
+<a href="/2018/05/31/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-The-PADS/">(中文版) SQL 笔记: Hackerrank The PADS</a></p>
 
                 
 
