@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -225,11 +225,21 @@ Can you write a SQL query to output the result for Mary?</p>
 If the number of students is odd, there is no need to change the last one’s seat.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>In order to exchange seats, we can exchange id and then order by id. If origin id is odd, add 1 as new id, otherwise minus 1 as new id. But if the table has odd number of records, the id of last record will not change. As a result, we need to count how many records the table has and store it in a temp table first:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> cnt <span class="keyword">FROM</span> seat) <span class="keyword">AS</span> t</div></pre></td></tr></table></figure>
+<p>Then use IF() function to change id. If total number of records in the table is odd and id equals to the total number, do not change id and return origin id directly:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(cnt % <span class="number">2</span> = <span class="number">1</span> <span class="keyword">AND</span> <span class="keyword">id</span> = cnt, <span class="keyword">id</span>, <span class="keyword">IF</span>()) <span class="keyword">AS</span> <span class="keyword">id</span>, student <span class="keyword">FROM</span> seat,</div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> cnt <span class="keyword">FROM</span> seat) <span class="keyword">AS</span> t</div></pre></td></tr></table></figure>
+<p>If the table has even number of records or the id is the last one, check whether id is even or odd. If odd, add 1 as new id, otherwise minus 1 as new id:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(cnt % <span class="number">2</span> = <span class="number">1</span> <span class="keyword">AND</span> <span class="keyword">id</span> = cnt, <span class="keyword">id</span>, <span class="keyword">IF</span>(<span class="keyword">id</span> % <span class="number">2</span> = <span class="number">1</span>, <span class="keyword">id</span> + <span class="number">1</span>, <span class="keyword">id</span> - <span class="number">1</span>)) <span class="keyword">AS</span> <span class="keyword">id</span>, student <span class="keyword">FROM</span> seat,</div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> cnt <span class="keyword">FROM</span> seat) <span class="keyword">AS</span> t</div></pre></td></tr></table></figure>
+<p>Sort by id finally:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(cnt % <span class="number">2</span> = <span class="number">1</span> <span class="keyword">AND</span> <span class="keyword">id</span> = cnt, <span class="keyword">id</span>, <span class="keyword">IF</span>(<span class="keyword">id</span> % <span class="number">2</span> = <span class="number">1</span>, <span class="keyword">id</span> + <span class="number">1</span>, <span class="keyword">id</span> - <span class="number">1</span>)) <span class="keyword">AS</span> <span class="keyword">id</span>, student <span class="keyword">FROM</span> seat,</div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> cnt <span class="keyword">FROM</span> seat) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">id</span>;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IF</span>(cnt % <span class="number">2</span> = <span class="number">1</span> <span class="keyword">AND</span> <span class="keyword">id</span> = cnt, <span class="keyword">id</span>, <span class="keyword">IF</span>(<span class="keyword">id</span> % <span class="number">2</span> = <span class="number">1</span>, <span class="keyword">id</span> + <span class="number">1</span>, <span class="keyword">id</span> - <span class="number">1</span>)) <span class="keyword">AS</span> <span class="keyword">id</span>, student <span class="keyword">FROM</span> seat,</div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> cnt <span class="keyword">FROM</span> seat) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">id</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/exchange-seats/description/" target="_blank" rel="external">626. Exchange Seats</a></p>
+<p><a href="https://leetcode.com/problems/exchange-seats/description/" target="_blank" rel="external">626. Exchange Seats</a><br>
+<a href="/2018/06/06/SQL-%E7%AC%94%E8%AE%B0-Leetcode-626-Exchange-Seats/">(中文版) SQL 笔记: Leetcode#626 Exchange Seats</a></p>
 
                 
 

@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -289,7 +289,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">id</span>, age, m.coins_needed, m.power <span class="keyword">FROM</span> </div><div class="line">(<span class="keyword">SELECT</span> code, <span class="keyword">power</span>, <span class="keyword">MIN</span>(coins_needed) <span class="keyword">AS</span> coins_needed <span class="keyword">FROM</span> Wands <span class="keyword">GROUP</span> <span class="keyword">BY</span> code, <span class="keyword">power</span>) <span class="keyword">AS</span> m</div><div class="line"><span class="keyword">JOIN</span> Wands <span class="keyword">AS</span> w <span class="keyword">ON</span> m.code = w.code <span class="keyword">AND</span> m.power = w.power <span class="keyword">AND</span> m.coins_needed = w.coins_needed</div><div class="line"><span class="keyword">JOIN</span> Wands_Property <span class="keyword">AS</span> p <span class="keyword">ON</span> m.code = p.code</div><div class="line"><span class="keyword">WHERE</span> p.is_evil = <span class="number">0</span></div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> m.power <span class="keyword">DESC</span>, age <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/harry-potter-and-wands/problem" target="_blank" rel="external">Ollivander’s Inventory</a></p>
+<p><a href="https://www.hackerrank.com/challenges/harry-potter-and-wands/problem" target="_blank" rel="external">Ollivander’s Inventory</a><br>
+<a href="/2018/06/08/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Ollivander-s-Inventory/">(中文版) SQL 笔记: Hackerrank Ollivander’s Inventory</a></p>
 
                 
 

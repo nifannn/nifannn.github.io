@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -292,7 +292,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> con.contest_id, con.hacker_id, con.name, </div><div class="line"><span class="keyword">SUM</span>(sg.total_submissions), <span class="keyword">SUM</span>(sg.total_accepted_submissions), </div><div class="line"><span class="keyword">SUM</span>(vg.total_views), <span class="keyword">SUM</span>(vg.total_unique_views)</div><div class="line"><span class="keyword">FROM</span> Contests <span class="keyword">AS</span> con</div><div class="line"><span class="keyword">JOIN</span> Colleges <span class="keyword">AS</span> <span class="keyword">col</span> <span class="keyword">ON</span> con.contest_id = col.contest_id</div><div class="line"><span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> cha <span class="keyword">ON</span> cha.college_id = col.college_id</div><div class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span></div><div class="line">(<span class="keyword">SELECT</span> ss.challenge_id, <span class="keyword">SUM</span>(ss.total_submissions) <span class="keyword">AS</span> total_submissions, <span class="keyword">SUM</span>(ss.total_accepted_submissions) <span class="keyword">AS</span> total_accepted_submissions <span class="keyword">FROM</span> Submission_Stats <span class="keyword">AS</span> ss <span class="keyword">GROUP</span> <span class="keyword">BY</span> ss.challenge_id) <span class="keyword">AS</span> sg</div><div class="line"><span class="keyword">ON</span> cha.challenge_id = sg.challenge_id</div><div class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span></div><div class="line">(<span class="keyword">SELECT</span> vs.challenge_id, <span class="keyword">SUM</span>(vs.total_views) <span class="keyword">AS</span> total_views, <span class="keyword">SUM</span>(vs.total_unique_views) <span class="keyword">AS</span> total_unique_views</div><div class="line"><span class="keyword">FROM</span> View_Stats <span class="keyword">AS</span> vs <span class="keyword">GROUP</span> <span class="keyword">BY</span> vs.challenge_id) <span class="keyword">AS</span> vg</div><div class="line"><span class="keyword">ON</span> cha.challenge_id = vg.challenge_id</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> con.contest_id, con.hacker_id, con.name</div><div class="line"><span class="keyword">HAVING</span> <span class="keyword">SUM</span>(sg.total_submissions) +</div><div class="line">       <span class="keyword">SUM</span>(sg.total_accepted_submissions) +</div><div class="line">       <span class="keyword">SUM</span>(vg.total_views) +</div><div class="line">       <span class="keyword">SUM</span>(vg.total_unique_views) &gt; <span class="number">0</span></div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> con.contest_id;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/interviews/problem" target="_blank" rel="external">Interviews</a></p>
+<p><a href="https://www.hackerrank.com/challenges/interviews/problem" target="_blank" rel="external">Interviews</a><br>
+<a href="/2018/06/10/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Interviews/">(中文版) SQL 笔记: Hackerrank Interviews</a></p>
 
                 
 
@@ -301,7 +302,7 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/24/SQL-Notes-Hackerrank-15-Days-of-Learning-SQL/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank 15 Days of Learning SQL">&larr; Previous Post</a>
+                            <a href="/2017/10/24/SQL-Notes-Hackerrank-Draw-The-Triangle-1/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Hackerrank Draw The Triangle 1">&larr; Previous Post</a>
                         </li>
                     
                     

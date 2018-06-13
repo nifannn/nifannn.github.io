@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -258,7 +258,7 @@ The <strong>STATION</strong> table is described as follows:</p>
 <p>where <em>LAT_N</em> is the northern latitude and <em>LONG_W</em> is the western longitude.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
-<p>The Manhattan Distance is |a - c| + |b - d|.</p>
+<p>The Manhattan Distance is |x<sub>1</sub> - x<sub>2</sub>| + |y<sub>1</sub> - y<sub>2</sub>| = |a - c| + |b - d|.</p>
 <ul>
 <li>|a - c| + |b - d| ==&gt; ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W)-MAX(LONG_W))</li>
 <li>round to a scale of 4 decimal places ==&gt; SELECT ROUND(ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W)-MAX(LONG_W)), 4)</li>
@@ -269,7 +269,8 @@ The <strong>STATION</strong> table is described as follows:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">ROUND</span>(<span class="keyword">ABS</span>(<span class="keyword">MIN</span>(LAT_N)-<span class="keyword">MAX</span>(LAT_N)) + <span class="keyword">ABS</span>(<span class="keyword">MIN</span>(LONG_W)-<span class="keyword">MAX</span>(LONG_W)), <span class="number">4</span>) <span class="keyword">FROM</span> STATION;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-18/problem" target="_blank" rel="external">Weather Observation Station 18</a></p>
+<p><a href="https://www.hackerrank.com/challenges/weather-observation-station-18/problem" target="_blank" rel="external">Weather Observation Station 18</a><br>
+<a href="/2018/06/04/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Weather-Observation-Station-18/">(中文版) SQL 笔记: Hackerrank Weather Observation Station 18</a></p>
 
                 
 

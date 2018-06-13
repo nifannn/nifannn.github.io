@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -265,7 +265,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> h.hacker_id, h.name <span class="keyword">FROM</span> Submissions <span class="keyword">AS</span> s <span class="keyword">JOIN</span> Hackers <span class="keyword">AS</span> h <span class="keyword">ON</span> s.hacker_id = h.hacker_id</div><div class="line">                                <span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> c <span class="keyword">ON</span> s.challenge_id = c.challenge_id</div><div class="line">                                <span class="keyword">JOIN</span> Difficulty <span class="keyword">AS</span> d <span class="keyword">ON</span> c.difficulty_level = d.difficulty_level</div><div class="line"><span class="keyword">WHERE</span> s.score = d.score <span class="keyword">GROUP</span> <span class="keyword">BY</span> h.hacker_id, h.name <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*)&gt;<span class="number">1</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span>, h.hacker_id;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/full-score/problem" target="_blank" rel="external">Top Competitors</a></p>
+<p><a href="https://www.hackerrank.com/challenges/full-score/problem" target="_blank" rel="external">Top Competitors</a><br>
+<a href="/2018/06/08/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Top-Competitors/">(中文版) SQL 笔记: Hackerrank Top Competitors</a></p>
 
                 
 

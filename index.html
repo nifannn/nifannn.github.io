@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-17/">
+    <a href="/2018/06/10/SQL-笔记-Hackerrank-Interviews/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 17
+            SQL 笔记: Hackerrank Interviews
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,35 +219,14 @@
         <div class="post-content-preview">
             问题
 
-查询 STATION 表中大于38.7780的北纬（Northern Latitude (LAT_N)）中的最小值对应的西经（Western Longitude (LONG_W)）。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2......
+Samantha通过编程竞赛来面试候选人。写一条查询语句打印每场竞赛contest_id， hacker_id， name，以及total_submissions的和， total_accepted_submissions的和， total_views的和，total_unique_views的和，并根据contest_id排序。从结果中排除四个总和都是0的竞赛。
+注意： 一场竞赛可......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-03
+            2018-06-10
         </p>
         <div class="tags">
             
@@ -263,9 +242,9 @@ VARCHAR2......
 
 <div class="post-preview">
 
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-16/">
+    <a href="/2018/06/10/SQL-笔记-Hackerrank-Symmetric-Pairs/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 16
+            SQL 笔记: Hackerrank Symmetric Pairs
         </h2>
         <h3 class="post-subtitle">
             
@@ -273,45 +252,28 @@ VARCHAR2......
         <div class="post-content-preview">
             问题
 
-查询STATION表中大于38.7780的北纬（Northern Latitude (LAT_N)）的最小值。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
+给你一张表, Functions, 包含两个字段： X 和 Y。
 
+如果X1 = Y2 且 X2 = Y1，那么就说(X1, Y1) 和 (X2, Y2) 是对称的。
+写一条查询语句输出所有对称点，并根据X值升序排序。
+输入样例
 
+输出样例
 
-Field
-Type
+20 20
+20 21
+22 23
 
+分析
 
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-......
+可以分别找出当x等于y时和当x不等于y时的对称点，然后用UNION合并，再排序输出。
+当x等于y......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-03
+            2018-06-10
         </p>
         <div class="tags">
             
@@ -327,45 +289,25 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-15/">
+    <a href="/2018/06/10/SQL-笔记-Hackerrank-Placements/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 15
+            SQL 笔记: Hackerrank Placements
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            Problem
+            问题
 
-查询 STATION 表中小于137.2345的北纬（Northern Latitude (LAT_N)）中的最大值所对应的西经（Western Longitude (LONG_W)）。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
+有三张表： Students， Friends 和 Packages。 Students 包含两个字段：ID 和 Name。 Friends 包含两个字段：ID 和 Friend_ID (唯一的最好的朋友的ID)。 Packages 包含两个字段：ID 和 Salary (每个月的薪水，单位：千刀)。
 
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-V......
+写一条查询语句输出那些薪水没有最好的朋友高的学生的名字。结果根据朋友的薪水排序。......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-03
+            2018-06-10
         </p>
         <div class="tags">
             
@@ -381,9 +323,9 @@ V......
 
 <div class="post-preview">
 
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-14/">
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 14
+            SQL 笔记: Hackerrank Projects
         </h2>
         <h3 class="post-subtitle">
             
@@ -391,43 +333,16 @@ V......
         <div class="post-content-preview">
             问题
 
-查询STATION表中小于137.2345的北纬（Northern Latitudes (LAT_N)）的最大值。结果保留小数点后4位。
-输入格式
-STATION 表描述如下：
-STATION
+有一张表， Projects，包含三个字段：任务ID（Task_ID）， 开始日期（Start_Date） 和 结束日期（End_Date）。 表中每一行 结束日期（End_Date） 和 开始日期（Start_Date） 都只相差1天。
 
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMB......
+如果几个任务的结束日期（End_Date）是连续的，则表示这些都属于同一个项目。Samantha对完成了的项目的数量感兴趣。
+写一条查询语句输出......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-03
+            2018-06-09
         </p>
         <div class="tags">
             
@@ -443,9 +358,9 @@ NUMB......
 
 <div class="post-preview">
 
-    <a href="/2018/06/02/SQL-笔记-Hackerrank-Weather-Observation-Station-13/">
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 13
+            SQL 笔记: Hackerrank Draw The Triangle 2
         </h2>
         <h3 class="post-subtitle">
             
@@ -453,42 +368,28 @@ NUMB......
         <div class="post-content-preview">
             问题
 
-查询STATION表中所有大于38.7880且小于137.2345的北纬（Northern Latitudes (LAT_N)）之和。结果近似到小数点后4位。
-输入格式
-STATION表描述如下：
-STATION
+P(R) 表示R行的一种图案。下面的图案就是P(5):
 
+*
+* *
+* * *
+* * * *
+* * * * *
 
+写一条查询语句去生成*P(20)*的图案。
+分析
 
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-L......
+使用REPEAT函数生成图案。需要一个超过20行的表，并用一个变量控制每一行的长度。最后还要控制输出的行数。
+定义并初始化变量：
+1SET @number = 0;
+然后找一张超过20行的表，变量每次递增1:
+12......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-02
+            2018-06-09
         </p>
         <div class="tags">
             
@@ -504,9 +405,9 @@ L......
 
 <div class="post-preview">
 
-    <a href="/2018/06/02/SQL-笔记-Hackerrank-Weather-Observation-Station-2/">
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-1/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 2
+            SQL 笔记: Hackerrank Draw The Triangle 1
         </h2>
         <h3 class="post-subtitle">
             
@@ -514,50 +415,24 @@ L......
         <div class="post-content-preview">
             问题
 
-查询STATION表中下列两个值：
+P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
 
-所有LAT_N的和，并近似到小数点后两位。
-所有LONG_W的和，并近似到小数点后两位。
+* * * * *
+* * * *
+* * *
+* *
+*
 
-输入格式
-STATION表描述如下：
-STATION
+写一条查询语句打印*P(20)*的图案。
+分析
 
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-......
+可以使用REPEAT()函数生产图案。语法是REPEAT(str, count)，str是需要重复的字符串，count是重复次数。但是一次只能生成一行，因此还需要一张超过20行的表。另外还需要一个变量来控制每一......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-02
+            2018-06-09
         </p>
         <div class="tags">
             
@@ -573,9 +448,9 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/06/02/SQL-笔记-Hackerrank-Top-Earners/">
+    <a href="/2018/06/08/SQL-笔记-Hackerrank-Contest-Leaderboard/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Top Earners
+            SQL 笔记: Hackerrank Contest Leaderboard
         </h2>
         <h3 class="post-subtitle">
             
@@ -583,9 +458,53 @@ NUMBER
         <div class="post-content-preview">
             问题
 
-我们定义一个员工的总收入（total earnings）为他们的月薪乘月数（salary x months），然后最大总收入（maximum total earnings）是Employee表中员工总收入的最大值。写一条查询语句找出最大总收入以及对应员工的数量。然后以空格分隔打印出来。
+在上一场编程竞赛中你帮了Julia很大的忙，这次她也想让你帮忙！
+参赛者的总分是他所有比赛获得的最大分的和。写一条查询语句打印hacker_id， name，和总分，根据总分降序排序。如果总分相同，根据hacker_id升序排序。排除总分为0的参赛者。
 输入格式
-包含公司员工数据的Employee表描述如下：
+下面的表包含了竞赛相关数据：
+
+Hackers: hacker_id是参赛者id，name是参赛者姓名。
+
+
+
+Submi......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-08
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/08/SQL-笔记-Hackerrank-Challenges/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Challenges
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+Julia让她的学生创建一些编程赛题。写一条查询语句打印hacker_id， name，和每个学生创建的题目数。结果按题目数量降序排序。如果数量相同，根据hacker_id排序。如果几个学生题目数量相同但数量并不是最大数，就从结果中排除。
+输入格式
+下面的表包含赛题相关数据：
+
+Hackers: hacker_id是学生id，name是对应姓名。
+
 
 
 
@@ -593,64 +512,13 @@ Column
 Type
 
 
-
-
-e......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-02
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/02/SQL-笔记-Hackerrank-The-Blunder/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank The Blunder
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-Samantha被派去计算 EMPLOYEES 表中所有员工的平均月薪，但是在计算完成后才发现键盘的0按键是坏的。她希望你能帮她求出真实的平均工资与她的错误结果（移除所有0计算所得）之间的误差。
-写一条查询语句计算误差值（真实平均月薪 - 错误计算结果），然后进一法近似取整。
-输入格式
-EMPLOYEES 表描述如下：
-
-
-
-Column
-Type
-
-
-
-
-ID
-Integer
-
-
 ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-02
+            2018-06-08
         </p>
         <div class="tags">
             
@@ -666,9 +534,9 @@ Integer
 
 <div class="post-preview">
 
-    <a href="/2018/06/02/SQL-笔记-Hackerrank-Population-Density-Difference/">
+    <a href="/2018/06/08/SQL-笔记-Hackerrank-Ollivander-s-Inventory/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Population Density Difference
+            SQL 笔记: Hackerrank Ollivander's Inventory
         </h2>
         <h3 class="post-subtitle">
             
@@ -676,50 +544,14 @@ Integer
         <div class="post-content-preview">
             问题
 
-查询 CITY 表中最大人口数与最小人口数的差值。
-输入格式
-CITY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-VARCHAR2(3)
-
-
-DISTRICT
-VARCHAR2(20)
-
-
-POPULATION
-NUMBER
-
-
-
-分析
-
-
-最大人口数 ==&gt; MAX(PO......
+哈利波特（Harry Potter）和他的朋友们陪罗恩（Ron）在奥利凡德（Ollivander）处找一根魔杖来替换查理（Charlie）老破的魔杖。
+赫敏（Hermione）觉得最好的方式是找出购买每一类非邪恶的高能力和年龄的魔杖最少需要的金加隆巫师钱（gold galleons）。写一条查询语句打印出罗恩感兴趣的魔杖的id， age， coins_needed，和power，并根......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-02
+            2018-06-08
         </p>
         <div class="tags">
             
@@ -735,9 +567,9 @@ NUMBER
 
 <div class="post-preview">
 
-    <a href="/2018/06/02/SQL-笔记-Hackerrank-Japan-Population/">
+    <a href="/2018/06/08/SQL-笔记-Hackerrank-Top-Competitors/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Japan Population
+            SQL 笔记: Hackerrank Top Competitors
         </h2>
         <h3 class="post-subtitle">
             
@@ -745,50 +577,22 @@ NUMBER
         <div class="post-content-preview">
             问题
 
-查询 CITY 表中所有日本城市的总人口。日本的 COUNTRYCODE 是 JPN。
+Julia刚举办了场编程竞赛，她需要你帮忙整合排行榜。写一条查询语句打印在超过一场竞赛中获得满分的参赛人员的hacker_id和name。结果根据获得满分的竞赛的数量降序排序，如果数量相同，再根据hacker_id升序排序。
+
 输入格式
-CITY 表描述如下：
-CITY
+下面的列表包含了竞赛相关数据：
+
+Hackers: hacker_id是参赛人员的id，name是其姓名。
 
 
 
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-VARCHAR2(3)
-
-
-DISTRICT
-VARCHAR2(20)
-
-
-POPULATION
-NUMBER
-
-
-
-分析
-
-
-查......
+Difficulty: diffi......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-02
+            2018-06-08
         </p>
         <div class="tags">
             
@@ -844,14 +648,6 @@ NUMBER
             
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="81">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="124">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Machine Learning" title="Machine Learning" rel="13">Machine Learning</a>
             
         
@@ -863,6 +659,14 @@ NUMBER
             <a href="/tags/#Coursera" title="Coursera" rel="5">Coursera</a>
             
         
+            
+        
+            
+            <a href="/tags/#Algorithm" title="Algorithm" rel="81">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="140">Leetcode</a>
             
         
             
@@ -928,15 +732,11 @@ NUMBER
             
         
             
-            <a href="/tags/#SQL" title="SQL" rel="139">SQL</a>
+            <a href="/tags/#SQL" title="SQL" rel="170">SQL</a>
             
         
             
-            <a href="/tags/#Hackerrank" title="Hackerrank" rel="99">Hackerrank</a>
-            
-        
-            
-        
+            <a href="/tags/#Hackerrank" title="Hackerrank" rel="114">Hackerrank</a>
             
         
             
@@ -945,6 +745,10 @@ NUMBER
         
             
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
+            
+        
+            
+        
             
         
             
@@ -1014,23 +818,23 @@ NUMBER
     <ul>
       
         <li>
-          <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-17/">SQL 笔记: Hackerrank Weather Observation Station 17</a>
+          <a href="/2018/06/10/SQL-笔记-Hackerrank-Interviews/">SQL 笔记: Hackerrank Interviews</a>
         </li>
       
         <li>
-          <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-16/">SQL 笔记: Hackerrank Weather Observation Station 16</a>
+          <a href="/2018/06/10/SQL-笔记-Hackerrank-Symmetric-Pairs/">SQL 笔记: Hackerrank Symmetric Pairs</a>
         </li>
       
         <li>
-          <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-15/">SQL 笔记: Hackerrank Weather Observation Station 15</a>
+          <a href="/2018/06/10/SQL-笔记-Hackerrank-Placements/">SQL 笔记: Hackerrank Placements</a>
         </li>
       
         <li>
-          <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-14/">SQL 笔记: Hackerrank Weather Observation Station 14</a>
+          <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">SQL 笔记: Hackerrank Projects</a>
         </li>
       
         <li>
-          <a href="/2018/06/02/SQL-笔记-Hackerrank-Weather-Observation-Station-13/">SQL 笔记: Hackerrank Weather Observation Station 13</a>
+          <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">SQL 笔记: Hackerrank Draw The Triangle 2</a>
         </li>
       
     </ul>

@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -307,7 +307,8 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> c.hacker_id, h.name, <span class="keyword">COUNT</span>(c.challenge_id) <span class="keyword">AS</span> cnt </div><div class="line"><span class="keyword">FROM</span> Hackers <span class="keyword">AS</span> h <span class="keyword">JOIN</span> Challenges <span class="keyword">AS</span> c <span class="keyword">ON</span> h.hacker_id = c.hacker_id</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> c.hacker_id, h.name <span class="keyword">HAVING</span></div><div class="line">cnt = (<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(c1.challenge_id) <span class="keyword">FROM</span> Challenges <span class="keyword">AS</span> c1 <span class="keyword">GROUP</span> <span class="keyword">BY</span> c1.hacker_id <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>) <span class="keyword">OR</span></div><div class="line">cnt <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(c2.challenge_id) <span class="keyword">FROM</span> Challenges <span class="keyword">AS</span> c2 <span class="keyword">GROUP</span> <span class="keyword">BY</span> c2.hacker_id <span class="keyword">HAVING</span> c2.hacker_id &lt;&gt; c.hacker_id)</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> cnt <span class="keyword">DESC</span>, c.hacker_id;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/challenges/problem" target="_blank" rel="external">Challenges</a></p>
+<p><a href="https://www.hackerrank.com/challenges/challenges/problem" target="_blank" rel="external">Challenges</a><br>
+<a href="/2018/06/08/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Challenges/">(中文版) SQL 笔记: Hackerrank Challenges</a></p>
 
                 
 

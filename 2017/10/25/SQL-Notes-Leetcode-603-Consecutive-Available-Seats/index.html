@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -283,7 +283,8 @@ Can you help to query all the consecutive available seats order by the seat_id u
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> c1.seat_id <span class="keyword">FROM</span> cinema <span class="keyword">AS</span> c1, cinema <span class="keyword">AS</span> c2 <span class="keyword">WHERE</span> c1.free = <span class="number">1</span> <span class="keyword">AND</span> c2.free = <span class="number">1</span> <span class="keyword">AND</span> (c2.seat_id = c1.seat_id + <span class="number">1</span> <span class="keyword">OR</span> c2.seat_id = c1.seat_id <span class="number">-1</span>) <span class="keyword">ORDER</span> <span class="keyword">BY</span> c1.seat_id;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/consecutive-available-seats/description/" target="_blank" rel="external">603. Consecutive Available Seats</a></p>
+<p><a href="https://leetcode.com/problems/consecutive-available-seats/description/" target="_blank" rel="external">603. Consecutive Available Seats</a><br>
+<a href="/2018/06/06/SQL-%E7%AC%94%E8%AE%B0-Leetcode-603-Consecutive-Available-Seats/">(中文版) SQL 笔记: Leetcode#603 Consecutive Available Seats</a></p>
 
                 
 

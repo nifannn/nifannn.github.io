@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -216,7 +216,7 @@
 <hr>
 <p>You are given a table, Functions, containing two columns: X and Y.</p>
 <p><img src="table_0.png" alt="table_0"></p>
-<p>Two pairs (X1, Y1) and (X2, Y2) are said to be symmetric pairs if X1 = Y2 and X2 = Y1.</p>
+<p>Two pairs (X<sub>1</sub>, Y<sub>1</sub>) and (X<sub>2</sub>, Y<sub>2</sub>) are said to be symmetric pairs if X<sub>1</sub> = Y<sub>2</sub> and X<sub>2</sub> = Y<sub>1</sub>.</p>
 <p>Write a query to output all such <em>symmetric pairs</em> in ascending order by the value of X.</p>
 <p><strong>Sample Input</strong></p>
 <p><img src="table_1.png" alt="table_1"></p>
@@ -230,8 +230,10 @@
 <hr>
 <p>To solve this problem, we can find symmetric pairs when x equals y and when x is not equal to y. And then union results and sort to output.</p>
 <p>When x equals y, if (x, y) appears at least twice, the pair should be included in the output:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1 </div><div class="line"><span class="keyword">WHERE</span> f1.X = f1.Y <span class="keyword">GROUP</span> <span class="keyword">BY</span> f1.X, f1.Y <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span></div></pre></td></tr></table></figure>
+<p>Or,</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1 </div><div class="line"><span class="keyword">WHERE</span> f1.X = f1.Y <span class="keyword">AND</span> </div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> Functions <span class="keyword">WHERE</span> X = f1.X <span class="keyword">AND</span> Y = f1.X) &gt; <span class="number">1</span>;</div></pre></td></tr></table></figure>
-<p>Also, the query above will return duplicate rows, but UNION will remove duplicate rows. As a result, DISTINCT is not necessary.</p>
+<p>Also, the query above may return duplicate rows, but UNION will remove duplicate rows. As a result, DISTINCT is not necessary.</p>
 <p>When x is not equal to y, we can use 2 Functions tables, one to iterate all records and the other to search for symmetric pairs:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1, Functions <span class="keyword">AS</span> f2</div><div class="line"><span class="keyword">WHERE</span> f1.X &lt;&gt; f1.Y <span class="keyword">AND</span> f1.X = f2.Y <span class="keyword">AND</span> f1.Y = f2.X;</div></pre></td></tr></table></figure>
 <p>But the query has a problem. For example, we have symmetric pairs (20, 21) and (21, 20), and the query will output (20, 21) and (21, 20), which is unexpected. We should output (20, 21) only. We can only output the (x, y) with smaller x of symmetric pairs:</p>
@@ -250,9 +252,12 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1 </div><div class="line"><span class="keyword">WHERE</span> f1.X = f1.Y <span class="keyword">AND</span> </div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> Functions <span class="keyword">WHERE</span> X = f1.X <span class="keyword">AND</span> Y = f1.X) &gt; <span class="number">1</span></div><div class="line"><span class="keyword">UNION</span></div><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1</div><div class="line"><span class="keyword">WHERE</span> f1.X &lt;&gt; f1.Y <span class="keyword">AND</span> <span class="keyword">EXISTS</span>(<span class="keyword">SELECT</span> X, Y <span class="keyword">FROM</span> Functions <span class="keyword">WHERE</span> f1.X = Y <span class="keyword">AND</span> f1.Y = X <span class="keyword">AND</span> f1.X &lt; X)</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> X;</div></pre></td></tr></table></figure>
 <h4 id="solution-3">Solution 3</h4>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1 </div><div class="line"><span class="keyword">WHERE</span> f1.X = f1.Y <span class="keyword">AND</span> </div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> Functions <span class="keyword">WHERE</span> X = f1.X <span class="keyword">AND</span> Y = f1.X) &gt; <span class="number">1</span></div><div class="line"><span class="keyword">UNION</span></div><div class="line"><span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">EXISTS</span>(<span class="keyword">SELECT</span> X, Y <span class="keyword">FROM</span> Functions <span class="keyword">WHERE</span> f1.X = Y <span class="keyword">AND</span> f1.Y = X <span class="keyword">AND</span> f1.X &lt; X)</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> X;</div></pre></td></tr></table></figure>
+<h4 id="solution-4">Solution 4</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1 </div><div class="line"><span class="keyword">WHERE</span> f1.X = f1.Y <span class="keyword">GROUP</span> <span class="keyword">BY</span> f1.X, f1.Y <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>)</div><div class="line"><span class="keyword">UNION</span></div><div class="line">(<span class="keyword">SELECT</span> f1.X, f1.Y <span class="keyword">FROM</span> Functions <span class="keyword">AS</span> f1</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">EXISTS</span>(<span class="keyword">SELECT</span> X, Y <span class="keyword">FROM</span> Functions <span class="keyword">WHERE</span> f1.X = Y <span class="keyword">AND</span> f1.Y = X <span class="keyword">AND</span> f1.X &lt; X))</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> X;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://www.hackerrank.com/challenges/symmetric-pairs/problem" target="_blank" rel="external">Symmetric Pairs</a></p>
+<p><a href="https://www.hackerrank.com/challenges/symmetric-pairs/problem" target="_blank" rel="external">Symmetric Pairs</a><br>
+<a href="/2018/06/10/SQL-%E7%AC%94%E8%AE%B0-Hackerrank-Symmetric-Pairs/">(中文版) SQL 笔记: Hackerrank Symmetric Pairs</a></p>
 
                 
 
@@ -292,7 +297,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Solution 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Solution 2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Solution 3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Solution 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Solution 2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Solution 3</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#solution-4"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Solution 4</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
