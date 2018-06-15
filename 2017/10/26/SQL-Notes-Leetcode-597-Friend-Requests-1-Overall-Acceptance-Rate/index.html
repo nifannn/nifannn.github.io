@@ -142,6 +142,13 @@
 
                         
                         <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/archive/">Archives</a>
                         </li>
                         
@@ -150,13 +157,6 @@
                         
                         <li>
                             <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -338,7 +338,8 @@ For the sample data above, your query should return the following result.</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IFNULL</span>(<span class="keyword">ROUND</span>((<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> requester_id, accepter_id) <span class="keyword">FROM</span> request_accepted)/(<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> sender_id, send_to_id) <span class="keyword">FROM</span> friend_request), <span class="number">2</span>), <span class="number">0</span>) <span class="keyword">AS</span> accept_rate;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/friend-requests-i-overall-acceptance-rate/description/" target="_blank" rel="external">597. Friend Request 1: Overall Acceptance Rate</a></p>
+<p><a href="https://leetcode.com/problems/friend-requests-i-overall-acceptance-rate/description/" target="_blank" rel="external">597. Friend Request 1: Overall Acceptance Rate</a><br>
+<a href="/2018/06/15/SQL-%E7%AC%94%E8%AE%B0-Leetcode-597-Friend-Requests-1-Overall-Acceptance-Rate/">(中文版) SQL 笔记: Leetcode#597 Friend Requests 1: Overall Acceptance Rate</a></p>
 
                 
 
