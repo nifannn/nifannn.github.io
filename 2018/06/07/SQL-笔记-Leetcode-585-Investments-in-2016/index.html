@@ -212,15 +212,15 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>Write a query to print the sum of all total investment values in 2016 (<strong>TIV_2016</strong>), to a scale of 2 decimal places, for all policy holders who meet the following criteria:</p>
+<p>写一条查询语句打印2016年总投资额(<strong>TIV_2016</strong>)，并保留2位小数，并且投保人需满足以下条件：</p>
 <ol>
-<li>Have the same <strong>TIV_2015</strong> value as one or more other policyholders.</li>
-<li>Are not located in the same city as any other policyholder (i.e.: the (latitude, longitude) attribute pairs must be unique).</li>
+<li>和一个或多个投保人有相同的<strong>TIV_2015</strong>。</li>
+<li>不和其他投保人在同一城市（就是说（纬度，经度）必须唯一）。</li>
 </ol>
-<p><strong>Input Format:</strong><br>
-The <em>insurance</em> table is described as follows:</p>
+<p><strong>输入格式：</strong><br>
+表<em>insurance</em>描述如下：</p>
 <table>
 <thead>
 <tr>
@@ -251,8 +251,8 @@ The <em>insurance</em> table is described as follows:</p>
 </tr>
 </tbody>
 </table>
-<p>where <strong>PID</strong> is the policyholder’s policy ID, <strong>TIV_2015</strong> is the total investment value in 2015, <strong>TIV_2016</strong> is the total investment value in 2016, <strong>LAT</strong> is the latitude of the policy holder’s city, and <strong>LON</strong> is the longitude of the policy holder’s city.</p>
-<p><strong>Sample Input</strong></p>
+<p><strong>PID</strong>是投保人ID，<strong>TIV_2015</strong>是2015年投资总额，<strong>TIV_2016</strong>是2016年投资总额，<strong>LAT</strong>是投保人城市纬度，<strong>LON</strong>是投保人城市经度。</p>
+<p><strong>输入样例</strong></p>
 <table>
 <thead>
 <tr>
@@ -294,7 +294,7 @@ The <em>insurance</em> table is described as follows:</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Sample Output</strong></p>
+<p><strong>输出样例</strong></p>
 <table>
 <thead>
 <tr>
@@ -307,19 +307,36 @@ The <em>insurance</em> table is described as follows:</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Explanation</strong></p>
-<p>The first record in the table, like the last record, meets both of the two criteria.<br>
-The <strong>TIV_2015</strong> value ‘10’ is as the same as the third and forth record, and its location unique.</p>
-<p>The second record does not meet any of the two criteria. Its <strong>TIV_2015</strong> is not like any other policyholders.</p>
-<p>And its location is the same with the third record, which makes the third record fail, too.</p>
-<p>So, the result is the sum of <strong>TIV_2016</strong> of the first and last record, which is 45.</p>
-<h3 id="analysis">Analysis</h3>
+<p><strong>说明</strong></p>
+<p>表中第一个记录和最后一个记录满足两个条件。<br>
+第一条记录<strong>TIV_2015</strong>的值’10’和第三、四条记录的值相同，且位置是唯一的。</p>
+<p>第二条记录两个要求都不满足。它的<strong>TIV_2015</strong>和其他任何投保人的值都不同。</p>
+<p>并且位置也和第三条记录相同，并且这也导致第三条记录不符合要求。</p>
+<p>所以，结果是第一条记录和最后一条记录<strong>TIV_2016</strong>的和，45。</p>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>遍历<strong>insurance</strong>表中的每一行，先检查<em>TIV_2015</em>是否和其他记录相同，再判断位置(<em>LAT</em>, <em>LON</em>)是否唯一。最后对符合条件的记录的<em>TIV_2016</em>求和。</p>
+<p>为了检查<em>TIV_2015</em>是否与其他记录相同，可以再拿一张<strong>insurance</strong>表，看看表中是否有 <em>TIV_2015</em>相同但<em>PID</em>不同的记录：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> i1.TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i1</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> i2.PID <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i2 <span class="keyword">WHERE</span> i2.PID &lt;&gt; i1.PID <span class="keyword">AND</span> i2.TIV_2015 = i1.TIV_2015)</div></pre></td></tr></table></figure>
+<p>或者可以先找出所有重复出现过的<em>TIV_2015</em>值，再找出对应的记录：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">WHERE</span></div><div class="line">TIV_2015 <span class="keyword">IN</span> (<span class="keyword">SELECT</span> TIV_2015 <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> TIV_2015 <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>)</div></pre></td></tr></table></figure>
+<p>然后检查位置(<em>LAT</em>, <em>LON</em>)是否唯一。可以找出所有重复出现的值，再找出不在其中的记录：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> i1.TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i1</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> i2.PID <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i2 <span class="keyword">WHERE</span> i2.PID &lt;&gt; i1.PID <span class="keyword">AND</span> i2.TIV_2015 = i1.TIV_2015) <span class="keyword">AND</span></div><div class="line">(i1.LAT, i1.LON) <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> LAT, LON <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> LAT, LON <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>)</div></pre></td></tr></table></figure>
+<p>也可以找出所有只出现过一次的位置(<em>LAT</em>, <em>LON</em>)，再找出对应记录：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">WHERE</span></div><div class="line">TIV_2015 <span class="keyword">IN</span> (<span class="keyword">SELECT</span> TIV_2015 <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> TIV_2015 <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>) <span class="keyword">AND</span></div><div class="line">(LAT, LON) <span class="keyword">IN</span> (<span class="keyword">SELECT</span> LAT, LON <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> LAT, LON <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) = <span class="number">1</span>)</div></pre></td></tr></table></figure>
+<p>最后对<em>TIV_2016</em>求和：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(i1.TIV_2016) <span class="keyword">AS</span> TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i1</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> i2.PID <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i2 <span class="keyword">WHERE</span> i2.PID &lt;&gt; i1.PID <span class="keyword">AND</span> i2.TIV_2015 = i1.TIV_2015) <span class="keyword">AND</span></div><div class="line">(i1.LAT, i1.LON) <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> LAT, LON <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> LAT, LON <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(TIV_2016) <span class="keyword">AS</span> TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">WHERE</span></div><div class="line">TIV_2015 <span class="keyword">IN</span> (<span class="keyword">SELECT</span> TIV_2015 <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> TIV_2015 <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>) <span class="keyword">AND</span></div><div class="line">(LAT, LON) <span class="keyword">IN</span> (<span class="keyword">SELECT</span> LAT, LON <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> LAT, LON <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) = <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<h4 id="解法-1">解法 1</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(i1.TIV_2016) <span class="keyword">AS</span> TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i1</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> i2.PID <span class="keyword">FROM</span> insurance <span class="keyword">AS</span> i2 <span class="keyword">WHERE</span> i2.PID &lt;&gt; i1.PID <span class="keyword">AND</span> i2.TIV_2015 = i1.TIV_2015) <span class="keyword">AND</span></div><div class="line">(i1.LAT, i1.LON) <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> LAT, LON <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> LAT, LON <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<h4 id="解法-2">解法 2</h4>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SUM</span>(TIV_2016) <span class="keyword">AS</span> TIV_2016 <span class="keyword">FROM</span> insurance <span class="keyword">WHERE</span></div><div class="line">TIV_2015 <span class="keyword">IN</span> (<span class="keyword">SELECT</span> TIV_2015 <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> TIV_2015 <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) &gt; <span class="number">1</span>) <span class="keyword">AND</span></div><div class="line">(LAT, LON) <span class="keyword">IN</span> (<span class="keyword">SELECT</span> LAT, LON <span class="keyword">FROM</span> insurance <span class="keyword">GROUP</span> <span class="keyword">BY</span> LAT, LON <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) = <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/investments-in-2016/description/" target="_blank" rel="external">585. Investment in 2016</a></p>
+<p><a href="https://leetcode.com/problems/investments-in-2016/description/" target="_blank" rel="external">585. Investment in 2016</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-585-Investments-in-2016/">(English version) SQL Notes: Leetcode#585 Investments in 2016</a></p>
 
                 
 
@@ -359,7 +376,7 @@ The <strong>TIV_2015</strong> value ‘10’ is as the same as the third and for
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解法-1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">解法 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#解法-2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">解法 2</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>
