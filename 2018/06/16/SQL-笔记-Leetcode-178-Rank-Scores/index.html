@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#185 Department Top Three Salaries - Memogrocery
+          SQL 笔记: Leetcode#178 Rank Scores - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-185-Department-Top-Three-Salaries/">
+    <link rel="canonical" href="https://nifannn.github.io/2018/06/16/SQL-笔记-Leetcode-178-Rank-Scores/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
-                        <h1>SQL Notes: Leetcode#185 Department Top Three Salaries</h1>
+                        <h1>SQL 笔记: Leetcode#178 Rank Scores</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-27
+                            2018-06-16
                         </span>
                     </div>
                 
@@ -212,21 +212,30 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>The <strong>Employee</strong> table holds all employees. Every employee has an Id, and there is also a column for the department Id.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+----+-------+--------+--------------+</div><div class="line">| Id | Name  | Salary | DepartmentId |</div><div class="line">+----+-------+--------+--------------+</div><div class="line">| 1  | Joe   | 70000  | 1            |</div><div class="line">| 2  | Henry | 80000  | 2            |</div><div class="line">| 3  | Sam   | 60000  | 2            |</div><div class="line">| 4  | Max   | 90000  | 1            |</div><div class="line">| 5  | Janet | 69000  | 1            |</div><div class="line">| 6  | Randy | 85000  | 1            |</div><div class="line">+----+-------+--------+--------------+</div></pre></td></tr></table></figure>
-<p>The <strong>Department</strong> table holds all departments of the company.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+----+----------+</div><div class="line">| Id | Name     |</div><div class="line">+----+----------+</div><div class="line">| 1  | IT       |</div><div class="line">| 2  | Sales    |</div><div class="line">+----+----------+</div></pre></td></tr></table></figure>
-<p>Write a SQL query to find employees who earn the top three salaries in each of the department. For the above tables, your SQL query should return the following rows.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+------------+----------+--------+</div><div class="line">| Department | Employee | Salary |</div><div class="line">+------------+----------+--------+</div><div class="line">| IT         | Max      | 90000  |</div><div class="line">| IT         | Randy    | 85000  |</div><div class="line">| IT         | Joe      | 70000  |</div><div class="line">| Sales      | Henry    | 80000  |</div><div class="line">| Sales      | Sam      | 60000  |</div><div class="line">+------------+----------+--------+</div></pre></td></tr></table></figure>
-<h3 id="analysis">Analysis</h3>
+<p>写一条SQL语句对分数进行排序。如果两个分数相等，排名应该相同。需要注意的是，并列的分数后的排名应该是连续的整数。换句话说，排名之间不存在间隔。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+----+-------+</div><div class="line">| Id | Score |</div><div class="line">+----+-------+</div><div class="line">| 1  | 3.50  |</div><div class="line">| 2  | 3.65  |</div><div class="line">| 3  | 4.00  |</div><div class="line">| 4  | 3.85  |</div><div class="line">| 5  | 4.00  |</div><div class="line">| 6  | 3.65  |</div><div class="line">+----+-------+</div></pre></td></tr></table></figure>
+<p>例如，像上面的<strong>Scores</strong>表，结果如下（按最高分排序）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+-------+------+</div><div class="line">| Score | Rank |</div><div class="line">+-------+------+</div><div class="line">| 4.00  | 1    |</div><div class="line">| 4.00  | 1    |</div><div class="line">| 3.85  | 2    |</div><div class="line">| 3.65  | 3    |</div><div class="line">| 3.65  | 3    |</div><div class="line">| 3.50  | 4    |</div><div class="line">+-------+------+</div></pre></td></tr></table></figure>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>对于一个分数来说，它的排名就是去重后的<strong>Scores</strong>表中大于等于它的分数的数量。拿上面的表举例，表中有6个分数，3.50，3.65，4.00，3.85，4.00，3.65。去除重复记录，有4个分数，3.50，3.65，3.85，4.00。对于分数4.00，只有4.00 ≥ 4.00，排名为1。同样地，对于分数3.65，4.00 ≥ 3.65，3.85 ≥ 3.65，3.65 ≥ 3.65，有三个数大于等于它，所以排名为3。</p>
+<p>首先，找出去重后的所有分数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores;</div></pre></td></tr></table></figure>
+<p>假设由不重复的分数组成的表叫<strong>t</strong>，接下来可以全连接<strong>t</strong>和<strong>Scores</strong>，然后对于<strong>Scores</strong>表中的每一个分数，找出<strong>t</strong>中大于等于它的分数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, t.Score <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score;</div></pre></td></tr></table></figure>
+<p>对<strong>Scores</strong>表中的每一个分数，统计<strong>t</strong>中大于等于它的分数的数量作为排名：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, <span class="keyword">COUNT</span>(t.Score) <span class="keyword">AS</span> <span class="keyword">Rank</span> <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> s.Id, s.Score;</div></pre></td></tr></table></figure>
+<p>最后根据分数降序排序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, <span class="keyword">COUNT</span>(t.Score) <span class="keyword">AS</span> <span class="keyword">Rank</span> <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> s.Id, s.Score</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> s.Score <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, <span class="keyword">COUNT</span>(t.Score) <span class="keyword">AS</span> <span class="keyword">Rank</span> <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> s.Id, s.Score</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> s.Score <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/department-top-three-salaries/description/" target="_blank" rel="external">185. Department Top Three Salaries</a></p>
+<p><a href="https://leetcode.com/problems/rank-scores/description/" target="_blank" rel="external">178. Rank Scores</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-178-Rank-Scores/">(English version) SQL Notes: Leetcode#178 Rank Scores</a></p>
 
                 
 
@@ -235,12 +244,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-262-Trips-and-Users/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#262 Trips and Users">&larr; Previous Post</a>
+                            <a href="/2018/06/17/SQL-笔记-Leetcode-180-Consecutive-Numbers/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#180 Consecutive Numbers">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-579-Find-Cumulative-Salary-of-an-Employee/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#579 Find Cumulative Salary of an Employee">Next Post &rarr;</a>
+                            <a href="/2018/06/16/SQL-笔记-Leetcode-574-Winning-Candidate/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#574 Winning Candidate">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -266,7 +275,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>

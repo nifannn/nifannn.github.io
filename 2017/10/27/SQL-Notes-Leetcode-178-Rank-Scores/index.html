@@ -86,9 +86,9 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
                             
-                              <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                              <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
                         <h1>SQL Notes: Leetcode#178 Rank Scores</h1>
@@ -220,11 +220,22 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+-------+------+</div><div class="line">| Score | Rank |</div><div class="line">+-------+------+</div><div class="line">| 4.00  | 1    |</div><div class="line">| 4.00  | 1    |</div><div class="line">| 3.85  | 2    |</div><div class="line">| 3.65  | 3    |</div><div class="line">| 3.65  | 3    |</div><div class="line">| 3.50  | 4    |</div><div class="line">+-------+------+</div></pre></td></tr></table></figure>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>For a score, its rank is the number of scores in the <strong>Scores</strong> table without duplicates that is larger than or equal to the score. Take above table as example, there are six scores, 3.50, 3.65, 4.00, 3.85, 4.00 and 3.65. The distinct scores are 3.50, 3.65, 3.85 and 4.00. For a score of 4.00, only 4.00 ≥ 4.00, so the rank is 1. Similarly, for a score of 3.65, 4.00 ≥ 3.65, 3.85 ≥ 3.65, 3.65 ≥ 3.65, therefore, the rank is 3.</p>
+<p>First, we need to get all distinct scores:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores;</div></pre></td></tr></table></figure>
+<p>Assuming that we call the table of distinct scores <strong>t</strong>, next we can fully join <strong>t</strong> and <strong>Scores</strong> and filter scores in <strong>t</strong> that is larger than or equal to each score in <strong>Scores</strong>:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, t.Score <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score;</div></pre></td></tr></table></figure>
+<p>For each score in <strong>Scores</strong>, count how many scores in <strong>t</strong> are larger than or equal to it:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, <span class="keyword">COUNT</span>(t.Score) <span class="keyword">AS</span> <span class="keyword">Rank</span> <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> s.Id, s.Score;</div></pre></td></tr></table></figure>
+<p>Finally, sort by score in descending order:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, <span class="keyword">COUNT</span>(t.Score) <span class="keyword">AS</span> <span class="keyword">Rank</span> <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> s.Id, s.Score</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> s.Score <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> s.Score, <span class="keyword">COUNT</span>(t.Score) <span class="keyword">AS</span> <span class="keyword">Rank</span> <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Score <span class="keyword">FROM</span> Scores) <span class="keyword">AS</span> t, Scores <span class="keyword">AS</span> s</div><div class="line"><span class="keyword">WHERE</span> s.Score &lt;= t.Score</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> s.Id, s.Score</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> s.Score <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/rank-scores/description/" target="_blank" rel="external">178. Rank Scores</a></p>
+<p><a href="https://leetcode.com/problems/rank-scores/description/" target="_blank" rel="external">178. Rank Scores</a><br>
+<a href="/2018/06/16/SQL-%E7%AC%94%E8%AE%B0-Leetcode-178-Rank-Scores/">(中文版) SQL 笔记: Leetcode#178 Rank Scores</a></p>
 
                 
 
@@ -284,9 +295,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
+                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
                         
-                          <a class="tag" href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+                          <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                         
                     </div>
                 </section>

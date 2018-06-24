@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#618 Students Report By Geography - Memogrocery
+          SQL 笔记: Leetcode#578 Get Highest Answer Rate Question - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-618-Students-Report-By-Geography/">
+    <link rel="canonical" href="https://nifannn.github.io/2018/06/21/SQL-笔记-Leetcode-578-Get-Highest-Answer-Rate-Question/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
-                        <h1>SQL Notes: Leetcode#618 Students Report By Geography</h1>
+                        <h1>SQL 笔记: Leetcode#578 Get Highest Answer Rate Question</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-27
+                            2018-06-21
                         </span>
                     </div>
                 
@@ -212,65 +212,35 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>A U.S graduate school has students from Asia, Europe and America. The students’ location information are stored in table <strong>student</strong> as below.</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>continent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jack</td>
-<td>America</td>
-</tr>
-<tr>
-<td>Pascal</td>
-<td>Europe</td>
-</tr>
-<tr>
-<td>Xi</td>
-<td>Asia</td>
-</tr>
-<tr>
-<td>Jane</td>
-<td>America</td>
-</tr>
-</tbody>
-</table>
-<p>Pivot the continent column in this table so that each name is sorted alphabetically and displayed underneath its corresponding continent. The output headers should be America, Asia and Europe respectively. It is guaranteed that the student number from America is no less than either Asia or Europe.<br>
-For the sample input, the output is:</p>
-<table>
-<thead>
-<tr>
-<th>America</th>
-<th>Asia</th>
-<th>Europe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jack</td>
-<td>Xi</td>
-<td>Pascal</td>
-</tr>
-<tr>
-<td>Jane</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="analysis">Analysis</h3>
+<p>求出<strong>survey_log</strong>表中回答率最高的问题，表格的字段有：<strong>uid, action, question_id, answer_id, q_num, timestamp</strong>。</p>
+<p>uid是用户id；action的值为：“show”， “answer”， “skip”；当action是&quot;answer&quot;时，answer_id不为空，相反，当action是&quot;show&quot;和&quot;skip&quot;时为空（null）；q_num是问题的数字序号。</p>
+<p>写一条sql语句找出回答率最高的问题。</p>
+<p><strong>举例：</strong></p>
+<p><strong>输入</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+------+-----------+--------------+------------+-----------+------------+</div><div class="line">| uid  | action    | question_id  | answer_id  | q_num     | timestamp  |</div><div class="line">+------+-----------+--------------+------------+-----------+------------+</div><div class="line">| 5    | show      | 285          | null       | 1         | 123        |</div><div class="line">| 5    | answer    | 285          | 124124     | 1         | 124        |</div><div class="line">| 5    | show      | 369          | null       | 2         | 125        |</div><div class="line">| 5    | skip      | 369          | null       | 2         | 126        |</div><div class="line">+------+-----------+--------------+------------+-----------+------------+</div></pre></td></tr></table></figure>
+<p><strong>输出</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+-------------+</div><div class="line">| survey_log  |</div><div class="line">+-------------+</div><div class="line">|    285      |</div><div class="line">+-------------+</div></pre></td></tr></table></figure>
+<p><strong>说明</strong></p>
+<p>问题285的回答率为1/1，然而问题369的回答率是0/1，所以输出是285。</p>
+<p><strong>注意：</strong> 最高回答旅的意思是：同一个问题出现的次数中回答的比例。</p>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>根据question_id分组，然后根据回答率降序排序，并输出第一条记录。回答率就是<em>action</em>字段中’answer’的次数除以’show’的次数。要计算回答率,就需要统计action中’answer’和’show’的个数。可以根据question_id分组，然后分别统计出每道题’answer’和’show’的次数。</p>
+<p>首先，按question_id分组，然后用SUM()和IF()统计每道题’answer’和’show’的次数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> question_id, </div><div class="line">       <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'show'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_show,</div><div class="line">       <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'answer'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_answer</div><div class="line"><span class="keyword">FROM</span> survey_log <span class="keyword">GROUP</span> <span class="keyword">BY</span> question_id</div></pre></td></tr></table></figure>
+<p>再按question_id分组，并根据回答率降序排序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> question_id <span class="keyword">AS</span> survey_log <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> question_id, </div><div class="line">        <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'show'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_show,</div><div class="line">        <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'answer'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_answer</div><div class="line"> <span class="keyword">FROM</span> survey_log <span class="keyword">GROUP</span> <span class="keyword">BY</span> question_id) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> (num_answer/num_show) <span class="keyword">DESC</span>;</div></pre></td></tr></table></figure>
+<p>最后输出第一条记录：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> question_id <span class="keyword">AS</span> survey_log <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> question_id, </div><div class="line">        <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'show'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_show,</div><div class="line">        <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'answer'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_answer</div><div class="line"> <span class="keyword">FROM</span> survey_log <span class="keyword">GROUP</span> <span class="keyword">BY</span> question_id) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> (num_answer/num_show) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> question_id <span class="keyword">AS</span> survey_log <span class="keyword">FROM</span></div><div class="line">(<span class="keyword">SELECT</span> question_id, </div><div class="line">        <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'show'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_show,</div><div class="line">        <span class="keyword">SUM</span>(<span class="keyword">IF</span>(<span class="keyword">action</span>=<span class="string">'answer'</span>, <span class="number">1</span>, <span class="number">0</span>)) <span class="keyword">AS</span> num_answer</div><div class="line"> <span class="keyword">FROM</span> survey_log <span class="keyword">GROUP</span> <span class="keyword">BY</span> question_id) <span class="keyword">AS</span> t</div><div class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> (num_answer/num_show) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/students-report-by-geography/description/" target="_blank" rel="external">618. Students Report By Geography</a></p>
+<p><a href="https://leetcode.com/problems/get-highest-answer-rate-question/description/" target="_blank" rel="external">578. Get Highest Answer Rate Question</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-578-Get-Highest-Answer-Rate-Question/">(English version) SQL Notes: Leetcode#578 Get Highest Answer Rate Question</a></p>
 
                 
 
@@ -278,13 +248,9 @@ For the sample input, the output is:</p>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-601-Human-Traffic-of-Stadium/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#601 Human Traffic of Stadium">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-177-Nth-Highest-Salary/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#177 Nth Highest Salary">Next Post &rarr;</a>
+                            <a href="/2018/06/21/SQL-笔记-Leetcode-177-Nth-Highest-Salary/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#177 Nth Highest Salary">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -310,7 +276,7 @@ For the sample input, the output is:</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>

@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#262 Trips and Users - Memogrocery
+          SQL 笔记: Leetcode#614 Second Degree Follower - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-262-Trips-and-Users/">
+    <link rel="canonical" href="https://nifannn.github.io/2018/06/17/SQL-笔记-Leetcode-614-Second-Degree-Follower/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
-                        <h1>SQL Notes: Leetcode#262 Trips and Users</h1>
+                        <h1>SQL 笔记: Leetcode#614 Second Degree Follower</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-27
+                            2018-06-17
                         </span>
                     </div>
                 
@@ -212,21 +212,29 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>The <strong>Trips</strong> table holds all taxi trips. Each trip has a unique Id, while Client_Id and Driver_Id are both foreign keys to the Users_Id at the <strong>Users</strong> table. Status is an ENUM type of (‘completed’, ‘cancelled_by_driver’, ‘cancelled_by_client’).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">+----+-----------+-----------+---------+--------------------+----------+</div><div class="line">| Id | Client_Id | Driver_Id | City_Id |        Status      |Request_at|</div><div class="line">+----+-----------+-----------+---------+--------------------+----------+</div><div class="line">| 1  |     1     |    10     |    1    |     completed      |2013-10-01|</div><div class="line">| 2  |     2     |    11     |    1    | cancelled_by_driver|2013-10-01|</div><div class="line">| 3  |     3     |    12     |    6    |     completed      |2013-10-01|</div><div class="line">| 4  |     4     |    13     |    6    | cancelled_by_client|2013-10-01|</div><div class="line">| 5  |     1     |    10     |    1    |     completed      |2013-10-02|</div><div class="line">| 6  |     2     |    11     |    6    |     completed      |2013-10-02|</div><div class="line">| 7  |     3     |    12     |    6    |     completed      |2013-10-02|</div><div class="line">| 8  |     2     |    12     |    12   |     completed      |2013-10-03|</div><div class="line">| 9  |     3     |    10     |    12   |     completed      |2013-10-03| </div><div class="line">| 10 |     4     |    13     |    12   | cancelled_by_driver|2013-10-03|</div><div class="line">+----+-----------+-----------+---------+--------------------+----------+</div></pre></td></tr></table></figure>
-<p>The <strong>Users</strong> table holds all users. Each user has an unique Users_Id, and Role is an ENUM type of (‘client’, ‘driver’, ‘partner’).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">+----------+--------+--------+</div><div class="line">| Users_Id | Banned |  Role  |</div><div class="line">+----------+--------+--------+</div><div class="line">|    1     |   No   | client |</div><div class="line">|    2     |   Yes  | client |</div><div class="line">|    3     |   No   | client |</div><div class="line">|    4     |   No   | client |</div><div class="line">|    10    |   No   | driver |</div><div class="line">|    11    |   No   | driver |</div><div class="line">|    12    |   No   | driver |</div><div class="line">|    13    |   No   | driver |</div><div class="line">+----------+--------+--------+</div></pre></td></tr></table></figure>
-<p>Write a SQL query to find the cancellation rate of requests made by unbanned clients between <strong>Oct 1, 2013</strong> and <strong>Oct 3, 2013</strong>. For the above tables, your SQL query should return the following rows with the cancellation rate being rounded to two decimal places.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+------------+-------------------+</div><div class="line">|     Day    | Cancellation Rate |</div><div class="line">+------------+-------------------+</div><div class="line">| 2013-10-01 |       0.33        |</div><div class="line">| 2013-10-02 |       0.00        |</div><div class="line">| 2013-10-03 |       0.50        |</div><div class="line">+------------+-------------------+</div></pre></td></tr></table></figure>
-<h3 id="analysis">Analysis</h3>
+<p>在facebook上，有一张<strong>follow</strong>表，包含两个字段：<em>followee</em>, <em>follower</em>。</p>
+<p>请写一条sql语句计算每个关注者的关注者的数量（如果有的话）。</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+-------------+------------+</div><div class="line">| followee    | follower   |</div><div class="line">+-------------+------------+</div><div class="line">|     A       |     B      |</div><div class="line">|     B       |     C      |</div><div class="line">|     B       |     D      |</div><div class="line">|     D       |     E      |</div><div class="line">+-------------+------------+</div></pre></td></tr></table></figure>
+<p>应该输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+-------------+------------+</div><div class="line">| follower    | num        |</div><div class="line">+-------------+------------+</div><div class="line">|     B       |  2         |</div><div class="line">|     D       |  1         |</div><div class="line">+-------------+------------+</div></pre></td></tr></table></figure>
+<p><strong>说明：</strong><br>
+B和D都在follower字段中，而且当作为被关注者时，B的关注者是C和D，D的关注者是E。A不存在关注者（follower）列表中。</p>
+<p><strong>注意：</strong><br>
+被关注者不可以关注自己。<br>
+请按照关注者的字母表顺序显示结果。</p>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>连接两张<strong>follow</strong>表格。让第二张表的被关注者（<em>followee</em>）等于第一张表的关注者（<em>follower</em>），则第二张表的关注者（<em>follower</em>）就是第一张表关注者的关注者。然后根据第一张表的关注者（<em>follower</em>）分组，对于每组统计第二张表中关注者（<em>follower</em>）的数量。最后排除重复记录，并按照第一张表中关注者（<em>follower</em>）的字母表顺序排序。</p>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.follower, <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> f2.follower) <span class="keyword">AS</span> <span class="keyword">num</span> <span class="keyword">FROM</span></div><div class="line">follow <span class="keyword">AS</span> f1 <span class="keyword">JOIN</span> follow <span class="keyword">AS</span> f2 <span class="keyword">ON</span> f1.follower = f2.followee</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> f1.follower <span class="keyword">ORDER</span> <span class="keyword">BY</span> f1.follower;</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/trips-and-users/description/" target="_blank" rel="external">262. Trips and Users</a></p>
+<p><a href="https://leetcode.com/problems/second-degree-follower/" target="_blank" rel="external">614. Second Degree Follower</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-614-Second-Degree-Follower/">(English version) SQL Notes: Leetcode#614 Second Degree Follower</a></p>
 
                 
 
@@ -235,12 +243,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/27/Coursera-Deep-Learning-Specialization-Notes-Neural-Networks-and-Deep-Learning/" data-toggle="tooltip" data-placement="top" title="Coursera Deep Learning Specialization Notes: Neural Networks and Deep Learning">&larr; Previous Post</a>
+                            <a href="/2018/06/17/SQL-笔记-Leetcode-184-Department-Highest-Salary/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#184 Department Highest Salary">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-185-Department-Top-Three-Salaries/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#185 Department Top Three Salaries">Next Post &rarr;</a>
+                            <a href="/2018/06/17/SQL-笔记-Leetcode-180-Consecutive-Numbers/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#180 Consecutive Numbers">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -266,7 +274,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>

@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#615 Average Salary: Departments VS Company - Memogrocery
+          SQL 笔记: Leetcode#177 Nth Highest Salary - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-615-Average-Salary-Departments-VS-Company/">
+    <link rel="canonical" href="https://nifannn.github.io/2018/06/21/SQL-笔记-Leetcode-177-Nth-Highest-Salary/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
-                        <h1>SQL Notes: Leetcode#615 Average Salary: Departments VS Company</h1>
+                        <h1>SQL 笔记: Leetcode#177 Nth Highest Salary</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-27
+                            2018-06-21
                         </span>
                     </div>
                 
@@ -212,125 +212,22 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>Given two tables as below, write a query to display the comparison result (higher/lower/same) of the average salary of employees in a department to the company’s average salary.</p>
-<p>Table: <strong>salary</strong></p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>employee_id</th>
-<th>amount</th>
-<th>pay_date</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>9000</td>
-<td>2017-03-31</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2</td>
-<td>6000</td>
-<td>2017-03-31</td>
-</tr>
-<tr>
-<td>3</td>
-<td>3</td>
-<td>10000</td>
-<td>2017-03-31</td>
-</tr>
-<tr>
-<td>4</td>
-<td>1</td>
-<td>7000</td>
-<td>2017-02-28</td>
-</tr>
-<tr>
-<td>5</td>
-<td>2</td>
-<td>6000</td>
-<td>2017-02-28</td>
-</tr>
-<tr>
-<td>6</td>
-<td>3</td>
-<td>8000</td>
-<td>2017-02-28</td>
-</tr>
-</tbody>
-</table>
-<p>The <em>employee_id</em> column refers to the <em>employee_id</em> in the following table <strong>employee</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>employee_id</th>
-<th>department_id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<p>So for the sample data above, the result is:</p>
-<table>
-<thead>
-<tr>
-<th>pay_month</th>
-<th>department_id</th>
-<th>comparison</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2017-03</td>
-<td>1</td>
-<td>higher</td>
-</tr>
-<tr>
-<td>2017-03</td>
-<td>2</td>
-<td>lower</td>
-</tr>
-<tr>
-<td>2017-02</td>
-<td>1</td>
-<td>same</td>
-</tr>
-<tr>
-<td>2017-02</td>
-<td>2</td>
-<td>same</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Explanation</strong><br>
-In March, the company’s average salary is (9000+6000+10000)/3 = 8333.33…</p>
-<p>The average salary for department ‘1’ is 9000, which is the salary of <em>employee_id</em> ‘1’ since there is only one employee in this department. So the comparison result is ‘higher’ since 9000 &gt; 8333.33 obviously.</p>
-<p>The average salary of department ‘2’ is (6000 + 10000)/2 = 8000, which is the average of <em>employee_id</em> ‘2’ and ‘3’. So the comparison result is ‘lower’ since 8000 &lt; 8333.33.</p>
-<p>With he same formula for the average salary comparison in February, the result is ‘same’ since both the department ‘1’ and ‘2’ have the same average salary with the company, which is 7000.</p>
-<h3 id="analysis">Analysis</h3>
+<p>写一条SQL语句求出<strong>Employee</strong>表中第n高的薪水。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+----+--------+</div><div class="line">| Id | Salary |</div><div class="line">+----+--------+</div><div class="line">| 1  | 100    |</div><div class="line">| 2  | 200    |</div><div class="line">| 3  | 300    |</div><div class="line">+----+--------+</div></pre></td></tr></table></figure>
+<p>例如，对于上面的表格，当<em>n = 2</em>时，第n高的薪水是<strong>200</strong>。如果不存在第n高薪水，则返回<strong>null</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+------------------------+</div><div class="line">| getNthHighestSalary(2) |</div><div class="line">+------------------------+</div><div class="line">| 200                    |</div><div class="line">+------------------------+</div></pre></td></tr></table></figure>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>可以使用LIMIT和OFFSET来解决问题。先根据薪水降序排序，然后跳过前n-1个数，再输出第一条记录。</p>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT</div><div class="line">BEGIN</div><div class="line">  SET N=N-1;</div><div class="line">  RETURN (</div><div class="line">      # Write your MySQL query statement below.</div><div class="line">      SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET N</div><div class="line">  );</div><div class="line">END</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/average-salary-departments-vs-company/description/" target="_blank" rel="external">615. Average Salary Departments VS Company</a></p>
+<p><a href="https://leetcode.com/problems/nth-highest-salary/description/" target="_blank" rel="external">177. Nth Highest Salary</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-177-Nth-Highest-Salary/">(English version) SQL Notes: Leetcode#177 Nth Highest Salary</a></p>
 
                 
 
@@ -339,12 +236,12 @@ In March, the company’s average salary is (9000+6000+10000)/3 = 8333.33…</p>
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-579-Find-Cumulative-Salary-of-an-Employee/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#579 Find Cumulative Salary of an Employee">&larr; Previous Post</a>
+                            <a href="/2018/06/21/SQL-笔记-Leetcode-578-Get-Highest-Answer-Rate-Question/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#578 Get Highest Answer Rate Question">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-571-Find-Median-Given-Frequency-of-Numbers/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#571 Find Median Given Frequency of Numbers">Next Post &rarr;</a>
+                            <a href="/2018/06/17/SQL-笔记-Leetcode-184-Department-Highest-Salary/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#184 Department Highest Salary">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -370,7 +267,7 @@ In March, the company’s average salary is (9000+6000+10000)/3 = 8333.33…</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>

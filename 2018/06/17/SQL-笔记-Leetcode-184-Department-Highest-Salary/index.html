@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#569 Median Employee Salary - Memogrocery
+          SQL 笔记: Leetcode#184 Department Highest Salary - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-569-Median-Employee-Salary/">
+    <link rel="canonical" href="https://nifannn.github.io/2018/06/17/SQL-笔记-Leetcode-184-Department-Highest-Salary/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
-                        <h1>SQL Notes: Leetcode#569 Median Employee Salary</h1>
+                        <h1>SQL 笔记: Leetcode#184 Department Highest Salary</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-27
+                            2018-06-17
                         </span>
                     </div>
                 
@@ -212,19 +212,28 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>The <strong>Employee</strong> table holds all employees. The employee table has three columns: Employee Id, Company Name, and Salary.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">+-----+------------+--------+</div><div class="line">|Id   | Company    | Salary |</div><div class="line">+-----+------------+--------+</div><div class="line">|1    | A          | 2341   |</div><div class="line">|2    | A          | 341    |</div><div class="line">|3    | A          | 15     |</div><div class="line">|4    | A          | 15314  |</div><div class="line">|5    | A          | 451    |</div><div class="line">|6    | A          | 513    |</div><div class="line">|7    | B          | 15     |</div><div class="line">|8    | B          | 13     |</div><div class="line">|9    | B          | 1154   |</div><div class="line">|10   | B          | 1345   |</div><div class="line">|11   | B          | 1221   |</div><div class="line">|12   | B          | 234    |</div><div class="line">|13   | C          | 2345   |</div><div class="line">|14   | C          | 2645   |</div><div class="line">|15   | C          | 2645   |</div><div class="line">|16   | C          | 2652   |</div><div class="line">|17   | C          | 65     |</div><div class="line">+-----+------------+--------+</div></pre></td></tr></table></figure>
-<p>Write a SQL query to find the median salary of each company. Bonus points if you can solve it without using any built-in SQL functions.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+-----+------------+--------+</div><div class="line">|Id   | Company    | Salary |</div><div class="line">+-----+------------+--------+</div><div class="line">|5    | A          | 451    |</div><div class="line">|6    | A          | 513    |</div><div class="line">|12   | B          | 234    |</div><div class="line">|9    | B          | 1154   |</div><div class="line">|14   | C          | 2645   |</div><div class="line">+-----+------------+--------+</div></pre></td></tr></table></figure>
-<h3 id="analysis">Analysis</h3>
+<p><strong>Employee</strong>表包含所有员工的数据。每位员工都有Id，薪水和对应部门Id。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+----+-------+--------+--------------+</div><div class="line">| Id | Name  | Salary | DepartmentId |</div><div class="line">+----+-------+--------+--------------+</div><div class="line">| 1  | Joe   | 70000  | 1            |</div><div class="line">| 2  | Henry | 80000  | 2            |</div><div class="line">| 3  | Sam   | 60000  | 2            |</div><div class="line">| 4  | Max   | 90000  | 1            |</div><div class="line">+----+-------+--------+--------------+</div></pre></td></tr></table></figure>
+<p><strong>Department</strong>表包含公司所有部门的数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+----+----------+</div><div class="line">| Id | Name     |</div><div class="line">+----+----------+</div><div class="line">| 1  | IT       |</div><div class="line">| 2  | Sales    |</div><div class="line">+----+----------+</div></pre></td></tr></table></figure>
+<p>写一条SQL语句找出各个部门薪水最高的员工。对于上面的表格，Max是IT部门薪水最高的，Henry是销售部门薪水最高的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">+------------+----------+--------+</div><div class="line">| Department | Employee | Salary |</div><div class="line">+------------+----------+--------+</div><div class="line">| IT         | Max      | 90000  |</div><div class="line">| Sales      | Henry    | 80000  |</div><div class="line">+------------+----------+--------+</div></pre></td></tr></table></figure>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>根据部门id连接<strong>Employee</strong>表和<strong>Department</strong>表。然后对于每条记录，从另一个 <strong>Employee</strong>表中找出对应部门的最高薪水，并判断该员工的薪水是否等于部门最高薪水。</p>
+<p>连接两张表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> d.Name <span class="keyword">AS</span> Department, e.Name <span class="keyword">AS</span> Employee, e.Salary</div><div class="line"><span class="keyword">FROM</span> Employee <span class="keyword">AS</span> e, Department <span class="keyword">AS</span> d</div><div class="line"><span class="keyword">WHERE</span> e.DepartmentId = d.Id;</div></pre></td></tr></table></figure>
+<p>然后从另一张<strong>Employee</strong>表中寻找对应部门最高薪水：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> d.Name <span class="keyword">AS</span> Department, e.Name <span class="keyword">AS</span> Employee, e.Salary</div><div class="line"><span class="keyword">FROM</span> Employee <span class="keyword">AS</span> e, Department <span class="keyword">AS</span> d</div><div class="line"><span class="keyword">WHERE</span> e.DepartmentId = d.Id <span class="keyword">AND</span></div><div class="line">e.Salary = (<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(Salary) <span class="keyword">FROM</span> Employee <span class="keyword">AS</span> t <span class="keyword">WHERE</span> t.DepartmentId = e.DepartmentId);</div></pre></td></tr></table></figure>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> d.Name <span class="keyword">AS</span> Department, e.Name <span class="keyword">AS</span> Employee, e.Salary</div><div class="line"><span class="keyword">FROM</span> Employee <span class="keyword">AS</span> e, Department <span class="keyword">AS</span> d</div><div class="line"><span class="keyword">WHERE</span> e.DepartmentId = d.Id <span class="keyword">AND</span></div><div class="line">e.Salary = (<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(Salary) <span class="keyword">FROM</span> Employee <span class="keyword">AS</span> t <span class="keyword">WHERE</span> t.DepartmentId = e.DepartmentId);</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/median-employee-salary/description/" target="_blank" rel="external">569. Median Employee Salary</a></p>
+<p><a href="https://leetcode.com/problems/department-highest-salary/description/" target="_blank" rel="external">184. Department Highest Salary</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-184-Department-Highest-Salary/">(English version) SQL Notes: Leetcode#184 Department Highest Salary</a></p>
 
                 
 
@@ -233,12 +242,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-571-Find-Median-Given-Frequency-of-Numbers/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#571 Find Median Given Frequency of Numbers">&larr; Previous Post</a>
+                            <a href="/2018/06/21/SQL-笔记-Leetcode-177-Nth-Highest-Salary/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#177 Nth Highest Salary">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-601-Human-Traffic-of-Stadium/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#601 Human Traffic of Stadium">Next Post &rarr;</a>
+                            <a href="/2018/06/17/SQL-笔记-Leetcode-614-Second-Degree-Follower/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#614 Second Degree Follower">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -264,7 +273,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>

@@ -224,11 +224,18 @@
 You may assume <strong>there is no tie</strong>, in other words there will be <strong>at most one</strong> winning candidate.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Find the id of candidate who gets the most votes, then output the name.</p>
+<p>First, find the <em>CandidateId</em> having the most votes in <strong>Vote</strong> table:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CandidateId <span class="keyword">FROM</span> Vote <span class="keyword">GROUP</span> <span class="keyword">BY</span> CandidateId <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<p>Output <em>Name</em> of the candidate whose <em>id</em> is the <em>CandidateId</em> with most votes:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">FROM</span> Candidate</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">id</span> = (<span class="keyword">SELECT</span> CandidateId <span class="keyword">FROM</span> Vote <span class="keyword">GROUP</span> <span class="keyword">BY</span> CandidateId <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>);</div></pre></td></tr></table></figure>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">FROM</span> Candidate</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">id</span> = (<span class="keyword">SELECT</span> CandidateId <span class="keyword">FROM</span> Vote <span class="keyword">GROUP</span> <span class="keyword">BY</span> CandidateId <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>);</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/winning-candidate/description/" target="_blank" rel="external">574. Winning Candidate</a></p>
+<p><a href="https://leetcode.com/problems/winning-candidate/description/" target="_blank" rel="external">574. Winning Candidate</a><br>
+<a href="/2018/06/16/SQL-%E7%AC%94%E8%AE%B0-Leetcode-574-Winning-Candidate/">(中文版) SQL 笔记: Leetcode#574 Winning Candidate</a></p>
 
                 
 

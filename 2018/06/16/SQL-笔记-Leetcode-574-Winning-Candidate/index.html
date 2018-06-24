@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          SQL Notes: Leetcode#571 Find Median Given Frequency of Numbers - Memogrocery
+          SQL 笔记: Leetcode#574 Winning Candidate - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2017/10/27/SQL-Notes-Leetcode-571-Find-Median-Given-Frequency-of-Numbers/">
+    <link rel="canonical" href="https://nifannn.github.io/2018/06/16/SQL-笔记-Leetcode-574-Winning-Candidate/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -91,11 +91,11 @@
                               <a class="tag" href="/tags/#SQL" title="SQL">SQL</a>
                             
                         </div>
-                        <h1>SQL Notes: Leetcode#571 Find Median Given Frequency of Numbers</h1>
+                        <h1>SQL 笔记: Leetcode#574 Winning Candidate</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2017-10-27
+                            2018-06-16
                         </span>
                     </div>
                 
@@ -212,20 +212,30 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="problem">Problem</h3>
+                <h3 id="问题">问题</h3>
 <hr>
-<p>The <strong>Numbers</strong> table keeps the value of number and its frequency.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">+----------+-------------+</div><div class="line">|  Number  |  Frequency  |</div><div class="line">+----------+-------------|</div><div class="line">|  0       |  7          |</div><div class="line">|  1       |  1          |</div><div class="line">|  2       |  3          |</div><div class="line">|  3       |  1          |</div><div class="line">+----------+-------------+</div></pre></td></tr></table></figure>
-<p>In this table, the numbers are 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3, so the median is (0 + 0) / 2 = 0.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+--------+</div><div class="line">| median |</div><div class="line">+--------|</div><div class="line">| 0.0000 |</div><div class="line">+--------+</div></pre></td></tr></table></figure>
-<p>Write a query to find the median of all numbers and name the result as <em>median</em>.</p>
-<h3 id="analysis">Analysis</h3>
+<p>表格： <strong>Candidate</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+-----+---------+</div><div class="line">| id  | Name    |</div><div class="line">+-----+---------+</div><div class="line">| 1   | A       |</div><div class="line">| 2   | B       |</div><div class="line">| 3   | C       |</div><div class="line">| 4   | D       |</div><div class="line">| 5   | E       |</div><div class="line">+-----+---------+</div></pre></td></tr></table></figure>
+<p>表格： <strong>Vote</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">+-----+--------------+</div><div class="line">| id  | CandidateId  |</div><div class="line">+-----+--------------+</div><div class="line">| 1   |     2        |</div><div class="line">| 2   |     4        |</div><div class="line">| 3   |     3        |</div><div class="line">| 4   |     2        |</div><div class="line">| 5   |     5        |</div><div class="line">+-----+--------------+</div><div class="line">id 是自动增一的主键，</div><div class="line">CandidateId 是Candidate表中的id。</div></pre></td></tr></table></figure>
+<p>写一条sql语句求出获胜者的名字，上面的例子应该返回B。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+------+</div><div class="line">| Name |</div><div class="line">+------+</div><div class="line">| B    |</div><div class="line">+------+</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>：<br>
+本题不存在平局，即最多一个获胜者。</p>
+<h3 id="分析">分析</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<p>找到得票最多的候选人的id，再输出对应的名字。</p>
+<p>先找出<strong>Vote</strong>表中票数最多的<em>CandidateId</em>：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CandidateId <span class="keyword">FROM</span> Vote <span class="keyword">GROUP</span> <span class="keyword">BY</span> CandidateId <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<p>再找出<strong>Candidate</strong>表中<em>id</em>就是得票最多的<em>CandidateId</em>的候选人的名字：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">FROM</span> Candidate</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">id</span> = (<span class="keyword">SELECT</span> CandidateId <span class="keyword">FROM</span> Vote <span class="keyword">GROUP</span> <span class="keyword">BY</span> CandidateId <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<h3 id="解法">解法</h3>
 <hr>
-<h3 id="link">Link</h3>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span> <span class="keyword">FROM</span> Candidate</div><div class="line"><span class="keyword">WHERE</span> <span class="keyword">id</span> = (<span class="keyword">SELECT</span> CandidateId <span class="keyword">FROM</span> Vote <span class="keyword">GROUP</span> <span class="keyword">BY</span> CandidateId <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">COUNT</span>(*) <span class="keyword">DESC</span> <span class="keyword">LIMIT</span> <span class="number">1</span>);</div></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/find-median-given-frequency-of-numbers/description/" target="_blank" rel="external">571. Find Median Given Frequency of Numbers</a></p>
+<p><a href="https://leetcode.com/problems/winning-candidate/description/" target="_blank" rel="external">574. Winning Candidate</a><br>
+<a href="/2017/10/27/SQL-Notes-Leetcode-574-Winning-Candidate/">(English version) SQL Notes: Leetcode#574 Winning Candidate</a></p>
 
                 
 
@@ -234,12 +244,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-615-Average-Salary-Departments-VS-Company/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#615 Average Salary: Departments VS Company">&larr; Previous Post</a>
+                            <a href="/2018/06/16/SQL-笔记-Leetcode-178-Rank-Scores/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#178 Rank Scores">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-569-Median-Employee-Salary/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#569 Median Employee Salary">Next Post &rarr;</a>
+                            <a href="/2018/06/16/SQL-笔记-Leetcode-580-Count-Student-Number-in-Departments/" data-toggle="tooltip" data-placement="top" title="SQL 笔记: Leetcode#580 Count Student Number in Departments">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -265,7 +275,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#问题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">问题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#链接"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">链接</span></a></li></ol>
         
         </div>
       </aside>

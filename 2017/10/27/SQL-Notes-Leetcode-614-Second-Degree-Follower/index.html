@@ -227,11 +227,14 @@ Followee would not follow himself/herself in all cases.<br>
 Please display the result in follower’s alphabet order.</p>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Join 2 <strong>follow</strong> tables. Let <em>followee</em> of the second table be equal to the <em>follower</em> of the first table so that <em>follower</em> in the second table is follower’s follower in the first table. Then group by <em>follower</em> of the first table and count number of <em>follower</em> in the second table for each <em>follower</em> in the first table. Finally exclude duplicates and sort by <em>follower</em> of the first table alphabetically.</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> f1.follower, <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> f2.follower) <span class="keyword">AS</span> <span class="keyword">num</span> <span class="keyword">FROM</span></div><div class="line">follow <span class="keyword">AS</span> f1 <span class="keyword">JOIN</span> follow <span class="keyword">AS</span> f2 <span class="keyword">ON</span> f1.follower = f2.followee</div><div class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> f1.follower <span class="keyword">ORDER</span> <span class="keyword">BY</span> f1.follower;</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/second-degree-follower/" target="_blank" rel="external">614. Second Degree Follower</a></p>
+<p><a href="https://leetcode.com/problems/second-degree-follower/" target="_blank" rel="external">614. Second Degree Follower</a><br>
+<a href="/2018/06/17/SQL-%E7%AC%94%E8%AE%B0-Leetcode-614-Second-Degree-Follower/">(中文版) SQL 笔记: Leetcode#614 Second Degree Follower</a></p>
 
                 
 

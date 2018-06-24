@@ -220,11 +220,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+------------------------+</div><div class="line">| getNthHighestSalary(2) |</div><div class="line">+------------------------+</div><div class="line">| 200                    |</div><div class="line">+------------------------+</div></pre></td></tr></table></figure>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>We can solve this problem with LIMIT and OFFSET. We can sort by salary in descending order first, then skip n-1 numbers and output the first number.</p>
 <h3 id="solution">Solution</h3>
 <hr>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT</div><div class="line">BEGIN</div><div class="line">  SET N=N-1;</div><div class="line">  RETURN (</div><div class="line">      # Write your MySQL query statement below.</div><div class="line">      SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET N</div><div class="line">  );</div><div class="line">END</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/nth-highest-salary/description/" target="_blank" rel="external">177. Nth Highest Salary</a></p>
+<p><a href="https://leetcode.com/problems/nth-highest-salary/description/" target="_blank" rel="external">177. Nth Highest Salary</a><br>
+<a href="/2018/06/21/SQL-%E7%AC%94%E8%AE%B0-Leetcode-177-Nth-Highest-Salary/">(中文版) SQL 笔记: Leetcode#177 Nth Highest Salary</a></p>
 
                 
 
@@ -233,7 +236,7 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/10/27/SQL-Notes-Leetcode-618-Students-Report-By-Geography/" data-toggle="tooltip" data-placement="top" title="SQL Notes: Leetcode#618 Students Report By Geography">&larr; Previous Post</a>
+                            <a href="/2017/10/27/Coursera-Deep-Learning-Specialization-Notes-Neural-Networks-and-Deep-Learning/" data-toggle="tooltip" data-placement="top" title="Coursera Deep Learning Specialization Notes: Neural Networks and Deep Learning">&larr; Previous Post</a>
                         </li>
                     
                     
