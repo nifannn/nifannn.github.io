@@ -240,20 +240,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-        <lastmod>2018-06-04T00:05:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/Algorithm/</loc>
-        <lastmod>2018-06-04T00:50:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Hackerrank/</loc>
         <lastmod>2018-06-13T00:35:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -261,15 +247,29 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Leetcode/</loc>
+        <loc>https://nifannn.github.io/tags/SQL/</loc>
         <lastmod>2018-06-22T14:26:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/SQL/</loc>
-        <lastmod>2018-06-22T14:26:50.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/Algorithm/</loc>
+        <lastmod>2018-06-27T00:45:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Leetcode/</loc>
+        <lastmod>2018-06-27T00:52:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+        <lastmod>2018-06-27T00:52:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

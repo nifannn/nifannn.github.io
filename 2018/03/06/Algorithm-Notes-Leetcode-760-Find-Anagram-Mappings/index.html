@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('Algorithms.jpg')
             /*post*/
         
     }
@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,14 +214,34 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<h3 id="analysis">Analysis</h3>
-<hr>
+<p>Given two lists <strong>A</strong> and <strong>B</strong>, and <strong>B</strong> is an anagram of <strong>A</strong>. <strong>B</strong> is an anagram of <strong>A</strong> means <strong>B</strong> is made by randomizing the order of the elements in <strong>A</strong>.</p>
+<p>We want to find an <em>index mapping</em> <strong>P</strong>, from <strong>A</strong> to <strong>B</strong>. A mapping <strong>P[i] = j</strong> means the <strong>i</strong>th element in <strong>A</strong> appears in <strong>B</strong> at index <strong>j</strong>.</p>
+<p>These lists <strong>A</strong> and <strong>B</strong> may contain duplicates. If there are multiple answers, output any of them.</p>
+<p>For example, given</p>
+<p>A = [12, 28, 46, 32, 50]<br>
+B = [50, 12, 32, 46, 28]</p>
+<p>We should return</p>
+<p>[1, 4, 3, 2, 0]</p>
+<p>as <strong>P[0] = 1</strong> because the <strong>0</strong>th element of <strong>A</strong> appears at <strong>B[1]</strong>, and <strong>P[1] = 4</strong> because the <strong>1</strong>st element of <strong>A</strong> appears at <strong>B[4]</strong>, and so on.</p>
+<p><strong>Note:</strong></p>
+<ol>
+<li><strong>A, B</strong> have equal lengths in range <strong>[1, 100]</strong>.</li>
+<li><strong>A[i], B[i]</strong> are integers in range <strong>[0, 10^5]</strong>.</li>
+</ol>
 <h3 id="soultion">Soultion</h3>
 <hr>
+<h4 id="basic-idea">Basic idea</h4>
+<p>P[i] = j, A[i] = B[j]. Traverse list A, map each value of A to its index in B. And before that, we need to traverse B, and find a hash table that can map value of B to its index.</p>
+<h4 id="python-implementation">Python implementation</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">anagramMappings</span><span class="params">(self, A, B)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type A: List[int]</div><div class="line">        :type B: List[int]</div><div class="line">        :rtype: List[int]</div><div class="line">        """</div><div class="line">        lookup = &#123; val: i <span class="keyword">for</span> i, val <span class="keyword">in</span> enumerate(B)&#125;</div><div class="line">        <span class="keyword">return</span> [lookup[val] <span class="keyword">for</span> val <span class="keyword">in</span> A]</div></pre></td></tr></table></figure>
+<h4 id="time-complexity-analysis">Time complexity analysis</h4>
+<p>Traverse list A and B. O(n).</p>
+<h4 id="space-complexity-analysis">Space complexity analysis</h4>
+<p>Use a hash table to store the mapping from value of B to its index. O(n).</p>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/find-anagram-mappings/description/" target="_blank" rel="external">760. Find Anagram Mappings</a></p>
+<p><a href="https://leetcode.com/problems/find-anagram-mappings/description/" target="_blank" rel="external">760. Find Anagram Mappings</a><br>
+<a href="/2018/06/26/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-760-Find-Anagram-Mappings/">(中文版) 算法笔记: Leetcode#760 Find Anagram Mappings</a></p>
 
                 
 
@@ -261,7 +281,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#soultion"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Soultion</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#soultion"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Soultion</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#basic-idea"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Basic idea</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity-analysis"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Time complexity analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity-analysis"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Space complexity analysis</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
