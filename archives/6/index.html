@@ -209,6 +209,399 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/06/SQL-笔记-Leetcode-612-Shortest-Distance-in-a-Plane/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#612 Shortest Distance in a Plane
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+point_2d 表包含一个平面内一些点（超过两个）的坐标值（x，y）。
+写一条查询语句求出这些点中的最短距离并保留2位小数。
+
+
+
+x
+y
+
+
+
+
+-1
+-1
+
+
+0
+0
+
+
+-1
+-2
+
+
+
+最短距离是1，从点（-1，-1）到点（-1，2）。所以输出结果为：
+
+
+
+shortest
+
+
+
+
+1.00
+
+
+
+注意： 所有点的最大距离小于10000。
+分析
+
+连接（join）两张 p......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-603-Consecutive-Available-Seats/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#603 Consecutive Available Seats
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+几个朋友在售票处想要订几张连续的座位。
+你能帮忙查询下面cinema表中所有可以订的连续的座位，并按seat_id排序吗？
+
+
+
+seat_id
+free
+
+
+
+
+1
+1
+
+
+2
+0
+
+
+3
+1
+
+
+4
+1
+
+
+5
+1
+
+
+
+对于上面的例子，应该输出结果：
+
+
+
+seat_id
+
+
+
+
+3
+
+
+4
+
+
+5
+
+
+
+注意：
+
+seat_id 是自动增加的整数，free是布尔型（1表示空余......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-608-Tree-Node/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#608 Tree Node
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+对于 tree 表，id 是树节点的标识，p_id 是其父节点的 id。
+123456789+----+------+| id | p_id |+----+------+| 1  | null || 2  | 1    || 3  | 1    || 4  | 2    || 5  | 2    |+----+------+
+每个节点都是以下三种类型中的一种：
+
+Leaf: 如果节点......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-570-Mnanagers-with-at-Least-5-Direct-Reports/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#570 Mnanagers with at Least 5 Direct Reports
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+Employee 表包含所有员工及其上级的信息。每位员工都有一个Id，并且还有一个对应主管的Id（ManagerId）。
+12345678910+------+----------+-----------+----------+|Id    |Name 	  |Department |ManagerId |+------+----------+-----------+--------......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-610-Triangle-Judgement/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#610 Triangle Judgement
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+小学生Tim有份家庭作业要去判断三边是否能组成三角形。
+然而，工作量太大因为有几百条记录要去计算。
+希望你能写一条查询语句判断三边是否能组成三角形来帮助Tim。假设triangle表中包含三边长度x，y和z。
+
+
+
+x
+y
+z
+
+
+
+
+13
+15
+30
+
+
+10
+20
+15
+
+
+
+对于上面的例子，应给返回如下结果：
+
+
+
+x
+y
+z
+triangle
+
+
+
+
+13
+15
+30
+No
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/05/SQL-笔记-Leetcode-620-Not-Boring-Movies/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#620 Not Boring Movies
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+X城市新开了家电影院，许多人都想去看电影。电影院也给出了一份海报，展示着不同电影的评分和描述。
+请写一条SQL语句输出ID号码为奇数且描述（description）不是“无聊”（‘boring’）的电影。结果按评分排序。
+例如， cinema 表：
+123456789+---------+-----------+--------------+-----------+|   id   ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/05/SQL-笔记-Leetcode-586-Customer-Placing-the-Largest-Number-of-Orders/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#586 Customer Placing the Largest Number of Orders
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 orders 表中下了最多订单的客户对应的 customer_number 。
+题中只有一个客户的订单数比其他所有客户多。
+orders 表描述如下：
+
+
+
+Column
+Type
+
+
+
+
+order_number (PK)
+int
+
+
+customer_number
+int
+
+
+order_date
+date
+
+
+required_date
+date
+
+
+shipped_da......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/05/SQL-笔记-Leetcode-584-Find-Customer-Referee/">
         <h2 class="post-title">
             SQL 笔记: Leetcode#584 Find Customer Referee
@@ -384,322 +777,6 @@ shortest
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#595 Big Countries
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-有一张 World 表
-123456789+-----------------+------------+------------+--------------+---------------+| name            | continent  | area       | population   | gdp           |+-----------------+-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Average-Population-of-Each-Continent/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Average Population of Each Continent
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有大陆的名字（COUNTRY.Continent）以及对应的平均城市人口（CITY.Population），人口数进一法取整。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。不要输出没有城市的大陆。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-African-Cities/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank African Cities
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有非洲城市（CONTINENT 为 ‘Africa’）的名字。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Asian-Population/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Asian Population
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有亚洲城市（CONTINENT 是 ‘Asia’）的人口之和。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Weather-Observation-Station-20/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 20
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-中位数（median）定义为分割一个数据集较大的一半和较小的一半的一个数。查询STATION表中北纬（Northern Latitudes (LAT_N)）的中位数，并保留4位小数。
-注意： 本题不允许使用Oracle的方法。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-S......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Weather-Observation-Station-19/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 19
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P1(a,c) 和 P2(b,d) 是2D平面内的两点，(a,b)分别是北纬（Northern Latitude (LAT_N)）的最小值和最大值，(c,d)分别是西经（Western Longitude (LONG_W)）的最小值和最大值。
-计算 P1 和 P2 之间的欧氏距离（Euclidean Distance），并保留4位小数。
-输入格式
-STATION 表描述如下：
-STA......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Weather-Observation-Station-18/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 18
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P1(a,b) 和 P2(c,d) 是2D平面内的两点。
-
-a 等于北纬（Northern Latitude，STATION表中的LAT_N）的最小值。
-b 等于西经（Western Longitude，STATION表中的LONG_W）的最小值。
-c 等于北纬（Northern Latitude，STATION表中的LAT_N）的最大值。
-d 等于西经（Western Longit......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -740,6 +817,20 @@ d 等于西经（Western Longit......
     <div class="tags">
         
             
+            <a href="/tags/#Python" title="Python" rel="4">Python</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#Algorithm" title="Algorithm" rel="88">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="168">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Machine Learning" title="Machine Learning" rel="13">Machine Learning</a>
             
         
@@ -754,20 +845,6 @@ d 等于西经（Western Longit......
             
         
             
-            <a href="/tags/#Python" title="Python" rel="4">Python</a>
-            
-        
-            
-        
-            
-            <a href="/tags/#Algorithm" title="Algorithm" rel="85">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="161">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Data Science" title="Data Science" rel="3">Data Science</a>
             
         
@@ -778,13 +855,13 @@ d 等于西经（Western Longit......
             
         
             
-            <a href="/tags/#Deep Learning Specialization" title="Deep Learning Specialization" rel="3">Deep Learning Specialization</a>
-            
-        
-            
         
             
             <a href="/tags/#CNN" title="CNN" rel="2">CNN</a>
+            
+        
+            
+            <a href="/tags/#Deep Learning Specialization" title="Deep Learning Specialization" rel="3">Deep Learning Specialization</a>
             
         
             
@@ -852,7 +929,7 @@ d 等于西经（Western Longit......
             
         
             
-            <a href="/tags/#算法" title="算法" rel="8">算法</a>
+            <a href="/tags/#算法" title="算法" rel="12">算法</a>
             
         
     </div>
@@ -916,23 +993,23 @@ d 等于西经（Western Longit......
     <ul>
       
         <li>
-          <a href="/2018/06/29/算法笔记-Leetcode-852-Peak-Index-in-a-Mountain-Array/">算法笔记: Leetcode#852 Peak Index in a Mountain Array</a>
+          <a href="/2018/07/01/算法笔记-Leetcode-561-Array-Partition-1/">算法笔记: Leetcode#561 Array Partition 1</a>
         </li>
       
         <li>
-          <a href="/2018/06/29/Algorithm-Notes-Leetcode-852-Peak-Index-in-a-Mountain-Array/">Algorithm Notes: Leetcode#852 Peak Index in a Mountain Array</a>
+          <a href="/2018/07/01/算法笔记-Leetcode-728-Self-Dividing-Numbers/">算法笔记: Leetcode#728 Self Dividing Numbers</a>
         </li>
       
         <li>
-          <a href="/2018/06/29/算法笔记-Leetcode-461-Hamming-Distance/">算法笔记: Leetcode#461 Hamming Distance</a>
+          <a href="/2018/07/01/Algorithm-Notes-Leetcode-728-Self-Dividing-Numbers/">Algorithm Notes: Leetcode#728 Self Dividing Numbers</a>
         </li>
       
         <li>
-          <a href="/2018/06/29/Algorithm-Notes-Leetcode-461-Hamming-Distance/">Algorithm Notes: Leetcode#461 Hamming Distance</a>
+          <a href="/2018/06/30/算法笔记-Leetcode-617-Merge-Two-Binary-Trees/">算法笔记: Leetcode#617 Merge Two Binary Trees</a>
         </li>
       
         <li>
-          <a href="/2018/06/28/算法笔记-Leetcode-832-Flipping-an-Image/">算法笔记: Leetcode#832 Flipping an Image</a>
+          <a href="/2018/06/30/Algorithm-Notes-Leetcode-617-Merge-Two-Binary-Trees/">Algorithm Notes: Leetcode#617 Merge Two Binary Trees</a>
         </li>
       
     </ul>
