@@ -226,13 +226,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
-        <lastmod>2017-11-29T17:29:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/CNN/</loc>
         <lastmod>2017-11-29T17:29:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -254,22 +247,64 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/Deep-Learning/</loc>
+        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/GPU/</loc>
+        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Tensorflow/</loc>
+        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Keras/</loc>
+        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/PyTorch/</loc>
+        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/MXNet/</loc>
+        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Algorithm/</loc>
-        <lastmod>2018-07-02T00:41:19.000Z</lastmod>
+        <lastmod>2018-09-10T13:09:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Leetcode/</loc>
-        <lastmod>2018-07-02T00:53:04.000Z</lastmod>
+        <lastmod>2018-09-10T13:31:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-        <lastmod>2018-07-02T00:53:04.000Z</lastmod>
+        <lastmod>2018-09-10T13:31:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
