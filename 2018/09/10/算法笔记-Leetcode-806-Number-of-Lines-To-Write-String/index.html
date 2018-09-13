@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          算法笔记: Leetcode#806 Number of Lines To Write String - Memogrocery
+          算法笔记: 领扣#806 写字符串需要的行数 - Memogrocery
         
     </title>
 
@@ -86,12 +86,12 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-                            
                               <a class="tag" href="/tags/#算法" title="算法">算法</a>
                             
+                              <a class="tag" href="/tags/#领扣" title="领扣">领扣</a>
+                            
                         </div>
-                        <h1>算法笔记: Leetcode#806 Number of Lines To Write String</h1>
+                        <h1>算法笔记: 领扣#806 写字符串需要的行数</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
@@ -214,16 +214,46 @@
 
                 <h3 id="问题描述">问题描述</h3>
 <hr>
+<p>将给定字符串<em>S</em>中的字母从左到右分行输出。每一行最大宽度100单位，如果输出某一个字母导致宽度超出100单位，则写在下一行中。本题给出一个数组<em>widths</em>，其中widths[0]是’a’的宽度，widths[1]是’b’的宽度， …，widths[25]是’z’的宽度。</p>
+<p>现在回答两个问题：会有多少行包含至少一个<em>S</em>的字母，并且最后一行的宽度为多少单位？将答案作为一个长度为2的整数列表返回。</p>
+<p><strong>例子 :</strong><br>
+<strong>输入:</strong><br>
+widths = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]<br>
+S = &quot;abcdefghijklmnopqrstuvwxyz&quot;<br>
+<strong>输出:</strong> [3, 60]<br>
+<strong>说明:</strong><br>
+所有字母的长度均为10。要写出所有26个字母，需要写满两行，再加60单位的一行。</p>
+<p><strong>例子 :</strong><br>
+<strong>输入:</strong><br>
+widths = [4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]<br>
+S = &quot;bbbcccdddaaa&quot;<br>
+<strong>输出:</strong> [2, 4]<br>
+<strong>说明:</strong><br>
+除了’a’之外的字母长度均为10，<br>
+“bbbcccdddaa” 会占据9 * 10 + 2 * 4 = 98单位。<br>
+最后一个’a’写在第二行因为第一行只剩2个单位。<br>
+所以答案是2行，再加第二行的4个单位。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li>S的长度区间为[1, 1000]。</li>
+<li>S只包含小写字母。</li>
+<li>widths是长度26的数组。</li>
+<li>widths[i]的范围是[2, 10]。</li>
+</ul>
 <h3 id="解法">解法</h3>
 <hr>
 <h4 id="基本思路">基本思路</h4>
+<p>需要用到两个变量，一个记录行数，一个记录这一行的宽度。先初始化，行数为1，宽度为0。因为先从第一行开始，并且当前没有放入任何字母。然后遍历字符串的每一个字母，找出对应宽度，尝试放入当前行中。如果宽度超过100，就将字母放入下一行，意味着行数加1，宽度设为该字母的宽度。</p>
 <h4 id="python-实现">Python 实现</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">numberOfLines</span><span class="params">(self, widths, S)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type widths: List[int]</div><div class="line">        :type S: str</div><div class="line">        :rtype: List[int]</div><div class="line">        """</div><div class="line">        ans = [<span class="number">1</span>, <span class="number">0</span>]</div><div class="line">        <span class="keyword">for</span> c <span class="keyword">in</span> S:</div><div class="line">            num = widths[ord(c) - ord(<span class="string">"a"</span>)]</div><div class="line">            <span class="keyword">if</span> ans[<span class="number">1</span>] + num &gt; <span class="number">100</span>:</div><div class="line">                ans[<span class="number">0</span>] += <span class="number">1</span></div><div class="line">                ans[<span class="number">1</span>] = num</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                ans[<span class="number">1</span>] += num</div><div class="line">        <span class="keyword">return</span> ans</div></pre></td></tr></table></figure>
 <h4 id="时间复杂度">时间复杂度</h4>
+<p>O(N)。N是字符串长度，因为要遍历字符串的每一个字母。</p>
 <h4 id="空间复杂度">空间复杂度</h4>
+<p>O(1)。使用一个长度为2的列表进行重要数值的记录。</p>
 <h3 id="链接">链接</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/number-of-lines-to-write-string/description/" target="_blank" rel="external">806. Number of Lines To Write String</a><br>
+<a href="https://leetcode-cn.com/problems/number-of-lines-to-write-string/description/" target="_blank" rel="external">806. 写字符串需要的行数</a><br>
 <a href="/2018/09/10/Algorithm-Notes-Leetcode-806-Number-of-Lines-To-Write-String/">(English version) Algorithm Notes: Leetcode#806 Number of Lines To Write String</a></p>
 
                 
@@ -231,6 +261,10 @@
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/09/11/Algorithm-Notes-Leetcode-476-Number-Complement/" data-toggle="tooltip" data-placement="top" title="Algorithm Notes: Leetcode#476 Number Complement">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
@@ -280,9 +314,9 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-                        
                           <a class="tag" href="/tags/#算法" title="算法">算法</a>
+                        
+                          <a class="tag" href="/tags/#领扣" title="领扣">领扣</a>
                         
                     </div>
                 </section>
