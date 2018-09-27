@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -242,13 +242,13 @@
 <h3 id="解法">解法</h3>
 <hr>
 <h4 id="基本思路">基本思路</h4>
-<p>Use hash table to store relationship between subdomains and its visit count. Traverse each string in the given list, and find the visit count and the domain. Then get all subdomains of the domain and add the visit count to the values in the hash table.</p>
+<p>用哈希表储存子域名与访问量之间的对应关系。遍历给定列表中的每个字符串，分离出域名和访问量。然后求出所有子域名，并把访问量加到哈希表中对应子域名的访问量中。</p>
 <h4 id="python-实现">Python 实现</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">subdomainVisits</span><span class="params">(self, cpdomains)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type cpdomains: List[str]</div><div class="line">        :rtype: List[str]</div><div class="line">        """</div><div class="line">        lookup = &#123;&#125;</div><div class="line">        <span class="keyword">for</span> s <span class="keyword">in</span> cpdomains:</div><div class="line">            num, domain = s.split(<span class="string">' '</span>)</div><div class="line">            sub = domain.split(<span class="string">'.'</span>)</div><div class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(sub)):</div><div class="line">                subdomain = <span class="string">'.'</span>.join(sub[i:])</div><div class="line">                lookup[subdomain] = lookup.get(subdomain, <span class="number">0</span>) + int(num)</div><div class="line">        <span class="keyword">return</span> [str(n)+<span class="string">" "</span>+d <span class="keyword">for</span> d, n <span class="keyword">in</span> lookup.items()]</div></pre></td></tr></table></figure>
 <h4 id="时间复杂度">时间复杂度</h4>
-<p>O(N), N is the length of given string. Because we have to traverse the given string, and each address has 1 or 2 ‘.’ characters.</p>
+<p>O(N), N 是给定列表的长度。因为要遍历每个字符串，且每个地址有1个或2个’.'字符。</p>
 <h4 id="空间复杂度">空间复杂度</h4>
-<p>O(N), N is the length of given string. Use a hash table to store subdomains and visit count. Each address has at most 3 subdomains, so the number of subdomains depends on the number of domains in the given string.</p>
+<p>O(N), N 是给定列表的长度。使用哈希表储存子域名和访问量。每个地址最多包含3个子域名，所以子域名数量依赖于字符串的数量。</p>
 <h3 id="链接">链接</h3>
 <hr>
 <p><a href="https://leetcode.com/problems/subdomain-visit-count/description/" target="_blank" rel="external">811. Subdomain Visit Count</a><br>
@@ -260,6 +260,10 @@
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/09/14/Algorithm-Notes-Leetcode-821-Shortest-Distance-to-a-Character/" data-toggle="tooltip" data-placement="top" title="Algorithm Notes: Leetcode#821 Shortest Distance to a Character">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">

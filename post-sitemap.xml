@@ -7,16 +7,128 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/09/11/Algorithm-Notes-Leetcode-476-Number-Complement/</loc>
-        <lastmod>2018-09-13T09:15:05.000Z</lastmod>
+        <loc>https://nifannn.github.io/2018/09/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-476-Number-Complement/</loc>
+        <lastmod>2018-09-27T06:00:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/09/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-476-Number-Complement/</loc>
-        <lastmod>2018-09-13T09:14:23.000Z</lastmod>
+        <loc>https://nifannn.github.io/2018/09/11/Algorithm-Notes-Leetcode-476-Number-Complement/</loc>
+        <lastmod>2018-09-27T05:47:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
+        <lastmod>2018-09-26T08:50:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B9%8BSigmoid/</loc>
+        <lastmod>2018-09-26T08:50:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/26/Deep-Learning-Notes-Dense-Layer/</loc>
+        <lastmod>2018-09-26T03:39:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/26/Deep-Learning-Notes-Optimization-Gradient-Descent/</loc>
+        <lastmod>2018-09-26T03:39:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Backpropagation/</loc>
+        <lastmod>2018-09-26T03:37:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
+        <lastmod>2018-09-26T03:36:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/18/Public-Datasets-Collections/</loc>
+        <lastmod>2018-09-18T10:08:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/18/Deploy-Flask-Application-with-uWSGI-and-Nginx-on-Ubuntu/</loc>
+        <lastmod>2018-09-18T10:07:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/14/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-359-Logger-Rate-Limiter/</loc>
+        <lastmod>2018-09-14T02:41:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/14/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-821-Shortest-Distance-to-a-Character/</loc>
+        <lastmod>2018-09-14T02:40:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/14/Algorithm-Notes-Leetcode-821-Shortest-Distance-to-a-Character/</loc>
+        <lastmod>2018-09-14T02:40:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-359-Logger-Rate-Limiter/</loc>
+        <lastmod>2018-09-14T02:40:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/11/Algorithm-Notes-Leetcode-811-Subdomain-Visit-Count/</loc>
+        <lastmod>2018-09-14T02:27:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-811-Subdomain-Visit-Count/</loc>
+        <lastmod>2018-09-14T02:21:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -65,22 +177,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-771-Jewels-and-Stones/</loc>
         <lastmod>2018-09-13T07:34:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/09/11/Algorithm-Notes-Leetcode-811-Subdomain-Visit-Count/</loc>
-        <lastmod>2018-09-13T07:28:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/09/11/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-811-Subdomain-Visit-Count/</loc>
-        <lastmod>2018-09-13T07:27:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2007,14 +2103,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-359-Logger-Rate-Limiter/</loc>
-        <lastmod>2018-03-06T23:01:27.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/10/31/Algorithm-Notes-Leetcode-531-Lonely-Pixel-1/</loc>
         <lastmod>2018-03-02T21:12:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2431,14 +2519,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Backpropagation/</loc>
-        <lastmod>2018-01-23T02:08:26.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-ReLU/</loc>
         <lastmod>2018-01-23T01:59:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2455,24 +2535,8 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
-        <lastmod>2018-01-23T01:59:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-Maximum-Likelihood-and-Cross-Entropy/</loc>
         <lastmod>2018-01-23T01:58:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
-        <lastmod>2018-01-23T01:57:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
