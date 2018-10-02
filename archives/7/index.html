@@ -209,6 +209,217 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Projects
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+有一张表， Projects，包含三个字段：任务ID（Task_ID）， 开始日期（Start_Date） 和 结束日期（End_Date）。 表中每一行 结束日期（End_Date） 和 开始日期（Start_Date） 都只相差1天。
+
+如果几个任务的结束日期（End_Date）是连续的，则表示这些都属于同一个项目。Samantha对完成了的项目的数量感兴趣。
+写一条查询语句输出......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Draw The Triangle 2
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+P(R) 表示R行的一种图案。下面的图案就是P(5):
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+写一条查询语句去生成*P(20)*的图案。
+分析
+
+使用REPEAT函数生成图案。需要一个超过20行的表，并用一个变量控制每一行的长度。最后还要控制输出的行数。
+定义并初始化变量：
+1SET @number = 0;
+然后找一张超过20行的表，变量每次递增1:
+12......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-1/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Draw The Triangle 1
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+写一条查询语句打印*P(20)*的图案。
+分析
+
+可以使用REPEAT()函数生产图案。语法是REPEAT(str, count)，str是需要重复的字符串，count是重复次数。但是一次只能生成一行，因此还需要一张超过20行的表。另外还需要一个变量来控制每一......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/08/SQL-笔记-Hackerrank-Contest-Leaderboard/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Contest Leaderboard
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+在上一场编程竞赛中你帮了Julia很大的忙，这次她也想让你帮忙！
+参赛者的总分是他所有比赛获得的最大分的和。写一条查询语句打印hacker_id， name，和总分，根据总分降序排序。如果总分相同，根据hacker_id升序排序。排除总分为0的参赛者。
+输入格式
+下面的表包含了竞赛相关数据：
+
+Hackers: hacker_id是参赛者id，name是参赛者姓名。
+
+
+
+Submi......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-08
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/08/SQL-笔记-Hackerrank-Challenges/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Challenges
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+Julia让她的学生创建一些编程赛题。写一条查询语句打印hacker_id， name，和每个学生创建的题目数。结果按题目数量降序排序。如果数量相同，根据hacker_id排序。如果几个学生题目数量相同但数量并不是最大数，就从结果中排除。
+输入格式
+下面的表包含赛题相关数据：
+
+Hackers: hacker_id是学生id，name是对应姓名。
+
+
+
+
+Column
+Type
+
+
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-08
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/08/SQL-笔记-Hackerrank-Ollivander-s-Inventory/">
         <h2 class="post-title">
             SQL 笔记: Hackerrank Ollivander's Inventory
@@ -449,271 +660,6 @@ NUMERIC(15,2)
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-626-Exchange-Seats/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#626 Exchange Seats
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-Mary是一所中学的老师，她有一份储存着学生姓名及对应座位id的seat表。
-id字段是连续加1的。
-Mary想要交换相邻两个同学的座位。
-你能帮Mary写一条SQL语句来输出结果么？
-123456789+---------+---------+|    id   | student |+---------+---------+|    1    | Abbot   ||    2 ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-577-Employee-Bonus/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#577 Employee Bonus
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询所有奖金&lt;1000的员工的姓名和奖金。
-表: Employee
-123456789+-------+--------+-----------+--------+| empId |  name  | supervisor| salary |+-------+--------+-----------+--------+|   1   | John   |  3        |......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-607-Sales-Person/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#607 Sales Person
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-描述
-有三张表: salesperson, company, orders.
-输出 salesperson 表中对’RED’公司没有销量的销售姓名（name）。
-例子
-输入
-表格: salesperson
-123456789+----------+------+--------+-----------------+-----------+| sales_id | name | sal......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-612-Shortest-Distance-in-a-Plane/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#612 Shortest Distance in a Plane
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-point_2d 表包含一个平面内一些点（超过两个）的坐标值（x，y）。
-写一条查询语句求出这些点中的最短距离并保留2位小数。
-
-
-
-x
-y
-
-
-
-
--1
--1
-
-
-0
-0
-
-
--1
--2
-
-
-
-最短距离是1，从点（-1，-1）到点（-1，2）。所以输出结果为：
-
-
-
-shortest
-
-
-
-
-1.00
-
-
-
-注意： 所有点的最大距离小于10000。
-分析
-
-连接（join）两张 p......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-603-Consecutive-Available-Seats/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#603 Consecutive Available Seats
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-几个朋友在售票处想要订几张连续的座位。
-你能帮忙查询下面cinema表中所有可以订的连续的座位，并按seat_id排序吗？
-
-
-
-seat_id
-free
-
-
-
-
-1
-1
-
-
-2
-0
-
-
-3
-1
-
-
-4
-1
-
-
-5
-1
-
-
-
-对于上面的例子，应该输出结果：
-
-
-
-seat_id
-
-
-
-
-3
-
-
-4
-
-
-5
-
-
-
-注意：
-
-seat_id 是自动增加的整数，free是布尔型（1表示空余......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -754,6 +700,14 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
     <div class="tags">
         
             
+            <a href="/tags/#Algorithm" title="Algorithm" rel="95">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="169">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
@@ -771,14 +725,6 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
             <a href="/tags/#Coursera" title="Coursera" rel="5">Coursera</a>
             
         
-            
-        
-            
-            <a href="/tags/#Algorithm" title="Algorithm" rel="93">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="163">Leetcode</a>
             
         
             
@@ -810,6 +756,12 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
             
         
             
+        
+            
+            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
+            
+        
+            
             <a href="/tags/#NLP" title="NLP" rel="3">NLP</a>
             
         
@@ -826,27 +778,21 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
             
         
             
-            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
             
         
             
             <a href="/tags/#Kaggle" title="Kaggle" rel="3">Kaggle</a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
             
         
             
@@ -878,6 +824,8 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
             
         
             
+        
+            
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
             
         
@@ -886,13 +834,11 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
             
         
             
-        
-            
-            <a href="/tags/#算法" title="算法" rel="18">算法</a>
+            <a href="/tags/#算法" title="算法" rel="21">算法</a>
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="16">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="15">领扣</a>
             
         
     </div>
@@ -956,23 +902,23 @@ seat_id 是自动增加的整数，free是布尔型（1表示空余......
     <ul>
       
         <li>
-          <a href="/2018/09/26/Deep-Learning-Notes-Dense-Layer/">Deep Learning Notes: Dense Layer</a>
+          <a href="/2018/10/01/算法笔记-Leetcode-557-Reverse-Words-in-a-String-III/">算法笔记: Leetcode#557 Reverse Words in a String III</a>
         </li>
       
         <li>
-          <a href="/2018/09/26/Deep-Learning-Notes-Optimization-Gradient-Descent/">Deep Learning Notes: Optimization - Gradient Descent</a>
+          <a href="/2018/10/01/Algorithm-Notes-Leetcode-557-Reverse-Words-in-a-String-III/">Algorithm Notes: Leetcode#557 Reverse Words in a String III</a>
         </li>
       
         <li>
-          <a href="/2018/09/18/深度学习笔记：激活函数之Sigmoid/">深度学习笔记：激活函数之Sigmoid</a>
+          <a href="/2018/10/01/算法笔记-Leetcode-344-Reverse-String/">算法笔记: Leetcode#344 Reverse String</a>
         </li>
       
         <li>
-          <a href="/2018/09/18/Public-Datasets-Collections/">Public Datasets Collections</a>
+          <a href="/2018/10/01/算法笔记-Leetcode-346-Moving-Average-from-Data-Stream/">算法笔记: Leetcode#346 Moving Average from Data Stream</a>
         </li>
       
         <li>
-          <a href="/2018/09/18/Deploy-Flask-Application-with-uWSGI-and-Nginx-on-Ubuntu/">Deploy Flask Application with uWSGI and Nginx on Ubuntu</a>
+          <a href="/2018/10/01/Algorithm-Notes-Leetcode-346-Moving-Average-from-Data-Stream/">Algorithm Notes: Leetcode#346 Moving Average from Data Stream</a>
         </li>
       
     </ul>
