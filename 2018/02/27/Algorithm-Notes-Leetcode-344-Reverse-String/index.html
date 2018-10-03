@@ -214,14 +214,37 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<h3 id="analysis">Analysis</h3>
+<p>Write a function that takes a string as input and returns the string reversed.</p>
+<p><strong>Example 1:</strong></p>
+<p><strong>Input:</strong> &quot;hello&quot;<br>
+<strong>Output:</strong> “olleh”</p>
+<p><strong>Example 2:</strong></p>
+<p><strong>Input:</strong> &quot;A man, a plan, a canal: Panama&quot;<br>
+<strong>Output:</strong> “amanaP :lanac a ,nalp a ,nam A”</p>
+<h3 id="solution-1">Solution 1</h3>
 <hr>
-<h3 id="solution">Solution</h3>
+<h4 id="analysis">Analysis</h4>
+<p>Use two pointers <code>i</code>,<code>j</code>. <code>i</code> iterates characters from left to the center and <code>j</code> iterates from right to the center, then exchange the values <code>i</code> and <code>j</code> points at.</p>
+<h4 id="python-implenmentation">Python implenmentation</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseString</span><span class="params">(self, s)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type s: str</div><div class="line">        :rtype: str</div><div class="line">        """</div><div class="line">        s = list(s)</div><div class="line">        i, j = <span class="number">0</span>, len(s) - <span class="number">1</span></div><div class="line">        <span class="keyword">while</span> i &lt; j:</div><div class="line">            s[i], s[j] = s[j], s[i]</div><div class="line">            i += <span class="number">1</span></div><div class="line">            j -= <span class="number">1</span></div><div class="line">        <span class="keyword">return</span> <span class="string">""</span>.join(s)</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(n).</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(n).</p>
+<h3 id="solution-2">Solution 2</h3>
 <hr>
+<h4 id="analysis">Analysis</h4>
+<p>Iterate characters in string <code>s</code> backwards.</p>
+<h4 id="python-implementation">Python implementation</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseString</span><span class="params">(self, s)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type s: str</div><div class="line">        :rtype: str</div><div class="line">        """</div><div class="line">        <span class="keyword">return</span> s[::<span class="number">-1</span>]</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(n).</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(1).</p>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/reverse-string/description/" target="_blank" rel="external">344. Reverse String</a></p>
+<p><a href="https://leetcode.com/problems/reverse-string/description/" target="_blank" rel="external">344. Reverse String</a><br>
+<a href="/2018/10/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-344-Reverse-String/">(中文版) 算法笔记: 领扣#344 反转字符串</a></p>
 
                 
 
@@ -261,7 +284,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution-1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implenmentation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implenmentation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution-2"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution 2</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
