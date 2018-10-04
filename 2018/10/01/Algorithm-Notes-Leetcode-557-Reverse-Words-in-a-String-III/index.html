@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,11 +214,25 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.</p>
+<p><strong>Example 1:</strong></p>
+<p><strong>Input:</strong> &quot;Let’s take LeetCode contest&quot;<br>
+<strong>Output:</strong> “s’teL ekat edoCteeL tsetnoc”</p>
+<p><strong>Note:</strong> In the string, each word is separated by single space and there will not be any extra space in the string.</p>
 <h3 id="solution">Solution</h3>
 <hr>
-<h4 id="basic-idea">Basic idea</h4>
-<h4 id="life-is-short-i-use-python">Life is short, I use Python</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h4 id="analysis">Analysis</h4>
+<p>Split string <code>s</code> into different words. For each word, iterate each character backward to generate the reversed word, then combine reversed words and return the string.</p>
+<h4 id="python-implementation">Python implementation</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span><span class="params">(self, s)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type s: str</div><div class="line">        :rtype: str</div><div class="line">        """</div><div class="line">        <span class="keyword">return</span> <span class="string">' '</span>.join([word[::<span class="number">-1</span>] <span class="keyword">for</span> word <span class="keyword">in</span> s.split(<span class="string">' '</span>)])</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(n).</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(n).</p>
+<h3 id="links">Links</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/reverse-words-in-a-string-iii/description/" target="_blank" rel="external">557. Reverse Words in a String III</a><br>
+<a href="/2018/10/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-557-Reverse-Words-in-a-String-III/">(中文版) 算法笔记: 领扣#557 反转字符串中的单词 III</a></p>
 
                 
 
@@ -227,7 +241,7 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2018/10/01/算法笔记-Leetcode-557-Reverse-Words-in-a-String-III/" data-toggle="tooltip" data-placement="top" title="算法笔记: Leetcode#557 Reverse Words in a String III">&larr; Previous Post</a>
+                            <a href="/2018/10/01/算法笔记-Leetcode-557-Reverse-Words-in-a-String-III/" data-toggle="tooltip" data-placement="top" title="算法笔记: 领扣#557 反转字符串中的单词 III">&larr; Previous Post</a>
                         </li>
                     
                     
@@ -258,7 +272,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#basic-idea"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Basic idea</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#life-is-short-i-use-python"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Life is short, I use Python</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#links"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Links</span></a></li></ol>
         
         </div>
       </aside>
