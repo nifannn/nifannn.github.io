@@ -7,6 +7,46 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
+        <lastmod>2018-10-05T10:26:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B9%8BSigmoid/</loc>
+        <lastmod>2018-10-05T10:26:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Softmax/</loc>
+        <lastmod>2018-10-05T07:42:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-ReLU/</loc>
+        <lastmod>2018-10-05T07:42:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
+        <lastmod>2018-10-04T04:30:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2018/10/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-557-Reverse-Words-in-a-String-III/</loc>
         <lastmod>2018-10-04T03:42:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -103,22 +143,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
-        <lastmod>2018-09-26T08:50:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/09/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B9%8BSigmoid/</loc>
-        <lastmod>2018-09-26T08:50:36.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/09/26/Deep-Learning-Notes-Dense-Layer/</loc>
         <lastmod>2018-09-26T03:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -137,14 +161,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Backpropagation/</loc>
         <lastmod>2018-09-26T03:37:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
-        <lastmod>2018-09-26T03:36:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2023,7 +2039,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2031,7 +2047,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2553,22 +2569,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/02/23/Algorithm-Notes-Leetcode-766-Toeplitz-Matrix/</loc>
         <lastmod>2018-02-23T22:37:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-ReLU/</loc>
-        <lastmod>2018-01-23T01:59:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Softmax/</loc>
-        <lastmod>2018-01-23T01:59:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
