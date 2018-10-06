@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('Algorithms.jpg')
             /*post*/
         
     }
@@ -214,14 +214,26 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
+<p>Given a List of words, return the words that can be typed using letters of alphabet on only one row’s of American keyboard like the image below.</p>
+<p><img src="keyboard.png" alt="keyboard"></p>
+<p><strong>Example 1:</strong></p>
+<p><strong>Input:</strong> [“Hello”, “Alaska”, “Dad”, “Peace”]<br>
+<strong>Output:</strong> [“Alaska”, “Dad”]</p>
+<p><strong>Note:</strong></p>
+<ol>
+<li>You may use one character in the keyboard more than once.</li>
+<li>You may assume the input string will only contain letters of alphabet.</li>
+</ol>
 <h3 id="analysis">Analysis</h3>
 <hr>
+<p>Traverse each word in the given list and check whether it should be in the result. Create three sets with characters in three lines of keyboard, convert each word to lowercase and check whether it is subset of one of three sets, if yes, inlude it in the result.</p>
 <h3 id="soultion">Soultion</h3>
 <hr>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findWords</span><span class="params">(self, words)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type words: List[str]</div><div class="line">        :rtype: List[str]</div><div class="line">        """</div><div class="line">        lines = [set(<span class="string">'qwertyuiop'</span>), set(<span class="string">'asdfghjkl'</span>), set(<span class="string">'zxcvbnm'</span>)]</div><div class="line">        ans = []</div><div class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> words:</div><div class="line">            tmp = set(word.lower())</div><div class="line">            <span class="keyword">if</span> tmp.issubset(lines[<span class="number">0</span>]) <span class="keyword">or</span> tmp.issubset(lines[<span class="number">1</span>]) <span class="keyword">or</span> tmp.issubset(lines[<span class="number">2</span>]):</div><div class="line">                ans.append(word)</div><div class="line">        <span class="keyword">return</span> ans</div></pre></td></tr></table></figure>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/keyboard-row/description/" target="_blank" rel="external">500. Keyboard Row</a></p>
+<p><a href="https://leetcode.com/problems/keyboard-row/description/" target="_blank" rel="external">500. Keyboard Row</a><br>
+<a href="/2018/10/06/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-500-Keyboard-Row/">(中文版) 算法笔记: 领扣#500 键盘行</a></p>
 
                 
 

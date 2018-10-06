@@ -209,6 +209,108 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/28/Algorithm-Notes-Leetcode-804-Unique-Morse-Code-Words/">
+        <h2 class="post-title">
+            Algorithm Notes: Leetcode#804 Unique Morse Code Words
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Problem
+
+International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: “a” maps to “.-”, “b” maps to “-…”, “c” maps to “-.-.”, and so ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-28
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/26/算法笔记-Leetcode-760-Find-Anagram-Mappings/">
+        <h2 class="post-title">
+            算法笔记: Leetcode#760 Find Anagram Mappings
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题描述
+
+给定两个列表 A 和 B，且 B 是 A 的变位词。 B 是 A 的变位词表示 B 是由随机 A 中元素的顺序生成的。
+我们希望找到一个从 A 到 B 的索引映射 P。映射 P[i] = j 表示 A 的第 i 个元素在 B 中的索引为 j。
+列表 A 和 B 都可能包含重复元素。如果有多种答案，输出任意一个。
+例如，给定
+A = [12, 28, 46, 32, 50]
+B =......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-26
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/21/SQL-笔记-Leetcode-578-Get-Highest-Answer-Rate-Question/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#578 Get Highest Answer Rate Question
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+求出survey_log表中回答率最高的问题，表格的字段有：uid, action, question_id, answer_id, q_num, timestamp。
+uid是用户id；action的值为：“show”， “answer”， “skip”；当action是&quot;answer&quot;时，answer_id不为空，相反，当action是&quot;show&q......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/21/SQL-笔记-Leetcode-177-Nth-Highest-Salary/">
         <h2 class="post-title">
             SQL 笔记: Leetcode#177 Nth Highest Salary
@@ -461,168 +563,6 @@ s......
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/16/SQL-笔记-Leetcode-602-Friend-Requests-2-Who-Has-the-Most-Friends/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#602 Friend Requests 2: Who Has the Most Friends
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-在社交网络（比如，脸书、推特）上，人们互相发送和接收好友请求。
-request_accepted表包含好友请求的相关数据，requester_id 和 accepter_id 都是某位用户的id。
-
-
-
-requester_id
-accepter_id
-accept_date
-
-
-
-
-1
-2
-2016_06-03
-
-
-1
-3
-2016-06-08
-
-
-2
-3
-2016-06-08
-
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-16
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/15/SQL-笔记-Leetcode-176-Second-Highest-Salary/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#176 Second Highest Salary
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-写一条SQL语句输出Employee表中第二高的薪水。
-
-
-
-Id
-Salary
-
-
-
-
-1
-100
-
-
-2
-200
-
-
-3
-300
-
-
-
-例如，对于上面的表格，应该返回200作为第二高薪水。如果不存在第二高薪水，就返回null。
-
-
-
-SecondHighestSalary
-
-
-
-
-200
-
-
-
-分析
-
-可以先找出最大值，然后从小于最大值的记录中找出最大值，作为第二高薪水输出：
-1......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-15
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/15/SQL-笔记-Leetcode-196-Delete-Duplicate-Emails/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#196 Delete Duplicate Emails
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-写一条SQL语句删除Person表中所有重复的邮件记录，只保留重复记录中Id最小的记录。
-12345678+----+------------------+| Id | Email            |+----+------------------+| 1  | john@example.com || 2  | bob@example.com  || 3  | john@exa......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-15
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -663,11 +603,11 @@ SecondHighestSalary
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="95">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="96">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="167">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="168">Leetcode</a>
             
         
             
@@ -691,10 +631,6 @@ SecondHighestSalary
             
         
             
-            <a href="/tags/#Deep Learning Specialization" title="Deep Learning Specialization" rel="3">Deep Learning Specialization</a>
-            
-        
-            
             <a href="/tags/#Data Science" title="Data Science" rel="3">Data Science</a>
             
         
@@ -711,7 +647,21 @@ SecondHighestSalary
             
         
             
+            <a href="/tags/#Deep Learning Specialization" title="Deep Learning Specialization" rel="3">Deep Learning Specialization</a>
+            
+        
+            
             <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
+            
+        
+            
+            <a href="/tags/#Tensorflow" title="Tensorflow" rel="2">Tensorflow</a>
+            
+        
+            
+            <a href="/tags/#PyTorch" title="PyTorch" rel="2">PyTorch</a>
+            
+        
             
         
             
@@ -735,37 +685,33 @@ SecondHighestSalary
             
         
             
-            <a href="/tags/#Kaggle" title="Kaggle" rel="3">Kaggle</a>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
             <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Kaggle" title="Kaggle" rel="3">Kaggle</a>
+            
+        
             
         
             
@@ -785,6 +731,8 @@ SecondHighestSalary
             
         
             
+        
+            
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
             
         
@@ -797,13 +745,11 @@ SecondHighestSalary
             
         
             
-        
-            
-            <a href="/tags/#算法" title="算法" rel="21">算法</a>
+            <a href="/tags/#算法" title="算法" rel="23">算法</a>
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="17">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="19">领扣</a>
             
         
     </div>
@@ -867,23 +813,23 @@ SecondHighestSalary
     <ul>
       
         <li>
+          <a href="/2018/10/06/算法笔记-Leetcode-682-Baseball-Game/">算法笔记: 领扣#682 棒球比赛</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/06/Algorithm-Notes-Leetcode-682-Baseball-Game/">Algorithm Notes: Leetcode#682 Baseball Game</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/06/算法笔记-Leetcode-500-Keyboard-Row/">算法笔记: 领扣#500 键盘行</a>
+        </li>
+      
+        <li>
           <a href="/2018/10/01/算法笔记-Leetcode-557-Reverse-Words-in-a-String-III/">算法笔记: 领扣#557 反转字符串中的单词 III</a>
         </li>
       
         <li>
           <a href="/2018/10/01/Algorithm-Notes-Leetcode-557-Reverse-Words-in-a-String-III/">Algorithm Notes: Leetcode#557 Reverse Words in a String III</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/01/算法笔记-Leetcode-344-Reverse-String/">算法笔记: 领扣#344 反转字符串</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/01/算法笔记-Leetcode-346-Moving-Average-from-Data-Stream/">算法笔记: Leetcode#346 Moving Average from Data Stream</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/01/Algorithm-Notes-Leetcode-346-Moving-Average-from-Data-Stream/">Algorithm Notes: Leetcode#346 Moving Average from Data Stream</a>
         </li>
       
     </ul>
