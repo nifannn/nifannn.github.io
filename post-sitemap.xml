@@ -7,6 +7,86 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2017/04/18/deploy-Django-based-website-on-Ubuntu/</loc>
+        <lastmod>2018-10-14T09:14:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/09/Install-Upgrade-Cuda-cuDNN-Tensorflow-Keras-PyTorch-MXNet/</loc>
+        <lastmod>2018-10-14T09:12:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
+        <lastmod>2018-10-14T09:11:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-266-Palindrome-Permutation/</loc>
+        <lastmod>2018-10-14T08:32:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/14/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-266-Palindrome-Permutation/</loc>
+        <lastmod>2018-10-14T08:08:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/21/Algorithm-Notes-Leetcode-561-Array-Partition-1/</loc>
+        <lastmod>2018-10-14T04:44:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/29/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-461-Hamming-Distance/</loc>
+        <lastmod>2018-10-14T04:30:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/29/Algorithm-Notes-Leetcode-461-Hamming-Distance/</loc>
+        <lastmod>2018-10-14T04:29:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/06/Algorithm-Notes-Leetcode-682-Baseball-Game/</loc>
+        <lastmod>2018-10-14T02:44:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/06/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-682-Baseball-Game/</loc>
+        <lastmod>2018-10-14T02:44:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2018/10/06/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-500-Keyboard-Row/</loc>
         <lastmod>2018-10-06T05:00:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,30 +97,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-500-Keyboard-Row/</loc>
         <lastmod>2018-10-06T04:56:35.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/10/06/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-682-Baseball-Game/</loc>
-        <lastmod>2018-10-06T02:41:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/10/06/Algorithm-Notes-Leetcode-682-Baseball-Game/</loc>
-        <lastmod>2018-10-06T02:40:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
-        <lastmod>2018-10-05T13:07:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -375,30 +431,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/06/29/Algorithm-Notes-Leetcode-461-Hamming-Distance/</loc>
-        <lastmod>2018-09-12T10:15:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/06/29/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-461-Hamming-Distance/</loc>
-        <lastmod>2018-09-12T10:15:17.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/21/Algorithm-Notes-Leetcode-561-Array-Partition-1/</loc>
-        <lastmod>2018-09-12T10:11:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/07/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-561-Array-Partition-1/</loc>
         <lastmod>2018-09-12T10:11:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -433,14 +465,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/09/10/Algorithm-Notes-Leetcode-339-Nested-List-Weight-Sum/</loc>
         <lastmod>2018-09-10T13:09:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/09/09/Install-Upgrade-Cuda-cuDNN-Tensorflow-Keras-PyTorch-MXNet/</loc>
-        <lastmod>2018-09-09T08:58:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2079,7 +2103,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2087,7 +2111,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2177,14 +2201,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-575-Distribute-Candies/</loc>
         <lastmod>2018-03-07T18:11:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-266-Palindrome-Permutation/</loc>
-        <lastmod>2018-03-07T00:41:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2863,22 +2879,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/16/Advanced-Machine-Learning-Specialization-Notes-Data-Science-Competition/</loc>
-        <lastmod>2017-11-16T16:00:40.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/26/Advanced-Machine-Learning-Specialization-Notes-Introduction-to-Deep-Learning/</loc>
-        <lastmod>2017-11-16T15:35:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/11/15/Computer-Vision-Notes-FaceNet/</loc>
         <lastmod>2017-11-16T00:58:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3359,14 +3359,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/01/Coursera-Deep-Learning-Specialization-Notes-Convolutional-Neural-Networks/</loc>
-        <lastmod>2017-11-03T21:52:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/11/03/Algorithm-Notes-Leetcode-162-Find-Peak-Element/</loc>
         <lastmod>2017-11-03T14:04:34.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3527,30 +3519,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/10/27/Coursera-Deep-Learning-Specialization-Notes-Structuring-Machine-Learning-Projects/</loc>
-        <lastmod>2017-10-27T21:08:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/27/Coursera-Deep-Learning-Specialization-Notes-Neural-Networks-and-Deep-Learning/</loc>
-        <lastmod>2017-10-27T20:58:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/27/Coursera-Deep-Learning-Specialization-Notes-Improving-Deep-Neural-Networks/</loc>
-        <lastmod>2017-10-27T20:57:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/10/25/%E8%9A%9D%E6%B2%B9%E6%B2%B9%E8%8F%9C/</loc>
         <lastmod>2017-10-25T17:16:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3561,14 +3529,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/24/A-Simple-Web-Spider-Using-Requests-and-BeautifulSoup/</loc>
         <lastmod>2017-10-24T16:22:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/10/23/Kaggle-Competition-Notes-Porto-Seguro%E2%80%99s-Safe-Driver-Prediction/</loc>
-        <lastmod>2017-10-24T13:43:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -3593,14 +3553,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/10/12/Machine-Learning-Notes-Linear-Regression-Model/</loc>
         <lastmod>2017-10-21T04:43:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/04/18/deploy-Django-based-website-on-Ubuntu/</loc>
-        <lastmod>2017-10-20T22:48:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

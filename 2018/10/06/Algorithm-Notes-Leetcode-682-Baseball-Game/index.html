@@ -212,7 +212,62 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="problem">Problem</h3>
+<hr>
+<p>You’re now a baseball game point recorder.</p>
+<p>Given a list of strings, each string can be one of the 4 following types:</p>
+<ol>
+<li><code>Integer</code> (one round’s score): Directly represents the number of points you get in this round.</li>
+<li><code>&quot;+&quot;</code> (one round’s score): Represents that the points you get in this round are the sum of the last two <code>valid</code> round’s points.</li>
+<li><code>&quot;D&quot;</code> (one round’s score): Represents that the points you get in this round are the doubled data of the last <code>valid</code> round’s points.</li>
+<li><code>&quot;C&quot;</code> (an operation, which isn’t a round’s score): Represents the last <code>valid</code> round’s points you get were invalid and should be removed.</li>
+</ol>
+<p>Each round’s operation is permanent and could have an impact on the round before and the round after.</p>
+<p>You need to return the sum of the points you could get in all the rounds.</p>
+<p><strong>Example 1:</strong></p>
+<p><strong>Input:</strong> [“5”, “2”, “C”, “D”, “+”]<br>
+<strong>Output:</strong> 30<br>
+<strong>Explanation:</strong><br>
+Round 1: You could get 5 points. The sum is: 5.<br>
+Round 2: You could get 2 points. The sum is: 7.<br>
+Operation 1: The round 2’s data was invalid. The sum is: 5.<br>
+Round 3: You could get 10 points (the round 2’s data has been removed). The sum is: 15.<br>
+Round 4: You could get 5 + 10 = 15 points. The sum is: 30.</p>
+<p><strong>Example 2:</strong></p>
+<p><strong>Input:</strong> [“5”, “-2”, “4”, “C”, “D”, “9”, “+”, “+”]<br>
+<strong>Output:</strong> 27<br>
+<strong>Explanation:</strong><br>
+Round 1: You could get 5 points. The sum is: 5.<br>
+Round 2: You could get -2 points. The sum is: 3.<br>
+Round 3: You could get 4 points. The sum is: 7.<br>
+Operation 1: The round 3’s data is invalid. The sum is: 3.<br>
+Round 4: You could get -4 points (the round 3’s data has been removed). The sum is: -1.<br>
+Round 5: You could get 9 points. The sum is: 8.<br>
+Round 6: You could get -4 + 9 = 5 points. The sum is 13.<br>
+Round 7: You could get 9 + 5 = 14 points. The sum is 27.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The size of the input list will be between 1 and 1000.</li>
+<li>Every integer represented in the list will be between -30000 and 30000.</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<hr>
+<h4 id="analysis">Analysis</h4>
+<p>Use <code>history</code> to record scores we get in each round, <code>ans</code> to store the sum we should return, and take <code>increment</code> as the number of points we should add to the sum in each round.</p>
+<p>Traverse each string in the given list, calculate the <code>increment</code> and add it to <code>ans</code>. In addition, if the string is <code>'C'</code>, we should remove the last score in the <code>history</code>, otherwise, we should append points we get in the current round to <code>history</code>.</p>
+<h4 id="python-implementation">Python implementation</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">calPoints</span><span class="params">(self, ops)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type ops: List[str]</div><div class="line">        :rtype: int</div><div class="line">        """</div><div class="line">        ans = <span class="number">0</span></div><div class="line">        history = []</div><div class="line">        </div><div class="line">        <span class="keyword">for</span> op <span class="keyword">in</span> ops:</div><div class="line">            <span class="keyword">if</span> op == <span class="string">"+"</span>:</div><div class="line">                increment = history[<span class="number">-1</span>] + history[<span class="number">-2</span>]</div><div class="line">                history.append(increment)</div><div class="line">            <span class="keyword">elif</span> op == <span class="string">"D"</span>:</div><div class="line">                increment = history[<span class="number">-1</span>] * <span class="number">2</span></div><div class="line">                history.append(increment)</div><div class="line">            <span class="keyword">elif</span> op ==<span class="string">"C"</span>:</div><div class="line">                increment = - history.pop()</div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                increment = int(op)</div><div class="line">                history.append(increment)</div><div class="line">                </div><div class="line">            ans += increment</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> ans</div></pre></td></tr></table></figure>
+<h4 id="java-implementation">Java implementation</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">calPoints</span><span class="params">(String[] ops)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> increment = <span class="number">0</span>;</div><div class="line">        Stack&lt;Integer&gt; history = <span class="keyword">new</span> Stack();</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(String op : ops)&#123;</div><div class="line">            <span class="keyword">if</span>(op.equals(<span class="string">"+"</span>))&#123;</div><div class="line">                <span class="keyword">int</span> lastOne = history.pop();</div><div class="line">                <span class="keyword">int</span> lastTwo = history.peek();</div><div class="line">                increment = lastOne + lastTwo;</div><div class="line">                history.push(lastOne);</div><div class="line">                history.push(increment);</div><div class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(op.equals(<span class="string">"D"</span>))&#123;</div><div class="line">                increment = history.peek() * <span class="number">2</span>;</div><div class="line">                history.push(increment);</div><div class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(op.equals(<span class="string">"C"</span>))&#123;</div><div class="line">                increment = -history.pop();</div><div class="line">            &#125;<span class="keyword">else</span> &#123;</div><div class="line">                increment = Integer.parseInt(op);</div><div class="line">                history.push(increment);</div><div class="line">            &#125;</div><div class="line">            </div><div class="line">            ans += increment;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> ans;        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(n). n is length of the given list, as we iterate it once.</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(n). n is length of the given list, because we need to record points we get in each round.</p>
+<h3 id="links">Links</h3>
+<hr>
+<p><a href="https://leetcode.com/problems/baseball-game/description/" target="_blank" rel="external">682. Baseball Game</a><br>
+<a href="/2018/10/06/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-682-Baseball-Game/">(中文版) 算法笔记: 领扣#682 棒球比赛</a></p>
+
                 
 
                 <hr>
@@ -251,7 +306,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#java-implementation"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Java implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#links"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Links</span></a></li></ol>
         
         </div>
       </aside>
