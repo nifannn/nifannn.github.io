@@ -7,6 +7,94 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/10/16/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-669-Trim-a-Binary-Search-Tree/</loc>
+        <lastmod>2018-10-17T03:45:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/16/Algorithm-Notes-Leetcode-669-Trim-a-Binary-Search-Tree/</loc>
+        <lastmod>2018-10-17T03:38:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/03/06/Algorithm-Notes-Leetcode-760-Find-Anagram-Mappings/</loc>
+        <lastmod>2018-10-16T08:34:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/26/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-760-Find-Anagram-Mappings/</loc>
+        <lastmod>2018-10-16T08:28:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/09/26/Deep-Learning-Notes-Dense-Layer/</loc>
+        <lastmod>2018-10-15T09:44:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
+        <lastmod>2018-10-15T09:44:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
+        <lastmod>2018-10-15T09:11:25.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-771-Jewels-and-Stones/</loc>
+        <lastmod>2018-10-15T07:45:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/03/06/Algorithm-Notes-Leetcode-771-Jewels-and-Stones/</loc>
+        <lastmod>2018-10-15T07:34:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/15/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-463-Island-Perimeter/</loc>
+        <lastmod>2018-10-15T05:49:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-463-Island-Perimeter/</loc>
+        <lastmod>2018-10-15T04:56:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/04/18/deploy-Django-based-website-on-Ubuntu/</loc>
         <lastmod>2018-10-14T09:14:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,14 +105,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/09/09/Install-Upgrade-Cuda-cuDNN-Tensorflow-Keras-PyTorch-MXNet/</loc>
         <lastmod>2018-10-14T09:12:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
-        <lastmod>2018-10-14T09:11:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -127,14 +207,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
-        <lastmod>2018-10-04T04:30:54.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/10/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-557-Reverse-Words-in-a-String-III/</loc>
         <lastmod>2018-10-04T03:42:28.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -231,14 +303,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/09/26/Deep-Learning-Notes-Dense-Layer/</loc>
-        <lastmod>2018-09-26T03:39:14.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/09/26/Deep-Learning-Notes-Optimization-Gradient-Descent/</loc>
         <lastmod>2018-09-26T03:39:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -313,22 +377,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/07/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-728-Self-Dividing-Numbers/</loc>
         <lastmod>2018-09-13T08:13:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/03/06/Algorithm-Notes-Leetcode-771-Jewels-and-Stones/</loc>
-        <lastmod>2018-09-13T07:35:53.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-771-Jewels-and-Stones/</loc>
-        <lastmod>2018-09-13T07:34:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -473,22 +521,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/09/07/Spark-Notes-Install-Configure-Spark-First/</loc>
         <lastmod>2018-09-07T06:39:02.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/06/26/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-760-Find-Anagram-Mappings/</loc>
-        <lastmod>2018-06-27T00:52:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/03/06/Algorithm-Notes-Leetcode-760-Find-Anagram-Mappings/</loc>
-        <lastmod>2018-06-27T00:45:36.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2095,7 +2127,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2111,7 +2143,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2177,14 +2209,6 @@
     <url>
         <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-136-Single-Number/</loc>
         <lastmod>2018-03-07T22:53:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2017/11/16/Algorithm-Notes-Leetcode-463-Island-Perimeter/</loc>
-        <lastmod>2018-03-07T22:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
