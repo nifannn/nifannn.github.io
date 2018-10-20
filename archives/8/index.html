@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -206,6 +206,165 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/2018/06/10/SQL-笔记-Hackerrank-Placements/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Placements
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+有三张表： Students， Friends 和 Packages。 Students 包含两个字段：ID 和 Name。 Friends 包含两个字段：ID 和 Friend_ID (唯一的最好的朋友的ID)。 Packages 包含两个字段：ID 和 Salary (每个月的薪水，单位：千刀)。
+
+写一条查询语句输出那些薪水没有最好的朋友高的学生的名字。结果根据朋友的薪水排序。......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-10
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Projects
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+有一张表， Projects，包含三个字段：任务ID（Task_ID）， 开始日期（Start_Date） 和 结束日期（End_Date）。 表中每一行 结束日期（End_Date） 和 开始日期（Start_Date） 都只相差1天。
+
+如果几个任务的结束日期（End_Date）是连续的，则表示这些都属于同一个项目。Samantha对完成了的项目的数量感兴趣。
+写一条查询语句输出......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Draw The Triangle 2
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+P(R) 表示R行的一种图案。下面的图案就是P(5):
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+写一条查询语句去生成*P(20)*的图案。
+分析
+
+使用REPEAT函数生成图案。需要一个超过20行的表，并用一个变量控制每一行的长度。最后还要控制输出的行数。
+定义并初始化变量：
+1SET @number = 0;
+然后找一张超过20行的表，变量每次递增1:
+12......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-1/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Draw The Triangle 1
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+写一条查询语句打印*P(20)*的图案。
+分析
+
+可以使用REPEAT()函数生产图案。语法是REPEAT(str, count)，str是需要重复的字符串，count是重复次数。但是一次只能生成一行，因此还需要一张超过20行的表。另外还需要一个变量来控制每一......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -500,149 +659,6 @@ NUMERIC(15,2)
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/07/SQL-笔记-Leetcode-182-Duplicate-Emails/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#182 Duplicate Emails
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-写一条SQL语句找出Person表中所有的重复的email。
-1234567+----+---------+| Id | Email   |+----+---------+| 1  | a@b.com || 2  | c@d.com || 3  | a@b.com |+----+---------+
-例如，对于上面的表应返回如下结果：
-12345+---------+| Email ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-07
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-626-Exchange-Seats/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#626 Exchange Seats
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-Mary是一所中学的老师，她有一份储存着学生姓名及对应座位id的seat表。
-id字段是连续加1的。
-Mary想要交换相邻两个同学的座位。
-你能帮Mary写一条SQL语句来输出结果么？
-123456789+---------+---------+|    id   | student |+---------+---------+|    1    | Abbot   ||    2 ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-577-Employee-Bonus/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#577 Employee Bonus
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询所有奖金&lt;1000的员工的姓名和奖金。
-表: Employee
-123456789+-------+--------+-----------+--------+| empId |  name  | supervisor| salary |+-------+--------+-----------+--------+|   1   | John   |  3        |......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-607-Sales-Person/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#607 Sales Person
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-描述
-有三张表: salesperson, company, orders.
-输出 salesperson 表中对’RED’公司没有销量的销售姓名（name）。
-例子
-输入
-表格: salesperson
-123456789+----------+------+--------+-----------------+-----------+| sales_id | name | sal......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -683,25 +699,17 @@ Mary想要交换相邻两个同学的座位。
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="97">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="98">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="170">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="171">Leetcode</a>
             
         
             
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
-            
-        
-            
-            <a href="/tags/#Deep Learning" title="Deep Learning" rel="12">Deep Learning</a>
-            
-        
-            
-            <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
             
         
             
@@ -717,9 +725,11 @@ Mary想要交换相邻两个同学的座位。
             
         
             
-            <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
+            <a href="/tags/#Deep Learning" title="Deep Learning" rel="12">Deep Learning</a>
             
         
+            
+            <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
             
         
             
@@ -732,6 +742,12 @@ Mary想要交换相邻两个同学的座位。
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="4">MXNet</a>
+            
+        
+            
+            <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
+            
+        
             
         
             
@@ -787,13 +803,13 @@ Mary想要交换相邻两个同学的座位。
             
         
             
+        
+            
+        
+            
+        
+            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
-        
-            
-        
-            
-        
             
         
             
@@ -803,15 +819,15 @@ Mary想要交换相邻两个同学的座位。
             
         
             
+            <a href="/tags/#算法" title="算法" rel="29">算法</a>
+            
+        
+            
         
             
         
             
-            <a href="/tags/#算法" title="算法" rel="26">算法</a>
-            
-        
-            
-            <a href="/tags/#领扣" title="领扣" rel="21">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="24">领扣</a>
             
         
     </div>
@@ -829,7 +845,7 @@ Mary想要交换相邻两个同学的座位。
         
 
         
-            <p>Read the world.</p>
+            <p>Read the world via data.</p>
         
 
         <!-- SNS Link -->
@@ -875,23 +891,23 @@ Mary想要交换相邻两个同学的座位。
     <ul>
       
         <li>
+          <a href="/2018/10/20/算法笔记-Leetcode-766-Toeplitz-Matrix/">算法笔记: 领扣#766 托普利茨矩阵</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/18/算法笔记-Leetcode-412-Fizz-Buzz/">算法笔记: 领扣#412 Fizz Buzz</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/18/Algorithm-Notes-Leetcode-412-Fizz-Buzz/">Algorithm Notes: Leetcode#412 Fizz Buzz</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/18/算法笔记-Leetcode-575-Distribute-Candies/">算法笔记: 领扣#575 分糖果</a>
+        </li>
+      
+        <li>
           <a href="/2018/10/16/算法笔记-Leetcode-669-Trim-a-Binary-Search-Tree/">算法笔记: 领扣#669 修剪二叉搜索树</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/16/Algorithm-Notes-Leetcode-669-Trim-a-Binary-Search-Tree/">Algorithm Notes: Leetcode#669 Trim a Binary Search Tree</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/15/算法笔记-Leetcode-463-Island-Perimeter/">算法笔记: 领扣#463 岛屿的周长</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/14/算法笔记-Leetcode-266-Palindrome-Permutation/">算法笔记: Leetcode#266 Palindrome Permutation</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/06/算法笔记-Leetcode-682-Baseball-Game/">算法笔记: 领扣#682 棒球比赛</a>
         </li>
       
     </ul>

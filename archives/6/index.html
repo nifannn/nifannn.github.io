@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -206,6 +206,142 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/2018/06/21/SQL-笔记-Leetcode-578-Get-Highest-Answer-Rate-Question/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#578 Get Highest Answer Rate Question
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+求出survey_log表中回答率最高的问题，表格的字段有：uid, action, question_id, answer_id, q_num, timestamp。
+uid是用户id；action的值为：“show”， “answer”， “skip”；当action是&quot;answer&quot;时，answer_id不为空，相反，当action是&quot;show&q......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/21/SQL-笔记-Leetcode-177-Nth-Highest-Salary/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#177 Nth Highest Salary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+写一条SQL语句求出Employee表中第n高的薪水。
+1234567+----+--------+| Id | Salary |+----+--------+| 1  | 100    || 2  | 200    || 3  | 300    |+----+--------+
+例如，对于上面的表格，当n = 2时，第n高的薪水是200。如果不存在第n高薪水，则返回null。
+12......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/17/SQL-笔记-Leetcode-184-Department-Highest-Salary/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#184 Department Highest Salary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+Employee表包含所有员工的数据。每位员工都有Id，薪水和对应部门Id。
+12345678+----+-------+--------+--------------+| Id | Name  | Salary | DepartmentId |+----+-------+--------+--------------+| 1  | Joe   | 70000  | 1       ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-17
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/17/SQL-笔记-Leetcode-614-Second-Degree-Follower/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#614 Second Degree Follower
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+在facebook上，有一张follow表，包含两个字段：followee, follower。
+请写一条sql语句计算每个关注者的关注者的数量（如果有的话）。
+例如：
+12345678+-------------+------------+| followee    | follower   |+-------------+------------+|     A       | ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-17
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -487,149 +623,6 @@ SecondHighestSalary
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/15/SQL-笔记-Leetcode-196-Delete-Duplicate-Emails/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#196 Delete Duplicate Emails
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-写一条SQL语句删除Person表中所有重复的邮件记录，只保留重复记录中Id最小的记录。
-12345678+----+------------------+| Id | Email            |+----+------------------+| 1  | john@example.com || 2  | bob@example.com  || 3  | john@exa......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-15
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/15/SQL-笔记-Leetcode-197-Rising-Temperature/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#197 Rising Temperature
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定一张Weather表，写一条SQL语句找出所有比前一天（昨天）气温高的日期的Id。
-12345678+---------+------------------+------------------+| Id(INT) | RecordDate(DATE) | Temperature(INT) |+---------+------------------+-------------......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-15
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/15/SQL-笔记-Leetcode-596-Classes-More-Than-5-Students/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#596 Classes More Than 5 Students
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-courses表有两个字段：student 和 class
-请列出所有超过或包含5个学生的课程。
-例如，有这样一张表：
-12345678910111213+---------+------------+| student | class      |+---------+------------+| A       | Math       || B       | English ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-15
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/15/SQL-笔记-Leetcode-619-Biggest-Single-Number/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#619 Biggest Single Number
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-表格number在字段num中包含许多的数字（包含重复）。
-写一条SQL语句求出只出现过一次的最大的数。
-1234567891011+---+|num|+---+| 8 || 8 || 3 || 3 || 1 || 4 || 5 || 6 |
-对于上面的例子，结果应返回：
-1234+---+|num|+---+| 6 |
-注意：
-如果不存在这样的数，直接返回null。
-分析
-
-
-找到......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-15
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -670,25 +663,17 @@ courses表有两个字段：student 和 class
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="97">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="98">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="170">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="171">Leetcode</a>
             
         
             
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
-            
-        
-            
-            <a href="/tags/#Deep Learning" title="Deep Learning" rel="12">Deep Learning</a>
-            
-        
-            
-            <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
             
         
             
@@ -704,9 +689,11 @@ courses表有两个字段：student 和 class
             
         
             
-            <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
+            <a href="/tags/#Deep Learning" title="Deep Learning" rel="12">Deep Learning</a>
             
         
+            
+            <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
             
         
             
@@ -719,6 +706,12 @@ courses表有两个字段：student 和 class
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="4">MXNet</a>
+            
+        
+            
+            <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
+            
+        
             
         
             
@@ -774,13 +767,13 @@ courses表有两个字段：student 和 class
             
         
             
+        
+            
+        
+            
+        
+            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
-        
-            
-        
-            
-        
             
         
             
@@ -790,15 +783,15 @@ courses表有两个字段：student 和 class
             
         
             
+            <a href="/tags/#算法" title="算法" rel="29">算法</a>
+            
+        
+            
         
             
         
             
-            <a href="/tags/#算法" title="算法" rel="26">算法</a>
-            
-        
-            
-            <a href="/tags/#领扣" title="领扣" rel="21">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="24">领扣</a>
             
         
     </div>
@@ -816,7 +809,7 @@ courses表有两个字段：student 和 class
         
 
         
-            <p>Read the world.</p>
+            <p>Read the world via data.</p>
         
 
         <!-- SNS Link -->
@@ -862,23 +855,23 @@ courses表有两个字段：student 和 class
     <ul>
       
         <li>
+          <a href="/2018/10/20/算法笔记-Leetcode-766-Toeplitz-Matrix/">算法笔记: 领扣#766 托普利茨矩阵</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/18/算法笔记-Leetcode-412-Fizz-Buzz/">算法笔记: 领扣#412 Fizz Buzz</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/18/Algorithm-Notes-Leetcode-412-Fizz-Buzz/">Algorithm Notes: Leetcode#412 Fizz Buzz</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/18/算法笔记-Leetcode-575-Distribute-Candies/">算法笔记: 领扣#575 分糖果</a>
+        </li>
+      
+        <li>
           <a href="/2018/10/16/算法笔记-Leetcode-669-Trim-a-Binary-Search-Tree/">算法笔记: 领扣#669 修剪二叉搜索树</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/16/Algorithm-Notes-Leetcode-669-Trim-a-Binary-Search-Tree/">Algorithm Notes: Leetcode#669 Trim a Binary Search Tree</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/15/算法笔记-Leetcode-463-Island-Perimeter/">算法笔记: 领扣#463 岛屿的周长</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/14/算法笔记-Leetcode-266-Palindrome-Permutation/">算法笔记: Leetcode#266 Palindrome Permutation</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/06/算法笔记-Leetcode-682-Baseball-Game/">算法笔记: 领扣#682 棒球比赛</a>
         </li>
       
     </ul>
