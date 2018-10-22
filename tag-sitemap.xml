@@ -121,13 +121,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/game/</loc>
-        <lastmod>2017-10-22T19:05:47.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Vuejs/</loc>
         <lastmod>2017-10-22T19:05:47.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -282,29 +275,50 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/game/</loc>
+        <lastmod>2018-10-22T02:43:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/Java/</loc>
+        <lastmod>2018-10-22T02:43:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/%E5%B0%8F%E6%B8%B8%E6%88%8F/</loc>
+        <lastmod>2018-10-22T02:43:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/Algorithm/</loc>
-        <lastmod>2018-10-20T02:54:51.000Z</lastmod>
+        <lastmod>2018-10-22T06:32:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Leetcode/</loc>
-        <lastmod>2018-10-20T02:54:51.000Z</lastmod>
+        <lastmod>2018-10-22T06:32:53.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-        <lastmod>2018-10-20T03:10:25.000Z</lastmod>
+        <lastmod>2018-10-22T06:41:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/%E9%A2%86%E6%89%A3/</loc>
-        <lastmod>2018-10-20T03:10:25.000Z</lastmod>
+        <lastmod>2018-10-22T06:41:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

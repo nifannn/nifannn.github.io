@@ -7,6 +7,70 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-566-Reshape-the-Matrix/</loc>
+        <lastmod>2018-10-22T06:41:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/21/Algorithm-Notes-Leetcode-566-Reshape-the-Matrix/</loc>
+        <lastmod>2018-10-22T06:32:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-617-Merge-Two-Binary-Trees/</loc>
+        <lastmod>2018-10-22T03:50:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/30/Algorithm-Notes-Leetcode-617-Merge-Two-Binary-Trees/</loc>
+        <lastmod>2018-10-22T03:50:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-657-Judge-Route-Circle/</loc>
+        <lastmod>2018-10-22T03:19:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/</loc>
+        <lastmod>2018-10-22T03:18:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/21/Java-Practice-Tetris-cn/</loc>
+        <lastmod>2018-10-22T02:43:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/21/Java-Practice-Tetris/</loc>
+        <lastmod>2018-10-22T02:43:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2018/10/20/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-766-Toeplitz-Matrix/</loc>
         <lastmod>2018-10-20T03:10:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -447,22 +511,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/06/30/Algorithm-Notes-Leetcode-617-Merge-Two-Binary-Trees/</loc>
-        <lastmod>2018-09-13T08:53:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/06/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-617-Merge-Two-Binary-Trees/</loc>
-        <lastmod>2018-09-13T08:45:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/07/01/Algorithm-Notes-Leetcode-728-Self-Dividing-Numbers/</loc>
         <lastmod>2018-09-13T08:22:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -479,40 +527,8 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/10/21/Algorithm-Notes-Leetcode-566-Reshape-the-Matrix/</loc>
-        <lastmod>2018-09-13T07:16:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-566-Reshape-the-Matrix/</loc>
-        <lastmod>2018-09-13T07:16:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/06/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-657-Judge-Route-Circle/</loc>
-        <lastmod>2018-09-13T06:59:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/09/10/Algorithm-Notes-Leetcode-806-Number-of-Lines-To-Write-String/</loc>
         <lastmod>2018-09-13T06:58:13.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/</loc>
-        <lastmod>2018-09-13T06:57:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
