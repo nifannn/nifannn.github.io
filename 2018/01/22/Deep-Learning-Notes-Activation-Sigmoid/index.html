@@ -148,14 +148,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -220,6 +220,7 @@
 
                 <h3 id="introduction">Introduction</h3>
 <hr>
+<p>Sigmoid is a most common activation function in neural networks. It maps real values to <code>(0, 1)</code>, which makes it often used to represent probability.</p>
 <h3 id="math-basics">Math Basics</h3>
 <hr>
 <h4 id="formula">Formula</h4>
@@ -231,6 +232,7 @@
 <p><img src="sigmoid.png" alt="sigmoid"></p>
 <h3 id="practice-with-libraries">Practice with Libraries</h3>
 <hr>
+<p>Given a matrix <code>x = [[-4, -3, -2], [-1, 0, 1], [ 2, 3, 4]]</code>, compute <code>y = sigmoid(x)</code> and the <code>gradient</code> of y with respect to x.</p>
 <h4 id="tensorflow">TensorFlow</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div><div class="line"></div><div class="line">print(tf.__version__)</div></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.10</span><span class="number">.1</span></div></pre></td></tr></table></figure>
@@ -260,12 +262,17 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>x = np.arange(<span class="number">-4</span>, <span class="number">5</span>, <span class="number">1</span>).reshape([<span class="number">3</span>,<span class="number">3</span>])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>x</div><div class="line">array([[<span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-2</span>],</div><div class="line">       [<span class="number">-1</span>,  <span class="number">0</span>,  <span class="number">1</span>],</div><div class="line">       [ <span class="number">2</span>,  <span class="number">3</span>,  <span class="number">4</span>]])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>y = sigmoid(x)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>y</div><div class="line">array([[<span class="number">0.01798621</span>, <span class="number">0.04742587</span>, <span class="number">0.11920292</span>],</div><div class="line">       [<span class="number">0.26894142</span>, <span class="number">0.5</span>       , <span class="number">0.73105858</span>],</div><div class="line">       [<span class="number">0.88079708</span>, <span class="number">0.95257413</span>, <span class="number">0.98201379</span>]])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>grad = sigmoid_grad(y)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>grad</div><div class="line">array([[<span class="number">0.01766271</span>, <span class="number">0.04517666</span>, <span class="number">0.10499359</span>],</div><div class="line">       [<span class="number">0.19661193</span>, <span class="number">0.25</span>      , <span class="number">0.19661193</span>],</div><div class="line">       [<span class="number">0.10499359</span>, <span class="number">0.04517666</span>, <span class="number">0.01766271</span>]])</div></pre></td></tr></table></figure>
 <h3 id="notes">Notes</h3>
 <hr>
+<ul>
+<li>Often used for binary classification</li>
+</ul>
 <h3 id="references">References</h3>
 <hr>
-<p><a href="/2018/09/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B9%8BSigmoid/">(中文版)深度学习笔记：激活函数之Sigmoid</a><br>
-<a href="https://www.tensorflow.org" target="_blank" rel="external">Tensorflow Document</a><br>
-<a href="">PyTorch Document</a><br>
-<a href="">MxNet Document</a></p>
+<ul>
+<li><a href="/2018/09/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B9%8BSigmoid/">(中文版)深度学习笔记：激活函数之Sigmoid</a></li>
+<li><a href="https://www.tensorflow.org" target="_blank" rel="external">Tensorflow</a></li>
+<li><a href="https://pytorch.org" target="_blank" rel="external">PyTorch</a></li>
+<li><a href="https://mxnet.incubator.apache.org" target="_blank" rel="external">MxNet</a></li>
+</ul>
 
                 
 

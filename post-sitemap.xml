@@ -7,6 +7,94 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/10/24/Algorithm-cn-Notes-Leetcode-496-Next-Greater-Element-I/</loc>
+        <lastmod>2018-10-25T04:00:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/24/Algorithm-Notes-Leetcode-496-Next-Greater-Element-I/</loc>
+        <lastmod>2018-10-25T03:45:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/07/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-561-Array-Partition-1/</loc>
+        <lastmod>2018-10-24T06:03:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/10/21/Algorithm-Notes-Leetcode-561-Array-Partition-1/</loc>
+        <lastmod>2018-10-24T06:02:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/23/Algorithm-Notes-Leetcode-293-Flip-Game/</loc>
+        <lastmod>2018-10-23T03:54:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/10/23/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-293-Flip-Game/</loc>
+        <lastmod>2018-10-23T03:48:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/07/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-728-Self-Dividing-Numbers/</loc>
+        <lastmod>2018-10-23T02:57:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/07/01/Algorithm-Notes-Leetcode-728-Self-Dividing-Numbers/</loc>
+        <lastmod>2018-10-23T02:57:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
+        <lastmod>2018-10-22T13:03:17.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-ReLU/</loc>
+        <lastmod>2018-10-22T09:56:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
+        <lastmod>2018-10-22T08:55:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-566-Reshape-the-Matrix/</loc>
         <lastmod>2018-10-22T06:41:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -207,22 +295,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Loss-MSE/</loc>
-        <lastmod>2018-10-15T09:44:03.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/</loc>
-        <lastmod>2018-10-15T09:11:25.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/05/31/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-771-Jewels-and-Stones/</loc>
         <lastmod>2018-10-15T07:45:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -287,14 +359,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/10/21/Algorithm-Notes-Leetcode-561-Array-Partition-1/</loc>
-        <lastmod>2018-10-14T04:44:46.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/06/29/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-461-Hamming-Distance/</loc>
         <lastmod>2018-10-14T04:30:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -353,14 +417,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-Softmax/</loc>
         <lastmod>2018-10-05T07:42:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/01/22/Deep-Learning-Notes-Activation-ReLU/</loc>
-        <lastmod>2018-10-05T07:42:46.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -511,22 +567,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2018/07/01/Algorithm-Notes-Leetcode-728-Self-Dividing-Numbers/</loc>
-        <lastmod>2018-09-13T08:22:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/07/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-728-Self-Dividing-Numbers/</loc>
-        <lastmod>2018-09-13T08:13:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2018/09/10/Algorithm-Notes-Leetcode-806-Number-of-Lines-To-Write-String/</loc>
         <lastmod>2018-09-13T06:58:13.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -537,14 +577,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/09/10/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-806-Number-of-Lines-To-Write-String/</loc>
         <lastmod>2018-09-13T06:51:55.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/07/01/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-561-Array-Partition-1/</loc>
-        <lastmod>2018-09-12T10:11:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -2191,7 +2223,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2199,7 +2231,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
