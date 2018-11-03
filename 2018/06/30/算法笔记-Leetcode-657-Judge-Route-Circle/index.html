@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -214,14 +214,17 @@
 
                 <h3 id="问题描述">问题描述</h3>
 <hr>
-<p>假设有一个机器人位于（0，0）。给定一连串的移动指令，判断其是否能画一个圆，就是说它能回到原点。</p>
-<p>移动指令的序列用一个字符串表示。每一次移动都是一个字符。有效的移动字符有<strong>R</strong>(右)，<strong>L</strong>(左)，<strong>U</strong>(上)和<strong>D</strong>(下)。输出应该是true或者false，来表示机器人是否能画一个圆。</p>
+<p>在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 <strong>(0, 0) 处结束</strong>。</p>
+<p>移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 <code>R</code>（右），<code>L</code>（左），<code>U</code>（上）和 <code>D</code>（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。</p>
+<p><strong>注意：</strong> 机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。</p>
 <p><strong>例子 1:</strong></p>
 <p><strong>输入:</strong> &quot;UD&quot;<br>
-<strong>输出:</strong> true</p>
+<strong>输出:</strong> true<br>
+<strong>解释：</strong> 机器人向上移动一次，然后向下移动一次。所有动作都具有相同的幅度，因此它最终回到它开始的原点。因此，我们返回 true。</p>
 <p><strong>例子 2:</strong></p>
 <p><strong>输入:</strong> &quot;LL&quot;<br>
-<strong>输出:</strong> false</p>
+<strong>输出:</strong> false<br>
+<strong>解释：</strong> 机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。</p>
 <h3 id="解法">解法</h3>
 <hr>
 <h4 id="基本思路">基本思路</h4>
@@ -236,9 +239,9 @@
 <p>O(1)。</p>
 <h3 id="链接">链接</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/judge-route-circle/description/" target="_blank" rel="external">657. Judge Route Circle</a><br>
+<p><a href="https://leetcode.com/problems/robot-return-to-origin/" target="_blank" rel="external">657. Robot Return to Origin</a><br>
 <a href="https://leetcode-cn.com/problems/robot-return-to-origin/description/" target="_blank" rel="external">657. 机器人能否返回原点</a><br>
-<a href="/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/">(English version) Algorithm Notes: Leetcode#657 Judge Route Circle</a></p>
+<a href="/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/">(English version) Algorithm Notes: Leetcode#657 Robot Return to Origin</a></p>
 
                 
 
@@ -252,7 +255,7 @@
                     
                     
                         <li class="next">
-                            <a href="/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/" data-toggle="tooltip" data-placement="top" title="Algorithm Notes: Leetcode#657 Judge Route Circle">Next Post &rarr;</a>
+                            <a href="/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/" data-toggle="tooltip" data-placement="top" title="Algorithm Notes: Leetcode#657 Robot Return to Origin">Next Post &rarr;</a>
                         </li>
                     
                 </ul>

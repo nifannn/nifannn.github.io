@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Algorithm Notes: Leetcode#657 Judge Route Circle - Memogrocery
+          Algorithm Notes: Leetcode#657 Robot Return to Origin - Memogrocery
         
     </title>
 
@@ -91,7 +91,7 @@
                               <a class="tag" href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
                             
                         </div>
-                        <h1>Algorithm Notes: Leetcode#657 Judge Route Circle</h1>
+                        <h1>Algorithm Notes: Leetcode#657 Robot Return to Origin</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -214,14 +214,17 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<p>Initially, there is a Robot at position (0, 0). Given a sequence of its moves, judge if this robot makes a circle, which means it moves back to <strong>the original place.</strong></p>
-<p>The move sequence is represented by a string. And each move is represent by a character. The valid robot moves are <strong>R</strong> (Right), <strong>L</strong> (Left), <strong>U</strong> (Up) and <strong>D</strong> (down). The output should be true or false representing whether the robot makes a circle.</p>
+<p>There is a robot starting at position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot <strong>ends up at (0, 0)</strong> after it completes its moves.</p>
+<p>The move sequence is represented by a string, and the character moves[i] represents its ith move. Valid moves are R (right), L (left), U (up), and D (down). If the robot returns to the origin after it finishes all of its moves, return true. Otherwise, return false.</p>
+<p><strong>Note:</strong> The way that the robot is “facing” is irrelevant. “R” will always make the robot move to the right once, “L” will always make it move left, etc. Also, assume that the magnitude of the robot’s movement is the same for each move.</p>
 <p><strong>Example 1:</strong></p>
 <p><strong>Input:</strong> &quot;UD&quot;<br>
-<strong>Output:</strong> true</p>
+<strong>Output:</strong> true<br>
+<strong>Explanation:</strong> The robot moves up once, and then down once. All moves have the same magnitude, so it ended up at the origin where it started. Therefore, we return true.</p>
 <p><strong>Example 2:</strong></p>
 <p><strong>Input:</strong> &quot;LL&quot;<br>
-<strong>Output:</strong> false</p>
+<strong>Output:</strong> false<br>
+<strong>Explanation:</strong> The robot moves left twice. It ends up two “moves” to the left of the origin. We return false because it is not at the origin at the end of its moves.</p>
 <h3 id="solution">Solution</h3>
 <hr>
 <h4 id="basic-idea">Basic idea</h4>
@@ -236,7 +239,7 @@
 <p>O(1).</p>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/judge-route-circle/description/" target="_blank" rel="external">657. Judge Route Circle</a><br>
+<p><a href="https://leetcode.com/problems/robot-return-to-origin/" target="_blank" rel="external">657. Robot Return to Origin</a><br>
 <a href="https://leetcode-cn.com/problems/robot-return-to-origin/description/" target="_blank" rel="external">657. 机器人能否返回原点</a><br>
 <a href="/2018/06/30/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Leetcode-657-Judge-Route-Circle/">(中文版) 算法笔记: 领扣#657 机器人能否返回原点</a></p>
 

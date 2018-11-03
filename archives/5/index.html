@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -206,6 +206,80 @@
             
                 <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/2018/09/09/Install-Upgrade-Cuda-cuDNN-Tensorflow-Keras-PyTorch-MXNet/">
+        <h2 class="post-title">
+            Install & Upgrade Cuda, cuDNN, TensorFlow, Keras, PyTorch, MXNet
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Introduction
+
+Step by step
+
+Put together in shell script
+
+Make docker image
+
+References
+
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-09-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
+            
+              <a href="/tags/#TensorFlow" title="TensorFlow">TensorFlow</a>
+            
+              <a href="/tags/#PyTorch" title="PyTorch">PyTorch</a>
+            
+              <a href="/tags/#MXNet" title="MXNet">MXNet</a>
+            
+              <a href="/tags/#GPU" title="GPU">GPU</a>
+            
+              <a href="/tags/#Keras" title="Keras">Keras</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/09/07/Spark-Notes-Install-Configure-Spark-First/">
+        <h2 class="post-title">
+            Spark Notes: Install & Configure Spark First
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            ...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-09-07
+        </p>
+        <div class="tags">
+            
+        </div>
+    
+
+</div>
+<hr>
 
 <div class="post-preview">
 
@@ -402,13 +476,9 @@ You need to merge them into a new ......
         <div class="post-content-preview">
             问题描述
 
-假设有一个机器人位于（0，0）。给定一连串的移动指令，判断其是否能画一个圆，就是说它能回到原点。
-移动指令的序列用一个字符串表示。每一次移动都是一个字符。有效的移动字符有R(右)，L(左)，U(上)和D(下)。输出应该是true或者false，来表示机器人是否能画一个圆。
-例子 1:
-输入: &quot;UD&quot;
-输出: true
-例子 2:
-输入: &quot;LL&q......
+在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。
+移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 R（右），L（左），U（上）和 D（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。
+注意： 机器人“面朝”的方向无关紧要。 “R......
         </div>
     </a>
     
@@ -432,7 +502,7 @@ You need to merge them into a new ......
 
     <a href="/2018/06/30/Algorithm-Notes-Leetcode-657-Judge-Route-Circle/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#657 Judge Route Circle
+            Algorithm Notes: Leetcode#657 Robot Return to Origin
         </h2>
         <h3 class="post-subtitle">
             
@@ -440,8 +510,8 @@ You need to merge them into a new ......
         <div class="post-content-preview">
             Problem
 
-Initially, there is a Robot at position (0, 0). Given a sequence of its moves, judge if this robot makes a circle, which means it moves back to the original place.
-The move sequence is rep......
+There is a robot starting at position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.
+The move sequenc......
         </div>
     </a>
     
@@ -479,88 +549,6 @@ A.length &gt;= 3
 存在某个i，满足0 &lt; i &lt; A.length - 1 且 A[0] &lt; A[1] &lt; … A[i-1] &lt; A[i] &gt; A[i+1] &gt; … &gt; A[A.length - 1]
 
 给定一个符合上面条件的数组，返回任何一个满足A[0] &lt......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-29
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/29/Algorithm-Notes-Leetcode-852-Peak-Index-in-a-Mountain-Array/">
-        <h2 class="post-title">
-            Algorithm Notes: Leetcode#852 Peak Index in a Mountain Array
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            Problem
-
-Let’s call an array A a mountain if the following properties hold:
-
-A.length &gt;= 3
-There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A[i-1] &lt; A[i] &gt; A[i+......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-29
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/29/算法笔记-Leetcode-461-Hamming-Distance/">
-        <h2 class="post-title">
-            算法笔记: 领扣#461 汉明距离
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-两个整数的汉明距离是二进制对应位置上不同字符的数量。
-给出两个整数 x 和 y，计算汉明距离。
-注意：
-0 ≤ x, y &lt; 231.
-例子：
-输入： x = 1, y = 4
-输出： 2
-说明：
-1     (0 0 0 1)
-4     (0 1 0 0)
-           ↑   ↑
-上面的箭头所指就是对应位置不同的地方。
-解法
-
-基本思路
-可以使用异或计算来解决......
         </div>
     </a>
     
@@ -620,25 +608,25 @@ There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A
     <div class="tags">
         
             
+            <a href="/tags/#Algorithm" title="Algorithm" rel="101">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="175">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="100">Algorithm</a>
+            <a href="/tags/#算法" title="算法" rel="32">算法</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="174">Leetcode</a>
-            
-        
-            
-            <a href="/tags/#算法" title="算法" rel="31">算法</a>
-            
-        
-            
-            <a href="/tags/#领扣" title="领扣" rel="25">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="26">领扣</a>
             
         
             
@@ -702,11 +690,7 @@ There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A
             
         
             
-        
-            
-        
-            
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -716,7 +700,11 @@ There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+        
+            
+        
+            
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -742,17 +730,17 @@ There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A
             
         
             
-        
-            
-        
-            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
         
             
+        
+            
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
+            
+        
             
         
             
@@ -820,6 +808,14 @@ There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A
     <ul>
       
         <li>
+          <a href="/2018/10/26/Algorithm-cn-Notes-Leetcode-637-Average-of-Levels-in-Binary-Tree/">算法笔记: 领扣#637 二叉树的层平均值</a>
+        </li>
+      
+        <li>
+          <a href="/2018/10/26/Algorithm-Notes-Leetcode-637-Average-of-Levels-in-Binary-Tree/">Algorithm Notes: Leetcode#637 Average of Levels in Binary Tree</a>
+        </li>
+      
+        <li>
           <a href="/2018/10/24/Algorithm-cn-Notes-Leetcode-496-Next-Greater-Element-I/">算法笔记: 领扣#496 下一个更大元素 I</a>
         </li>
       
@@ -829,14 +825,6 @@ There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; … A
       
         <li>
           <a href="/2018/10/23/算法笔记-Leetcode-293-Flip-Game/">算法笔记: Leetcode#293 Flip Game</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/23/Algorithm-Notes-Leetcode-293-Flip-Game/">Algorithm Notes: Leetcode#293 Flip Game</a>
-        </li>
-      
-        <li>
-          <a href="/2018/10/21/Java-Practice-Tetris-cn/">Java 练习: 俄罗斯方块</a>
         </li>
       
     </ul>
