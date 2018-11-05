@@ -222,15 +222,24 @@
 <h4 id="java-实现">Java 实现</h4>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Definition for a binary tree node.</div><div class="line"> * public class TreeNode &#123;</div><div class="line"> *     int val;</div><div class="line"> *     TreeNode left;</div><div class="line"> *     TreeNode right;</div><div class="line"> *     TreeNode(int x) &#123; val = x; &#125;</div><div class="line"> * &#125;</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> List&lt;Double&gt; <span class="title">averageOfLevels</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        List&lt;Double&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        List&lt;Integer&gt; cnt = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        getLevelSum(root, <span class="number">0</span>, res, cnt);</div><div class="line">        </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; res.size(); i++)&#123;</div><div class="line">            res.set(i, res.get(i)/cnt.get(i));</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> res;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">getLevelSum</span><span class="params">(TreeNode node, <span class="keyword">int</span> level, List&lt;Double&gt; res, List&lt;Integer&gt; cnt)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(node == <span class="keyword">null</span>)&#123; <span class="keyword">return</span>; &#125;</div><div class="line">        <span class="keyword">if</span>(res.size() &lt;= level)&#123;</div><div class="line">            res.add(node.val * <span class="number">1.0</span>);</div><div class="line">            cnt.add(<span class="number">1</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            res.set(level, res.get(level) + node.val);</div><div class="line">            cnt.set(level, cnt.get(level) + <span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        getLevelSum(node.left, level+<span class="number">1</span>, res, cnt);</div><div class="line">        getLevelSum(node.right, level+<span class="number">1</span>, res, cnt);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="时间复杂度">时间复杂度</h4>
+<p>O(N).</p>
 <h4 id="空间复杂度">空间复杂度</h4>
+<p>O(L).</p>
 <h3 id="链接">链接</h3>
 <hr>
+<p><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/" target="_blank" rel="external">637. Average of Levels in Binary Tree</a><br>
+<a href="https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/description/" target="_blank" rel="external">637. 二叉树的层平均值</a><br>
+<a href="/2018/10/26/Algorithm-Notes-Leetcode-637-Average-of-Levels-in-Binary-Tree/">(English version) Algorithm Notes: Leetcode#637 Average of Levels in Binary Tree</a></p>
 
                 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/11/04/Algorithm-cn-Notes-Leetcode-136-Single-Number/" data-toggle="tooltip" data-placement="top" title="算法笔记: 领扣#136 只出现一次的数字">&larr; Previous Post</a>
+                        </li>
                     
                     
                         <li class="next">
