@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('Algorithms.jpg')
             /*post*/
         
     }
@@ -214,14 +214,21 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<h3 id="analysis">Analysis</h3>
-<hr>
 <h3 id="solution">Solution</h3>
 <hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(self, nums)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :rtype: int</div><div class="line">        """</div><div class="line">        cnt = <span class="number">0</span></div><div class="line">        his_cnt = []</div><div class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</div><div class="line">            <span class="keyword">if</span> num:</div><div class="line">                cnt += <span class="number">1</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                cnt = <span class="number">0</span></div><div class="line">            his_cnt.append(cnt)</div><div class="line">        <span class="keyword">return</span> max(his_cnt)</div></pre></td></tr></table></figure>
-<h3 id="link">Link</h3>
+<h4 id="analysis">Analysis</h4>
+<h4 id="python-implementation">Python implementation</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(self, nums)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :rtype: int</div><div class="line">        """</div><div class="line">        ans = <span class="number">0</span></div><div class="line">        n = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> nums:</div><div class="line">            <span class="keyword">if</span> num == <span class="number">1</span>:</div><div class="line">                n += <span class="number">1</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                ans = max(n, ans)</div><div class="line">                n = <span class="number">0</span></div><div class="line">                </div><div class="line">        <span class="keyword">return</span> max(n, ans)</div></pre></td></tr></table></figure>
+<h4 id="java-implementation">Java implementation</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMaxConsecutiveOnes</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num : nums)&#123;</div><div class="line">            <span class="keyword">if</span>(num == <span class="number">1</span>)&#123;</div><div class="line">                n ++;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                ans = ans &gt; n ? ans : n;</div><div class="line">                n = <span class="number">0</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans &gt; n ? ans : n;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(N).</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(1).</p>
+<h3 id="links">Links</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/max-consecutive-ones/description/" target="_blank" rel="external">485. Max Consecutive Ones</a></p>
+<p><a href="https://leetcode.com/problems/max-consecutive-ones/description/" target="_blank" rel="external">485. Max Consecutive Ones</a><br>
+<a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-485-Max-Consecutive-Ones/">(中文版) 算法笔记: 领扣#485 最大连续1的个数</a></p>
 
                 
 
@@ -261,7 +268,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#java-implementation"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Java implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#links"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Links</span></a></li></ol>
         
         </div>
       </aside>
