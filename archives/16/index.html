@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-11/">
+    <a href="/2018/06/01/SQL-笔记-Hackerrank-New-Companies/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 11
+            SQL 笔记: Hackerrank New Companies
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,47 +219,16 @@
         <div class="post-content-preview">
             问题
 
-查询 STATION 表格中以非元音字母开头或结尾的 CITY 名称。结果不包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
+Amber的联合企业刚收购了一些新公司。每家公司都遵循下图所示的架构：
 
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ：北纬  LONG_......
+根据下面给出的表格概要，写一条查询语句打印company_code（公司代码），founder（创始人）姓名，lead manager（总监）的总数，senior manager（高级主管）的总数，managers（主管）的总数，以及employees（员工）的总数。按照company_code升序排序。
+注意......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-22
+            2018-06-01
         </p>
         <div class="tags">
             
@@ -275,9 +244,9 @@ LAT_N ：北纬  LONG_......
 
 <div class="post-preview">
 
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-10/">
+    <a href="/2018/06/01/SQL-笔记-Hackerrank-Occupations/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 10
+            SQL 笔记: Hackerrank Occupations
         </h2>
         <h3 class="post-subtitle">
             
@@ -285,47 +254,20 @@ LAT_N ：北纬  LONG_......
         <div class="post-content-preview">
             问题
 
-查询 STATION 表格中以非元音字母结尾的 CITY 名称。结果不包含重复记录。
+轴向旋转（pivot） OCCUPATIONS  表格中的职业（Occupation）一列，从而姓名（Name）按字母表顺序排序并与对应的职业显示在一起。输出结果的列名为医生（Doctor），教授（Professor），歌手（Singer），演员（Actor）。
+注意: 当没有姓名可以对应一个职业时，打印NULL。
 输入格式
-STATION 表格描述如下:
-STATION
+OCCUPATIONS 表格描述如下：
 
 
 
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ：北纬 LONG_W ：西......
+Column......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-22
+            2018-06-01
         </p>
         <div class="tags">
             
@@ -341,9 +283,9 @@ LAT_N ：北纬 LONG_W ：西......
 
 <div class="post-preview">
 
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-9/">
+    <a href="/2018/05/31/SQL-笔记-Hackerrank-Binary-Tree-Nodes/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 9
+            SQL 笔记: Hackerrank Binary Tree Nodes
         </h2>
         <h3 class="post-subtitle">
             
@@ -351,47 +293,37 @@ LAT_N ：北纬 LONG_W ：西......
         <div class="post-content-preview">
             问题
 
-查询 STATION 表格中以非元音字母开头的 CITY 名字。结果不包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
+给定一个表格，BST，包含两列： N 和 P，N 表示二叉树一个节点的值，P 是 N 的父节点。
 
 
 
-Field
+Column
 Type
 
 
 
 
-ID
-NUMBER
+N
+Integer
 
 
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
+P
+Integer
 
 
 
-LAT_N ：北纬 LONG_W ：西......
+写一条查询语句，得出二叉树中节点类型并按节点值的大小排序。按如下方式输出结果:
+
+Root: 如果节点是根节点。
+Leaf: 如果节点是叶子节点。
+Inner: 如果节点既不是根节点也不是叶子节点。
+......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-22
+            2018-05-31
         </p>
         <div class="tags">
             
@@ -407,230 +339,29 @@ LAT_N ：北纬 LONG_W ：西......
 
 <div class="post-preview">
 
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-8/">
+    <a href="/2018/05/31/算法笔记-Leetcode-771-Jewels-and-Stones/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 8
+            算法笔记: 领扣#771 宝石与石头
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            问题
+            问题描述
 
-查询 STATION 表格中首字母和最后一个字母均为元音字母的 CITY 名字。结果不包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ：北纬 L......
+假设字符串J表示宝石的石头类型，字符串S表示你所拥有的石头。S中的每一个字符代表属于你的一种石头。你想知道自己的石头中有多少是宝石。
+J中的字符都是唯一的，且J和S中的字符都是字母。字母区分大小写，所以 “a” 和 “A” 是不同种的石头。
+例子 1:
+输入: J = “aA”, S = &quot;aAAbbbb&quot;
+输出: 3
+例子 2:
+输入: J = “z”, S......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-7/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 7
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 STATION 表格中以元音字母结尾的 CITY 名字。结果不可以包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ：北纬 LONG_W ：......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-6/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 6
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 STATION 表中元音字母(a, e, i, o, u) 开头的 CITY 名字。不可以包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/21/算法笔记-Leetcode-1-Two-Sum/">
-        <h2 class="post-title">
-            算法笔记: 领扣#1 两数之和
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
-你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
-示例:
-给定 nums = [2, 7, 11, 15], target = 9
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]
-解法
-
-基本思路
-使用哈希表储存数组的值以及对应索引。遍历数组，每次把数值和索引加入哈希......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-21
+            2018-05-31
         </p>
         <div class="tags">
             
@@ -646,100 +377,66 @@ LAT_N ......
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-5/">
+    <a href="/2018/05/31/算法笔记-Leetcode-566-Reshape-the-Matrix/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 5
+            算法笔记: 领扣#566 重塑矩阵
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            问题
+            问题描述
 
-查询 STATION 表格中 CITY 名字最长和最短的城市名, 以及对应长度(名字的字符数)。 如果最长或最短的城市不止一个, 选择按字母表排序优先出现的一个。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-21
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-4/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 4
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-把N作为 STATION 表格中 CITY 记录的数量，把N’作为 STATION 表格中 不重复 CITY 名字的数量; 查询 N - N’ 的值。 总之, 求表格中 CITY 记录的总数 和唯一的 CITY 名字的数量的差值。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
+在MATLAB中，有一个非常有用的函数 reshape，它可以将一个矩阵重塑为另一个大小不同的新矩阵，但保留其原始数据。
+给出一个由二维数组表示的矩阵，以及两个正整数r和c，分别表示想要的重构的矩阵的行数和列数。
+重构后的矩阵需要将原始矩阵的所有元素以相同的行遍历顺序填充。
+如果具有给定参数的reshape操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩阵。
+示例 1:
 ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-31
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#领扣" title="领扣">领扣</a>
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/31/SQL-笔记-Hackerrank-The-PADS/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank The PADS
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+生成以下两个结果:
+
+以字母表顺序查询 OCCUPATIONS 中的所有名字,并且后面跟着职业的首字母（用括号包围）。例如：AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).
+查询 OCCUPATIONS 中每个职业的出现次数，升序排序，并按以下格式输出：
+
+
+There are a total......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-31
         </p>
         <div class="tags">
             
@@ -755,9 +452,9 @@ VARCHAR2(21)
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-3/">
+    <a href="/2018/05/24/SQL-笔记-Hackerrank-Type-of-Triangle/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 3
+            SQL 笔记: Hackerrank Type of Triangle
         </h2>
         <h3 class="post-subtitle">
             
@@ -765,47 +462,195 @@ VARCHAR2(21)
         <div class="post-content-preview">
             问题
 
-查询 STATION 表中偶数 ID 的 CITY 名字。可以以任意顺序打印结果,但必须排除重复记录。
+写一条查询语句来根据三边长度确定 TRIANGLES 表格中每条记录的三角形类型。输出的类型如下：
+
+Equilateral（等边三角形）: 三边长度相等的三角形。
+Isosceles（等腰三角形）: 有两条边相等的三角形。
+Scalene（不等边三角形）: 三边均不相等的三角形。
+Not a Triangle（不是三角形）: A，B，C的值无法构成三角形。
+
 输入格式
-STATION 表格描述如下:
-STATION
+TRIANG......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-24
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Salaries/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Employee Salaries
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+写一条查询语句打印 Employee 表格中月薪大于$2000，并且工作时间小于10个月的员工名字（ name 属性）。根据 employee_id 升序排序。
+输入格式
+Employee 表格包含一家公司的员工数据，描述如下:
 
 
 
-Field
+Column
+Type
+
+
+
+
+employee_id
+Integer
+
+
+name
+String
+
+
+months
+Integer
+
+
+salary......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-23
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Names/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Employee Names
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+写一条查询语句以字母表顺序打印 Employee 中员工名字（ name 属性）。
+输入格式
+Employee 表格包含一家公司的员工数据，描述如下:
+
+
+
+Column
+Type
+
+
+
+
+employee_id
+Integer
+
+
+name
+String
+
+
+months
+Integer
+
+
+salary
+Integer
+
+
+
+employee_id 为员工的ID号码，name 是......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-23
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/23/SQL-笔记-Hackerrank-Higher-Than-75-Marks/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Higher Than 75 Marks
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STUDENTS 中得分超过75 Marks 的学生的 Name。按名字最后三个字母排序。如果几个学生名字最后三个字母相同(如: Bobby, Robby, 等), 再按 ID 升序排序。
+输入格式
+STUDENTS 表格描述如下:
+
+
+
+Column
 Type
 
 
 
 
 ID
-NUMBER
+Integer
 
 
-CITY
-VARCHAR2(21)
+Name
+String
 
 
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
+Marks
+Integer
 
 
 
-LAT_N ：北纬 ......
+Name 列只包含大......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-21
+            2018-05-23
         </p>
         <div class="tags">
             
@@ -859,11 +704,11 @@ LAT_N ：北纬 ......
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="108">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="111">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="182">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="185">Leetcode</a>
             
         
             
@@ -873,11 +718,23 @@ LAT_N ：北纬 ......
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="35">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="43">领扣</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="41">算法</a>
+            <a href="/tags/#算法" title="算法" rel="49">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -901,18 +758,6 @@ LAT_N ：北纬 ......
             
         
             
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
-            
-        
-            
             <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
             
         
@@ -924,6 +769,16 @@ LAT_N ：北纬 ......
         
             
             <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
+            
+        
+            
+            <a href="/tags/#web" title="web" rel="2">web</a>
+            
+        
+            
+            <a href="/tags/#game" title="game" rel="2">game</a>
+            
+        
             
         
             
@@ -946,16 +801,6 @@ LAT_N ：北纬 ......
         
             
             <a href="/tags/#Java" title="Java" rel="2">Java</a>
-            
-        
-            
-        
-            
-            <a href="/tags/#web" title="web" rel="2">web</a>
-            
-        
-            
-            <a href="/tags/#game" title="game" rel="2">game</a>
             
         
             
@@ -1059,23 +904,23 @@ LAT_N ：北纬 ......
     <ul>
       
         <li>
-          <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-292-Nim-Game/">算法笔记: 领扣#292 Nim游戏</a>
+          <a href="/2018/11/11/Algorithm-cn-Notes-Leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/">算法笔记: 领扣#448 找到所有数组中消失的数字</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-Notes-Leetcode-292-Nim-Game/">Algorithm Notes: Leetcode#292 Nim Game</a>
+          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-389-Find-the-Difference/">算法笔记: 领扣#389 找不同</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-Notes-Leetcode-824-Goat-Latin/">Algorithm Notes: Leetcode#824 Goat Latin</a>
+          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-690-Employee-Importance/">算法笔记: 领扣#690 员工的重要性</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-824-Goat-Latin/">算法笔记: 领扣#824 山羊拉丁文</a>
+          <a href="/2018/11/10/Algorithm-Notes-Leetcode-520-Detect-Capital/">Algorithm Notes: Leetcode#520 Detect Capital</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-485-Max-Consecutive-Ones/">算法笔记: 领扣#485 最大连续1的个数</a>
+          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-520-Detect-Capital/">算法笔记: 领扣#520 检测大写字母</a>
         </li>
       
     </ul>

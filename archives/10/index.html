@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/06/14/SQL-笔记-Leetcode-181-Employees-Earning-More-Than-Their-Managers/">
+    <a href="/2018/06/16/SQL-笔记-Leetcode-178-Rank-Scores/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#181 Employees Earning More Than Their Managers
+            SQL 笔记: Leetcode#178 Rank Scores
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,14 +219,14 @@
         <div class="post-content-preview">
             问题
 
-Employee表包含所有员工及其上级的相关信息。每位员工都有一个Id，另外还有一个字段为其上级的Id（managerId）。
-12345678+----+-------+--------+-----------+| Id | Name  | Salary | ManagerId |+----+-------+--------+-----------+| 1  | Joe   | 7......
+写一条SQL语句对分数进行排序。如果两个分数相等，排名应该相同。需要注意的是，并列的分数后的排名应该是连续的整数。换句话说，排名之间不存在间隔。
+12345678910+----+-------+| Id | Score |+----+-------+| 1  | 3.50  || 2  | 3.65  || 3  | 4.00  || 4  | 3.85  || 5  | 4.00......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-14
+            2018-06-16
         </p>
         <div class="tags">
             
@@ -242,9 +242,9 @@ Employee表包含所有员工及其上级的相关信息。每位员工都有一
 
 <div class="post-preview">
 
-    <a href="/2018/06/14/SQL-笔记-Leetcode-175-Combine-Two-Tables/">
+    <a href="/2018/06/16/SQL-笔记-Leetcode-574-Winning-Candidate/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#175 Combine Two Tables
+            SQL 笔记: Leetcode#574 Winning Candidate
         </h2>
         <h3 class="post-subtitle">
             
@@ -252,59 +252,16 @@ Employee表包含所有员工及其上级的相关信息。每位员工都有一
         <div class="post-content-preview">
             问题
 
-表格： Person
-
-
-
-Column Name
-Type
-
-
-
-
-PersonId
-int
-
-
-FirstName
-varchar
-
-
-LastName
-varchar
-
-
-
-PersonId是该表的主键。
-表格： Address
-
-
-
-Column Name
-Type
-
-
-
-
-AddressId
-int
-
-
-PersonId
-int
-
-
-City
-varchar
-
-
-State......
+表格： Candidate
+123456789+-----+---------+| id  | Name    |+-----+---------+| 1   | A       || 2   | B       || 3   | C       || 4   | D       || 5   | E       |+-----+---------+
+表格： Vote
+1234567......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-14
+            2018-06-16
         </p>
         <div class="tags">
             
@@ -320,9 +277,9 @@ State......
 
 <div class="post-preview">
 
-    <a href="/2018/06/10/SQL-笔记-Hackerrank-Interviews/">
+    <a href="/2018/06/16/SQL-笔记-Leetcode-580-Count-Student-Number-in-Departments/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Interviews
+            SQL 笔记: Leetcode#580 Count Student Number in Departments
         </h2>
         <h3 class="post-subtitle">
             
@@ -330,297 +287,363 @@ State......
         <div class="post-content-preview">
             问题
 
-Samantha通过编程竞赛来面试候选人。写一条查询语句打印每场竞赛contest_id， hacker_id， name，以及total_submissions的和， total_accepted_submissions的和， total_views的和，total_unique_views的和，并根据contest_id排序。从结果中排除四个总和都是0的竞赛。
-注意： 一场竞赛可......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/10/SQL-笔记-Hackerrank-Symmetric-Pairs/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Symmetric Pairs
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给你一张表, Functions, 包含两个字段： X 和 Y。
-
-如果X1 = Y2 且 X2 = Y1，那么就说(X1, Y1) 和 (X2, Y2) 是对称的。
-写一条查询语句输出所有对称点，并根据X值升序排序。
-输入样例
-
-输出样例
-
-20 20
-20 21
-22 23
-
-分析
-
-可以分别找出当x等于y时和当x不等于y时的对称点，然后用UNION合并，再排序输出。
-当x等于y......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/10/SQL-笔记-Hackerrank-Placements/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Placements
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-有三张表： Students， Friends 和 Packages。 Students 包含两个字段：ID 和 Name。 Friends 包含两个字段：ID 和 Friend_ID (唯一的最好的朋友的ID)。 Packages 包含两个字段：ID 和 Salary (每个月的薪水，单位：千刀)。
-
-写一条查询语句输出那些薪水没有最好的朋友高的学生的名字。结果根据朋友的薪水排序。......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Projects
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-有一张表， Projects，包含三个字段：任务ID（Task_ID）， 开始日期（Start_Date） 和 结束日期（End_Date）。 表中每一行 结束日期（End_Date） 和 开始日期（Start_Date） 都只相差1天。
-
-如果几个任务的结束日期（End_Date）是连续的，则表示这些都属于同一个项目。Samantha对完成了的项目的数量感兴趣。
-写一条查询语句输出......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-09
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Draw The Triangle 2
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P(R) 表示R行的一种图案。下面的图案就是P(5):
-
-*
-* *
-* * *
-* * * *
-* * * * *
-
-写一条查询语句去生成*P(20)*的图案。
-分析
-
-使用REPEAT函数生成图案。需要一个超过20行的表，并用一个变量控制每一行的长度。最后还要控制输出的行数。
-定义并初始化变量：
-1SET @number = 0;
-然后找一张超过20行的表，变量每次递增1:
-12......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-09
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-1/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Draw The Triangle 1
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
-
-* * * * *
-* * * *
-* * *
-* *
-*
-
-写一条查询语句打印*P(20)*的图案。
-分析
-
-可以使用REPEAT()函数生产图案。语法是REPEAT(str, count)，str是需要重复的字符串，count是重复次数。但是一次只能生成一行，因此还需要一张超过20行的表。另外还需要一个变量来控制每一......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-09
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/08/SQL-笔记-Hackerrank-Contest-Leaderboard/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Contest Leaderboard
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-在上一场编程竞赛中你帮了Julia很大的忙，这次她也想让你帮忙！
-参赛者的总分是他所有比赛获得的最大分的和。写一条查询语句打印hacker_id， name，和总分，根据总分降序排序。如果总分相同，根据hacker_id升序排序。排除总分为0的参赛者。
-输入格式
-下面的表包含了竞赛相关数据：
-
-Hackers: hacker_id是参赛者id，name是参赛者姓名。
+某大学使用两张数据表，student 和 department，来储存学生和每个专业对应所属系的相关数据。
+写一条查询语句打印出每个系的名字和其拥有的学生数量（即使该系没有学生）。
+结果根据学生数量降序排序；如果几个系学生数量相同，再根据系的名字按字母表顺序排序。
+student表描述如下：
 
 
 
-Submi......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-08
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/08/SQL-笔记-Hackerrank-Challenges/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Challenges
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-Julia让她的学生创建一些编程赛题。写一条查询语句打印hacker_id， name，和每个学生创建的题目数。结果按题目数量降序排序。如果数量相同，根据hacker_id排序。如果几个学生题目数量相同但数量并不是最大数，就从结果中排除。
-输入格式
-下面的表包含赛题相关数据：
-
-Hackers: hacker_id是学生id，name是对应姓名。
-
-
-
-
-Column
+Column Name
 Type
+
+
+
+
+student_id
+Integer
+
+
+s......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-16
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/16/SQL-笔记-Leetcode-602-Friend-Requests-2-Who-Has-the-Most-Friends/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#602 Friend Requests 2: Who Has the Most Friends
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+在社交网络（比如，脸书、推特）上，人们互相发送和接收好友请求。
+request_accepted表包含好友请求的相关数据，requester_id 和 accepter_id 都是某位用户的id。
+
+
+
+requester_id
+accepter_id
+accept_date
+
+
+
+
+1
+2
+2016_06-03
+
+
+1
+3
+2016-06-08
+
+
+2
+3
+2016-06-08
+
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-16
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-176-Second-Highest-Salary/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#176 Second Highest Salary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+写一条SQL语句输出Employee表中第二高的薪水。
+
+
+
+Id
+Salary
+
+
+
+
+1
+100
+
+
+2
+200
+
+
+3
+300
+
+
+
+例如，对于上面的表格，应该返回200作为第二高薪水。如果不存在第二高薪水，就返回null。
+
+
+
+SecondHighestSalary
+
+
+
+
+200
+
+
+
+分析
+
+可以先找出最大值，然后从小于最大值的记录中找出最大值，作为第二高薪水输出：
+1......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-196-Delete-Duplicate-Emails/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#196 Delete Duplicate Emails
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+写一条SQL语句删除Person表中所有重复的邮件记录，只保留重复记录中Id最小的记录。
+12345678+----+------------------+| Id | Email            |+----+------------------+| 1  | john@example.com || 2  | bob@example.com  || 3  | john@exa......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-197-Rising-Temperature/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#197 Rising Temperature
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定一张Weather表，写一条SQL语句找出所有比前一天（昨天）气温高的日期的Id。
+12345678+---------+------------------+------------------+| Id(INT) | RecordDate(DATE) | Temperature(INT) |+---------+------------------+-------------......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-596-Classes-More-Than-5-Students/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#596 Classes More Than 5 Students
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+courses表有两个字段：student 和 class
+请列出所有超过或包含5个学生的课程。
+例如，有这样一张表：
+12345678910111213+---------+------------+| student | class      |+---------+------------+| A       | Math       || B       | English ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-619-Biggest-Single-Number/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#619 Biggest Single Number
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+表格number在字段num中包含许多的数字（包含重复）。
+写一条SQL语句求出只出现过一次的最大的数。
+1234567891011+---+|num|+---+| 8 || 8 || 3 || 3 || 1 || 4 || 5 || 6 |
+对于上面的例子，结果应返回：
+1234+---+|num|+---+| 6 |
+注意：
+如果不存在这样的数，直接返回null。
+分析
+
+
+找到......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-597-Friend-Requests-1-Overall-Acceptance-Rate/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#597 Friend Requests 1: Overall Acceptance Rate
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+在社交网络上（如脸书、推特），人们向他人发送好友请求，同时接受他人的请求。现在有如下的两张表：
+表： friend_request
+
+
+
+sender_id
+send_to_id
+request_date
+
+
+
+
+1
+2
+2016_06-01
+
+
+1
+3
+2016_06-01
+
+
+1
+4
+2016_06-01
+
+
+2
+3
+2016_06-02
+
+
+3
+4
+2016-06-09
+
 
 
 ......
@@ -629,13 +652,13 @@ Type
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-08
+            2018-06-15
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
         </div>
     
@@ -683,11 +706,11 @@ Type
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="108">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="111">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="182">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="185">Leetcode</a>
             
         
             
@@ -697,11 +720,23 @@ Type
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="35">领扣</a>
+            <a href="/tags/#领扣" title="领扣" rel="43">领扣</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="41">算法</a>
+            <a href="/tags/#算法" title="算法" rel="49">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -725,18 +760,6 @@ Type
             
         
             
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
-            
-        
-            
             <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
             
         
@@ -748,6 +771,16 @@ Type
         
             
             <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
+            
+        
+            
+            <a href="/tags/#web" title="web" rel="2">web</a>
+            
+        
+            
+            <a href="/tags/#game" title="game" rel="2">game</a>
+            
+        
             
         
             
@@ -770,16 +803,6 @@ Type
         
             
             <a href="/tags/#Java" title="Java" rel="2">Java</a>
-            
-        
-            
-        
-            
-            <a href="/tags/#web" title="web" rel="2">web</a>
-            
-        
-            
-            <a href="/tags/#game" title="game" rel="2">game</a>
             
         
             
@@ -883,23 +906,23 @@ Type
     <ul>
       
         <li>
-          <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-292-Nim-Game/">算法笔记: 领扣#292 Nim游戏</a>
+          <a href="/2018/11/11/Algorithm-cn-Notes-Leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/">算法笔记: 领扣#448 找到所有数组中消失的数字</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-Notes-Leetcode-292-Nim-Game/">Algorithm Notes: Leetcode#292 Nim Game</a>
+          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-389-Find-the-Difference/">算法笔记: 领扣#389 找不同</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-Notes-Leetcode-824-Goat-Latin/">Algorithm Notes: Leetcode#824 Goat Latin</a>
+          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-690-Employee-Importance/">算法笔记: 领扣#690 员工的重要性</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-824-Goat-Latin/">算法笔记: 领扣#824 山羊拉丁文</a>
+          <a href="/2018/11/10/Algorithm-Notes-Leetcode-520-Detect-Capital/">Algorithm Notes: Leetcode#520 Detect Capital</a>
         </li>
       
         <li>
-          <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-485-Max-Consecutive-Ones/">算法笔记: 领扣#485 最大连续1的个数</a>
+          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-520-Detect-Capital/">算法笔记: 领扣#520 检测大写字母</a>
         </li>
       
     </ul>
