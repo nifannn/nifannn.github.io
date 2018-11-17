@@ -209,6 +209,183 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/05/SQL-笔记-Leetcode-627-Swap-Salary/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#627 Swap Salary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定 salary 表，例如下面这张，m代表男性，f代表女性。使用一条update语句所有f和m对换（所有f改成m，m改成f），并且不使用辅助表格。
+例如：
+
+
+
+id
+name
+sex
+salary
+
+
+
+
+1
+A
+m
+2500
+
+
+2
+B
+f
+1500
+
+
+3
+C
+m
+5500
+
+
+4
+D
+f
+500
+
+
+
+在运行完sql语句后，上述的表格内容变为：
+
+
+
+id
+name
+sex......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/05/SQL-笔记-Leetcode-613-Shortest-Distance-in-a-Line/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#613 Shortest Distance in a Line
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+point 表包含了一些点的x坐标值，坐标值均为整数。
+写一条查询语句计算这些点中的最短距离。
+
+
+
+x
+
+
+
+
+-1
+
+
+0
+
+
+2
+
+
+
+最短距离明显是1，是-1和0之间的距离。所以输出如下：
+
+
+
+shortest
+
+
+
+
+1
+
+
+
+注意: 每个点都是唯一的， point 表中没有重复记录。
+分析
+
+可以将表与其自身进行连接（join）操作，以生成所有可能的点对。然后计算每对点......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#595 Big Countries
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+有一张 World 表
+123456789+-----------------+------------+------------+--------------+---------------+| name            | continent  | area       | population   | gdp           |+-----------------+-......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/04/SQL-笔记-Hackerrank-Average-Population-of-Each-Continent/">
         <h2 class="post-title">
             SQL 笔记: Hackerrank Average Population of Each Continent
@@ -544,186 +721,6 @@ VARCHAR2......
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-16/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 16
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询STATION表中大于38.7780的北纬（Northern Latitude (LAT_N)）的最小值。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-03
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-15/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 15
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 STATION 表中小于137.2345的北纬（Northern Latitude (LAT_N)）中的最大值所对应的西经（Western Longitude (LONG_W)）。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHA......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-03
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-14/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 14
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询STATION表中小于137.2345的北纬（Northern Latitudes (LAT_N)）的最大值。结果保留小数点后4位。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMB......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-03
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -764,25 +761,33 @@ NUMB......
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="111">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="185">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="43">领扣</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="113">Algorithm</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="49">算法</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="187">Leetcode</a>
+            
+        
+            
+            <a href="/tags/#算法" title="算法" rel="50">算法</a>
+            
+        
+            
+            <a href="/tags/#领扣" title="领扣" rel="44">领扣</a>
+            
+        
+            
+            <a href="/tags/#Deep Learning" title="Deep Learning" rel="12">Deep Learning</a>
+            
+        
+            
+            <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
             
         
             
@@ -795,14 +800,6 @@ NUMB......
         
             
         
-            
-        
-            
-            <a href="/tags/#Deep Learning" title="Deep Learning" rel="12">Deep Learning</a>
-            
-        
-            
-            <a href="/tags/#Activation Function" title="Activation Function" rel="3">Activation Function</a>
             
         
             
@@ -832,16 +829,6 @@ NUMB......
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
-            
-        
-            
-            <a href="/tags/#game" title="game" rel="2">game</a>
-            
-        
-            
-        
-            
             <a href="/tags/#NLP" title="NLP" rel="3">NLP</a>
             
         
@@ -861,6 +848,16 @@ NUMB......
         
             
             <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            
+        
+            
+            <a href="/tags/#game" title="game" rel="2">game</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -894,9 +891,9 @@ NUMB......
             
         
             
-        
-            
             <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
+            
+        
             
         
             
@@ -964,23 +961,23 @@ NUMB......
     <ul>
       
         <li>
+          <a href="/2018/11/17/Algorithm-Notes-Leetcode-371-Sum-of-Two-Integers/">Algorithm Notes: Leetcode#371 Sum of Two Integers</a>
+        </li>
+      
+        <li>
+          <a href="/2018/11/16/Algorithm-Notes-Leetcode-696-Count-Binary-Substrings/">Algorithm Notes: Leetcode#696 Count Binary Substrings</a>
+        </li>
+      
+        <li>
+          <a href="/2018/11/16/Algorithm-cn-Notes-Leetcode-696-Count-Binary-Substrings/">算法笔记: 领扣#696 计数二进制子串</a>
+        </li>
+      
+        <li>
           <a href="/2018/11/11/Algorithm-cn-Notes-Leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/">算法笔记: 领扣#448 找到所有数组中消失的数字</a>
         </li>
       
         <li>
           <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-389-Find-the-Difference/">算法笔记: 领扣#389 找不同</a>
-        </li>
-      
-        <li>
-          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-690-Employee-Importance/">算法笔记: 领扣#690 员工的重要性</a>
-        </li>
-      
-        <li>
-          <a href="/2018/11/10/Algorithm-Notes-Leetcode-520-Detect-Capital/">Algorithm Notes: Leetcode#520 Detect Capital</a>
-        </li>
-      
-        <li>
-          <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-520-Detect-Capital/">算法笔记: 领扣#520 检测大写字母</a>
         </li>
       
     </ul>

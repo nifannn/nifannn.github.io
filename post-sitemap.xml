@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2018/11/17/Algorithm-Notes-Leetcode-371-Sum-of-Two-Integers/</loc>
+        <lastmod>2018-11-17T04:16:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/11/16/Algorithm-cn-Notes-Leetcode-696-Count-Binary-Substrings/</loc>
+        <lastmod>2018-11-17T02:40:27.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2018/11/16/Algorithm-Notes-Leetcode-696-Count-Binary-Substrings/</loc>
+        <lastmod>2018-11-17T02:38:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2017/10/28/Algorithm-Notes-Leetcode-448-Find-All-Numbers-Disappeared-in-an-Array/</loc>
         <lastmod>2018-11-11T03:58:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2519,14 +2543,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
-        <lastmod>2018-03-10T23:39:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-170-Two-Sum-3-Data-structure-design/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2536,6 +2552,14 @@
 
     <url>
         <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
+        <lastmod>2018-03-10T23:39:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
