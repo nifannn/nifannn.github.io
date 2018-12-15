@@ -209,9 +209,154 @@
 
 <div class="post-preview">
 
-    <a href="/2018/10/14/算法笔记-Leetcode-266-Palindrome-Permutation/">
+    <a href="/2018/11/09/Algorithm-Notes-Leetcode-784-Letter-Case-Permutation/">
         <h2 class="post-title">
-            算法笔记: Leetcode#266 Palindrome Permutation
+            Algorithm Notes: Leetcode#784 Letter Case Permutation
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Problem
+
+Solution
+
+Analysis
+Python implementation
+1234567891011121314class Solution:    def letterCasePermutation(self, S):        """        :type S: str        :rtype: List[str]        """       ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-292-Nim-Game/">
+        <h2 class="post-title">
+            算法笔记: 领扣#292 Nim游戏
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题描述
+
+解法
+
+Python 实现
+1234567class Solution:    def canWinNim(self, n):        """        :type n: int        :rtype: bool        """        return n % 4 != 0
+Java 实现
+12345class Solution &#123;    pu......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#领扣" title="领扣">领扣</a>
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/06/Algorithm-Notes-Leetcode-292-Nim-Game/">
+        <h2 class="post-title">
+            Algorithm Notes: Leetcode#292 Nim Game
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Problem
+
+Solution
+
+Python implementation
+1234567class Solution:    def canWinNim(self, n):        """        :type n: int        :rtype: bool        """        return n % 4 != 0
+Java implementation......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/06/Algorithm-Notes-Leetcode-824-Goat-Latin/">
+        <h2 class="post-title">
+            Algorithm Notes: Leetcode#824 Goat Latin
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Problem
+
+Solution
+
+Analysis
+Python implementation
+123456789101112class Solution:    def toGoatLatin(self, S):        """        :type S: str        :rtype: str        """        def process(word, i......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-824-Goat-Latin/">
+        <h2 class="post-title">
+            算法笔记: 领扣#824 山羊拉丁文
         </h2>
         <h3 class="post-subtitle">
             
@@ -223,51 +368,13 @@
 
 分析
 Python 实现
-12345678910111213class Solution:    def canPermutePalindrome(self, s):        """        :type s: str        :rtype: bool        """        left = set()        for c in s:   ......
+123456789101112class Solution:    def toGoatLatin(self, S):        """        :type S: str        :rtype: str        """        def process(word, idx):            if word[0] ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-10-14
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/10/06/算法笔记-Leetcode-682-Baseball-Game/">
-        <h2 class="post-title">
-            算法笔记: 领扣#682 棒球比赛
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-你现在是棒球比赛记录员。
-给定一个字符串列表，每个字符串可以是以下四种类型之一：
-
-整数（一轮的得分）：直接表示您在本轮中获得的积分数。
-&quot;+&quot;（一轮的得分）：表示本轮获得的得分是前两轮有效 回合得分的总和。
-&quot;D&quot;（一轮的得分）：表示本轮获得的得分是前一轮有效 回合得分的两倍。
-&quot;C&quot;（一个操作，这不是一个回合的分数）......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-10-06
+            2018-11-06
         </p>
         <div class="tags">
             
@@ -283,44 +390,9 @@ Python 实现
 
 <div class="post-preview">
 
-    <a href="/2018/10/06/Algorithm-Notes-Leetcode-682-Baseball-Game/">
+    <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-485-Max-Consecutive-Ones/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#682 Baseball Game
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            Problem
-
-You’re now a baseball game point recorder.
-Given a list of strings, each string can be one of the 4 following types:
-
-Integer (one round’s score): Directly represents the number of points ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-10-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/10/06/算法笔记-Leetcode-500-Keyboard-Row/">
-        <h2 class="post-title">
-            算法笔记: 领扣#500 键盘行
+            算法笔记: 领扣#485 最大连续1的个数
         </h2>
         <h3 class="post-subtitle">
             
@@ -328,65 +400,17 @@ Integer (one round’s score): Directly represents the number of points ......
         <div class="post-content-preview">
             问题描述
 
-给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。键盘如下图所示。
-
-示例1:
-输入: [“Hello”, “Alaska”, “Dad”, “Peace”]
-输出: [“Alaska”, “Dad”]
-注意:
-
-你可以重复使用键盘上同一字符。
-你可以假设输入的字符串将只包含字母。
-
-分析
-
-遍历给定列表中的每一个单词，并判断其是否应包含在结果中。将键盘上三行字母......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-10-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/10/01/算法笔记-Leetcode-557-Reverse-Words-in-a-String-III/">
-        <h2 class="post-title">
-            算法笔记: 领扣#557 反转字符串中的单词 III
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。
-示例 1:
-输入: &quot;Let’s take LeetCode contest&quot;
-输出: &quot;s’teL ekat edoCteeL tsetnoc&quot;
-注意: 在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。
 解法
 
 分析
-先将字符串拆......
+Python 实现
+12345678910111213141516class Solution:    def findMaxConsecutiveOnes(self, nums):        """        :type nums: List[int]        :rtype: int        """        ans = 0        ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-10-01
+            2018-11-06
         </p>
         <div class="tags">
             
@@ -402,9 +426,45 @@ Integer (one round’s score): Directly represents the number of points ......
 
 <div class="post-preview">
 
-    <a href="/2018/10/01/Algorithm-Notes-Leetcode-557-Reverse-Words-in-a-String-III/">
+    <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-762-Prime-Number-of-Set-Bits-in-Binary-Representation/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#557 Reverse Words in a String III
+            算法笔记: 领扣#762 二进制表示中质数个计算置位
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题描述
+
+解法
+
+分析
+Python 实现
+123456789class Solution:    def countPrimeSetBits(self, L, R):        """        :type L: int        :type R: int        :rtype: int        """        prime_set = &#123;2, 3,......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#领扣" title="领扣">领扣</a>
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/06/Algorithm-Notes-Leetcode-762-Prime-Number-of-Set-Bits-in-Binary-Representation/">
+        <h2 class="post-title">
+            Algorithm Notes: Leetcode#762 Prime Number of Set Bits in Binary Representation
         </h2>
         <h3 class="post-subtitle">
             
@@ -412,15 +472,17 @@ Integer (one round’s score): Directly represents the number of points ......
         <div class="post-content-preview">
             Problem
 
-Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
-Example 1:
-Input: &quot;Let’s take Leet......
+Solution
+
+Analysis
+Python implementation
+123456789class Solution:    def countPrimeSetBits(self, L, R):        """        :type L: int        :type R: int        :rtype: int        """    ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-10-01
+            2018-11-06
         </p>
         <div class="tags">
             
@@ -436,51 +498,9 @@ Input: &quot;Let’s take Leet......
 
 <div class="post-preview">
 
-    <a href="/2018/10/01/算法笔记-Leetcode-344-Reverse-String/">
+    <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-521-Longest-Uncommon-Subsequence-I/">
         <h2 class="post-title">
-            算法笔记: 领扣#344 反转字符串
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-编写一个函数，其作用是将输入的字符串反转过来。
-示例 1:
-输入: &quot;hello&quot;
-输出: “olleh”
-示例 2:
-输入: &quot;A man, a plan, a canal: Panama&quot;
-输出: “amanaP :lanac a ,nalp a ,nam A”
-解法 1
-
-分析
-准备两个指针，一个从前到中间遍历，一个从后向中间遍历，交......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-10-01
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/10/01/算法笔记-Leetcode-346-Moving-Average-from-Data-Stream/">
-        <h2 class="post-title">
-            算法笔记: Leetcode#346 Moving Average from Data Stream
+            算法笔记: 领扣#521 最长特殊序列 Ⅰ
         </h2>
         <h3 class="post-subtitle">
             
@@ -491,17 +511,17 @@ Input: &quot;Let’s take Leet......
 解法
 
 Python 实现
-123456789101112131415161718192021222324252627class MovingAverage:    def __init__(self, size):        """        Initialize your data structure here.        :type size: int     ......
+12345678910class Solution:    def findLUSlength(self, a, b):        """        :type a: str        :type b: str        :rtype: int        """        if a == b:            return......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-10-01
+            2018-11-06
         </p>
         <div class="tags">
             
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+              <a href="/tags/#领扣" title="领扣">领扣</a>
             
               <a href="/tags/#算法" title="算法">算法</a>
             
@@ -513,9 +533,9 @@ Python 实现
 
 <div class="post-preview">
 
-    <a href="/2018/10/01/Algorithm-Notes-Leetcode-346-Moving-Average-from-Data-Stream/">
+    <a href="/2018/11/06/Algorithm-Notes-Leetcode-521-Longest-Uncommon-Subsequence-I/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#346 Moving Average from Data Stream
+            Algorithm Notes: Leetcode#521 Longest Uncommon Subsequence I
         </h2>
         <h3 class="post-subtitle">
             
@@ -523,55 +543,22 @@ Python 实现
         <div class="post-content-preview">
             Problem
 
-Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
-Example:
-12345MovingAverage m = new MovingAverage(3);m.next(1) = 1m.next(1......
+Solution
+
+Python implementation
+12345678910class Solution:    def findLUSlength(self, a, b):        """        :type a: str        :type b: str        :rtype: int        """        if a ==......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-10-01
+            2018-11-06
         </p>
         <div class="tags">
             
               <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
             
               <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/09/26/Deep-Learning-Notes-Dense-Layer/">
-        <h2 class="post-title">
-            Deep Learning Notes: Dense Layer
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-09-26
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-            
-              <a href="/tags/#TensorFlow" title="TensorFlow">TensorFlow</a>
-            
-              <a href="/tags/#PyTorch" title="PyTorch">PyTorch</a>
-            
-              <a href="/tags/#MXNet" title="MXNet">MXNet</a>
             
         </div>
     
@@ -619,25 +606,37 @@ Example:
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="124">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="198">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="58">领扣</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="132">Algorithm</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="64">算法</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="206">Leetcode</a>
+            
+        
+            
+            <a href="/tags/#领扣" title="领扣" rel="73">领扣</a>
+            
+        
+            
+            <a href="/tags/#算法" title="算法" rel="79">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -658,18 +657,6 @@ Example:
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="5">MXNet</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
             
         
             
@@ -701,7 +688,7 @@ Example:
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -715,7 +702,7 @@ Example:
             
         
             
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -741,9 +728,9 @@ Example:
             
         
             
-            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
         
+            
+            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
@@ -819,23 +806,23 @@ Example:
     <ul>
       
         <li>
-          <a href="/2018/11/28/Algorithm-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">Algorithm Notes: Leetcode#453 Minimum Moves to Equal Array Elements</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-447-Number-of-Boomerangs/">算法笔记: 领扣#447 回旋镖的数量</a>
         </li>
       
         <li>
-          <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">算法笔记: 领扣#453 最小移动次数使数组元素相等</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-387-First-Unique-Character-in-a-String/">算法笔记: 领扣#387 字符串中的第一个唯一字符</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-492-Construct-the-Rectangle/">算法笔记: 领扣#492 构造矩形</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-167-Two-Sum-II-Input-array-is-sorted/">算法笔记: 领扣#167 两数之和 II - 输入有序数组</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-Notes-Leetcode-492-Construct-the-Rectangle/">Algorithm Notes: Leetcode#492 Construct the Rectangle</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-506-Relative-Ranks/">算法笔记: 领扣#506 相对名次</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-598-Range-Addition-II/">算法笔记: 领扣#598 范围求和 II</a>
+          <a href="/2018/12/15/Algorithm-Notes-Leetcode-506-Relative-Ranks/">Algorithm Notes: Leetcode#506 Relative Ranks</a>
         </li>
       
     </ul>

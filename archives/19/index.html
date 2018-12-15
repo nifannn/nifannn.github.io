@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/05/31/SQL-笔记-Hackerrank-Binary-Tree-Nodes/">
+    <a href="/2018/06/06/SQL-笔记-Leetcode-603-Consecutive-Available-Seats/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Binary Tree Nodes
+            SQL 笔记: Leetcode#603 Consecutive Available Seats
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,44 +219,214 @@
         <div class="post-content-preview">
             问题
 
-给定一个表格，BST，包含两列： N 和 P，N 表示二叉树一个节点的值，P 是 N 的父节点。
+几个朋友在售票处想要订几张连续的座位。
+你能帮忙查询下面cinema表中所有可以订的连续的座位，并按seat_id排序吗？
 
 
 
-Column
-Type
+seat_id
+free
 
 
 
 
-N
-Integer
+1
+1
 
 
-P
-Integer
+2
+0
+
+
+3
+1
+
+
+4
+1
+
+
+5
+1
 
 
 
-写一条查询语句，得出二叉树中节点类型并按节点值的大小排序。按如下方式输出结果:
+对于上面的例子，应该输出结果：
 
-Root: 如果节点是根节点。
-Leaf: 如果节点是叶子节点。
-Inner: 如果节点既不是根节点也不是叶子节点。
+
+
+seat_id
+
+
+
+
+3
+
+
+4
+
+
+5
+
+
+
+注意：
+
+seat_id 是自动增加的整数，free是布尔型（1表示空余......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-608-Tree-Node/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#608 Tree Node
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+对于 tree 表，id 是树节点的标识，p_id 是其父节点的 id。
+123456789+----+------+| id | p_id |+----+------+| 1  | null || 2  | 1    || 3  | 1    || 4  | 2    || 5  | 2    |+----+------+
+每个节点都是以下三种类型中的一种：
+
+Leaf: 如果节点......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-570-Mnanagers-with-at-Least-5-Direct-Reports/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#570 Mnanagers with at Least 5 Direct Reports
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+Employee 表包含所有员工及其上级的信息。每位员工都有一个Id，并且还有一个对应主管的Id（ManagerId）。
+12345678910+------+----------+-----------+----------+|Id    |Name 	  |Department |ManagerId |+------+----------+-----------+--------......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-610-Triangle-Judgement/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#610 Triangle Judgement
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+小学生Tim有份家庭作业要去判断三边是否能组成三角形。
+然而，工作量太大因为有几百条记录要去计算。
+希望你能写一条查询语句判断三边是否能组成三角形来帮助Tim。假设triangle表中包含三边长度x，y和z。
+
+
+
+x
+y
+z
+
+
+
+
+13
+15
+30
+
+
+10
+20
+15
+
+
+
+对于上面的例子，应给返回如下结果：
+
+
+
+x
+y
+z
+triangle
+
+
+
+
+13
+15
+30
+No
 ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-31
+            2018-06-06
         </p>
         <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
               <a href="/tags/#SQL" title="SQL">SQL</a>
             
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
         </div>
     
 
@@ -265,84 +435,9 @@ Inner: 如果节点既不是根节点也不是叶子节点。
 
 <div class="post-preview">
 
-    <a href="/2018/05/31/算法笔记-Leetcode-771-Jewels-and-Stones/">
+    <a href="/2018/06/05/SQL-笔记-Leetcode-620-Not-Boring-Movies/">
         <h2 class="post-title">
-            算法笔记: 领扣#771 宝石与石头
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-假设字符串J表示宝石的石头类型，字符串S表示你所拥有的石头。S中的每一个字符代表属于你的一种石头。你想知道自己的石头中有多少是宝石。
-J中的字符都是唯一的，且J和S中的字符都是字母。字母区分大小写，所以 “a” 和 “A” 是不同种的石头。
-例子 1:
-输入: J = “aA”, S = &quot;aAAbbbb&quot;
-输出: 3
-例子 2:
-输入: J = “z”, S......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-31
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/31/算法笔记-Leetcode-566-Reshape-the-Matrix/">
-        <h2 class="post-title">
-            算法笔记: 领扣#566 重塑矩阵
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-在MATLAB中，有一个非常有用的函数 reshape，它可以将一个矩阵重塑为另一个大小不同的新矩阵，但保留其原始数据。
-给出一个由二维数组表示的矩阵，以及两个正整数r和c，分别表示想要的重构的矩阵的行数和列数。
-重构后的矩阵需要将原始矩阵的所有元素以相同的行遍历顺序填充。
-如果具有给定参数的reshape操作是可行且合理的，则输出新的重塑矩阵；否则，输出原始矩阵。
-示例 1:
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-31
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/31/SQL-笔记-Hackerrank-The-PADS/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank The PADS
+            SQL 笔记: Leetcode#620 Not Boring Movies
         </h2>
         <h3 class="post-subtitle">
             
@@ -350,25 +445,22 @@ J中的字符都是唯一的，且J和S中的字符都是字母。字母区分�
         <div class="post-content-preview">
             问题
 
-生成以下两个结果:
-
-以字母表顺序查询 OCCUPATIONS 中的所有名字,并且后面跟着职业的首字母（用括号包围）。例如：AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).
-查询 OCCUPATIONS 中每个职业的出现次数，升序排序，并按以下格式输出：
-
-
-There are a total......
+X城市新开了家电影院，许多人都想去看电影。电影院也给出了一份海报，展示着不同电影的评分和描述。
+请写一条SQL语句输出ID号码为奇数且描述（description）不是“无聊”（‘boring’）的电影。结果按评分排序。
+例如， cinema 表：
+123456789+---------+-----------+--------------+-----------+|   id   ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-31
+            2018-06-05
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
         </div>
     
@@ -378,9 +470,9 @@ There are a total......
 
 <div class="post-preview">
 
-    <a href="/2018/05/24/SQL-笔记-Hackerrank-Type-of-Triangle/">
+    <a href="/2018/06/05/SQL-笔记-Leetcode-586-Customer-Placing-the-Largest-Number-of-Orders/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Type of Triangle
+            SQL 笔记: Leetcode#586 Customer Placing the Largest Number of Orders
         </h2>
         <h3 class="post-subtitle">
             
@@ -388,49 +480,9 @@ There are a total......
         <div class="post-content-preview">
             问题
 
-写一条查询语句来根据三边长度确定 TRIANGLES 表格中每条记录的三角形类型。输出的类型如下：
-
-Equilateral（等边三角形）: 三边长度相等的三角形。
-Isosceles（等腰三角形）: 有两条边相等的三角形。
-Scalene（不等边三角形）: 三边均不相等的三角形。
-Not a Triangle（不是三角形）: A，B，C的值无法构成三角形。
-
-输入格式
-TRIANG......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-24
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Salaries/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Employee Salaries
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-写一条查询语句打印 Employee 表格中月薪大于$2000，并且工作时间小于10个月的员工名字（ name 属性）。根据 employee_id 升序排序。
-输入格式
-Employee 表格包含一家公司的员工数据，描述如下:
+查询 orders 表中下了最多订单的客户对应的 customer_number 。
+题中只有一个客户的订单数比其他所有客户多。
+orders 表描述如下：
 
 
 
@@ -440,31 +492,35 @@ Type
 
 
 
-employee_id
-Integer
+order_number (PK)
+int
 
 
-name
-String
+customer_number
+int
 
 
-months
-Integer
+order_date
+date
 
 
-salary......
+required_date
+date
+
+
+shipped_da......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-23
+            2018-06-05
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
         </div>
     
@@ -474,9 +530,9 @@ salary......
 
 <div class="post-preview">
 
-    <a href="/2018/05/23/SQL-笔记-Hackerrank-Employee-Names/">
+    <a href="/2018/06/05/SQL-笔记-Leetcode-584-Find-Customer-Referee/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Employee Names
+            SQL 笔记: Leetcode#584 Find Customer Referee
         </h2>
         <h3 class="post-subtitle">
             
@@ -484,48 +540,96 @@ salary......
         <div class="post-content-preview">
             问题
 
-写一条查询语句以字母表顺序打印 Employee 中员工名字（ name 属性）。
-输入格式
-Employee 表格包含一家公司的员工数据，描述如下:
+customer 表包含客户信息及推荐人。
+12345678910+------+------+-----------+| id   | name | referee_id|+------+------+-----------+|    1 | Will |      NULL ||    2 | Jane |      NULL ||    3 | Alex |         2......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/05/SQL-笔记-Leetcode-627-Swap-Salary/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#627 Swap Salary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定 salary 表，例如下面这张，m代表男性，f代表女性。使用一条update语句所有f和m对换（所有f改成m，m改成f），并且不使用辅助表格。
+例如：
 
 
 
-Column
-Type
-
-
-
-
-employee_id
-Integer
-
-
+id
 name
-String
-
-
-months
-Integer
-
-
+sex
 salary
-Integer
 
 
 
-employee_id 为员工的ID号码，name 是......
+
+1
+A
+m
+2500
+
+
+2
+B
+f
+1500
+
+
+3
+C
+m
+5500
+
+
+4
+D
+f
+500
+
+
+
+在运行完sql语句后，上述的表格内容变为：
+
+
+
+id
+name
+sex......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-23
+            2018-06-05
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
         </div>
     
@@ -535,9 +639,9 @@ employee_id 为员工的ID号码，name 是......
 
 <div class="post-preview">
 
-    <a href="/2018/05/23/SQL-笔记-Hackerrank-Higher-Than-75-Marks/">
+    <a href="/2018/06/05/SQL-笔记-Leetcode-613-Shortest-Distance-in-a-Line/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Higher Than 75 Marks
+            SQL 笔记: Leetcode#613 Shortest Distance in a Line
         </h2>
         <h3 class="post-subtitle">
             
@@ -545,44 +649,55 @@ employee_id 为员工的ID号码，name 是......
         <div class="post-content-preview">
             问题
 
-查询 STUDENTS 中得分超过75 Marks 的学生的 Name。按名字最后三个字母排序。如果几个学生名字最后三个字母相同(如: Bobby, Robby, 等), 再按 ID 升序排序。
-输入格式
-STUDENTS 表格描述如下:
+point 表包含了一些点的x坐标值，坐标值均为整数。
+写一条查询语句计算这些点中的最短距离。
 
 
 
-Column
-Type
+x
 
 
 
 
-ID
-Integer
+-1
 
 
-Name
-String
+0
 
 
-Marks
-Integer
+2
 
 
 
-Name 列只包含大......
+最短距离明显是1，是-1和0之间的距离。所以输出如下：
+
+
+
+shortest
+
+
+
+
+1
+
+
+
+注意: 每个点都是唯一的， point 表中没有重复记录。
+分析
+
+可以将表与其自身进行连接（join）操作，以生成所有可能的点对。然后计算每对点......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-23
+            2018-06-05
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
         </div>
     
@@ -592,9 +707,9 @@ Name 列只包含大......
 
 <div class="post-preview">
 
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-12/">
+    <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 12
+            SQL 笔记: Leetcode#595 Big Countries
         </h2>
         <h3 class="post-subtitle">
             
@@ -602,119 +717,20 @@ Name 列只包含大......
         <div class="post-content-preview">
             问题
 
-查询 STATION 表格中同时以非元音字母开头和结尾的 CITY 名称。结果不包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ：北纬 LONG......
+有一张 World 表
+123456789+-----------------+------------+------------+--------------+---------------+| name            | continent  | area       | population   | gdp           |+-----------------+-......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-05-22
+            2018-06-05
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-11/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 11
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 STATION 表格中以非元音字母开头或结尾的 CITY 名称。结果不包含重复记录。
-输入格式
-STATION 表格描述如下:
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-
-
-LAT_N ：北纬  LONG_......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-05-22
-        </p>
-        <div class="tags">
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
               <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -762,25 +778,37 @@ LAT_N ：北纬  LONG_......
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="124">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="198">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="58">领扣</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="132">Algorithm</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="64">算法</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="206">Leetcode</a>
+            
+        
+            
+            <a href="/tags/#领扣" title="领扣" rel="73">领扣</a>
+            
+        
+            
+            <a href="/tags/#算法" title="算法" rel="79">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -801,18 +829,6 @@ LAT_N ：北纬  LONG_......
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="5">MXNet</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
             
         
             
@@ -844,7 +860,7 @@ LAT_N ：北纬  LONG_......
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -858,7 +874,7 @@ LAT_N ：北纬  LONG_......
             
         
             
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -884,9 +900,9 @@ LAT_N ：北纬  LONG_......
             
         
             
-            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
         
+            
+            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
@@ -962,23 +978,23 @@ LAT_N ：北纬  LONG_......
     <ul>
       
         <li>
-          <a href="/2018/11/28/Algorithm-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">Algorithm Notes: Leetcode#453 Minimum Moves to Equal Array Elements</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-447-Number-of-Boomerangs/">算法笔记: 领扣#447 回旋镖的数量</a>
         </li>
       
         <li>
-          <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">算法笔记: 领扣#453 最小移动次数使数组元素相等</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-387-First-Unique-Character-in-a-String/">算法笔记: 领扣#387 字符串中的第一个唯一字符</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-492-Construct-the-Rectangle/">算法笔记: 领扣#492 构造矩形</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-167-Two-Sum-II-Input-array-is-sorted/">算法笔记: 领扣#167 两数之和 II - 输入有序数组</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-Notes-Leetcode-492-Construct-the-Rectangle/">Algorithm Notes: Leetcode#492 Construct the Rectangle</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-506-Relative-Ranks/">算法笔记: 领扣#506 相对名次</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-598-Range-Addition-II/">算法笔记: 领扣#598 范围求和 II</a>
+          <a href="/2018/12/15/Algorithm-Notes-Leetcode-506-Relative-Ranks/">Algorithm Notes: Leetcode#506 Relative Ranks</a>
         </li>
       
     </ul>

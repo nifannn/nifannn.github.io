@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/06/06/SQL-笔记-Leetcode-570-Mnanagers-with-at-Least-5-Direct-Reports/">
+    <a href="/2018/06/16/SQL-笔记-Leetcode-178-Rank-Scores/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#570 Mnanagers with at Least 5 Direct Reports
+            SQL 笔记: Leetcode#178 Rank Scores
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,14 +219,14 @@
         <div class="post-content-preview">
             问题
 
-Employee 表包含所有员工及其上级的信息。每位员工都有一个Id，并且还有一个对应主管的Id（ManagerId）。
-12345678910+------+----------+-----------+----------+|Id    |Name 	  |Department |ManagerId |+------+----------+-----------+--------......
+写一条SQL语句对分数进行排序。如果两个分数相等，排名应该相同。需要注意的是，并列的分数后的排名应该是连续的整数。换句话说，排名之间不存在间隔。
+12345678910+----+-------+| Id | Score |+----+-------+| 1  | 3.50  || 2  | 3.65  || 3  | 4.00  || 4  | 3.85  || 5  | 4.00......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-06
+            2018-06-16
         </p>
         <div class="tags">
             
@@ -242,9 +242,9 @@ Employee 表包含所有员工及其上级的信息。每位员工都有一个Id
 
 <div class="post-preview">
 
-    <a href="/2018/06/06/SQL-笔记-Leetcode-610-Triangle-Judgement/">
+    <a href="/2018/06/16/SQL-笔记-Leetcode-574-Winning-Candidate/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#610 Triangle Judgement
+            SQL 笔记: Leetcode#574 Winning Candidate
         </h2>
         <h3 class="post-subtitle">
             
@@ -252,53 +252,123 @@ Employee 表包含所有员工及其上级的信息。每位员工都有一个Id
         <div class="post-content-preview">
             问题
 
-小学生Tim有份家庭作业要去判断三边是否能组成三角形。
-然而，工作量太大因为有几百条记录要去计算。
-希望你能写一条查询语句判断三边是否能组成三角形来帮助Tim。假设triangle表中包含三边长度x，y和z。
+表格： Candidate
+123456789+-----+---------+| id  | Name    |+-----+---------+| 1   | A       || 2   | B       || 3   | C       || 4   | D       || 5   | E       |+-----+---------+
+表格： Vote
+1234567......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-16
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/16/SQL-笔记-Leetcode-580-Count-Student-Number-in-Departments/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#580 Count Student Number in Departments
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+某大学使用两张数据表，student 和 department，来储存学生和每个专业对应所属系的相关数据。
+写一条查询语句打印出每个系的名字和其拥有的学生数量（即使该系没有学生）。
+结果根据学生数量降序排序；如果几个系学生数量相同，再根据系的名字按字母表顺序排序。
+student表描述如下：
 
 
 
-x
-y
-z
+Column Name
+Type
 
 
 
 
-13
-15
-30
+student_id
+Integer
 
 
-10
-20
-15
+s......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-16
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/16/SQL-笔记-Leetcode-602-Friend-Requests-2-Who-Has-the-Most-Friends/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#602 Friend Requests 2: Who Has the Most Friends
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+在社交网络（比如，脸书、推特）上，人们互相发送和接收好友请求。
+request_accepted表包含好友请求的相关数据，requester_id 和 accepter_id 都是某位用户的id。
 
 
 
-对于上面的例子，应给返回如下结果：
-
-
-
-x
-y
-z
-triangle
+requester_id
+accepter_id
+accept_date
 
 
 
 
-13
-15
-30
-No
+1
+2
+2016_06-03
+
+
+1
+3
+2016-06-08
+
+
+2
+3
+2016-06-08
+
 ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-06
+            2018-06-16
         </p>
         <div class="tags">
             
@@ -314,9 +384,9 @@ No
 
 <div class="post-preview">
 
-    <a href="/2018/06/05/SQL-笔记-Leetcode-620-Not-Boring-Movies/">
+    <a href="/2018/06/15/SQL-笔记-Leetcode-176-Second-Highest-Salary/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#620 Not Boring Movies
+            SQL 笔记: Leetcode#176 Second Highest Salary
         </h2>
         <h3 class="post-subtitle">
             
@@ -324,185 +394,52 @@ No
         <div class="post-content-preview">
             问题
 
-X城市新开了家电影院，许多人都想去看电影。电影院也给出了一份海报，展示着不同电影的评分和描述。
-请写一条SQL语句输出ID号码为奇数且描述（description）不是“无聊”（‘boring’）的电影。结果按评分排序。
-例如， cinema 表：
-123456789+---------+-----------+--------------+-----------+|   id   ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/05/SQL-笔记-Leetcode-586-Customer-Placing-the-Largest-Number-of-Orders/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#586 Customer Placing the Largest Number of Orders
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 orders 表中下了最多订单的客户对应的 customer_number 。
-题中只有一个客户的订单数比其他所有客户多。
-orders 表描述如下：
+写一条SQL语句输出Employee表中第二高的薪水。
 
 
 
-Column
-Type
-
-
-
-
-order_number (PK)
-int
-
-
-customer_number
-int
-
-
-order_date
-date
-
-
-required_date
-date
-
-
-shipped_da......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/05/SQL-笔记-Leetcode-584-Find-Customer-Referee/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#584 Find Customer Referee
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-customer 表包含客户信息及推荐人。
-12345678910+------+------+-----------+| id   | name | referee_id|+------+------+-----------+|    1 | Will |      NULL ||    2 | Jane |      NULL ||    3 | Alex |         2......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/05/SQL-笔记-Leetcode-627-Swap-Salary/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#627 Swap Salary
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 salary 表，例如下面这张，m代表男性，f代表女性。使用一条update语句所有f和m对换（所有f改成m，m改成f），并且不使用辅助表格。
-例如：
-
-
-
-id
-name
-sex
-salary
+Id
+Salary
 
 
 
 
 1
-A
-m
-2500
+100
 
 
 2
-B
-f
-1500
+200
 
 
 3
-C
-m
-5500
-
-
-4
-D
-f
-500
+300
 
 
 
-在运行完sql语句后，上述的表格内容变为：
+例如，对于上面的表格，应该返回200作为第二高薪水。如果不存在第二高薪水，就返回null。
 
 
 
-id
-name
-sex......
+SecondHighestSalary
+
+
+
+
+200
+
+
+
+分析
+
+可以先找出最大值，然后从小于最大值的记录中找出最大值，作为第二高薪水输出：
+1......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-05
+            2018-06-15
         </p>
         <div class="tags">
             
@@ -518,9 +455,9 @@ sex......
 
 <div class="post-preview">
 
-    <a href="/2018/06/05/SQL-笔记-Leetcode-613-Shortest-Distance-in-a-Line/">
+    <a href="/2018/06/15/SQL-笔记-Leetcode-196-Delete-Duplicate-Emails/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#613 Shortest Distance in a Line
+            SQL 笔记: Leetcode#196 Delete Duplicate Emails
         </h2>
         <h3 class="post-subtitle">
             
@@ -528,118 +465,184 @@ sex......
         <div class="post-content-preview">
             问题
 
-point 表包含了一些点的x坐标值，坐标值均为整数。
-写一条查询语句计算这些点中的最短距离。
+写一条SQL语句删除Person表中所有重复的邮件记录，只保留重复记录中Id最小的记录。
+12345678+----+------------------+| Id | Email            |+----+------------------+| 1  | john@example.com || 2  | bob@example.com  || 3  | john@exa......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-197-Rising-Temperature/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#197 Rising Temperature
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定一张Weather表，写一条SQL语句找出所有比前一天（昨天）气温高的日期的Id。
+12345678+---------+------------------+------------------+| Id(INT) | RecordDate(DATE) | Temperature(INT) |+---------+------------------+-------------......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-596-Classes-More-Than-5-Students/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#596 Classes More Than 5 Students
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+courses表有两个字段：student 和 class
+请列出所有超过或包含5个学生的课程。
+例如，有这样一张表：
+12345678910111213+---------+------------+| student | class      |+---------+------------+| A       | Math       || B       | English ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-619-Biggest-Single-Number/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#619 Biggest Single Number
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+表格number在字段num中包含许多的数字（包含重复）。
+写一条SQL语句求出只出现过一次的最大的数。
+1234567891011+---+|num|+---+| 8 || 8 || 3 || 3 || 1 || 4 || 5 || 6 |
+对于上面的例子，结果应返回：
+1234+---+|num|+---+| 6 |
+注意：
+如果不存在这样的数，直接返回null。
+分析
+
+
+找到......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-597-Friend-Requests-1-Overall-Acceptance-Rate/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#597 Friend Requests 1: Overall Acceptance Rate
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+在社交网络上（如脸书、推特），人们向他人发送好友请求，同时接受他人的请求。现在有如下的两张表：
+表： friend_request
 
 
 
-x
-
-
-
-
--1
-
-
-0
-
-
-2
-
-
-
-最短距离明显是1，是-1和0之间的距离。所以输出如下：
-
-
-
-shortest
+sender_id
+send_to_id
+request_date
 
 
 
 
 1
+2
+2016_06-01
 
 
-
-注意: 每个点都是唯一的， point 表中没有重复记录。
-分析
-
-可以将表与其自身进行连接（join）操作，以生成所有可能的点对。然后计算每对点......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#595 Big Countries
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-有一张 World 表
-123456789+-----------------+------------+------------+--------------+---------------+| name            | continent  | area       | population   | gdp           |+-----------------+-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Average-Population-of-Each-Continent/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Average Population of Each Continent
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有大陆的名字（COUNTRY.Continent）以及对应的平均城市人口（CITY.Population），人口数进一法取整。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。不要输出没有城市的大陆。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
+1
+3
+2016_06-01
 
 
+1
+4
+2016_06-01
 
-Field
-Type
 
+2
+3
+2016_06-02
+
+
+3
+4
+2016-06-09
 
 
 
@@ -649,68 +652,13 @@ Type
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-04
+            2018-06-15
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-African-Cities/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank African Cities
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有非洲城市（CONTINENT 为 ‘Africa’）的名字。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
               <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -758,25 +706,37 @@ COUNTRYCODE
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="124">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="198">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="58">领扣</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="132">Algorithm</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="64">算法</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="206">Leetcode</a>
+            
+        
+            
+            <a href="/tags/#领扣" title="领扣" rel="73">领扣</a>
+            
+        
+            
+            <a href="/tags/#算法" title="算法" rel="79">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -797,18 +757,6 @@ COUNTRYCODE
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="5">MXNet</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
             
         
             
@@ -840,7 +788,7 @@ COUNTRYCODE
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -854,7 +802,7 @@ COUNTRYCODE
             
         
             
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -880,9 +828,9 @@ COUNTRYCODE
             
         
             
-            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
         
+            
+            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
@@ -958,23 +906,23 @@ COUNTRYCODE
     <ul>
       
         <li>
-          <a href="/2018/11/28/Algorithm-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">Algorithm Notes: Leetcode#453 Minimum Moves to Equal Array Elements</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-447-Number-of-Boomerangs/">算法笔记: 领扣#447 回旋镖的数量</a>
         </li>
       
         <li>
-          <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">算法笔记: 领扣#453 最小移动次数使数组元素相等</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-387-First-Unique-Character-in-a-String/">算法笔记: 领扣#387 字符串中的第一个唯一字符</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-492-Construct-the-Rectangle/">算法笔记: 领扣#492 构造矩形</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-167-Two-Sum-II-Input-array-is-sorted/">算法笔记: 领扣#167 两数之和 II - 输入有序数组</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-Notes-Leetcode-492-Construct-the-Rectangle/">Algorithm Notes: Leetcode#492 Construct the Rectangle</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-506-Relative-Ranks/">算法笔记: 领扣#506 相对名次</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-598-Range-Addition-II/">算法笔记: 领扣#598 范围求和 II</a>
+          <a href="/2018/12/15/Algorithm-Notes-Leetcode-506-Relative-Ranks/">Algorithm Notes: Leetcode#506 Relative Ranks</a>
         </li>
       
     </ul>

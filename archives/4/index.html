@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-690-Employee-Importance/">
+    <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-100-Same-Tree/">
         <h2 class="post-title">
-            算法笔记: 领扣#690 员工的重要性
+            算法笔记: 领扣#100 相同的树
         </h2>
         <h3 class="post-subtitle">
             
@@ -223,13 +223,13 @@
 
 分析
 Python 实现
-123456789101112131415161718192021222324"""# Employee infoclass Employee:    def __init__(self, id, importance, subordinates):        # It's the unique id of each node.       ......
+1234567891011121314151617181920212223# Definition for a binary tree node.# class TreeNode:#     def __init__(self, x):#         self.val = x#         self.left = None#       ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-10
+            2018-11-28
         </p>
         <div class="tags">
             
@@ -245,9 +245,9 @@ Python 实现
 
 <div class="post-preview">
 
-    <a href="/2018/11/10/Algorithm-Notes-Leetcode-520-Detect-Capital/">
+    <a href="/2018/11/28/Algorithm-Notes-Leetcode-100-Same-Tree/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#520 Detect Capital
+            Algorithm Notes: Leetcode#100 Same Tree
         </h2>
         <h3 class="post-subtitle">
             
@@ -257,15 +257,15 @@ Python 实现
 
 Solution
 
-Analysis
+Initial thoughts
 Python implementation
-1234567class Solution:    def detectCapitalUse(self, word):        """        :type word: str        :rtype: bool        """        return word == ......
+1234567891011121314151617181920212223# Definition for a binary tree node.# class TreeNode:#     def __init__(self, x):#         self.val = ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-10
+            2018-11-28
         </p>
         <div class="tags">
             
@@ -281,117 +281,9 @@ Python implementation
 
 <div class="post-preview">
 
-    <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-520-Detect-Capital/">
+    <a href="/2018/11/28/Algorithm-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">
         <h2 class="post-title">
-            算法笔记: 领扣#520 检测大写字母
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-解法
-
-分析
-Python 实现
-1234567class Solution:    def detectCapitalUse(self, word):        """        :type word: str        :rtype: bool        """        return word == word.lower() or word == wor......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-11-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-283-Move-Zeroes/">
-        <h2 class="post-title">
-            算法笔记: 领扣#283 移动零
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-解法
-
-分析
-Python 实现
-12345678910111213class Solution:    def moveZeroes(self, nums):        """        :type nums: List[int]        :rtype: void Do not return anything, modify nums in-place inste......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-11-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-258-Add-Digits/">
-        <h2 class="post-title">
-            算法笔记: 领扣#258 各位相加
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题描述
-
-解法
-
-分析
-Python 实现
-1234567891011class Solution:    def addDigits(self, num):        """        :type num: int        :rtype: int        """        if num == 0:            return 0        if num......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-11-10
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#领扣" title="领扣">领扣</a>
-            
-              <a href="/tags/#算法" title="算法">算法</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/11/10/Algorithm-Notes-Leetcode-258-Add-Digits/">
-        <h2 class="post-title">
-            Algorithm Notes: Leetcode#258 Add Digits
+            Algorithm Notes: Leetcode#453 Minimum Moves to Equal Array Elements
         </h2>
         <h3 class="post-subtitle">
             
@@ -401,15 +293,15 @@ Python 实现
 
 Solution
 
-Analysis
+Initial thoughts
 Python implementation
-1234567891011class Solution:    def addDigits(self, num):        """        :type num: int        :rtype: int        """        if num == 0:       ......
+1234567class Solution:    def minMoves(self, nums):        """        :type nums: List[int]        :rtype: int        """        return sum......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-10
+            2018-11-28
         </p>
         <div class="tags">
             
@@ -425,9 +317,9 @@ Python implementation
 
 <div class="post-preview">
 
-    <a href="/2018/11/10/Algorithm-cn-Notes-Leetcode-695-Max-Area-of-Island/">
+    <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">
         <h2 class="post-title">
-            算法笔记: 领扣#695 岛屿的最大面积
+            算法笔记: 领扣#453 最小移动次数使数组元素相等
         </h2>
         <h3 class="post-subtitle">
             
@@ -439,13 +331,14 @@ Python implementation
 
 分析
 Python 实现
-1234567891011121314151617181920class Solution:    def maxAreaOfIsland(self, grid):        """        :type grid: List[List[int]]        :rtype: int        """        m, n = l......
+1234567class Solution:    def minMoves(self, nums):        """        :type nums: List[int]        :rtype: int        """        return sum(nums) - min(nums)*len(nums)
+Java 实......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-10
+            2018-11-28
         </p>
         <div class="tags">
             
@@ -461,9 +354,9 @@ Python 实现
 
 <div class="post-preview">
 
-    <a href="/2018/11/09/Algorithm-cn-Notes-Leetcode-784-Letter-Case-Permutation/">
+    <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-492-Construct-the-Rectangle/">
         <h2 class="post-title">
-            算法笔记: 领扣#784 字母大小写全排列
+            算法笔记: 领扣#492 构造矩形
         </h2>
         <h3 class="post-subtitle">
             
@@ -475,13 +368,13 @@ Python 实现
 
 分析
 Python 实现
-1234567891011121314class Solution:    def letterCasePermutation(self, S):        """        :type S: str        :rtype: List[str]        """        ans = ['']                ......
+12345678910class Solution:    def constructRectangle(self, area):        """        :type area: int        :rtype: List[int]        """        width = int(area**0.5)        w......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-09
+            2018-11-27
         </p>
         <div class="tags">
             
@@ -497,9 +390,9 @@ Python 实现
 
 <div class="post-preview">
 
-    <a href="/2018/11/09/Algorithm-Notes-Leetcode-784-Letter-Case-Permutation/">
+    <a href="/2018/11/27/Algorithm-Notes-Leetcode-492-Construct-the-Rectangle/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#784 Letter Case Permutation
+            Algorithm Notes: Leetcode#492 Construct the Rectangle
         </h2>
         <h3 class="post-subtitle">
             
@@ -509,15 +402,15 @@ Python 实现
 
 Solution
 
-Analysis
+Initial thoughts
 Python implementation
-1234567891011121314class Solution:    def letterCasePermutation(self, S):        """        :type S: str        :rtype: List[str]        """       ......
+12345678910class Solution:    def constructRectangle(self, area):        """        :type area: int        :rtype: List[int]        """    ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-09
+            2018-11-27
         </p>
         <div class="tags">
             
@@ -533,9 +426,9 @@ Python implementation
 
 <div class="post-preview">
 
-    <a href="/2018/11/06/Algorithm-cn-Notes-Leetcode-292-Nim-Game/">
+    <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-598-Range-Addition-II/">
         <h2 class="post-title">
-            算法笔记: 领扣#292 Nim游戏
+            算法笔记: 领扣#598 范围求和 II
         </h2>
         <h3 class="post-subtitle">
             
@@ -545,16 +438,123 @@ Python implementation
 
 解法
 
+分析
 Python 实现
-1234567class Solution:    def canWinNim(self, n):        """        :type n: int        :rtype: bool        """        return n % 4 != 0
-Java 实现
-12345class Solution &#123;    pu......
+123456789101112class Solution(object):    def maxCount(self, m, n, ops):        """        :type m: int        :type n: int        :type ops: List[List[int]]        :rtype: i......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-11-06
+            2018-11-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#领扣" title="领扣">领扣</a>
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/27/Algorithm-Notes-Leetcode-598-Range-Addition-II/">
+        <h2 class="post-title">
+            Algorithm Notes: Leetcode#598 Range Addition II
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Problem
+
+Solution
+
+Initial thoughts
+Python implementation
+123456789101112class Solution(object):    def maxCount(self, m, n, ops):        """        :type m: int        :type n: int        :type op......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-122-Best-Time-to-Buy-and-Sell-Stock-II/">
+        <h2 class="post-title">
+            算法笔记: 领扣#122 买卖股票的最佳时机 II
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题描述
+
+解法
+
+分析
+Python 实现
+1234567class Solution(object):    def maxProfit(self, prices):        """        :type prices: List[int]        :rtype: int        """        return sum([prices[i+1]-prices[i......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#领扣" title="领扣">领扣</a>
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/11/25/Algorithm-cn-Notes-Leetcode-349-Intersection-of-Two-Arrays/">
+        <h2 class="post-title">
+            算法笔记: 领扣#349 两个数组的交集
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题描述
+
+解法
+
+分析
+Python 实现
+12345678class Solution:    def intersection(self, nums1, nums2):        """        :type nums1: List[int]        :type nums2: List[int]        :rtype: List[int]        """   ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-11-25
         </p>
         <div class="tags">
             
@@ -608,25 +608,37 @@ Java 实现
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="124">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="198">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="58">领扣</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="132">Algorithm</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="64">算法</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="206">Leetcode</a>
+            
+        
+            
+            <a href="/tags/#领扣" title="领扣" rel="73">领扣</a>
+            
+        
+            
+            <a href="/tags/#算法" title="算法" rel="79">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -647,18 +659,6 @@ Java 实现
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="5">MXNet</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
             
         
             
@@ -690,7 +690,7 @@ Java 实现
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -704,7 +704,7 @@ Java 实现
             
         
             
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -730,9 +730,9 @@ Java 实现
             
         
             
-            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
         
+            
+            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
@@ -808,23 +808,23 @@ Java 实现
     <ul>
       
         <li>
-          <a href="/2018/11/28/Algorithm-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">Algorithm Notes: Leetcode#453 Minimum Moves to Equal Array Elements</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-447-Number-of-Boomerangs/">算法笔记: 领扣#447 回旋镖的数量</a>
         </li>
       
         <li>
-          <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">算法笔记: 领扣#453 最小移动次数使数组元素相等</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-387-First-Unique-Character-in-a-String/">算法笔记: 领扣#387 字符串中的第一个唯一字符</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-492-Construct-the-Rectangle/">算法笔记: 领扣#492 构造矩形</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-167-Two-Sum-II-Input-array-is-sorted/">算法笔记: 领扣#167 两数之和 II - 输入有序数组</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-Notes-Leetcode-492-Construct-the-Rectangle/">Algorithm Notes: Leetcode#492 Construct the Rectangle</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-506-Relative-Ranks/">算法笔记: 领扣#506 相对名次</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-598-Range-Addition-II/">算法笔记: 领扣#598 范围求和 II</a>
+          <a href="/2018/12/15/Algorithm-Notes-Leetcode-506-Relative-Ranks/">Algorithm Notes: Leetcode#506 Relative Ranks</a>
         </li>
       
     </ul>

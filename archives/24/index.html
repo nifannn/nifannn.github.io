@@ -209,33 +209,63 @@
 
 <div class="post-preview">
 
-    <a href="/2018/02/25/Algorithm-Notes-Leetcode-746-Min-Cost-Climbing-Stairs/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-3/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#746 Min Cost Climbing Stairs
+            SQL 笔记: Hackerrank Weather Observation Station 3
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            Problem
+            问题
 
-Analysis
+查询 STATION 表中偶数 ID 的 CITY 名字。可以以任意顺序打印结果,但必须排除重复记录。
+输入格式
+STATION 表格描述如下:
+STATION
 
-Solution
 
-12345678910class Solution(object):    def minCostClimbingStairs(self, cost):        """        :type cost: List[int]        :rtype: int        """        dp = [0] * len......
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
+NUMBER
+
+
+LONG_W
+NUMBER
+
+
+
+LAT_N ：北纬 ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-02-25
+            2018-05-21
         </p>
         <div class="tags">
             
-              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -245,33 +275,67 @@ Solution
 
 <div class="post-preview">
 
-    <a href="/2018/02/24/Algorithm-Notes-Leetcode-717-1-bit-and-2-bit-Characters/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-1/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#717 1-bit and 2-bit Characters
+            SQL 笔记: Hackerrank Weather Observation Station 1
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            Problem
+            问题
 
-Solution
+查询 STATION 表格中的 CITY 和 STATE 属性。
+输入格式
+STATION 表格描述如下:
+STATION
 
-Analysis
-Python implementation
-12345678910class Solution:    def isOneBitCharacter(self, bits):        """        :type bits: List[int]        :rtype: bool        """        poin......
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
+NUMBER
+
+
+LONG_W
+NUMBER
+
+
+
+LAT_N ：北纬  LONG_W ：西经
+分析
+
+
+查询......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-02-24
+            2018-05-21
         </p>
         <div class="tags">
             
-              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -281,33 +345,66 @@ Python implementation
 
 <div class="post-preview">
 
-    <a href="/2018/02/23/Algorithm-Notes-Leetcode-766-Toeplitz-Matrix/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Names/">
         <h2 class="post-title">
-            Algorithm Notes: Leetcode#766 Toeplitz Matrix
+            SQL 笔记: Hackerrank Japanese Cities' Names
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            Problem
+            问题
 
-A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same element.
-Now given an M x N matrix, return True if and only if the matrix is Toeplitz.
-Example 1:
-Input:
-m......
+查询 CITY 表格中所有日本城市的名字。日本的 COUNTRYCODE 是JPN。
+输入格式
+CITY 表格描述如下:
+CITY
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBER
+
+
+
+分析
+
+
+查......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-02-23
+            2018-05-21
         </p>
         <div class="tags">
             
-              <a href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -317,27 +414,64 @@ m......
 
 <div class="post-preview">
 
-    <a href="/2018/01/22/Deep-Learning-Notes-Backpropagation/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Attributes/">
         <h2 class="post-title">
-            Deep Learning Notes: Optimization - Backpropagation
+            SQL 笔记: Hackerrank Japanese Cities' Attributes
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            ...
+            问题
+
+查询 CITY 表格中每一个日本城市的所有属性。日本的 COUNTRYCODE 是JPN.
+输入格式
+CITY 表格描述如下:
+CITY
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBER
+
+
+
+分析
+......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-01-22
+            2018-05-21
         </p>
         <div class="tags">
             
-              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
-              <a href="/tags/#Optimization" title="Optimization">Optimization</a>
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -347,43 +481,287 @@ m......
 
 <div class="post-preview">
 
-    <a href="/2018/01/22/Deep-Learning-Notes-Activation-ReLU/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Select-By-Id/">
         <h2 class="post-title">
-            Deep Learning Notes: Activation Function - ReLU
+            SQL 笔记: Hackerrank Select By Id
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            Introduction
+            问题
 
-Math Basics
+查询 CITY 表中 ID 为1661的城市的所有列.
+输入格式
+CITY 表描述如下:
+CITY
 
-Library Practice
 
-Numpy Playground
 
-References
+Field
+Type
 
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBER
+
+
+
+分析
+
+
+查询所有列 ==&gt; SELE......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Select-All/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Select All
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 CITY 表格中所有行所有列（属性）。
+输入格式
+CITY 表格描述如下:
+CITY
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBER
+
+
+
+分析
+
+
+查询所有属性 ==&gt; SELECT ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Revising-the-Select-Query-2/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Revising the Select Query 2
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 CITY 中所有人口数大于120000的美国城市的名字。美国的 CountryCode 为USA。
+输入格式
+CITY 表格描述如下:
+CITY
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBER......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Revising-the-Select-Query-1/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Revising the Select Query 1
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 CITY 中所有人口数大于100000的美国城市的所有列。美国的 CountryCode 是USA。
+输入格式
+CITY 表格描述如下:
+CITY
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBE......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/04/07/NLP-Notes-CRF/">
+        <h2 class="post-title">
+            NLP Notes: CRF
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            References and Resources
+An Introduction to Conditional Random Fields for Relational Learning
 ...
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-01-22
+            2018-04-07
         </p>
         <div class="tags">
-            
-              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-            
-              <a href="/tags/#Activation Function" title="Activation Function">Activation Function</a>
-            
-              <a href="/tags/#TensorFlow" title="TensorFlow">TensorFlow</a>
-            
-              <a href="/tags/#PyTorch" title="PyTorch">PyTorch</a>
-            
-              <a href="/tags/#MXNet" title="MXNet">MXNet</a>
             
         </div>
     
@@ -393,9 +771,9 @@ References
 
 <div class="post-preview">
 
-    <a href="/2018/01/22/Deep-Learning-Notes-Activation-Softmax/">
+    <a href="/2018/04/07/NLP-Notes-HMM/">
         <h2 class="post-title">
-            Deep Learning Notes: Activation Function - Softmax
+            NLP Notes: HMM
         </h2>
         <h3 class="post-subtitle">
             
@@ -407,156 +785,7 @@ References
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-01-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-            
-              <a href="/tags/#Activation Function" title="Activation Function">Activation Function</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/01/22/Deep-Learning-Notes-Activation-Sigmoid/">
-        <h2 class="post-title">
-            Deep Learning Notes: Activation Function - Sigmoid
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            Introduction
-
-Sigmoid is a most common activation function in neural networks. It maps real values to (0, 1), which makes it often used to represent probability.
-Math Basics
-
-Formula
-
-Derivative
-
-F......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-01-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-            
-              <a href="/tags/#Activation Function" title="Activation Function">Activation Function</a>
-            
-              <a href="/tags/#TensorFlow" title="TensorFlow">TensorFlow</a>
-            
-              <a href="/tags/#PyTorch" title="PyTorch">PyTorch</a>
-            
-              <a href="/tags/#MXNet" title="MXNet">MXNet</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/01/22/Deep-Learning-Notes-Loss-Maximum-Likelihood-and-Cross-Entropy/">
-        <h2 class="post-title">
-            Deep Learning Notes: Loss - Maximum Likelihood and Cross Entropy
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-01-22
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/01/22/Deep-Learning-Notes-Loss-MSE/">
-        <h2 class="post-title">
-            Deep Learning Notes: Loss Function - MSE
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            Introduction
-
-Math Basics
-
-Library Practice
-
-Numpy Playground
-
-Notes
-
-References
-
-...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-01-22
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Deep Learning" title="Deep Learning">Deep Learning</a>
-            
-              <a href="/tags/#TensorFlow" title="TensorFlow">TensorFlow</a>
-            
-              <a href="/tags/#PyTorch" title="PyTorch">PyTorch</a>
-            
-              <a href="/tags/#MXNet" title="MXNet">MXNet</a>
-            
-              <a href="/tags/#Loss Function" title="Loss Function">Loss Function</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2017/12/28/Machine-Learning-Notes-LSI/">
-        <h2 class="post-title">
-            Machine Learning Notes: LSI
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2017-12-28
+            2018-04-07
         </p>
         <div class="tags">
             
@@ -606,25 +835,37 @@ References
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="124">Algorithm</a>
-            
-        
-            
-            <a href="/tags/#Leetcode" title="Leetcode" rel="198">Leetcode</a>
-            
-        
-            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="58">领扣</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="132">Algorithm</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="64">算法</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="206">Leetcode</a>
+            
+        
+            
+            <a href="/tags/#领扣" title="领扣" rel="73">领扣</a>
+            
+        
+            
+            <a href="/tags/#算法" title="算法" rel="79">算法</a>
+            
+        
+            
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -645,18 +886,6 @@ References
         
             
             <a href="/tags/#MXNet" title="MXNet" rel="5">MXNet</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
             
         
             
@@ -688,7 +917,7 @@ References
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -702,7 +931,7 @@ References
             
         
             
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#web" title="web" rel="2">web</a>
             
         
             
@@ -728,9 +957,9 @@ References
             
         
             
-            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
-            
         
+            
+            <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
@@ -806,23 +1035,23 @@ References
     <ul>
       
         <li>
-          <a href="/2018/11/28/Algorithm-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">Algorithm Notes: Leetcode#453 Minimum Moves to Equal Array Elements</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-447-Number-of-Boomerangs/">算法笔记: 领扣#447 回旋镖的数量</a>
         </li>
       
         <li>
-          <a href="/2018/11/28/Algorithm-cn-Notes-Leetcode-453-Minimum-Moves-to-Equal-Array-Elements/">算法笔记: 领扣#453 最小移动次数使数组元素相等</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-387-First-Unique-Character-in-a-String/">算法笔记: 领扣#387 字符串中的第一个唯一字符</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-492-Construct-the-Rectangle/">算法笔记: 领扣#492 构造矩形</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-167-Two-Sum-II-Input-array-is-sorted/">算法笔记: 领扣#167 两数之和 II - 输入有序数组</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-Notes-Leetcode-492-Construct-the-Rectangle/">Algorithm Notes: Leetcode#492 Construct the Rectangle</a>
+          <a href="/2018/12/15/Algorithm-cn-Notes-Leetcode-506-Relative-Ranks/">算法笔记: 领扣#506 相对名次</a>
         </li>
       
         <li>
-          <a href="/2018/11/27/Algorithm-cn-Notes-Leetcode-598-Range-Addition-II/">算法笔记: 领扣#598 范围求和 II</a>
+          <a href="/2018/12/15/Algorithm-Notes-Leetcode-506-Relative-Ranks/">Algorithm Notes: Leetcode#506 Relative Ranks</a>
         </li>
       
     </ul>
