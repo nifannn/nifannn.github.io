@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('Algorithms.jpg')
             /*post*/
         
     }
@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -214,14 +214,21 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<h3 id="analysis">Analysis</h3>
-<hr>
 <h3 id="solution">Solution</h3>
 <hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findRestaurant</span><span class="params">(self, list1, list2)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type list1: List[str]</div><div class="line">        :type list2: List[str]</div><div class="line">        :rtype: List[str]</div><div class="line">        """</div><div class="line">        map1 = &#123;r:i <span class="keyword">for</span> i, r <span class="keyword">in</span> enumerate(list1)&#125;</div><div class="line">        map2 = &#123;r:i <span class="keyword">for</span> i, r <span class="keyword">in</span> enumerate(list2)&#125;</div><div class="line">        common = set(list1) &amp; set(list2)</div><div class="line">        res2sum = &#123;r:map1[r]+map2[r] <span class="keyword">for</span> r <span class="keyword">in</span> common&#125;</div><div class="line">        minSum = min(res2sum.values())</div><div class="line">        <span class="keyword">return</span> [r <span class="keyword">for</span> r, s <span class="keyword">in</span> res2sum.items() <span class="keyword">if</span> s==minSum]</div></pre></td></tr></table></figure>
+<h4 id="analysis">Analysis</h4>
+<h4 id="python-implementation">Python implementation</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findRestaurant</span><span class="params">(self, list1, list2)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type list1: List[str]</div><div class="line">        :type list2: List[str]</div><div class="line">        :rtype: List[str]</div><div class="line">        """</div><div class="line">        map1 = &#123;res:ix <span class="keyword">for</span> ix, res <span class="keyword">in</span> enumerate(list1)&#125;</div><div class="line">        common = dict()</div><div class="line">        minSum = len(list1) + len(list2)</div><div class="line">        <span class="keyword">for</span> ix, res <span class="keyword">in</span> enumerate(list2):</div><div class="line">            <span class="keyword">if</span> res <span class="keyword">in</span> map1:</div><div class="line">                common[res] = ix+map1[res]</div><div class="line">                minSum = min(minSum, common[res])</div><div class="line">        <span class="keyword">return</span> [res <span class="keyword">for</span> res, s <span class="keyword">in</span> common.items() <span class="keyword">if</span> s==minSum]</div></pre></td></tr></table></figure>
+<h4 id="java-implementation">Java implementation</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> String[] findRestaurant(String[] list1, String[] list2) &#123;</div><div class="line">        Map&lt;String, Integer&gt; map1 = <span class="keyword">new</span> HashMap();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list1.length; i++)&#123;</div><div class="line">            map1.put(list1[i], i);</div><div class="line">        &#125;</div><div class="line">        Map&lt;String, Integer&gt; common = <span class="keyword">new</span> HashMap();</div><div class="line">        <span class="keyword">int</span> minSum = list1.length + list2.length;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list2.length; i++)&#123;</div><div class="line">            String res = list2[i];</div><div class="line">            <span class="keyword">if</span>(map1.containsKey(res))&#123;</div><div class="line">                <span class="keyword">int</span> curSum = i+map1.get(res);</div><div class="line">                common.put(res, curSum);</div><div class="line">                minSum = minSum &gt; curSum ? curSum : minSum;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        List&lt;String&gt; ans = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">for</span>(Map.Entry&lt;String, Integer&gt; entry : common.entrySet())&#123;</div><div class="line">            String res = entry.getKey();</div><div class="line">            <span class="keyword">int</span> s = entry.getValue();</div><div class="line">            <span class="keyword">if</span>(s==minSum)&#123;</div><div class="line">                ans.add(res);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans.toArray(<span class="keyword">new</span> String[ans.size()]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(l<sub>1</sub>+l<sub>2</sub>)</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(l<sub>1</sub>+l<sub>2</sub>)</p>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/" target="_blank" rel="external">599. Minimum Index Sum of Two Lists</a></p>
+<p><a href="https://leetcode.com/problems/minimum-index-sum-of-two-lists/" target="_blank" rel="external">599. Minimum Index Sum of Two Lists</a><br>
+<a href="/2018/12/25/Algorithm-cn-Notes-Leetcode-599-Minimum-Index-Sum-of-Two-Lists/">(中文版) 算法笔记: 领扣#599 两个列表的最小索引总和</a></p>
 
                 
 
@@ -261,7 +268,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#java-implementation"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Java implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
