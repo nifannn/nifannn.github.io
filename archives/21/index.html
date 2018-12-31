@@ -209,6 +209,199 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/06/SQL-笔记-Leetcode-612-Shortest-Distance-in-a-Plane/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#612 Shortest Distance in a Plane
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+point_2d 表包含一个平面内一些点（超过两个）的坐标值（x，y）。
+写一条查询语句求出这些点中的最短距离并保留2位小数。
+
+
+
+x
+y
+
+
+
+
+-1
+-1
+
+
+0
+0
+
+
+-1
+-2
+
+
+
+最短距离是1，从点（-1，-1）到点（-1，2）。所以输出结果为：
+
+
+
+shortest
+
+
+
+
+1.00
+
+
+
+注意： 所有点的最大距离小于10000。
+分析
+
+连接（join）两张 p......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-603-Consecutive-Available-Seats/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#603 Consecutive Available Seats
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+几个朋友在售票处想要订几张连续的座位。
+你能帮忙查询下面cinema表中所有可以订的连续的座位，并按seat_id排序吗？
+
+
+
+seat_id
+free
+
+
+
+
+1
+1
+
+
+2
+0
+
+
+3
+1
+
+
+4
+1
+
+
+5
+1
+
+
+
+对于上面的例子，应该输出结果：
+
+
+
+seat_id
+
+
+
+
+3
+
+
+4
+
+
+5
+
+
+
+注意：
+
+seat_id 是自动增加的整数，free是布尔型（1表示空余......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-608-Tree-Node/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#608 Tree Node
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+对于 tree 表，id 是树节点的标识，p_id 是其父节点的 id。
+123456789+----+------+| id | p_id |+----+------+| 1  | null || 2  | 1    || 3  | 1    || 4  | 2    || 5  | 2    |+----+------+
+每个节点都是以下三种类型中的一种：
+
+Leaf: 如果节点......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/06/SQL-笔记-Leetcode-570-Mnanagers-with-at-Least-5-Direct-Reports/">
         <h2 class="post-title">
             SQL 笔记: Leetcode#570 Mnanagers with at Least 5 Direct Reports
@@ -584,140 +777,6 @@ shortest
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#595 Big Countries
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-有一张 World 表
-123456789+-----------------+------------+------------+--------------+---------------+| name            | continent  | area       | population   | gdp           |+-----------------+-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-05
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Average-Population-of-Each-Continent/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Average Population of Each Continent
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有大陆的名字（COUNTRY.Continent）以及对应的平均城市人口（CITY.Population），人口数进一法取整。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。不要输出没有城市的大陆。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-African-Cities/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank African Cities
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有非洲城市（CONTINENT 为 ‘Africa’）的名字。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -758,25 +817,37 @@ COUNTRYCODE
     <div class="tags">
         
             
+            <a href="/tags/#Algorithm" title="Algorithm" rel="139">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="213">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="138">Algorithm</a>
+            <a href="/tags/#算法" title="算法" rel="92">算法</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="212">Leetcode</a>
+            <a href="/tags/#领扣" title="领扣" rel="86">领扣</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="90">算法</a>
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="84">领扣</a>
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
             
         
             
@@ -800,18 +871,6 @@ COUNTRYCODE
             
         
             
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
-            
-        
-            
             <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
             
         
@@ -820,9 +879,13 @@ COUNTRYCODE
             
         
             
+            <a href="/tags/#web" title="web" rel="2">web</a>
+            
         
             
-            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
+            <a href="/tags/#game" title="game" rel="2">game</a>
+            
+        
             
         
             
@@ -842,19 +905,15 @@ COUNTRYCODE
             
         
             
-        
-            
-            <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
             
         
-            
-            <a href="/tags/#game" title="game" rel="2">game</a>
             
         
             
         
             
-            <a href="/tags/#web" title="web" rel="2">web</a>
+            <a href="/tags/#Java" title="Java" rel="2">Java</a>
             
         
             
@@ -958,23 +1017,23 @@ COUNTRYCODE
     <ul>
       
         <li>
+          <a href="/2018/12/31/Algorithm-cn-Notes-Leetcode-350-Intersection-of-Two-Arrays-II/">算法笔记: 领扣#350 两个数组的交集 II</a>
+        </li>
+      
+        <li>
+          <a href="/2018/12/31/Algorithm-cn-Notes-Leetcode-551-Student-Attendance-Record-I/">算法笔记: 领扣#551 学生出勤记录 I</a>
+        </li>
+      
+        <li>
+          <a href="/2018/12/31/Algorithm-Notes-Leetcode-551-Student-Attendance-Record-I/">Algorithm Notes: Leetcode#551 Student Attendance Record I</a>
+        </li>
+      
+        <li>
           <a href="/2018/12/30/Algorithm-cn-Notes-Leetcode-628-Maximum-Product-of-Three-Numbers/">算法笔记: 领扣#628 三个数的最大乘积</a>
         </li>
       
         <li>
           <a href="/2018/12/29/Algorithm-cn-Notes-Leetcode-543-Diameter-of-Binary-Tree/">算法笔记: 领扣#543 二叉树的直径</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/29/Algorithm-Notes-Leetcode-543-Diameter-of-Binary-Tree/">Algorithm Notes: Leetcode#543 Diameter of Binary Tree</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/28/Algorithm-cn-Notes-Leetcode-108-Convert-Sorted-Array-to-Binary-Search-Tree/">算法笔记: 领扣#108 将有序数组转换为二叉搜索树</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/28/Algorithm-Notes-Leetcode-108-Convert-Sorted-Array-to-Binary-Search-Tree/">Algorithm Notes: Leetcode#108 Convert Sorted Array to Binary Search Tree</a>
         </li>
       
     </ul>
