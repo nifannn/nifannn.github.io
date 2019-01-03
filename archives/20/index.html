@@ -209,6 +209,131 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Projects
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+有一张表， Projects，包含三个字段：任务ID（Task_ID）， 开始日期（Start_Date） 和 结束日期（End_Date）。 表中每一行 结束日期（End_Date） 和 开始日期（Start_Date） 都只相差1天。
+
+如果几个任务的结束日期（End_Date）是连续的，则表示这些都属于同一个项目。Samantha对完成了的项目的数量感兴趣。
+写一条查询语句输出......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Draw The Triangle 2
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+P(R) 表示R行的一种图案。下面的图案就是P(5):
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+写一条查询语句去生成*P(20)*的图案。
+分析
+
+使用REPEAT函数生成图案。需要一个超过20行的表，并用一个变量控制每一行的长度。最后还要控制输出的行数。
+定义并初始化变量：
+1SET @number = 0;
+然后找一张超过20行的表，变量每次递增1:
+12......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-1/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Draw The Triangle 1
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+写一条查询语句打印*P(20)*的图案。
+分析
+
+可以使用REPEAT()函数生产图案。语法是REPEAT(str, count)，str是需要重复的字符串，count是重复次数。但是一次只能生成一行，因此还需要一张超过20行的表。另外还需要一个变量来控制每一......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-09
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/08/SQL-笔记-Hackerrank-Contest-Leaderboard/">
         <h2 class="post-title">
             SQL 笔记: Hackerrank Contest Leaderboard
@@ -535,114 +660,6 @@ NUMERIC(15,2)
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-626-Exchange-Seats/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#626 Exchange Seats
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-Mary是一所中学的老师，她有一份储存着学生姓名及对应座位id的seat表。
-id字段是连续加1的。
-Mary想要交换相邻两个同学的座位。
-你能帮Mary写一条SQL语句来输出结果么？
-123456789+---------+---------+|    id   | student |+---------+---------+|    1    | Abbot   ||    2 ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-577-Employee-Bonus/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#577 Employee Bonus
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询所有奖金&lt;1000的员工的姓名和奖金。
-表: Employee
-123456789+-------+--------+-----------+--------+| empId |  name  | supervisor| salary |+-------+--------+-----------+--------+|   1   | John   |  3        |......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/06/SQL-笔记-Leetcode-607-Sales-Person/">
-        <h2 class="post-title">
-            SQL 笔记: Leetcode#607 Sales Person
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-描述
-有三张表: salesperson, company, orders.
-输出 salesperson 表中对’RED’公司没有销量的销售姓名（name）。
-例子
-输入
-表格: salesperson
-123456789+----------+------+--------+-----------------+-----------+| sales_id | name | sal......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-06
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -683,11 +700,11 @@ Mary想要交换相邻两个同学的座位。
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="139">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="140">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="213">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="214">Leetcode</a>
             
         
             
@@ -697,23 +714,11 @@ Mary想要交换相邻两个同学的座位。
             
         
             
-            <a href="/tags/#算法" title="算法" rel="92">算法</a>
+            <a href="/tags/#领扣" title="领扣" rel="88">领扣</a>
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="86">领扣</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
+            <a href="/tags/#算法" title="算法" rel="94">算法</a>
             
         
             
@@ -737,19 +742,21 @@ Mary想要交换相邻两个同学的座位。
             
         
             
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
+            
+        
+            
             <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
             
         
-            
-        
-            
-        
-            
-            <a href="/tags/#web" title="web" rel="2">web</a>
-            
-        
-            
-            <a href="/tags/#game" title="game" rel="2">game</a>
             
         
             
@@ -783,6 +790,16 @@ Mary想要交换相邻两个同学的座位。
             
         
             
+            <a href="/tags/#game" title="game" rel="2">game</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#web" title="web" rel="2">web</a>
+            
+        
+            
         
             
         
@@ -803,19 +820,19 @@ Mary想要交换相邻两个同学的座位。
             
         
             
-        
-            
-        
-            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
         
             
-            <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
+        
             
         
+            
+        
+            
+            <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
             
         
             
@@ -883,23 +900,23 @@ Mary想要交换相邻两个同学的座位。
     <ul>
       
         <li>
+          <a href="/2019/01/01/Algorithm-cn-Notes-Leetcode-541-Reverse-String-II/">算法笔记: 领扣#541 反转字符串 II</a>
+        </li>
+      
+        <li>
+          <a href="/2019/01/01/Algorithm-Notes-Leetcode-541-Reverse-String-II/">Algorithm Notes: Leetcode#541 Reverse String II</a>
+        </li>
+      
+        <li>
+          <a href="/2019/01/01/Algorithm-cn-Notes-Leetcode-746-Min-Cost-Climbing-Stairs/">算法笔记: 领扣#746 使用最小花费爬楼梯</a>
+        </li>
+      
+        <li>
           <a href="/2018/12/31/Algorithm-cn-Notes-Leetcode-350-Intersection-of-Two-Arrays-II/">算法笔记: 领扣#350 两个数组的交集 II</a>
         </li>
       
         <li>
           <a href="/2018/12/31/Algorithm-cn-Notes-Leetcode-551-Student-Attendance-Record-I/">算法笔记: 领扣#551 学生出勤记录 I</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/31/Algorithm-Notes-Leetcode-551-Student-Attendance-Record-I/">Algorithm Notes: Leetcode#551 Student Attendance Record I</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/30/Algorithm-cn-Notes-Leetcode-628-Maximum-Product-of-Three-Numbers/">算法笔记: 领扣#628 三个数的最大乘积</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/29/Algorithm-cn-Notes-Leetcode-543-Diameter-of-Binary-Tree/">算法笔记: 领扣#543 二叉树的直径</a>
         </li>
       
     </ul>
@@ -953,7 +970,7 @@ Mary想要交换相邻两个同学的座位。
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Fan Ni 2018 
+                    Copyright &copy; Fan Ni 2019 
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">

@@ -209,6 +209,116 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/15/SQL-笔记-Leetcode-197-Rising-Temperature/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#197 Rising Temperature
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定一张Weather表，写一条SQL语句找出所有比前一天（昨天）气温高的日期的Id。
+12345678+---------+------------------+------------------+| Id(INT) | RecordDate(DATE) | Temperature(INT) |+---------+------------------+-------------......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-596-Classes-More-Than-5-Students/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#596 Classes More Than 5 Students
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+courses表有两个字段：student 和 class
+请列出所有超过或包含5个学生的课程。
+例如，有这样一张表：
+12345678910111213+---------+------------+| student | class      |+---------+------------+| A       | Math       || B       | English ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/15/SQL-笔记-Leetcode-619-Biggest-Single-Number/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#619 Biggest Single Number
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+表格number在字段num中包含许多的数字（包含重复）。
+写一条SQL语句求出只出现过一次的最大的数。
+1234567891011+---+|num|+---+| 8 || 8 || 3 || 3 || 1 || 4 || 5 || 6 |
+对于上面的例子，结果应返回：
+1234+---+|num|+---+| 6 |
+注意：
+如果不存在这样的数，直接返回null。
+分析
+
+
+找到......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/15/SQL-笔记-Leetcode-597-Friend-Requests-1-Overall-Acceptance-Rate/">
         <h2 class="post-title">
             SQL 笔记: Leetcode#597 Friend Requests 1: Overall Acceptance Rate
@@ -537,131 +647,6 @@ Samantha通过编程竞赛来面试候选人。写一条查询语句打印每场
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/09/SQL-笔记-Hackerrank-Projects/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Projects
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-有一张表， Projects，包含三个字段：任务ID（Task_ID）， 开始日期（Start_Date） 和 结束日期（End_Date）。 表中每一行 结束日期（End_Date） 和 开始日期（Start_Date） 都只相差1天。
-
-如果几个任务的结束日期（End_Date）是连续的，则表示这些都属于同一个项目。Samantha对完成了的项目的数量感兴趣。
-写一条查询语句输出......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-09
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-2/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Draw The Triangle 2
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P(R) 表示R行的一种图案。下面的图案就是P(5):
-
-*
-* *
-* * *
-* * * *
-* * * * *
-
-写一条查询语句去生成*P(20)*的图案。
-分析
-
-使用REPEAT函数生成图案。需要一个超过20行的表，并用一个变量控制每一行的长度。最后还要控制输出的行数。
-定义并初始化变量：
-1SET @number = 0;
-然后找一张超过20行的表，变量每次递增1:
-12......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-09
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/09/SQL-笔记-Hackerrank-Draw-The-Triangle-1/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Draw The Triangle 1
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
-
-* * * * *
-* * * *
-* * *
-* *
-*
-
-写一条查询语句打印*P(20)*的图案。
-分析
-
-可以使用REPEAT()函数生产图案。语法是REPEAT(str, count)，str是需要重复的字符串，count是重复次数。但是一次只能生成一行，因此还需要一张超过20行的表。另外还需要一个变量来控制每一......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-09
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -702,11 +687,11 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
     <div class="tags">
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="139">Algorithm</a>
+            <a href="/tags/#Algorithm" title="Algorithm" rel="140">Algorithm</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="213">Leetcode</a>
+            <a href="/tags/#Leetcode" title="Leetcode" rel="214">Leetcode</a>
             
         
             
@@ -716,23 +701,11 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
             
         
             
-            <a href="/tags/#算法" title="算法" rel="92">算法</a>
+            <a href="/tags/#领扣" title="领扣" rel="88">领扣</a>
             
         
             
-            <a href="/tags/#领扣" title="领扣" rel="86">领扣</a>
-            
-        
-            
-            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
-            
-        
-            
-            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
-            
-        
-            
-        
+            <a href="/tags/#算法" title="算法" rel="94">算法</a>
             
         
             
@@ -756,19 +729,21 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
             
         
             
+            <a href="/tags/#Data Science" title="Data Science" rel="2">Data Science</a>
+            
+        
+            
+            <a href="/tags/#Machine Learning" title="Machine Learning" rel="7">Machine Learning</a>
+            
+        
+            
+        
+            
+        
+            
             <a href="/tags/#Optimization" title="Optimization" rel="2">Optimization</a>
             
         
-            
-        
-            
-        
-            
-            <a href="/tags/#web" title="web" rel="2">web</a>
-            
-        
-            
-            <a href="/tags/#game" title="game" rel="2">game</a>
             
         
             
@@ -802,6 +777,16 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
             
         
             
+            <a href="/tags/#game" title="game" rel="2">game</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#web" title="web" rel="2">web</a>
+            
+        
+            
         
             
         
@@ -822,19 +807,19 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
             
         
             
-        
-            
-        
-            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
         
             
-            <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
+        
             
         
+            
+        
+            
+            <a href="/tags/#Recipe" title="Recipe" rel="16">Recipe</a>
             
         
             
@@ -902,23 +887,23 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
     <ul>
       
         <li>
+          <a href="/2019/01/01/Algorithm-cn-Notes-Leetcode-541-Reverse-String-II/">算法笔记: 领扣#541 反转字符串 II</a>
+        </li>
+      
+        <li>
+          <a href="/2019/01/01/Algorithm-Notes-Leetcode-541-Reverse-String-II/">Algorithm Notes: Leetcode#541 Reverse String II</a>
+        </li>
+      
+        <li>
+          <a href="/2019/01/01/Algorithm-cn-Notes-Leetcode-746-Min-Cost-Climbing-Stairs/">算法笔记: 领扣#746 使用最小花费爬楼梯</a>
+        </li>
+      
+        <li>
           <a href="/2018/12/31/Algorithm-cn-Notes-Leetcode-350-Intersection-of-Two-Arrays-II/">算法笔记: 领扣#350 两个数组的交集 II</a>
         </li>
       
         <li>
           <a href="/2018/12/31/Algorithm-cn-Notes-Leetcode-551-Student-Attendance-Record-I/">算法笔记: 领扣#551 学生出勤记录 I</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/31/Algorithm-Notes-Leetcode-551-Student-Attendance-Record-I/">Algorithm Notes: Leetcode#551 Student Attendance Record I</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/30/Algorithm-cn-Notes-Leetcode-628-Maximum-Product-of-Three-Numbers/">算法笔记: 领扣#628 三个数的最大乘积</a>
-        </li>
-      
-        <li>
-          <a href="/2018/12/29/Algorithm-cn-Notes-Leetcode-543-Diameter-of-Binary-Tree/">算法笔记: 领扣#543 二叉树的直径</a>
         </li>
       
     </ul>
@@ -972,7 +957,7 @@ P(R) 表示在R行绘制的一种图案。下面的图案表示P(5)：
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Fan Ni 2018 
+                    Copyright &copy; Fan Ni 2019 
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">
