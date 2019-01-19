@@ -69,7 +69,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('null')
+            background-image: url('Algorithms.jpg')
             /*post*/
         
     }
@@ -142,14 +142,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -214,14 +214,21 @@
 
                 <h3 id="problem">Problem</h3>
 <hr>
-<h3 id="analysis">Analysis</h3>
-<hr>
 <h3 id="solution">Solution</h3>
 <hr>
+<h4 id="analysis">Analysis</h4>
+<h4 id="python-implementation">Python implementation</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestWord</span><span class="params">(self, words)</span>:</span></div><div class="line">        <span class="string">"""</span></div><div class="line">        :type words: List[str]</div><div class="line">        :rtype: str</div><div class="line">        """</div><div class="line">        valid = set([<span class="string">''</span>])</div><div class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> sorted(words):</div><div class="line">            <span class="keyword">if</span> word[:<span class="number">-1</span>] <span class="keyword">in</span> valid:</div><div class="line">                valid.add(word)</div><div class="line">        <span class="keyword">return</span> max(sorted(valid), key=len)</div></pre></td></tr></table></figure>
+<h4 id="java-implementation">Java implementation</h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestWord</span><span class="params">(String[] words)</span> </span>&#123;</div><div class="line">        Set&lt;String&gt; valid = <span class="keyword">new</span> HashSet&lt;&gt;();</div><div class="line">        Arrays.sort(words);</div><div class="line">        <span class="keyword">for</span>(String word : words)&#123;</div><div class="line">            <span class="keyword">if</span>(word.length()&lt;<span class="number">2</span> || valid.contains(word.substring(<span class="number">0</span>, word.length()-<span class="number">1</span>)))&#123;</div><div class="line">                valid.add(word);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        String[] validArr = <span class="keyword">new</span> String[valid.size()];</div><div class="line">        validArr = valid.toArray(validArr);</div><div class="line">        Arrays.sort(validArr);</div><div class="line">        <span class="keyword">int</span> maxLen = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(String word : validArr)&#123;</div><div class="line">            <span class="keyword">int</span> curLen = word.length();</div><div class="line">            maxLen = curLen &gt; maxLen ? curLen : maxLen;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(String word : validArr)&#123;</div><div class="line">            System.out.println(word);</div><div class="line">            <span class="keyword">if</span>(word.length()==maxLen)&#123;</div><div class="line">                <span class="keyword">return</span> word;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="time-complexity">Time complexity</h4>
+<p>O(nlogn).</p>
+<h4 id="space-complexity">Space complexity</h4>
+<p>O(n).</p>
 <h3 id="link">Link</h3>
 <hr>
-<p><a href="https://leetcode.com/problems/longest-word-in-dictionary/description/" target="_blank" rel="external">720. Longest Word in Dictionary</a></p>
+<p><a href="https://leetcode.com/problems/longest-word-in-dictionary/" target="_blank" rel="external">720. Longest Word in Dictionary</a><br>
+<a href="/2019/01/19/Algorithm-cn-Notes-Leetcode-720-Longest-Word-in-Dictionary/">(中文版) 算法笔记: 领扣#720 词典中最长的单词</a></p>
 
                 
 
@@ -261,7 +268,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Solution</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Link</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#problem"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Problem</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#solution"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Solution</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#analysis"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Analysis</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#python-implementation"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Python implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#java-implementation"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Java implementation</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#time-complexity"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Time complexity</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#space-complexity"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Space complexity</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Link</span></a></li></ol>
         
         </div>
       </aside>
