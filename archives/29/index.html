@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Revising-the-Select-Query-2/">
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-8/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Revising the Select Query 2
+            SQL 笔记: Hackerrank Weather Observation Station 8
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,10 +219,10 @@
         <div class="post-content-preview">
             问题
 
-查询 CITY 中所有人口数大于120000的美国城市的名字。美国的 CountryCode 为USA。
+查询 STATION 表格中首字母和最后一个字母均为元音字母的 CITY 名字。结果不包含重复记录。
 输入格式
-CITY 表格描述如下:
-CITY
+STATION 表格描述如下:
+STATION
 
 
 
@@ -236,19 +236,254 @@ ID
 NUMBER
 
 
-NAME
-VARCHAR2(17)
+CITY
+VARCHAR2(21)
 
 
-COUNTRYCODE
-VARCHAR2(3)
+STATE
+VARCHAR2(2)
 
 
-DISTRICT
-VARCHAR2(20)
+LAT_N
+NUMBER
 
 
-POPULATION
+LONG_W
+NUMBER
+
+
+
+LAT_N ：北纬 L......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-22
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-7/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Weather Observation Station 7
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STATION 表格中以元音字母结尾的 CITY 名字。结果不可以包含重复记录。
+输入格式
+STATION 表格描述如下:
+STATION
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
+NUMBER
+
+
+LONG_W
+NUMBER
+
+
+
+LAT_N ：北纬 LONG_W ：......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-22
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/22/SQL-笔记-Hackerrank-Weather-Observation-Station-6/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Weather Observation Station 6
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STATION 表中元音字母(a, e, i, o, u) 开头的 CITY 名字。不可以包含重复记录。
+输入格式
+STATION 表格描述如下:
+STATION
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
+NUMBER
+
+
+LONG_W
+NUMBER
+
+
+
+LAT_N ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-22
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/算法笔记-Leetcode-1-Two-Sum/">
+        <h2 class="post-title">
+            算法笔记: 力扣#1 两数之和
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
+你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
+示例:
+给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+解法
+
+基本思路
+使用哈希表储存数组的值以及对应索引。遍历数组，每次把数值和索引加入哈希......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#算法" title="算法">算法</a>
+            
+              <a href="/tags/#力扣" title="力扣">力扣</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-5/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Weather Observation Station 5
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STATION 表格中 CITY 名字最长和最短的城市名, 以及对应长度(名字的字符数)。 如果最长或最短的城市不止一个, 选择按字母表排序优先出现的一个。
+输入格式
+STATION 表格描述如下:
+STATION
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
 NUMBER......
         </div>
     </a>
@@ -271,9 +506,9 @@ NUMBER......
 
 <div class="post-preview">
 
-    <a href="/2018/05/21/SQL-笔记-Hackerrank-Revising-the-Select-Query-1/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-4/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Revising the Select Query 1
+            SQL 笔记: Hackerrank Weather Observation Station 4
         </h2>
         <h3 class="post-subtitle">
             
@@ -281,7 +516,194 @@ NUMBER......
         <div class="post-content-preview">
             问题
 
-查询 CITY 中所有人口数大于100000的美国城市的所有列。美国的 CountryCode 是USA。
+把N作为 STATION 表格中 CITY 记录的数量，把N’作为 STATION 表格中 不重复 CITY 名字的数量; 查询 N - N’ 的值。 总之, 求表格中 CITY 记录的总数 和唯一的 CITY 名字的数量的差值。
+输入格式
+STATION 表格描述如下:
+STATION
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-3/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Weather Observation Station 3
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STATION 表中偶数 ID 的 CITY 名字。可以以任意顺序打印结果,但必须排除重复记录。
+输入格式
+STATION 表格描述如下:
+STATION
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
+NUMBER
+
+
+LONG_W
+NUMBER
+
+
+
+LAT_N ：北纬 ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Weather-Observation-Station-1/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Weather Observation Station 1
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 STATION 表格中的 CITY 和 STATE 属性。
+输入格式
+STATION 表格描述如下:
+STATION
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+CITY
+VARCHAR2(21)
+
+
+STATE
+VARCHAR2(2)
+
+
+LAT_N
+NUMBER
+
+
+LONG_W
+NUMBER
+
+
+
+LAT_N ：北纬  LONG_W ：西经
+分析
+
+
+查询......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-05-21
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Names/">
+        <h2 class="post-title">
+            SQL 笔记: Hackerrank Japanese Cities' Names
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询 CITY 表格中所有日本城市的名字。日本的 COUNTRYCODE 是JPN。
 输入格式
 CITY 表格描述如下:
 CITY
@@ -311,7 +733,14 @@ VARCHAR2(20)
 
 
 POPULATION
-NUMBE......
+NUMBER
+
+
+
+分析
+
+
+查......
         </div>
     </a>
     
@@ -333,211 +762,64 @@ NUMBE......
 
 <div class="post-preview">
 
-    <a href="/2018/04/07/NLP-Notes-CRF/">
+    <a href="/2018/05/21/SQL-笔记-Hackerrank-Japanese-Cities-Attributes/">
         <h2 class="post-title">
-            NLP Notes: CRF
+            SQL 笔记: Hackerrank Japanese Cities' Attributes
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            References and Resources
-An Introduction to Conditional Random Fields for Relational Learning
-...
+            问题
+
+查询 CITY 表格中每一个日本城市的所有属性。日本的 COUNTRYCODE 是JPN.
+输入格式
+CITY 表格描述如下:
+CITY
+
+
+
+Field
+Type
+
+
+
+
+ID
+NUMBER
+
+
+NAME
+VARCHAR2(17)
+
+
+COUNTRYCODE
+VARCHAR2(3)
+
+
+DISTRICT
+VARCHAR2(20)
+
+
+POPULATION
+NUMBER
+
+
+
+分析
+......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-04-07
+            2018-05-21
         </p>
         <div class="tags">
             
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/07/NLP-Notes-HMM/">
-        <h2 class="post-title">
-            NLP Notes: HMM
-        </h2>
-        <h3 class="post-subtitle">
+              <a href="/tags/#SQL" title="SQL">SQL</a>
             
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-04-07
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/04/Deep-Learning-Notes-Capsule-Networks/">
-        <h2 class="post-title">
-            Deep Learning Notes: Capsule Networks
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-04-04
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/03/NLP-Notes-Name-Entity-Recognition/">
-        <h2 class="post-title">
-            NLP Notes: Name Entity Recognition
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-04-03
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/03/NLP-Notes-Part-of-SpeechTagging/">
-        <h2 class="post-title">
-            NLP Notes: Part-of-SpeechTagging
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            References and Resources
-Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition
-...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-04-03
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/03/31/Reinforcement-Learning-Notes-Temporal-Difference-Learning/">
-        <h2 class="post-title">
-            Reinforcement Learning Notes: Temporal-Difference Learning
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-03-31
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/03/31/Reinforcement-Learning-Notes-Finite-Markov-Decision-Process/">
-        <h2 class="post-title">
-            Reinforcement Learning Notes: Finite Markov Decision Process
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            References and Resources
-Reinforcement Learning: An Introduction
-...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-03-31
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/03/31/Reinforcement-Learning-Notes-Deep-Q-Network/">
-        <h2 class="post-title">
-            Reinforcement Learning Notes: Deep Q Network
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            ...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-03-31
-        </p>
-        <div class="tags">
+              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -585,25 +867,25 @@ Reinforcement Learning: An Introduction
     <div class="tags">
         
             
+            <a href="/tags/#Algorithm" title="Algorithm" rel="150">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="224">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="146">Algorithm</a>
+            <a href="/tags/#算法" title="算法" rel="110">算法</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="220">Leetcode</a>
-            
-        
-            
-            <a href="/tags/#算法" title="算法" rel="104">算法</a>
-            
-        
-            
-            <a href="/tags/#领扣" title="领扣" rel="98">领扣</a>
+            <a href="/tags/#力扣" title="力扣" rel="104">力扣</a>
             
         
             
@@ -647,12 +929,6 @@ Reinforcement Learning: An Introduction
             
         
             
-        
-            
-            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
-            
-        
-            
             <a href="/tags/#NLP" title="NLP" rel="3">NLP</a>
             
         
@@ -664,6 +940,12 @@ Reinforcement Learning: An Introduction
             <a href="/tags/#Word Representation" title="Word Representation" rel="2">Word Representation</a>
             
         
+            
+        
+            
+        
+            
+            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
             
         
             
@@ -681,11 +963,11 @@ Reinforcement Learning: An Introduction
             
         
             
+        
+            
+        
+            
             <a href="/tags/#Java" title="Java" rel="2">Java</a>
-            
-        
-            
-        
             
         
             
@@ -711,15 +993,15 @@ Reinforcement Learning: An Introduction
             
         
             
-        
-            
-        
-            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
+        
+            
             <a href="/tags/#菜谱" title="菜谱" rel="16">菜谱</a>
+            
+        
             
         
             
@@ -789,23 +1071,23 @@ Reinforcement Learning: An Introduction
     <ul>
       
         <li>
-          <a href="/2019/01/19/Algorithm-cn-Notes-Leetcode-720-Longest-Word-in-Dictionary/">算法笔记: 领扣#720 词典中最长的单词</a>
+          <a href="/2019/03/03/Algorithm-cn-Notes-Leetcode-70-Climbing-Stairs/">算法笔记: 力扣#70 爬楼梯</a>
         </li>
       
         <li>
-          <a href="/2019/01/19/Algorithm-cn-Notes-Leetcode-21-Merge-Two-Sorted-Lists/">算法笔记: 领扣#21 合并两个有序链表</a>
+          <a href="/2019/03/03/Algorithm-Notes-Leetcode-70-Climbing-Stairs/">Algorithm Notes: Leetcode#70 Climbing Stairs</a>
         </li>
       
         <li>
-          <a href="/2019/01/19/Algorithm-Notes-Leetcode-21-Merge-Two-Sorted-Lists/">Algorithm Notes: Leetcode#21 Merge Two Sorted Lists</a>
+          <a href="/2019/02/17/Algorithm-cn-Notes-Leetcode-118-Pascal-s-Triangle/">算法笔记: 力扣#118 杨辉三角</a>
         </li>
       
         <li>
-          <a href="/2019/01/13/Algorithm-cn-Notes-Leetcode-671-Second-Minimum-Node-In-a-Binary-Tree/">算法笔记: 领扣#671 二叉树中第二小的节点</a>
+          <a href="/2019/02/17/Algorithm-cn-Notes-Leetcode-747-Largest-Number-At-Least-Twice-of-Others/">算法笔记: 力扣#747 至少是其他数字两倍的最大数</a>
         </li>
       
         <li>
-          <a href="/2019/01/13/Algorithm-Notes-Leetcode-671-Second-Minimum-Node-In-a-Binary-Tree/">Algorithm Notes: Leetcode#671 Second Minimum Node In a Binary Tree</a>
+          <a href="/2019/02/17/Algorithm-cn-Notes-Leetcode-326-Power-of-Three/">算法笔记: 力扣#326 3的幂</a>
         </li>
       
     </ul>

@@ -132,14 +132,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -209,9 +209,9 @@
 
 <div class="post-preview">
 
-    <a href="/2018/06/05/SQL-笔记-Leetcode-584-Find-Customer-Referee/">
+    <a href="/2018/06/07/SQL-笔记-Leetcode-585-Investments-in-2016/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#584 Find Customer Referee
+            SQL 笔记: Leetcode#585 Investments in 2016
         </h2>
         <h3 class="post-subtitle">
             
@@ -219,14 +219,35 @@
         <div class="post-content-preview">
             问题
 
-customer 表包含客户信息及推荐人。
-12345678910+------+------+-----------+| id   | name | referee_id|+------+------+-----------+|    1 | Will |      NULL ||    2 | Jane |      NULL ||    3 | Alex |         2......
+写一条查询语句打印2016年总投资额(TIV_2016)，并保留2位小数，并且投保人需满足以下条件：
+
+和一个或多个投保人有相同的TIV_2015。
+不和其他投保人在同一城市（就是说（纬度，经度）必须唯一）。
+
+输入格式：
+表insurance描述如下：
+
+
+
+Column Name
+Type
+
+
+
+
+PID
+INTEGER(11)
+
+
+TIV_2015
+NUMERIC(15,2)
+......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-05
+            2018-06-07
         </p>
         <div class="tags">
             
@@ -242,9 +263,9 @@ customer 表包含客户信息及推荐人。
 
 <div class="post-preview">
 
-    <a href="/2018/06/05/SQL-笔记-Leetcode-627-Swap-Salary/">
+    <a href="/2018/06/07/SQL-笔记-Leetcode-182-Duplicate-Emails/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#627 Swap Salary
+            SQL 笔记: Leetcode#182 Duplicate Emails
         </h2>
         <h3 class="post-subtitle">
             
@@ -252,57 +273,16 @@ customer 表包含客户信息及推荐人。
         <div class="post-content-preview">
             问题
 
-给定 salary 表，例如下面这张，m代表男性，f代表女性。使用一条update语句所有f和m对换（所有f改成m，m改成f），并且不使用辅助表格。
-例如：
-
-
-
-id
-name
-sex
-salary
-
-
-
-
-1
-A
-m
-2500
-
-
-2
-B
-f
-1500
-
-
-3
-C
-m
-5500
-
-
-4
-D
-f
-500
-
-
-
-在运行完sql语句后，上述的表格内容变为：
-
-
-
-id
-name
-sex......
+写一条SQL语句找出Person表中所有的重复的email。
+1234567+----+---------+| Id | Email   |+----+---------+| 1  | a@b.com || 2  | c@d.com || 3  | a@b.com |+----+---------+
+例如，对于上面的表应返回如下结果：
+12345+---------+| Email ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-05
+            2018-06-07
         </p>
         <div class="tags">
             
@@ -318,9 +298,9 @@ sex......
 
 <div class="post-preview">
 
-    <a href="/2018/06/05/SQL-笔记-Leetcode-613-Shortest-Distance-in-a-Line/">
+    <a href="/2018/06/06/SQL-笔记-Leetcode-626-Exchange-Seats/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#613 Shortest Distance in a Line
+            SQL 笔记: Leetcode#626 Exchange Seats
         </h2>
         <h3 class="post-subtitle">
             
@@ -328,27 +308,139 @@ sex......
         <div class="post-content-preview">
             问题
 
-point 表包含了一些点的x坐标值，坐标值均为整数。
-写一条查询语句计算这些点中的最短距离。
+Mary是一所中学的老师，她有一份储存着学生姓名及对应座位id的seat表。
+id字段是连续加1的。
+Mary想要交换相邻两个同学的座位。
+你能帮Mary写一条SQL语句来输出结果么？
+123456789+---------+---------+|    id   | student |+---------+---------+|    1    | Abbot   ||    2 ......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-577-Employee-Bonus/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#577 Employee Bonus
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+查询所有奖金&lt;1000的员工的姓名和奖金。
+表: Employee
+123456789+-------+--------+-----------+--------+| empId |  name  | supervisor| salary |+-------+--------+-----------+--------+|   1   | John   |  3        |......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-607-Sales-Person/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#607 Sales Person
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+描述
+有三张表: salesperson, company, orders.
+输出 salesperson 表中对’RED’公司没有销量的销售姓名（name）。
+例子
+输入
+表格: salesperson
+123456789+----------+------+--------+-----------------+-----------+| sales_id | name | sal......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-612-Shortest-Distance-in-a-Plane/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#612 Shortest Distance in a Plane
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+point_2d 表包含一个平面内一些点（超过两个）的坐标值（x，y）。
+写一条查询语句求出这些点中的最短距离并保留2位小数。
 
 
 
 x
+y
 
 
 
 
 -1
+-1
 
 
 0
+0
 
 
-2
+-1
+-2
 
 
 
-最短距离明显是1，是-1和0之间的距离。所以输出如下：
+最短距离是1，从点（-1，-1）到点（-1，2）。所以输出结果为：
 
 
 
@@ -357,20 +449,105 @@ shortest
 
 
 
+1.00
+
+
+
+注意： 所有点的最大距离小于10000。
+分析
+
+连接（join）两张 p......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-603-Consecutive-Available-Seats/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#603 Consecutive Available Seats
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+几个朋友在售票处想要订几张连续的座位。
+你能帮忙查询下面cinema表中所有可以订的连续的座位，并按seat_id排序吗？
+
+
+
+seat_id
+free
+
+
+
+
+1
+1
+
+
+2
+0
+
+
+3
+1
+
+
+4
+1
+
+
+5
 1
 
 
 
-注意: 每个点都是唯一的， point 表中没有重复记录。
-分析
+对于上面的例子，应该输出结果：
 
-可以将表与其自身进行连接（join）操作，以生成所有可能的点对。然后计算每对点......
+
+
+seat_id
+
+
+
+
+3
+
+
+4
+
+
+5
+
+
+
+注意：
+
+seat_id 是自动增加的整数，free是布尔型（1表示空余......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-05
+            2018-06-06
         </p>
         <div class="tags">
             
@@ -386,9 +563,9 @@ shortest
 
 <div class="post-preview">
 
-    <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
+    <a href="/2018/06/06/SQL-笔记-Leetcode-608-Tree-Node/">
         <h2 class="post-title">
-            SQL 笔记: Leetcode#595 Big Countries
+            SQL 笔记: Leetcode#608 Tree Node
         </h2>
         <h3 class="post-subtitle">
             
@@ -396,14 +573,17 @@ shortest
         <div class="post-content-preview">
             问题
 
-有一张 World 表
-123456789+-----------------+------------+------------+--------------+---------------+| name            | continent  | area       | population   | gdp           |+-----------------+-......
+对于 tree 表，id 是树节点的标识，p_id 是其父节点的 id。
+123456789+----+------+| id | p_id |+----+------+| 1  | null || 2  | 1    || 3  | 1    || 4  | 2    || 5  | 2    |+----+------+
+每个节点都是以下三种类型中的一种：
+
+Leaf: 如果节点......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-05
+            2018-06-06
         </p>
         <div class="tags">
             
@@ -419,9 +599,9 @@ shortest
 
 <div class="post-preview">
 
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Average-Population-of-Each-Continent/">
+    <a href="/2018/06/06/SQL-笔记-Leetcode-570-Mnanagers-with-at-Least-5-Direct-Reports/">
         <h2 class="post-title">
-            SQL 笔记: Hackerrank Average Population of Each Continent
+            SQL 笔记: Leetcode#570 Mnanagers with at Least 5 Direct Reports
         </h2>
         <h3 class="post-subtitle">
             
@@ -429,270 +609,92 @@ shortest
         <div class="post-content-preview">
             问题
 
-给定 CITY 和 COUNTRY 表，查询所有大陆的名字（COUNTRY.Continent）以及对应的平均城市人口（CITY.Population），人口数进一法取整。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。不要输出没有城市的大陆。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
+Employee 表包含所有员工及其上级的信息。每位员工都有一个Id，并且还有一个对应主管的Id（ManagerId）。
+12345678910+------+----------+-----------+----------+|Id    |Name 	  |Department |ManagerId |+------+----------+-----------+--------......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/06/SQL-笔记-Leetcode-610-Triangle-Judgement/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#610 Triangle Judgement
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+小学生Tim有份家庭作业要去判断三边是否能组成三角形。
+然而，工作量太大因为有几百条记录要去计算。
+希望你能写一条查询语句判断三边是否能组成三角形来帮助Tim。假设triangle表中包含三边长度x，y和z。
 
 
 
-Field
-Type
+x
+y
+z
 
 
 
 
+13
+15
+30
+
+
+10
+20
+15
+
+
+
+对于上面的例子，应给返回如下结果：
+
+
+
+x
+y
+z
+triangle
+
+
+
+
+13
+15
+30
+No
 ......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by Fan Ni on
-            2018-06-04
+            2018-06-06
         </p>
         <div class="tags">
             
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-African-Cities/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank African Cities
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有非洲城市（CONTINENT 为 ‘Africa’）的名字。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
             
               <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Asian-Population/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Asian Population
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-给定 CITY 和 COUNTRY 表，查询所有亚洲城市（CONTINENT 是 ‘Asia’）的人口之和。
-注意: CITY.CountryCode 和 COUNTRY.Code 是匹配的字段。
-输入格式
-CITY 和 COUNTRY 表描述如下：
-CITY
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-NAME
-VARCHAR2(17)
-
-
-COUNTRYCODE
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Weather-Observation-Station-20/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 20
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-中位数（median）定义为分割一个数据集较大的一半和较小的一半的一个数。查询STATION表中北纬（Northern Latitudes (LAT_N)）的中位数，并保留4位小数。
-注意： 本题不允许使用Oracle的方法。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-S......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Weather-Observation-Station-19/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 19
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P1(a,c) 和 P2(b,d) 是2D平面内的两点，(a,b)分别是北纬（Northern Latitude (LAT_N)）的最小值和最大值，(c,d)分别是西经（Western Longitude (LONG_W)）的最小值和最大值。
-计算 P1 和 P2 之间的欧氏距离（Euclidean Distance），并保留4位小数。
-输入格式
-STATION 表描述如下：
-STA......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/04/SQL-笔记-Hackerrank-Weather-Observation-Station-18/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 18
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-P1(a,b) 和 P2(c,d) 是2D平面内的两点。
-
-a 等于北纬（Northern Latitude，STATION表中的LAT_N）的最小值。
-b 等于西经（Western Longitude，STATION表中的LONG_W）的最小值。
-c 等于北纬（Northern Latitude，STATION表中的LAT_N）的最大值。
-d 等于西经（Western Longit......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-04
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
             
         </div>
     
@@ -740,25 +742,25 @@ d 等于西经（Western Longit......
     <div class="tags">
         
             
+            <a href="/tags/#Algorithm" title="Algorithm" rel="150">Algorithm</a>
+            
+        
+            
+            <a href="/tags/#Leetcode" title="Leetcode" rel="224">Leetcode</a>
+            
+        
+            
             <a href="/tags/#Python" title="Python" rel="4">Python</a>
             
         
             
         
             
-            <a href="/tags/#Algorithm" title="Algorithm" rel="146">Algorithm</a>
+            <a href="/tags/#算法" title="算法" rel="110">算法</a>
             
         
             
-            <a href="/tags/#Leetcode" title="Leetcode" rel="220">Leetcode</a>
-            
-        
-            
-            <a href="/tags/#算法" title="算法" rel="104">算法</a>
-            
-        
-            
-            <a href="/tags/#领扣" title="领扣" rel="98">领扣</a>
+            <a href="/tags/#力扣" title="力扣" rel="104">力扣</a>
             
         
             
@@ -802,12 +804,6 @@ d 等于西经（Western Longit......
             
         
             
-        
-            
-            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
-            
-        
-            
             <a href="/tags/#NLP" title="NLP" rel="3">NLP</a>
             
         
@@ -819,6 +815,12 @@ d 等于西经（Western Longit......
             <a href="/tags/#Word Representation" title="Word Representation" rel="2">Word Representation</a>
             
         
+            
+        
+            
+        
+            
+            <a href="/tags/#Ubuntu" title="Ubuntu" rel="2">Ubuntu</a>
             
         
             
@@ -836,11 +838,11 @@ d 等于西经（Western Longit......
             
         
             
+        
+            
+        
+            
             <a href="/tags/#Java" title="Java" rel="2">Java</a>
-            
-        
-            
-        
             
         
             
@@ -866,15 +868,15 @@ d 等于西经（Western Longit......
             
         
             
-        
-            
-        
-            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
             
         
             
+        
+            
             <a href="/tags/#菜谱" title="菜谱" rel="16">菜谱</a>
+            
+        
             
         
             
@@ -944,23 +946,23 @@ d 等于西经（Western Longit......
     <ul>
       
         <li>
-          <a href="/2019/01/19/Algorithm-cn-Notes-Leetcode-720-Longest-Word-in-Dictionary/">算法笔记: 领扣#720 词典中最长的单词</a>
+          <a href="/2019/03/03/Algorithm-cn-Notes-Leetcode-70-Climbing-Stairs/">算法笔记: 力扣#70 爬楼梯</a>
         </li>
       
         <li>
-          <a href="/2019/01/19/Algorithm-cn-Notes-Leetcode-21-Merge-Two-Sorted-Lists/">算法笔记: 领扣#21 合并两个有序链表</a>
+          <a href="/2019/03/03/Algorithm-Notes-Leetcode-70-Climbing-Stairs/">Algorithm Notes: Leetcode#70 Climbing Stairs</a>
         </li>
       
         <li>
-          <a href="/2019/01/19/Algorithm-Notes-Leetcode-21-Merge-Two-Sorted-Lists/">Algorithm Notes: Leetcode#21 Merge Two Sorted Lists</a>
+          <a href="/2019/02/17/Algorithm-cn-Notes-Leetcode-118-Pascal-s-Triangle/">算法笔记: 力扣#118 杨辉三角</a>
         </li>
       
         <li>
-          <a href="/2019/01/13/Algorithm-cn-Notes-Leetcode-671-Second-Minimum-Node-In-a-Binary-Tree/">算法笔记: 领扣#671 二叉树中第二小的节点</a>
+          <a href="/2019/02/17/Algorithm-cn-Notes-Leetcode-747-Largest-Number-At-Least-Twice-of-Others/">算法笔记: 力扣#747 至少是其他数字两倍的最大数</a>
         </li>
       
         <li>
-          <a href="/2019/01/13/Algorithm-Notes-Leetcode-671-Second-Minimum-Node-In-a-Binary-Tree/">Algorithm Notes: Leetcode#671 Second Minimum Node In a Binary Tree</a>
+          <a href="/2019/02/17/Algorithm-cn-Notes-Leetcode-326-Power-of-Three/">算法笔记: 力扣#326 3的幂</a>
         </li>
       
     </ul>
