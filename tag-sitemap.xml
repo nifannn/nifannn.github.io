@@ -303,29 +303,29 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-        <lastmod>2019-03-05T16:17:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/tags/%E5%8A%9B%E6%89%A3/</loc>
-        <lastmod>2019-03-05T16:17:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Algorithm/</loc>
-        <lastmod>2019-03-05T16:17:40.000Z</lastmod>
+        <lastmod>2019-06-01T08:04:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://nifannn.github.io/tags/Leetcode/</loc>
-        <lastmod>2019-03-05T16:17:40.000Z</lastmod>
+        <lastmod>2019-06-01T08:04:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/%E5%8A%9B%E6%89%A3/</loc>
+        <lastmod>2019-06-01T08:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+        <lastmod>2019-06-01T08:04:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
