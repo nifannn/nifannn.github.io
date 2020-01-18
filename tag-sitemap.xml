@@ -198,13 +198,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/Python/</loc>
-        <lastmod>2018-10-14T09:14:49.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/tags/Ubuntu/</loc>
         <lastmod>2018-10-14T09:14:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -317,6 +310,13 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+        <lastmod>2019-06-01T08:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/tags/%E5%8A%9B%E6%89%A3/</loc>
         <lastmod>2019-06-01T08:04:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -324,8 +324,15 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-        <lastmod>2019-06-01T08:04:32.000Z</lastmod>
+        <loc>https://nifannn.github.io/tags/Python/</loc>
+        <lastmod>2020-01-18T13:45:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/tags/env/</loc>
+        <lastmod>2020-01-18T13:45:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

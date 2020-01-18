@@ -209,6 +209,150 @@
 
 <div class="post-preview">
 
+    <a href="/2018/06/05/SQL-笔记-Leetcode-627-Swap-Salary/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#627 Swap Salary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+给定 salary 表，例如下面这张，m代表男性，f代表女性。使用一条update语句所有f和m对换（所有f改成m，m改成f），并且不使用辅助表格。
+例如：
+
+
+
+id
+name
+sex
+salary
+
+
+
+
+1
+A
+m
+2500
+
+
+2
+B
+f
+1500
+
+
+3
+C
+m
+5500
+
+
+4
+D
+f
+500
+
+
+
+在运行完sql语句后，上述的表格内容变为：
+
+
+
+id
+name
+sex......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/06/05/SQL-笔记-Leetcode-613-Shortest-Distance-in-a-Line/">
+        <h2 class="post-title">
+            SQL 笔记: Leetcode#613 Shortest Distance in a Line
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            问题
+
+point 表包含了一些点的x坐标值，坐标值均为整数。
+写一条查询语句计算这些点中的最短距离。
+
+
+
+x
+
+
+
+
+-1
+
+
+0
+
+
+2
+
+
+
+最短距离明显是1，是-1和0之间的距离。所以输出如下：
+
+
+
+shortest
+
+
+
+
+1
+
+
+
+注意: 每个点都是唯一的， point 表中没有重复记录。
+分析
+
+可以将表与其自身进行连接（join）操作，以生成所有可能的点对。然后计算每对点......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Fan Ni on
+            2018-06-05
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Leetcode" title="Leetcode">Leetcode</a>
+            
+              <a href="/tags/#SQL" title="SQL">SQL</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
     <a href="/2018/06/05/SQL-笔记-Leetcode-595-Big-Countries/">
         <h2 class="post-title">
             SQL 笔记: Leetcode#595 Big Countries
@@ -577,124 +721,6 @@ VARCHAR2......
 </div>
 <hr>
 
-<div class="post-preview">
-
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-16/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 16
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询STATION表中大于38.7780的北纬（Northern Latitude (LAT_N)）的最小值。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHAR2(2)
-
-
-LAT_N
-NUMBER
-
-
-LONG_W
-NUMBER
-
-......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-03
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/06/03/SQL-笔记-Hackerrank-Weather-Observation-Station-15/">
-        <h2 class="post-title">
-            SQL 笔记: Hackerrank Weather Observation Station 15
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            问题
-
-查询 STATION 表中小于137.2345的北纬（Northern Latitude (LAT_N)）中的最大值所对应的西经（Western Longitude (LONG_W)）。结果保留4位小数。
-输入格式
-STATION 表描述如下：
-STATION
-
-
-
-Field
-Type
-
-
-
-
-ID
-NUMBER
-
-
-CITY
-VARCHAR2(21)
-
-
-STATE
-VARCHA......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Fan Ni on
-            2018-06-03
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#SQL" title="SQL">SQL</a>
-            
-              <a href="/tags/#Hackerrank" title="Hackerrank">Hackerrank</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
 
 
 <!-- Pager -->
@@ -735,7 +761,7 @@ VARCHA......
     <div class="tags">
         
             
-            <a href="/tags/#Python" title="Python" rel="4">Python</a>
+            <a href="/tags/#Python" title="Python" rel="6">Python</a>
             
         
             
@@ -749,11 +775,11 @@ VARCHA......
             
         
             
-            <a href="/tags/#力扣" title="力扣" rel="107">力扣</a>
+            <a href="/tags/#算法" title="算法" rel="113">算法</a>
             
         
             
-            <a href="/tags/#算法" title="算法" rel="113">算法</a>
+            <a href="/tags/#力扣" title="力扣" rel="107">力扣</a>
             
         
             
@@ -817,10 +843,6 @@ VARCHA......
             
         
             
-            <a href="/tags/#Data Engineering" title="Data Engineering" rel="2">Data Engineering</a>
-            
-        
-            
             <a href="/tags/#web" title="web" rel="2">web</a>
             
         
@@ -831,11 +853,17 @@ VARCHA......
             
         
             
+            <a href="/tags/#env" title="env" rel="2">env</a>
+            
+        
+            
         
             
         
             
             <a href="/tags/#Java" title="Java" rel="2">Java</a>
+            
+        
             
         
             
@@ -861,9 +889,9 @@ VARCHA......
             
         
             
-        
-            
             <a href="/tags/#Kaggle" title="Kaggle" rel="2">Kaggle</a>
+            
+        
             
         
             
@@ -939,23 +967,23 @@ VARCHA......
     <ul>
       
         <li>
-          <a href="/2019/06/01/Algorithm-cn-Notes-Leetcode-836-Rectangle-Overlap/">算法笔记: 力扣#836 矩形重叠</a>
+          <a href="/2020/01/18/Install-Python-3-On-Centos-cn/">CentOS上安装Python 3</a>
         </li>
       
         <li>
-          <a href="/2019/06/01/Algorithm-Notes-Leetcode-836-Rectangle-Overlap/">Algorithm Notes: Leetcode#836 Rectangle Overlap</a>
+          <a href="/2019/11/19/Install-Python-3-On-Centos/">Install Python 3 On Centos</a>
         </li>
       
         <li>
-          <a href="/2019/06/01/Algorithm-cn-Notes-Leetcode-405-Convert-a-Number-to-Hexadecimal/">算法笔记: 力扣#405 数字转换为十六进制数</a>
+          <a href="/2019/11/06/Representation-Learning-Notes-Node2Vec/">Representation Learning Notes: Node2Vec</a>
         </li>
       
         <li>
-          <a href="/2019/06/01/Algorithm-Notes-Leetcode-405-Convert-a-Number-to-Hexadecimal/">Algorithm Notes: Leetcode#405 Convert a Number to Hexadecimal</a>
+          <a href="/2019/11/06/Representation-Learning-Notes-DeepWalk/">Representation Learning Notes: DeepWalk</a>
         </li>
       
         <li>
-          <a href="/2019/03/05/Algorithm-cn-Notes-Leetcode-594-Longest-Harmonious-Subsequence/">算法笔记: 力扣#594 最长和谐子序列</a>
+          <a href="/2019/11/06/Representation-Learning-Notes-From-Word2Vec-to-Item2Vec/">Representation Learning Notes: From Word2Vec to Item2Vec</a>
         </li>
       
     </ul>
@@ -1009,7 +1037,7 @@ VARCHA......
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Fan Ni 2019 
+                    Copyright &copy; Fan Ni 2020 
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">

@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Recommender System Notes: Hierarchical Poisson Factorization - Memogrocery
+          Machine Learning Notes: FTRL - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2018/12/06/Recommender-System-Notes-Hierarchical-Poisson-Factorization/">
+    <link rel="canonical" href="https://nifannn.github.io/2019/10/26/Machine-Learning-Notes-FTRL/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -87,11 +87,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>Recommender System Notes: Hierarchical Poisson Factorization</h1>
+                        <h1>Machine Learning Notes: FTRL</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2018-12-06
+                            2019-10-26
                         </span>
                     </div>
                 
@@ -208,7 +208,20 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="introduction">Introduction</h3>
+<hr>
+<h3 id="the-algorithm">The Algorithm</h3>
+<hr>
+<h3 id="logistic-regression">Logistic Regression</h3>
+<h3 id="online-gradient-descend">Online Gradient Descend</h3>
+<h3 id="sparsity">Sparsity</h3>
+<h3 id="truncated-gradient">Truncated Gradient</h3>
+<h3 id="fobos">FOBOS</h3>
+<h3 id="rda">RDA</h3>
+<h3 id="ftrl">FTRL</h3>
+<h3 id="references">References</h3>
+<hr>
+
                 
 
                 <hr>
@@ -216,12 +229,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2018/12/06/Recommender-System-Notes-Item2Vec/" data-toggle="tooltip" data-placement="top" title="Recommender System Notes: Item2Vec">&larr; Previous Post</a>
+                            <a href="/2019/11/06/Representation-Learning-Notes-From-Word2Vec-to-Item2Vec/" data-toggle="tooltip" data-placement="top" title="Representation Learning Notes: From Word2Vec to Item2Vec">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2018/12/05/Recommender-System-Notes-Probability-Matrix-Factorization/" data-toggle="tooltip" data-placement="top" title="Recommender System Notes: Probability Matrix Factorization">Next Post &rarr;</a>
+                            <a href="/2019/06/01/Algorithm-cn-Notes-Leetcode-836-Rectangle-Overlap/" data-toggle="tooltip" data-placement="top" title="算法笔记: 力扣#836 矩形重叠">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -247,7 +260,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#the-algorithm"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">The Algorithm</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#logistic-regression"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Logistic Regression</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#online-gradient-descend"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Online Gradient Descend</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#sparsity"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Sparsity</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#truncated-gradient"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Truncated Gradient</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#fobos"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">FOBOS</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rda"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">RDA</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ftrl"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">FTRL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#references"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">References</span></a></li></ol>
         
         </div>
       </aside>
@@ -359,7 +372,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Fan Ni 2019 
+                    Copyright &copy; Fan Ni 2020 
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">

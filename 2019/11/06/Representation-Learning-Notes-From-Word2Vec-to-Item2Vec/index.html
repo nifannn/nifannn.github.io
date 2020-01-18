@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          HBase Notes: Basics - Memogrocery
+          Representation Learning Notes: From Word2Vec to Item2Vec - Memogrocery
         
     </title>
 
-    <link rel="canonical" href="https://nifannn.github.io/2019/01/12/HBase-Notes-Basics/">
+    <link rel="canonical" href="https://nifannn.github.io/2019/11/06/Representation-Learning-Notes-From-Word2Vec-to-Item2Vec/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -86,14 +86,12 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Data Engineering" title="Data Engineering">Data Engineering</a>
-                            
                         </div>
-                        <h1>HBase Notes: Basics</h1>
+                        <h1>Representation Learning Notes: From Word2Vec to Item2Vec</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by Fan Ni on
-                            2019-01-12
+                            2019-11-06
                         </span>
                     </div>
                 
@@ -210,7 +208,13 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                
+                <h3 id="introduction">Introduction</h3>
+<h3 id="tools">Tools</h3>
+<h4 id="google-word2vec">Google word2vec</h4>
+<h4 id="gensim">Gensim</h4>
+<h4 id="spark">Spark</h4>
+<h4 id="tensorflow">Tensorflow</h4>
+
                 
 
                 <hr>
@@ -218,12 +222,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/01/12/Algorithm-cn-Notes-Leetcode-674-Longest-Continuous-Increasing-Subsequence/" data-toggle="tooltip" data-placement="top" title="算法笔记: 力扣#674 最长连续递增序列">&larr; Previous Post</a>
+                            <a href="/2019/11/06/Representation-Learning-Notes-DeepWalk/" data-toggle="tooltip" data-placement="top" title="Representation Learning Notes: DeepWalk">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2019/01/06/Algorithm-cn-Notes-Leetcode-504-Base-7/" data-toggle="tooltip" data-placement="top" title="算法笔记: 力扣#504 七进制数">Next Post &rarr;</a>
+                            <a href="/2019/10/26/Machine-Learning-Notes-FTRL/" data-toggle="tooltip" data-placement="top" title="Machine Learning Notes: FTRL">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -249,7 +253,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#introduction"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Introduction</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#tools"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Tools</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#google-word2vec"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Google word2vec</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#gensim"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Gensim</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#spark"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Spark</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#tensorflow"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Tensorflow</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -269,8 +273,6 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#Data Engineering" title="Data Engineering">Data Engineering</a>
-                        
                     </div>
                 </section>
                 
@@ -363,7 +365,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Fan Ni 2019 
+                    Copyright &copy; Fan Ni 2020 
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> 
                     <span style="display: inline-block; margin: 0 5px;">

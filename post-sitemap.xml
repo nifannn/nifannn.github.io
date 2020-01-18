@@ -7,6 +7,54 @@
     </url>
 
     <url>
+        <loc>https://nifannn.github.io/2020/01/18/Install-Python-3-On-Centos-cn/</loc>
+        <lastmod>2020-01-18T13:45:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2019/11/19/Install-Python-3-On-Centos/</loc>
+        <lastmod>2020-01-18T13:34:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2019/11/06/Representation-Learning-Notes-From-Word2Vec-to-Item2Vec/</loc>
+        <lastmod>2019-11-19T02:01:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2019/10/26/Machine-Learning-Notes-FTRL/</loc>
+        <lastmod>2019-11-07T15:45:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2019/11/06/Representation-Learning-Notes-Node2Vec/</loc>
+        <lastmod>2019-11-06T01:23:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://nifannn.github.io/2019/11/06/Representation-Learning-Notes-DeepWalk/</loc>
+        <lastmod>2019-11-06T01:22:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://nifannn.github.io/2019/06/01/Algorithm-cn-Notes-Leetcode-836-Rectangle-Overlap/</loc>
         <lastmod>2019-06-01T08:04:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1871,14 +1919,6 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2019/01/12/HBase-Notes-Basics/</loc>
-        <lastmod>2019-01-13T08:47:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://nifannn.github.io/2019/01/12/NLP-Notes-Transformer-XL/</loc>
         <lastmod>2019-01-12T07:50:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1905,30 +1945,6 @@
     <url>
         <loc>https://nifannn.github.io/2018/12/23/NLP-Notes-The-Transformer/</loc>
         <lastmod>2018-12-23T04:51:34.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/12/06/Recommender-System-Notes-Item2Vec/</loc>
-        <lastmod>2018-12-06T00:47:27.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/12/06/Recommender-System-Notes-Hierarchical-Poisson-Factorization/</loc>
-        <lastmod>2018-12-06T00:47:16.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://nifannn.github.io/2018/12/05/Recommender-System-Notes-Probability-Matrix-Factorization/</loc>
-        <lastmod>2018-12-05T15:17:51.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -3751,7 +3767,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
+        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -3759,7 +3775,7 @@
     </url>
 
     <url>
-        <loc>https://nifannn.github.io/2017/11/18/Algorithm-Notes-Leetcode-204-Count-Primes/</loc>
+        <loc>https://nifannn.github.io/2017/11/17/Algorithm-Notes-Leetcode-205-Isomorphic-Strings/</loc>
         <lastmod>2018-03-10T23:39:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
